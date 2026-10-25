@@ -1,0 +1,23 @@
+"""quantum_physics checks run by tools/clean_install.py inside a fresh environment (written by tools/new_domain.py from the certified procedures' documented questions)."""
+
+SAMPLE = ('Barrier transmission: E = 1 eV, V0 = 2 eV, a = 0.5 nm, m = 9.1093837139e-31 kg', 0.023547119837692594)
+LATENCY = ["Barrier transmission: E = 1 eV, V0 = 2 eV, a = 0.5 nm, m = 9.1093837139e-31 kg", "Condensation temperature: n = 1e20 m^-3, m = 1.443e-25 kg", "Bohr level: Z = 1, n = 1"]
+QUESTIONS = [['Barrier transmission: E = 1 eV, V0 = 2 eV, a = 0.5 nm, m = 9.1093837139e-31 kg', {'T': 0.023547119837692594}], ['Condensation temperature: n = 1e20 m^-3, m = 1.443e-25 kg', {'T_c': 3.983751060581196e-07}], ['Bohr level: Z = 1, n = 1', {'E_eV': -13.605693122990514}], ['CHSH: a = 0 deg, a2 = 90 deg, b = 45 deg, b2 = 135 deg', {'abs_S': 2.8284271247461903}], ['Clebsch-Gordan coefficient: j1 = 0.5, m1 = 0.5, j2 = 0.5, m2 = -0.5, J = 1, M = 0', {'cg': 0.7071067811865476}], ['Coherent state: alpha = 2, n = 3', {'P_n': 0.19536681481316456}], ['Compton scattering: lambda = 71 pm, theta = 90 deg', {'shift_pm': 2.426310235380317}], ['Coulomb barrier: Z1 = 1, A1 = 1, Z2 = 1, A2 = 1, r0 = 1 fm', {'V_MeV': 0.7199822734301335}], ['de Broglie wavelength: V = 100 V, particle = electron', {'lambda_nonrel_nm': 0.12264259653234232}], ['de Broglie wavelength of a moving particle: m = 9.1093837139e-31 kg, v = 1e6 m/s', {'lambda_nm': 0.7273895093352238}], ['Debye heat capacity: T = 1 K, theta_D = 500 K', {'C_molar': 1.555016152455358e-05}], ['Decay chain: T_half_P = 2 s, T_half_D = 1 s, N0 = 1, t = 2 s', {'N_daughter': 0.25}], ['Einstein solid: theta_E = 300 K, T = 300 K', {'C_over_k': 0.9206735942077924}], ['Fermi-Dirac occupation: E = 5 eV, mu = 5 eV, T = 300 K', {'f': 0.5}], ['Fermi energy: n = 8.47e28 m^-3', {'E_F_eV': 7.032761293807787}], ['Fermi energy of a metal: rho = 8960 kg/m^3, M = 63.546 g/mol, z = 1', {'n': 8.491231739149593e+28}], ['Finite square well: V0 = 10 eV, a = 0.5 nm, m = 9.1093837139e-31 kg', {'n_bound': 3.0}], ['Centre-of-mass energy: m1 = 1, E1 = 7, m2 = 1', {'sqrt_s': 4.0}], ['Gate rotation: gates = H', {'angle': 3.141592653589793, 'nx': 0.7071067811865475}], ['Grover search: n_qubits = 2, M = 1, k = 1', {'P_success': 1.0}], ['Forbidden region probability: n = 0', {'P_forbidden': 0.1572992070502851}], ['Harmonic oscillator: m = 1.67262192595e-27 kg, omega = 1e14 rad/s, n = 0', {'E': 5.2728590882307826e-21}], ['Minimum uncertainty: dx = 0.1 nm, m = 9.1093837139e-31 kg', {'dv': 578838.1798194462}], ['Radial expectation values: n = 2, l = 1, Z = 1', {'r_mean_a0': 5.0}], ['Radial probability: n = 1, l = 0, Z = 1, R = 52.9177210544 pm', {'P_inside': 0.3233235838169365}], ['Hydrogen transition: Z = 1, n_upper = 3, n_lower = 2', {'lambda_nm': 656.1122764194982}], ['Reduced-mass transition: Z = 1, n_upper = 3, n_lower = 2, M_u = 1.00727646688', {'lambda_nm': 656.4696063331364}], ['Particle in a box: m = 9.1093837139e-31 kg, L = 1 nm, n = 1', {'E': 6.02466739403659e-20}], ['Particle in a box probability: n = 1, L = 1 nm, x1 = 0.25 nm, x2 = 0.75 nm', {'P': 0.8183098861837907}], ['Particle in a box transition: m = 9.1093837139e-31 kg, L = 1 nm, n_upper = 2, n_lower = 1', {'E_photon_eV': 1.1280904863146177}], ['Particle in a box uncertainty: n = 1, L = 1 m', {'dx_over_L': 0.18075602759566398}], ['Invariant mass: E1 = 50; p1 = 30, 0, 40; E2 = 50; p2 = -30, 0, -40', {'M': 100.0}], ['Landé g factor: L = 1, S = 0.5, J = 1.5, mJ = 0.5, B = 1 T', {'g_J': 1.3333333333333333}], ['Larmor precession: particle = proton, B = 1 T, t = 0 s', {'omega_L': 267522187.08}], ['Length contraction: L0 = 100 m, v = 0.6 c', {'L': 80.0}], ['Lorentz factor: v = 0.6 c', {'gamma': 1.25}], ["Moseley's law: Z = 29", {'E_keV': 8.000147556318423}], ['Reaction threshold: m_a = 4.002603254, m_X = 14.003074004, m_Y = 16.999131757, m_b = 1.00782503207', {'Q_MeV': -1.1918756472334098}], ['Nuclide decay: nuclide = I-131, t = 1385976.96 s', {'fraction': 0.25}], ['Decay length: particle = mu-, p = 0.1056583755', {'beta_gamma': 1.0}]]
+
+
+def _close(a, b):
+    if isinstance(b, list):
+        return isinstance(a, (list, tuple)) and len(a) == len(b) and all(_close(x, y) for x, y in zip(a, b))
+    try:
+        return abs(complex(a) - complex(b)) <= 1e-6 * max(1.0, abs(complex(b)))
+    except (TypeError, ValueError):
+        return a == b
+
+
+def checks(P) -> dict:
+    out = {"certified_procedures": len(P.pack().procedures) == 75,
+           "refuses_nonsense": not P.ask("What is it?").solved}
+    for i, (q, want) in enumerate(QUESTIONS):
+        a = P.ask(q)
+        out[f"question_{i}"] = a.solved and all(_close(a.values.get(k), v) for k, v in want.items())
+    return out
