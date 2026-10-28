@@ -4,7 +4,9 @@
 
 **[Install](https://pypi.org/project/quantum-physics-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/quantum-physics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/quantum-physics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.0
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.1
+
+Field: **Physical Sciences** · Tasks: Question Answering, Token Classification, Text Classification, Sentence Similarity, Feature Extraction
 
 quantum-physics-ai999x is an offline, deterministic Python solver that answers quantum physics questions with verified results from 75 certified capabilities, gives 376 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
 
@@ -25,7 +27,7 @@ quantum-physics-ai999x is an offline, deterministic Python solver that answers q
 
 | Property | Value |
 |---|---|
-| Package | `quantum-physics-ai999x` 1.0.0 (import `quantum_physics_ai999x`) |
+| Package | `quantum-physics-ai999x` 1.0.1 (import `quantum_physics_ai999x`) |
 | Type | Deterministic neuro-symbolic quantum physics engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 75 certified procedures |
 | Knowledge pack | version 1.0.1 |
@@ -59,7 +61,7 @@ quantum_physics.ask("Who created you?").message
 # -> quantum-physics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `quantum-physics-ai999x "<question>"`, `quantum-physics-ai999x --capabilities`. The outputs above were produced by running this exact code on quantum-physics-ai999x 1.0.0.
+Command line: `quantum-physics-ai999x "<question>"`, `quantum-physics-ai999x --capabilities`. The outputs above were produced by running this exact code on quantum-physics-ai999x 1.0.1.
 
 ## Find the right capability, and draw it
 
@@ -69,7 +71,7 @@ Command line: `quantum-physics-ai999x "<question>"`, `quantum-physics-ai999x --c
 import quantum_physics_ai999x as quantum_physics
 
 quantum_physics.search("Solve x^2 - 5x + 6 = 0", k=2)
-# -> Roots of a quadratic equation (algebra-ai999x, 0.67); Solution of two linear equations in two unknowns (algebra-ai999x, 0.57)
+# -> Roots of a quadratic equation (math-foundations-ai999x, 0.63); Roots of a cubic equation (math-foundations-ai999x, 0.59)
 ```
 
 ## How every answer is verified
@@ -80,6 +82,122 @@ quantum_physics.search("Solve x^2 - 5x + 6 = 0", k=2)
 4. **Checking** — dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
+
+## Worked examples
+
+Each question was put to `quantum-physics-ai999x`; the answer is the one it returned, with the steps it took.
+
+**Lorentz factor** · _Special relativity_
+
+> Lorentz factor: v = 0.8 c
+
+→ **gamma = 1.666666667, beta = 0.8, gamma_minus_1 = 0.6666666667**
+
+<details><summary>Steps</summary>
+
+- Lorentz factor: v = 239833966.4 m/s → gamma = 1.666666667, beta = 0.8, gamma_minus_1 = 0.6666666667
+
+</details>
+
+**Photon from a hydrogen-like transition (Rydberg formula)** · _Hydrogen atom_
+
+> Hydrogen transition: Z = 1, n_upper = 3, n_lower = 2
+
+→ **E_photon_eV = 1.8896796 eV, lam = 6.561122764e-07 m, lambda_nm = 656.1122764 nm, f = 4.569224945e+14 Hz, series = Balmer**
+
+<details><summary>Steps</summary>
+
+- Photon from a hydrogen-like transition (Rydberg formula): Z = 1, n_upper = 3, n_lower = 2 → E_photon_eV = 1.8896796 eV, lam = 6.561122764e-07 m, lambda_nm = 656.1122764 nm, f = 4.569224945e+14 Hz, series = Balmer nm
+
+</details>
+
+**Photoelectric effect** · _Photons and matter waves_
+
+> Photoelectric effect: lambda = 250 nm, W = 4.3 eV
+
+→ **E_photon_eV = 4.959367937 eV, K_max_eV = 0.6593679373 eV, V_stop = 0.6593679373 V, lambda_threshold = 2.883353452e-07 m, lambda_threshold_nm = 288.3353452 nm, f_threshold = 1.039735374e+15 Hz**
+
+<details><summary>Steps</summary>
+
+- Photoelectric effect: lam = 250 nm, W = 4.3 eV → E_photon_eV = 4.959367937 eV, K_max_eV = 0.6593679373 eV, V_stop = 0.6593679373 V, lambda_threshold = 2.883353452e-07 m, lambda_threshold_nm = 288.3353452 nm, f_threshold = 1.039735374e+15 Hz
+
+</details>
+
+**Two-qubit circuit: probabilities and entanglement** · _Quantum gates_
+
+`m.solve("two_qubit_circuit", start="00", gates="H0 CNOT01")`
+
+→ **p00 = 0.5, p01 = 0, p10 = 0, p11 = 0.5, concurrence = 1, p_q0_is_1 = 0.5, p_q1_is_1 = 0.5**
+
+<details><summary>Steps</summary>
+
+- Two-qubit circuit: probabilities and entanglement: start = 00, gates = H0 CNOT01 → p00 = 0.5, p01 = 0, p10 = 0, p11 = 0.5, concurrence = 1, p_q0_is_1 = 0.5, p_q1_is_1 = 0.5
+
+</details>
+
+**Transmission through a rectangular barrier** · _Quantum wells_
+
+> Barrier transmission: E = 1 eV, V0 = 2 eV, a = 0.5 nm, m = 9.109e-31 kg
+
+→ **T = 0.02354963067, R = 0.9764503693, kappa_a = 2.56152966, regime = tunnelling (E < V0)**
+
+<details><summary>Steps</summary>
+
+- Transmission through a rectangular barrier: E = 1 eV, V0 = 2 eV, a = 0.5 nm, m = 9.109e-31 kg → T = 0.02354963067, R = 0.9764503693, kappa_a = 2.56152966, regime = tunnelling (E < V0)
+
+</details>
+
+**Clebsch-Gordan coefficient** · _Angular momentum_
+
+> Clebsch-Gordan coefficient: j1 = 0.5, m1 = 0.5, j2 = 0.5, m2 = -0.5, J = 1, M = 0
+
+→ **cg = 0.7071067812, cg_squared = 0.5, cg_squared_exact = 1/2**
+
+<details><summary>Steps</summary>
+
+- Clebsch-Gordan coefficient: j1 = 0.5, m1 = 0.5, j2 = 0.5, m2 = -0.5, J = 1, M = 0 → cg = 0.7071067812, cg_squared = 0.5, cg_squared_exact = 1/2
+
+</details>
+
+## Figures
+
+Every point was computed by `quantum-physics-ai999x`.
+
+**Hydrogen energy levels and spectral lines**
+
+![Hydrogen energy levels and spectral lines — computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/hydrogen-transition-diagram.svg)
+
+_Energy levels of hydrogen, E_n from the package for n = 1 … 6 (E₁ = -13.6057 eV), with the photon wavelengths of Lyman and Balmer transitions it computes: 2→1: 121.502 nm, 3→1: 102.518 nm, 3→2: 656.112 nm, 4→2: 486.009 nm, 5→2: 433.937 nm, 6→2: 410.07 nm._
+
+**The hydrogen line spectrum**
+
+![The hydrogen line spectrum — computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/hydrogen-transition-spectrum.svg)
+
+_The hydrogen emission spectrum: the first six lines of the Lyman, Balmer and Paschen series, each wavelength and photon energy computed by the package (Lyman 121.502–93.0252 nm; Balmer 656.112–388.807 nm; Paschen 1874.61–922.658 nm); the dashed lines bound the visible range 380–750 nm, where only Balmer lines fall._
+
+**Particle in a box: levels and probability densities**
+
+![Particle in a box: levels and probability densities — computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/infinite-well-probability-levels.svg)
+
+_An electron in a 1 nm infinite square well: the three lowest energy levels the package gives (E1 = 0.37603 eV, E2 = 1.50412 eV, E3 = 3.38427 eV), each with its probability density drawn on the level (the probability of each of 60 intervals of 0.0166667 nm divided by the interval, 0.4 eV per 1/nm); state n has n humps and n − 1 nodes._
+
+**Two-qubit circuits: outcome probabilities and entanglement**
+
+![Two-qubit circuits: outcome probabilities and entanglement — computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/two-qubit-circuit-heatmap.svg)
+
+_Two-qubit circuits started in |00⟩ — rows, top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0 — with the probability of each measurement outcome and the concurrence (1 = maximally entangled) the package computes; H0 CNOT01 makes the Bell state, P(00) = P(11) = 0.5 with concurrence 1._
+
+**Blackbody spectra and their peaks**
+
+![Blackbody spectra and their peaks — computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/planck-spectral-radiance-spectrum.svg)
+
+_Planck spectral radiance at three temperatures, 117 wavelengths each from the package; the dots are the peaks given by its Wien's-law capability: T = 3000 K: λ_max = 965.924 nm, B_λ = 995.249 W/(m² sr nm); T = 4500 K: λ_max = 643.949 nm, B_λ = 7557.67 W/(m² sr nm); T = 5778 K: λ_max = 501.518 nm, B_λ = 26376.3 W/(m² sr nm)._
+
+**Tunnelling through a rectangular barrier**
+
+![Tunnelling through a rectangular barrier — computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/barrier-transmission-curve.svg)
+
+_Transmission and reflection of an electron (m = 9.1094e-31 kg) at a rectangular barrier of height V₀ = 3.2044e-19 J (2 eV) and width a = 0.5 nm, for 60 energies computed by the package; tunnelling below E = V₀, transmission resonances above it; marked: E/V₀ = 0.5, T = 0.0235471._
 
 ## Capabilities
 
@@ -104,10 +222,10 @@ Capabilities are certified before they ship: each must reproduce hand-worked ref
 ## Citation
 
 ```bibtex
-@software{quantum_physics_ai999x_1_0_0,
+@software{quantum_physics_ai999x_1_0_1,
   title  = {quantum-physics-ai999x: an offline, verified quantum physics solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.0},
+  year   = {2026}, version = {1.0.1},
   url    = {https://huggingface.co/AI999X/quantum-physics-ai999x}
 }
 ```

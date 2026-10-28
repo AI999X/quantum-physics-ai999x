@@ -1044,6 +1044,14 @@ $$
 - **Assumes:** n_upper > n_lower >= 1; infinitely heavy nucleus
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Energy levels of hydrogen, E_n from the package for n = 1 … 6 (E₁ = -13](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/hydrogen-transition-diagram.svg)
+
+*Energy levels of hydrogen, E_n from the package for n = 1 … 6 (E₁ = -13.6057 eV), with the photon wavelengths of Lyman and Balmer transitions it computes: 2→1: 121.502 nm, 3→1: 102.518 nm, 3→2: 656.112 nm, 4→2: 486.009 nm, 5→2: 433.937 nm, 6→2: 410.07 nm.*
+
+![The hydrogen emission spectrum: the first six lines of the Lyman, Balmer and Paschen series, each wavelength and photon energy computed by the package (Lyman 121](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/hydrogen-transition-spectrum.svg)
+
+*The hydrogen emission spectrum: the first six lines of the Lyman, Balmer and Paschen series, each wavelength and photon energy computed by the package (Lyman 121.502–93.0252 nm; Balmer 656.112–388.807 nm; Paschen 1874.61–922.658 nm); the dashed lines bound the visible range 380–750 nm, where only Balmer lines fall.*
+
 ```python
 quantum_physics_ai999x.solve('hydrogen_transition', Z=1, n_upper=3, n_lower=2)
 # -> E_photon_eV = 1.88968 eV, lam = 6.56112e-07 m, lambda_nm = 656.112 nm, f = 4.56922e+14 Hz, series = Balmer   (SOLVED)
@@ -1537,6 +1545,10 @@ $$
 - **Assumes:** $0  \leq  x_{1} < x_{2}  \leq  L$; $n  \geq  1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![An electron in a 1 nm infinite square well: the three lowest energy levels the package gives (E1 = 0](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/infinite-well-probability-levels.svg)
+
+*An electron in a 1 nm infinite square well: the three lowest energy levels the package gives (E1 = 0.37603 eV, E2 = 1.50412 eV, E3 = 3.38427 eV), each with its probability density drawn on the level (the probability of each of 60 intervals of 0.0166667 nm divided by the interval, 0.4 eV per 1/nm); state n has n humps and n − 1 nodes.*
+
 ```python
 quantum_physics_ai999x.solve('infinite_well_probability', n=1, L=1e-09, x1=2.5e-10, x2=7.5e-10)
 # -> P = 0.81831, classical = 0.5   (SOLVED)
@@ -1751,6 +1763,10 @@ $$
 - **Method:** T = 1/(1 + V0^2 sinh^2(kappa $a)/(4E$(V0 - E))) for $E < V_{0}$, sin for $E > V_{0}$, written as sinh(x)/x to stay finite at $E = V_{0}$
 - **Assumes:** E, V0, a, $m > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Transmission and reflection of an electron (m = 9](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/barrier-transmission-curve.svg)
+
+*Transmission and reflection of an electron (m = 9.1094e-31 kg) at a rectangular barrier of height V₀ = 3.2044e-19 J (2 eV) and width a = 0.5 nm, for 60 energies computed by the package; tunnelling below E = V₀, transmission resonances above it; marked: E/V₀ = 0.5, T = 0.0235471.*
 
 ```python
 quantum_physics_ai999x.solve('barrier_transmission', E=1.602176634e-19, V0=3.204353268e-19, a=5e-10, m=9.1093837139e-31)
@@ -1998,6 +2014,10 @@ $$
 - **Method:** the four-amplitude state vector updated gate by gate (index 2 q0 + q1)
 - **Assumes:** gates from the documented set; at most 500 gates
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Two-qubit circuits started in |00⟩ — rows, top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0 — with the probability of each measurement outcome and the concurrence (1 = maximally entangled) the package computes; H0 CNOT01 makes the Bell state, P(00) = P(11) = 0](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/two-qubit-circuit-heatmap.svg)
+
+*Two-qubit circuits started in |00⟩ — rows, top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0 — with the probability of each measurement outcome and the concurrence (1 = maximally entangled) the package computes; H0 CNOT01 makes the Bell state, P(00) = P(11) = 0.5 with concurrence 1.*
 
 ```python
 quantum_physics_ai999x.solve('two_qubit_circuit', start='00', gates='H0 CNOT01')
@@ -2859,6 +2879,10 @@ $$
 - **Method:** B_lambda = (2 h $c^{2}/\lambda^{5}) / (exp$(h c/(lambda k T)) - 1)
 - **Assumes:** $\lambda > 0$; $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Planck spectral radiance at three temperatures, 117 wavelengths each from the package; the dots are the peaks given by its Wien's-law capability: T = 3000 K: λ_max = 965](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/planck-spectral-radiance-spectrum.svg)
+
+*Planck spectral radiance at three temperatures, 117 wavelengths each from the package; the dots are the peaks given by its Wien's-law capability: T = 3000 K: λ_max = 965.924 nm, B_λ = 995.249 W/(m² sr nm); T = 4500 K: λ_max = 643.949 nm, B_λ = 7557.67 W/(m² sr nm); T = 5778 K: λ_max = 501.518 nm, B_λ = 26376.3 W/(m² sr nm).*
 
 ```python
 quantum_physics_ai999x.solve('planck_spectral_radiance', lam=5e-07, T=5778.0)
