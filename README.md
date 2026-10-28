@@ -4,7 +4,7 @@
 
 **[Install](https://pypi.org/project/quantum-physics-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/quantum-physics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/quantum-physics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.2
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.3
 
 Field: **Physical Sciences** · Tasks: Question Answering, Token Classification, Text Classification, Sentence Similarity, Feature Extraction
 
@@ -27,7 +27,7 @@ quantum-physics-ai999x is an offline, deterministic Python solver that answers q
 
 | Property | Value |
 |---|---|
-| Package | `quantum-physics-ai999x` 1.0.2 (import `quantum_physics_ai999x`) |
+| Package | `quantum-physics-ai999x` 1.0.3 (import `quantum_physics_ai999x`) |
 | Type | Deterministic neuro-symbolic quantum physics engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 75 certified procedures |
 | Knowledge pack | version 1.0.1 |
@@ -61,7 +61,7 @@ quantum_physics.ask("Who created you?").message
 # -> quantum-physics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `quantum-physics-ai999x "<question>"`, `quantum-physics-ai999x --capabilities`. The outputs above were produced by running this exact code on quantum-physics-ai999x 1.0.2.
+Command line: `quantum-physics-ai999x "<question>"`, `quantum-physics-ai999x --capabilities`. The outputs above were produced by running this exact code on quantum-physics-ai999x 1.0.3.
 
 ## Find the right capability, and draw it
 
@@ -222,10 +222,10 @@ _Transmission and reflection of an electron (m = 9.1094e-31 kg) at a rectangular
 ## Citation
 
 ```bibtex
-@software{quantum_physics_ai999x_1_0_2,
+@software{quantum_physics_ai999x_1_0_3,
   title  = {quantum-physics-ai999x: an offline, verified quantum physics solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.2},
+  year   = {2026}, version = {1.0.3},
   url    = {https://huggingface.co/AI999X/quantum-physics-ai999x}
 }
 ```

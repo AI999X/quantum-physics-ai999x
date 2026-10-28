@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "quantum-physics-ai999x"
-version = "1.0.2"
+version = "1.0.3"
 description = "Offline quantum physics solver: special relativity, photons and matter waves, the hydrogen atom, quantum wells and tunnelling, spin and qubits, quantum gates, nuclear and particle physics and statistical physics, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"
