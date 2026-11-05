@@ -1,16 +1,16 @@
-# quantum-physics-ai999x — offline, verified quantum physics solver with step-by-step answers
+# quantum-physics-ai999x: offline, verified quantum physics solver with step-by-step answers
 
 [![tests](https://github.com/AI999X/quantum-physics-ai999x/actions/workflows/ci.yml/badge.svg)](https://github.com/AI999X/quantum-physics-ai999x/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/quantum-physics-ai999x)](https://pypi.org/project/quantum-physics-ai999x/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/AI999X/quantum-physics-ai999x)
 
 **[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/quantum-physics-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/quantum-physics-ai999x/)** · **[Guides](https://huggingface.co/AI999X/quantum-physics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/quantum-physics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.1.0
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.5.0
 
-Field: **Physical Sciences** · Tasks: Question Answering, Token Classification, Text Classification, Sentence Similarity, Feature Extraction
+Field: **Physical Sciences** · Tasks: Question Answering
 
-quantum-physics-ai999x is an offline, deterministic Python solver that answers quantum physics questions with verified results from 75 certified capabilities, gives 376 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
+quantum-physics-ai999x is an offline, deterministic quantum physics solver written in Rust: a desktop app, a command-line program, a browser module and a Python package. It answers quantum physics questions with verified results from 75 certified capabilities, gives 376 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
 
-**quantum-physics-ai999x** is a compact, deterministic quantum physics engine for Python. It reads a question in plain English (or a typed call), picks a certified quantum physics capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions — or an honest refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
+**quantum-physics-ai999x** reads a question in plain English (or a typed call), picks a certified quantum physics capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions, or a refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
 
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green) ![Rust](https://img.shields.io/badge/Rust-Windows%20%7C%20Linux%20%7C%20WebAssembly-orange)
 
@@ -20,13 +20,13 @@ quantum-physics-ai999x is an offline, deterministic Python solver that answers q
 
 | Way to run it | For | Get it |
 |---|---|---|
-| **AI999X Quantum Physics desktop app** 1.4.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-quantum-physics-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-quantum-physics-1.4.0-linux-x86_64.tar.gz) |
-| **AI999X desktop app** 1.4.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz) |
-| **Command line** (`quantum-physics`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz) |
-| **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/quantum-physics-ai999x/#try) |
+| **AI999X Quantum Physics desktop app** 1.5.0 | Windows, Linux. This model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-quantum-physics-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-quantum-physics-1.5.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.5.0 | Windows, Linux. Every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz) |
+| **Command line** (`quantum-physics`) | Windows, Linux. One program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz) |
+| **In your browser** | any device. Nothing to install | [Compute on the model page](https://www.ai999x.com/models/quantum-physics-ai999x/#try) |
 | **Python** | Python 3.10+ | `pip install quantum-physics-ai999x` |
 
-Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
+Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
 
 ## Quick start
 
@@ -37,11 +37,11 @@ Download **AI999X Quantum Physics** for your system (above), unpack it and start
 Linux, from a terminal:
 
 ```bash
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-quantum-physics-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-quantum-physics-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-quantum-physics-1.4.0-linux-x86_64.tar.gz
-./ai999x-quantum-physics-1.4.0-linux-x86_64/ai999x-quantum-physics
+tar xzf ai999x-quantum-physics-1.5.0-linux-x86_64.tar.gz
+./ai999x-quantum-physics-1.5.0-linux-x86_64/ai999x-quantum-physics
 ```
 
 ### Command line
@@ -49,30 +49,30 @@ tar xzf ai999x-quantum-physics-1.4.0-linux-x86_64.tar.gz
 Linux:
 
 ```bash
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 quantum-physics --version
 ```
 
 Windows (PowerShell):
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 quantum-physics --version
 ```
 
 Every command below was run as shown; the text under it is what the program printed.
 
-**Ask in words** — Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+**Ask in words**: Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
 
 ```console
 $ quantum-physics ask "Lorentz factor: v = 0.8 c"
@@ -85,7 +85,7 @@ gamma_minus_1 = 0.6666666667
   assumes: 0 <= v < c
 ```
 
-**What a capability needs** — The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+**What a capability needs**: The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
 
 ```console
 $ quantum-physics info hydrogen_transition
@@ -101,7 +101,7 @@ Photon from a hydrogen-like transition (Rydberg formula)
   out  series   spectral series (Lyman, Balmer, ...) []
 ```
 
-**Solve** — Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+**Solve**: Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
 
 ```console
 $ quantum-physics solve hydrogen_transition Z=1 n_upper=3 n_lower=2
@@ -114,7 +114,7 @@ series = Balmer
   assumes: n_upper > n_lower >= 1; infinitely heavy nucleus
 ```
 
-**Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | quantum-physics batch
+**Many questions at once**: One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | quantum-physics batch
 
 `cases.jsonl`:
 
@@ -277,18 +277,18 @@ _What this means:_ This calculation determines the spectral properties of a hydr
 
 ## Documentation
 
-- **Rust user guide** — the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/quantum-physics-ai999x/blob/main/docs/quantum_physics_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/quantum-physics-ai999x/blob/main/docs/quantum_physics_ai999x_rust_guide.md)
-- **Python guide** — every capability with a Python example: [PDF](https://huggingface.co/AI999X/quantum-physics-ai999x/blob/main/docs/quantum_physics_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/quantum-physics-ai999x/blob/main/docs/quantum_physics_ai999x_capabilities.md)
-- **Desktop app & command line** — downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
-- **Model page** — compute in your browser, every capability explained: https://www.ai999x.com/models/quantum-physics-ai999x/
+- **Rust user guide**: the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/quantum-physics-ai999x/blob/main/docs/quantum_physics_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/quantum-physics-ai999x/blob/main/docs/quantum_physics_ai999x_rust_guide.md)
+- **Python guide**: every capability with a Python example: [PDF](https://huggingface.co/AI999X/quantum-physics-ai999x/blob/main/docs/quantum_physics_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/quantum-physics-ai999x/blob/main/docs/quantum_physics_ai999x_capabilities.md)
+- **Desktop app & command line**: downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
+- **Model page**: compute in your browser, every capability explained: https://www.ai999x.com/models/quantum-physics-ai999x/
 
 ## Highlights
 
 - **Verified, not generated.** Every answer is computed by a certified quantum physics capability and checked (substituted back, dimension-checked or compared with an independent computation) before it is returned.
-- **Zero wrong answers by design.** Seven explicit outcomes — SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR — never a silent guess. Every one of its 376 documented answers is reproduced exactly on every tested platform.
+- **Zero wrong answers by design.** Seven explicit outcomes (SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR), never a silent guess. Every one of its 376 documented answers is reproduced exactly on every tested platform.
 - **Plain-English questions and a guaranteed typed interface.** `ask()` reads documented question forms; `solve(capability_id, **inputs)` always solves a supported task with valid inputs.
 - **Explains itself.** Steps, formulas in LaTeX, units, assumptions and the model used, ready for notebooks, tutoring apps and homework checkers.
-- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `quantum-physics` command line for Windows and Linux, and WebAssembly on the model page — no Python, no network.
+- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `quantum-physics` command line for Windows and Linux, and WebAssembly on the model page, no Python, no network.
 - **Small and portable.** Pure Python (sympy, mpmath); identical answers on Windows and Linux (Python 3.10, 3.11, 3.12, 3.13, 3.14).
 - **Coverage:** special relativity, photons and matter waves, the hydrogen atom and angular momentum, quantum wells and tunnelling, spin, qubits and quantum gates, nuclear and particle physics, statistical physics.
 
@@ -296,7 +296,7 @@ _What this means:_ This calculation determines the spectral properties of a hydr
 
 | Property | Value |
 |---|---|
-| Package | `quantum-physics-ai999x` 1.1.0 (import `quantum_physics_ai999x`) |
+| Package | `quantum-physics-ai999x` 1.5.0 (import `quantum_physics_ai999x`) |
 | Type | Deterministic neuro-symbolic quantum physics engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 75 certified procedures |
 | Knowledge pack | version 1.0.1 |
@@ -330,25 +330,14 @@ quantum_physics.ask("Who created you?").message
 # -> quantum-physics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-The Python package also installs a Python command, `quantum-physics-ai999x "<question>"`; for the native program use `quantum-physics` (above). The outputs above were produced by running this exact code on quantum-physics-ai999x 1.1.0.
-
-## Find the right capability, and draw it
-
-`quantum_physics.search()` finds which certified capability a question is about — across **every** AI999X model, so a question for another model points you to it. It runs **[ai999x-encoder](https://huggingface.co/AI999X/ai999x-encoder)**, AI999X's own capability encoder (4.7M parameters, a 4.9 MB ONNX model, offline; the root `model.safetensors` of this repository): `pip install "quantum-physics-ai999x[search]"`. `ask(question, suggest=True)` adds the same pointers to a question it does not answer; an answer itself never changes.
-
-```python
-import quantum_physics_ai999x as quantum_physics
-
-quantum_physics.search("Solve x^2 - 5x + 6 = 0", k=2)
-# -> Roots of a quadratic equation (math-foundations-ai999x, 0.63); Roots of a cubic equation (math-foundations-ai999x, 0.59)
-```
+The Python package also installs a Python command, `quantum-physics-ai999x "<question>"`; for the native program use `quantum-physics` (above). The outputs above were produced by running this exact code on quantum-physics-ai999x 1.5.0.
 
 ## How every answer is verified
 
-1. **Reading** — the question is turned into typed quantities (value, unit, kind, role) and one asked quantity; every stated number must be used or the question is refused.
-2. **Planning** — only certified capabilities may answer; a capability applies only under the conditions the wording states (for example a pendulum, a liquid at rest, boiling).
-3. **Computing** — exact symbolic or high-precision numeric evaluation.
-4. **Checking** — dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
+1. **Reading**: the question is turned into typed quantities (value, unit, kind, role) and one asked quantity; every stated number must be used or the question is refused.
+2. **Planning**: only certified capabilities may answer; a capability applies only under the conditions the wording states (for example a pendulum, a liquid at rest, boiling).
+3. **Computing**: exact symbolic or high-precision numeric evaluation.
+4. **Checking**: dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
 
@@ -434,37 +423,37 @@ Every point was computed by `quantum-physics-ai999x`.
 
 **Hydrogen energy levels and spectral lines**
 
-![Hydrogen energy levels and spectral lines — computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/hydrogen-transition-diagram.svg)
+![Hydrogen energy levels and spectral lines, computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/hydrogen-transition-diagram.svg)
 
 _Energy levels of hydrogen, E_n from the package for n = 1 … 6 (E₁ = -13.6057 eV), with the photon wavelengths of Lyman and Balmer transitions it computes: 2→1: 121.502 nm, 3→1: 102.518 nm, 3→2: 656.112 nm, 4→2: 486.009 nm, 5→2: 433.937 nm, 6→2: 410.07 nm._
 
 **The hydrogen line spectrum**
 
-![The hydrogen line spectrum — computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/hydrogen-transition-spectrum.svg)
+![The hydrogen line spectrum, computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/hydrogen-transition-spectrum.svg)
 
 _The hydrogen emission spectrum: the first six lines of the Lyman, Balmer and Paschen series, each wavelength and photon energy computed by the package (Lyman 121.502–93.0252 nm; Balmer 656.112–388.807 nm; Paschen 1874.61–922.658 nm); the dashed lines bound the visible range 380–750 nm, where only Balmer lines fall._
 
 **Particle in a box: levels and probability densities**
 
-![Particle in a box: levels and probability densities — computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/infinite-well-probability-levels.svg)
+![Particle in a box: levels and probability densities, computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/infinite-well-probability-levels.svg)
 
 _An electron in a 1 nm infinite square well: the three lowest energy levels the package gives (E1 = 0.37603 eV, E2 = 1.50412 eV, E3 = 3.38427 eV), each with its probability density drawn on the level (the probability of each of 60 intervals of 0.0166667 nm divided by the interval, 0.4 eV per 1/nm); state n has n humps and n − 1 nodes._
 
 **Two-qubit circuits: outcome probabilities and entanglement**
 
-![Two-qubit circuits: outcome probabilities and entanglement — computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/two-qubit-circuit-heatmap.svg)
+![Two-qubit circuits: outcome probabilities and entanglement, computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/two-qubit-circuit-heatmap.svg)
 
-_Two-qubit circuits started in |00⟩ — rows, top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0 — with the probability of each measurement outcome and the concurrence (1 = maximally entangled) the package computes; H0 CNOT01 makes the Bell state, P(00) = P(11) = 0.5 with concurrence 1._
+_Two-qubit circuits started in |00⟩ (rows, top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0), with the probability of each measurement outcome and the concurrence (1 = maximally entangled) the package computes; H0 CNOT01 makes the Bell state, P(00) = P(11) = 0.5 with concurrence 1._
 
 **Blackbody spectra and their peaks**
 
-![Blackbody spectra and their peaks — computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/planck-spectral-radiance-spectrum.svg)
+![Blackbody spectra and their peaks, computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/planck-spectral-radiance-spectrum.svg)
 
 _Planck spectral radiance at three temperatures, 117 wavelengths each from the package; the dots are the peaks given by its Wien's-law capability: T = 3000 K: λ_max = 965.924 nm, B_λ = 995.249 W/(m² sr nm); T = 4500 K: λ_max = 643.949 nm, B_λ = 7557.67 W/(m² sr nm); T = 5778 K: λ_max = 501.518 nm, B_λ = 26376.3 W/(m² sr nm)._
 
 **Tunnelling through a rectangular barrier**
 
-![Tunnelling through a rectangular barrier — computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/barrier-transmission-curve.svg)
+![Tunnelling through a rectangular barrier, computed by quantum-physics-ai999x](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/barrier-transmission-curve.svg)
 
 _Transmission and reflection of an electron (m = 9.1094e-31 kg) at a rectangular barrier of height V₀ = 3.2044e-19 J (2 eV) and width a = 0.5 nm, for 60 energies computed by the package; tunnelling below E = V₀, transmission resonances above it; marked: E/V₀ = 0.5, T = 0.0235471._
 
@@ -479,22 +468,22 @@ _Transmission and reflection of an electron (m = 9.1094e-31 kg) at a rectangular
 ## Out of scope
 
 - Open-ended explanation, essay writing or tutoring dialogue: it is a solver, not a chatbot.
-- Questions outside its certified quantum physics capabilities, and any question whose stated numbers it cannot all use — it refuses with the reason instead.
+- Questions outside its certified quantum physics capabilities, and any question whose stated numbers it cannot all use: it refuses with the reason instead.
 - High-stakes engineering, medical or legal decisions without independent review.
 
 ## Limitations
 
 - It answers what its certified capabilities cover (special relativity, photons and matter waves, the hydrogen atom and angular momentum, quantum wells and tunnelling, spin, qubits and quantum gates, nuclear and particle physics, statistical physics); anything else is refused with a reason.
-- `ask()` reads documented question forms and common phrasings; unusual wording may be refused — use `solve()` for guaranteed results.
+- `ask()` reads documented question forms and common phrasings; unusual wording may be refused; use `solve()` for guaranteed results.
 - Results are as correct as the certified relations and their stated conditions; a certified relation is a checked model, not a claim about every physical situation.
 
 ## Citation
 
 ```bibtex
-@software{quantum_physics_ai999x_1_1_0,
+@software{quantum_physics_ai999x_1_5_0,
   title  = {quantum-physics-ai999x: an offline, verified quantum physics solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.1.0},
+  year   = {2026}, version = {1.5.0},
   url    = {https://huggingface.co/AI999X/quantum-physics-ai999x}
 }
 ```
@@ -511,4 +500,15 @@ Created and engineered by **Ibnul Jaif Farabi** · **[AI999X](https://huggingfac
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/quantum-physics-ai999x/) (`pip install .` builds it). Releases are tagged `v<version>`; the wheel is attached to each [GitHub release](https://github.com/AI999X/quantum-physics-ai999x/releases). The optional ONNX models (formula graphs and, where measured, a decision model) are on [Hugging Face](https://huggingface.co/AI999X/quantum-physics-ai999x/tree/main/onnx).
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/quantum-physics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.5.0`; the [GitHub release](https://github.com/AI999X/quantum-physics-ai999x/releases/tag/v1.5.0) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+
+## Build the program from source
+
+`rust/` holds the Rust source of the `quantum-physics` command-line program and browser module: the AI999X engine (`rust/ax-engine`), this model (`rust/quantum-physics`) and its data (`rust/models/quantum_physics/pack.json`). With Rust 1.80 or later:
+
+```bash
+cd rust
+cargo build --release -p quantum-physics-ai999x
+./target/release/quantum-physics --help
+cargo test -p quantum-physics-ai999x
+```

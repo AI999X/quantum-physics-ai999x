@@ -200,7 +200,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 
 <a id="lorentz_factor"></a>
 
-### Lorentz factor — `lorentz_factor`
+### Lorentz factor: `lorentz_factor`
 
 The Lorentz factor $\gamma = 1/sqrt$(1 - v^2/c^2) of a speed v.
 
@@ -252,7 +252,7 @@ quantum_physics_ai999x.solve('lorentz_factor', v=0.0)
 
 <a id="time_dilation"></a>
 
-### Time dilation — `time_dilation`
+### Time dilation: `time_dilation`
 
 The time $t = \gamma$ t0 between two ticks of a clock that moves at speed v, given its proper time t0.
 
@@ -304,7 +304,7 @@ quantum_physics_ai999x.solve('time_dilation', t0=2.2e-06, v=239833966.4)
 
 <a id="length_contraction"></a>
 
-### Length contraction — `length_contraction`
+### Length contraction: `length_contraction`
 
 The length $L = L_{0}/\gamma$ of a rod moving along its length at speed v, given its proper length L0.
 
@@ -356,7 +356,7 @@ quantum_physics_ai999x.solve('length_contraction', L0=5.0, v=239833966.4)
 
 <a id="relativistic_momentum_energy"></a>
 
-### Relativistic momentum and energy — `relativistic_momentum_energy`
+### Relativistic momentum and energy: `relativistic_momentum_energy`
 
 Momentum $p = \gamma$ m v, total energy $E = \gamma$ m $c^{2}$, kinetic energy $(\gamma - 1)$ m $c^{2}$ and rest energy of a mass m at speed v.
 
@@ -412,7 +412,7 @@ quantum_physics_ai999x.solve('relativistic_momentum_energy', m=1.0, v=239833966.
 
 <a id="relativistic_energy_from_momentum"></a>
 
-### Relativistic energy from momentum — `relativistic_energy_from_momentum`
+### Relativistic energy from momentum: `relativistic_energy_from_momentum`
 
 Total and kinetic energy and speed of a particle of mass m with momentum p, from $E^{2} = (pc)^{2} + (mc^{2})^{2.}$
 
@@ -467,7 +467,7 @@ quantum_physics_ai999x.solve('relativistic_energy_from_momentum', m=2.0, p=0.0)
 
 <a id="relativistic_speed_from_kinetic_energy"></a>
 
-### Speed from relativistic kinetic energy — `relativistic_speed_from_kinetic_energy`
+### Speed from relativistic kinetic energy: `relativistic_speed_from_kinetic_energy`
 
 The speed, Lorentz factor and momentum of a particle of mass m with kinetic energy K.
 
@@ -520,7 +520,7 @@ quantum_physics_ai999x.solve('relativistic_speed_from_kinetic_energy', m=1.0, K=
 
 <a id="relativistic_velocity_addition"></a>
 
-### Relativistic velocity addition — `relativistic_velocity_addition`
+### Relativistic velocity addition: `relativistic_velocity_addition`
 
 The velocity u = (u' + $v)/(1 + u$'v/c^2) of an object moving at u' in a frame that moves at v (signed, along x).
 
@@ -576,7 +576,7 @@ quantum_physics_ai999x.solve('relativistic_velocity_addition', u_prime=-14989622
 
 <a id="relativistic_doppler"></a>
 
-### Relativistic Doppler shift — `relativistic_doppler`
+### Relativistic Doppler shift: `relativistic_doppler`
 
 The observed frequency of light from a source approaching or receding at speed v (along the line of sight).
 
@@ -629,7 +629,7 @@ quantum_physics_ai999x.solve('relativistic_doppler', f=100000000000000.0, v=1798
 
 <a id="relativistic_aberration"></a>
 
-### Relativistic aberration of light — `relativistic_aberration`
+### Relativistic aberration of light: `relativistic_aberration`
 
 The direction of a light ray seen from a frame moving at speed v along +x, given its direction theta (from +x) in the rest frame.
 
@@ -680,7 +680,7 @@ quantum_physics_ai999x.solve('relativistic_aberration', theta=0.0, v=149896229.0
 
 <a id="spacetime_interval"></a>
 
-### Spacetime interval between two events — `spacetime_interval`
+### Spacetime interval between two events: `spacetime_interval`
 
 The invariant interval s^2 = (c dt)^2 - dx^2 between two events, its type, and the proper time or proper distance.
 
@@ -704,13 +704,13 @@ $$
 - **Assumes:** the events are distinct
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A Minkowski diagram with the origin event and three others (Δt, Δx stated; Δx in light-seconds = Δx / c, c = 299 792 458 m/s): events inside the light cone are timelike (reachable, with a proper time τ), outside spacelike (a proper length, written here in light-seconds), on it lightlike — each classification, s², τ and length from the package: (Δt = 5 s, Δx = 3 light-seconds): timelike, s² = 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spacetime-interval-diagram)
+![A Minkowski diagram with the origin event and three others (Δt, Δx stated; Δx in light-seconds = Δx / c, c = 299 792 458 m/s): events inside the light cone are timelike (reachable, with a proper time τ), outside spacelike (a proper length, written here in light-seconds), on it lightlike, each classification, s², τ and length from the package: (Δt = 5 s, Δx = 3 light-seconds): timelike, s² = 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spacetime-interval-diagram)
 
-*A Minkowski diagram with the origin event and three others (Δt, Δx stated; Δx in light-seconds = Δx / c, c = 299 792 458 m/s): events inside the light cone are timelike (reachable, with a proper time τ), outside spacelike (a proper length, written here in light-seconds), on it lightlike — each classification, s², τ and length from the package: (Δt = 5 s, Δx = 3 light-seconds): timelike, s² = 1.4380e+18 m²; (Δt = 2 s, Δx = 4 light-seconds): spacelike, s² = -1.0785e+18 m²; (Δt = 3 s, Δx = 3 light-seconds): lightlike, s² = 0 m². The first is the worked example.*
+*A Minkowski diagram with the origin event and three others (Δt, Δx stated; Δx in light-seconds = Δx / c, c = 299 792 458 m/s): events inside the light cone are timelike (reachable, with a proper time τ), outside spacelike (a proper length, written here in light-seconds), on it lightlike, each classification, s², τ and length from the package: (Δt = 5 s, Δx = 3 light-seconds): timelike, s² = 1.4380e+18 m²; (Δt = 2 s, Δx = 4 light-seconds): spacelike, s² = -1.0785e+18 m²; (Δt = 3 s, Δx = 3 light-seconds): lightlike, s² = 0 m². The first is the worked example.*
 
 ![timelike, spacelike or lightlike (nature) over dt (time between the events (signed)) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spacetime-interval-decision)
 
-*timelike, spacelike or lightlike (nature) over dt (time between the events (signed)) from 0.5 s to 50 s and dx (distance between the events along x (signed)) from 8.9938e+07 m to 8.9938e+09 m (logarithmic axes): each of the 31 × 21 cells is one run of quantum-physics-ai999x, coloured by the verdict it returned — spacelike: 261 cells, timelike: 390 cells. Marked: the worked example, dt = 5 s, dx = 8.9938e+08 m → timelike.*
+*timelike, spacelike or lightlike (nature) over dt (time between the events (signed)) from 0.5 s to 50 s and dx (distance between the events along x (signed)) from 8.9938e+07 m to 8.9938e+09 m (logarithmic axes): each of the 31 × 21 cells is one run of quantum-physics-ai999x, coloured by the verdict it returned, spacelike: 261 cells, timelike: 390 cells. Marked: the worked example, dt = 5 s, dx = 8.9938e+08 m → timelike.*
 
 ```python
 quantum_physics_ai999x.solve('spacetime_interval', dt=5.0, dx=899377374.0)
@@ -737,7 +737,7 @@ quantum_physics_ai999x.solve('spacetime_interval', dt=1.0, dx=299792458.0)
 
 <a id="invariant_mass"></a>
 
-### Invariant mass of two particles — `invariant_mass`
+### Invariant mass of two particles: `invariant_mass`
 
 The invariant mass $M = sqrt$($(E_{1} + E_{2})^{2}$ - |$p_{1} + p_{2}$|^2) of two particles, in natural units (GeV, GeV/c, GeV/c^2).
 
@@ -787,7 +787,7 @@ quantum_physics_ai999x.solve('invariant_mass', E1=5.0, p1=[3.0, 0.0, 0.0], E2=5.
 
 <a id="fixed_target_cm_energy"></a>
 
-### Centre-of-mass energy of a fixed-target collision — `fixed_target_cm_energy`
+### Centre-of-mass energy of a fixed-target collision, `fixed_target_cm_energy`
 
 sqrt(s) for a beam particle of mass m1 and total energy E1 striking a target of mass m2 at rest (natural units, GeV).
 
@@ -836,7 +836,7 @@ quantum_physics_ai999x.solve('fixed_target_cm_energy', m1=0.0, E1=2.0, m2=1.0)
 
 <a id="photoelectric_effect"></a>
 
-### Photoelectric effect — `photoelectric_effect`
+### Photoelectric effect: `photoelectric_effect`
 
 Maximum kinetic energy of photoelectrons, stopping potential and threshold wavelength from the light's wavelength and the metal's work function.
 
@@ -890,7 +890,7 @@ quantum_physics_ai999x.solve('photoelectric_effect', lam=2.5e-07, W=6.8893595261
 
 <a id="compton_scattering"></a>
 
-### Compton scattering — `compton_scattering`
+### Compton scattering: `compton_scattering`
 
 Wavelength and energy of a photon scattered by a free electron at rest through angle theta, and the electron's kinetic energy.
 
@@ -940,7 +940,7 @@ quantum_physics_ai999x.solve('compton_scattering', lam=1e-11, theta=3.1415926535
 
 <a id="de_broglie_accelerated"></a>
 
-### de Broglie wavelength of an accelerated particle — `de_broglie_accelerated`
+### de Broglie wavelength of an accelerated particle, `de_broglie_accelerated`
 
 The de Broglie wavelength of an electron or proton accelerated from rest through a voltage V, non-relativistic and relativistic.
 
@@ -990,7 +990,7 @@ quantum_physics_ai999x.solve('de_broglie_accelerated', V=1000.0, particle='proto
 
 <a id="heisenberg_minimum_uncertainty"></a>
 
-### Minimum momentum uncertainty (Heisenberg) — `heisenberg_minimum_uncertainty`
+### Minimum momentum uncertainty (Heisenberg): `heisenberg_minimum_uncertainty`
 
 The smallest momentum and velocity uncertainty compatible with a position uncertainty dx: dp = hbar/(2 dx).
 
@@ -1041,7 +1041,7 @@ quantum_physics_ai999x.solve('heisenberg_minimum_uncertainty', dx=1e-15, m=1.672
 
 <a id="thermal_de_broglie_wavelength"></a>
 
-### Thermal de Broglie wavelength — `thermal_de_broglie_wavelength`
+### Thermal de Broglie wavelength: `thermal_de_broglie_wavelength`
 
 The thermal de Broglie wavelength h/sqrt(2 pi m k T) and the quantum concentration $1/\lambda^{3.}$
 
@@ -1087,7 +1087,7 @@ quantum_physics_ai999x.solve('thermal_de_broglie_wavelength', m=9.1093837139e-31
 
 <a id="bohr_energy_level"></a>
 
-### Energy level of a hydrogen-like atom (Bohr model) — `bohr_energy_level`
+### Energy level of a hydrogen-like atom (Bohr model), `bohr_energy_level`
 
 Energy, ionization energy, orbit radius and orbital speed of level n of a one-electron atom or ion with nuclear charge Z.
 
@@ -1113,9 +1113,9 @@ $$
 - **Assumes:** $Z  \geq  1$; $n  \geq  1$; infinitely heavy nucleus (no reduced-mass correction)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Bohr orbits of hydrogen (Z = 1) for n = 1 … 4 drawn to scale, the radius and energy of each from the package — n = 1: r = 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bohr-energy-level-orbit)
+![Bohr orbits of a one-electron atom with Z = 1 (the worked example's) for n = 1 … 4 drawn to scale, the radius and energy of each from the package, n = 1: r = 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bohr-energy-level-orbit)
 
-*Bohr orbits of hydrogen (Z = 1) for n = 1 … 4 drawn to scale, the radius and energy of each from the package — n = 1: r = 0.0529177 nm, E = -13.6057 eV, v = 2.18769e+06 m/s; n = 2: r = 0.211671 nm, E = -3.40142 eV, v = 1.09385e+06 m/s; n = 3: r = 0.476259 nm, E = -1.51174 eV, v = 729230 m/s; n = 4: r = 0.846684 nm, E = -0.850356 eV, v = 546923 m/s. The radius grows as n², the binding energy falls as 1/n².*
+*Bohr orbits of a one-electron atom with Z = 1 (the worked example's) for n = 1 … 4 drawn to scale, the radius and energy of each from the package, n = 1: r = 0.0529177 nm, E = -13.6057 eV, v = 2.18769e+06 m/s; n = 2: r = 0.211671 nm, E = -3.40142 eV, v = 1.09385e+06 m/s; n = 3: r = 0.476259 nm, E = -1.51174 eV, v = 729230 m/s; n = 4: r = 0.846684 nm, E = -0.850356 eV, v = 546923 m/s. The radius grows as n², the binding energy falls as 1/n². Highlighted: the worked example's level, n = 1.*
 
 ![E_eV (energy of the level (negative: bound)) against n (principal quantum number) from 1 to 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bohr-energy-level-curve)
 
@@ -1142,7 +1142,7 @@ quantum_physics_ai999x.solve('bohr_energy_level', Z=2, n=3)
 
 <a id="hydrogen_transition"></a>
 
-### Photon from a hydrogen-like transition (Rydberg formula) — `hydrogen_transition`
+### Photon from a hydrogen-like transition (Rydberg formula), `hydrogen_transition`
 
 Energy, wavelength and frequency of the photon emitted when a one-electron atom drops from n_upper to n_lower.
 
@@ -1200,7 +1200,7 @@ quantum_physics_ai999x.solve('hydrogen_transition', Z=1, n_upper=2, n_lower=1)
 
 <a id="hydrogen_transition_reduced_mass"></a>
 
-### Hydrogen-like transition with the reduced-mass correction — `hydrogen_transition_reduced_mass`
+### Hydrogen-like transition with the reduced-mass correction, `hydrogen_transition_reduced_mass`
 
 Photon energy and wavelength of a transition of a one-electron atom whose nucleus has mass M (in u): R_M = R_inf mu/m_e.
 
@@ -1228,9 +1228,9 @@ $$
 - **Assumes:** n_upper > n_lower >= 1; $M > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Balmer-alpha line (3 → 2) of a one-electron atom against the mass of its nucleus, 61 masses from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-transition-reduced-mass-curve)
+![The 3 → 2 line of a one-electron atom with Z = 1 (the worked example's transition) against the mass of its nucleus, 61 masses from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-transition-reduced-mass-curve)
 
-*The Balmer-alpha line (3 → 2) of a one-electron atom against the mass of its nucleus, 61 masses from 0.1 to 1000 u from the package: the reduced-mass correction lengthens the wavelength for light nuclei. Marked (nuclear masses stated): H (M = 1.00728 u) 656.47 nm; D (M = 2.01355 u) 656.291 nm; T (M = 3.0155 u) 656.232 nm.*
+*The 3 → 2 line of a one-electron atom with Z = 1 (the worked example's transition) against the mass of its nucleus, 61 masses from 0.1 to 1000 u from the package: the reduced-mass correction lengthens the wavelength for light nuclei. Dots (nuclear masses stated): H (M = 1.00728 u) 656.47 nm; D (M = 2.01355 u) 656.291 nm; T (M = 3.0155 u) 656.232 nm. Marked: the worked example, M = 1.00728 u → 656.47 nm.*
 
 ```python
 quantum_physics_ai999x.solve('hydrogen_transition_reduced_mass', Z=1, n_upper=3, n_lower=2, M_u=1.00727646688)
@@ -1247,7 +1247,7 @@ quantum_physics_ai999x.solve('hydrogen_transition_reduced_mass', Z=1, n_upper=3,
 
 <a id="moseley_k_alpha"></a>
 
-### K-alpha X-ray line (Moseley's law) — `moseley_k_alpha`
+### K-alpha X-ray line (Moseley's law): `moseley_k_alpha`
 
 Energy and wavelength of the K-alpha X-ray line of element Z, with one unit of screening $(Z - 1)$.
 
@@ -1271,9 +1271,9 @@ $$
 - **Assumes:** $Z  \geq  2$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Moseley's law: the square root of the Kα X-ray frequency against atomic number, for Z = 5 … 60 (each frequency from the package, its square root taken for the plot) — a straight line](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/moseley-k-alpha-curve)
+![Moseley's law: the square root of the Kα X-ray frequency against atomic number, for Z = 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/moseley-k-alpha-curve)
 
-*Moseley's law: the square root of the Kα X-ray frequency against atomic number, for Z = 5 … 60 (each frequency from the package, its square root taken for the plot) — a straight line. Marked: copper (Z = 29, the worked example), f = 1.9344e+18 Hz, √f = 1.3908e+09 √Hz.*
+*Moseley's law: the square root of the Kα X-ray frequency against atomic number, for Z = 5.0 … 60.0 (each frequency from the package, its square root taken for the plot), a straight line. Marked: the worked example, Z = 29, f = 1.9344e+18 Hz, √f = 1.3908e+09 √Hz.*
 
 ![E_keV (photon energy) against Z (atomic number of the target element) from 1 to 58 on a logarithmic axis](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/moseley-k-alpha-curve-2)
 
@@ -1294,7 +1294,7 @@ quantum_physics_ai999x.solve('moseley_k_alpha', Z=29)
 
 <a id="hydrogen_radial_expectations"></a>
 
-### Radial expectation values of a hydrogen-like state — `hydrogen_radial_expectations`
+### Radial expectation values of a hydrogen-like state, `hydrogen_radial_expectations`
 
 <r>, <$r^{2}$>, <1/r> and the radial spread of the state n, l of a one-electron atom with nuclear charge Z (in Bohr radii).
 
@@ -1320,9 +1320,9 @@ $$
 - **Assumes:** $n  \geq  1$; $0  \leq  l  \leq  n - 1$; infinitely heavy nucleus
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Mean radius ⟨r⟩ of the hydrogen electron (dots) with its spread Δr (bars), for every state n = 1 … 4 and l = 0 … n − 1, from the package (in a₀): 1s 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-radial-expectations-points)
+![Mean radius ⟨r⟩ of the electron of a one-electron atom with Z = 1 (the worked example's; dots) with its spread Δr (bars), for every state n = 1 … 4 and l = 0 … n − 1, from the package (in a₀): 1s 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-radial-expectations-points)
 
-*Mean radius ⟨r⟩ of the hydrogen electron (dots) with its spread Δr (bars), for every state n = 1 … 4 and l = 0 … n − 1, from the package (in a₀): 1s 1.5, 2s 6, 3s 13.5, 4s 24, 2p 5, 3p 12.5, 4p 23, 3d 10.5, 4d 21, 4f 18. ⟨r⟩ grows as n²; at fixed n a larger l sits slightly closer in and is less spread.*
+*Mean radius ⟨r⟩ of the electron of a one-electron atom with Z = 1 (the worked example's; dots) with its spread Δr (bars), for every state n = 1 … 4 and l = 0 … n − 1, from the package (in a₀): 1s 1.5, 2s 6, 3s 13.5, 4s 24, 2p 5, 3p 12.5, 4p 23, 3d 10.5, 4d 21, 4f 18. ⟨r⟩ grows as n²/Z; at fixed n a larger l sits slightly closer in and is less spread. Marked: the worked example's state, 1s.*
 
 ```python
 quantum_physics_ai999x.solve('hydrogen_radial_expectations', n=1, l=0, Z=1)
@@ -1344,7 +1344,7 @@ quantum_physics_ai999x.solve('hydrogen_radial_expectations', n=2, l=1, Z=1)
 
 <a id="hydrogen_radial_probability"></a>
 
-### Probability of finding the electron within a radius — `hydrogen_radial_probability`
+### Probability of finding the electron within a radius, `hydrogen_radial_probability`
 
 The probability that the electron of the hydrogen-like state n, l lies within distance R of the nucleus.
 
@@ -1388,7 +1388,7 @@ quantum_physics_ai999x.solve('hydrogen_radial_probability', n=1, l=0, Z=1, R=5.2
 
 <a id="clebsch_gordan"></a>
 
-### Clebsch-Gordan coefficient — `clebsch_gordan`
+### Clebsch-Gordan coefficient: `clebsch_gordan`
 
 The coefficient <j1 m1; j2 m2 | J M> for coupling two angular momenta (Condon-Shortley convention), with its exact square.
 
@@ -1419,9 +1419,9 @@ $$
 
 *Clebsch–Gordan coefficients ⟨j₁ m₁; j₂ m₂ | J M⟩ for coupling two spins j₁ = j₂ = 1/2: every value the package returns for the uncoupled states (rows) and the coupled triplet J = 1 and singlet J = 0 (columns); a dot where M ≠ m₁ + m₂ (no coefficient). Marked: the worked example ⟨1/2 +1/2; 1/2 −1/2 | 1 0⟩ = 0.707107, squared 1/2.*
 
-![Clebsch–Gordan coefficients for coupling an orbital angular momentum j₁ = 1 with a spin j₂ = 1/2 (as in a p electron): the package's value for each uncoupled state (rows) and each coupled state of J = 3/2 and J = 1/2 (columns); a dot where M ≠ m₁ + m₂](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/clebsch-gordan-table-2)
+![Clebsch–Gordan coefficients for coupling j₁ = 1 with j₂ = 1/2: the package's value for each uncoupled state (rows) and each coupled state (columns); a dot where M ≠ m₁ + m₂](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/clebsch-gordan-table-2)
 
-*Clebsch–Gordan coefficients for coupling an orbital angular momentum j₁ = 1 with a spin j₂ = 1/2 (as in a p electron): the package's value for each uncoupled state (rows) and each coupled state of J = 3/2 and J = 1/2 (columns); a dot where M ≠ m₁ + m₂. Negative coefficients are shaded in the second colour; each column's squares add up to 1.*
+*Clebsch–Gordan coefficients for coupling j₁ = 1 with j₂ = 1/2: the package's value for each uncoupled state (rows) and each coupled state (columns); a dot where M ≠ m₁ + m₂. Negative coefficients are shaded in the second colour; each column's squares add up to 1. The worked example's coefficient ⟨1/2 +1/2; 1/2 −1/2 | 1 0⟩ = 0.707107.*
 
 ```python
 quantum_physics_ai999x.solve('clebsch_gordan', j1=0.5, m1=0.5, j2=0.5, m2=-0.5, J=1, M=0)
@@ -1448,7 +1448,7 @@ quantum_physics_ai999x.solve('clebsch_gordan', j1=1, m1=1, j2=1, m2=-1, J=2, M=0
 
 <a id="wigner_3j_symbol"></a>
 
-### Wigner 3j symbol — `wigner_3j_symbol`
+### Wigner 3j symbol: `wigner_3j_symbol`
 
 The Wigner 3j symbol (j1 j2 J; m1 m2 M), nonzero only when $m_{1} + m_{2} + M = 0.$
 
@@ -1498,7 +1498,7 @@ quantum_physics_ai999x.solve('wigner_3j_symbol', j1=0.5, m1=0.5, j2=0.5, m2=-0.5
 
 <a id="lande_g_zeeman"></a>
 
-### Landé g factor and anomalous Zeeman shift — `lande_g_zeeman`
+### Landé g factor and anomalous Zeeman shift, `lande_g_zeeman`
 
 The Landé g factor of a level L, S, J (with g_s = 2) and the energy shift g_J mu_B B mJ in a weak magnetic field.
 
@@ -1529,9 +1529,9 @@ $$
 
 *Zeeman splitting of the ²P₃/₂ and ²P₁/₂ levels (L = 1, S = 1/2) in a field B from 0 to 2 T: the energy shift of every m_J sublevel from the package at 9 fields (J = 3/2: g_J = 4/3; J = 1/2: g_J = 2/3); the shifts grow linearly with B, steeper for the larger g_J. Marked: the worked example J = 3/2, m_J = +1/2 at B = 1 T, ΔE = 3.8589e-05 eV.*
 
-![Landé g-factors of nine atomic terms ^{2S+1}L_J, each from the package (exact fractions written on the bars): ²S₁/₂ 2, ²P₁/₂ 2/3, ²P₃/₂ 4/3, ²D₃/₂ 4/5, ²D₅/₂ 6/5, ¹P₁ 1, ³P₁ 3/2, ³P₂ 3/2, ³D₃ 4/3](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/lande-g-zeeman-bars)
+![Landé g-factors of 9 atomic terms ^{2S+1}L_J, each from the package (exact fractions written on the bars): ²S₁/₂ 2, ²P₁/₂ 2/3, ²P₃/₂ 4/3, ²D₃/₂ 4/5, ²D₅/₂ 6/5, ¹P₁ 1, ³P₁ 3/2, ³P₂ 3/2, ³D₃ 4/3](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/lande-g-zeeman-bars)
 
-*Landé g-factors of nine atomic terms ^{2S+1}L_J, each from the package (exact fractions written on the bars): ²S₁/₂ 2, ²P₁/₂ 2/3, ²P₃/₂ 4/3, ²D₃/₂ 4/5, ²D₅/₂ 6/5, ¹P₁ 1, ³P₁ 3/2, ³P₂ 3/2, ³D₃ 4/3. A pure spin gives 2, a pure orbit 1.*
+*Landé g-factors of 9 atomic terms ^{2S+1}L_J, each from the package (exact fractions written on the bars): ²S₁/₂ 2, ²P₁/₂ 2/3, ²P₃/₂ 4/3, ²D₃/₂ 4/5, ²D₅/₂ 6/5, ¹P₁ 1, ³P₁ 3/2, ³P₂ 3/2, ³D₃ 4/3. A pure spin gives 2, a pure orbit 1. Highlighted: the worked example's term, L = 1, S = 1/2, J = 3/2.*
 
 ```python
 quantum_physics_ai999x.solve('lande_g_zeeman', L=1, S=0.5, J=1.5, mJ=0.5, B=1.0)
@@ -1553,7 +1553,7 @@ quantum_physics_ai999x.solve('lande_g_zeeman', L=0, S=0.5, J=0.5, mJ=0.5, B=2.0)
 
 <a id="spin_rotation_wigner_d"></a>
 
-### Spin rotation amplitude (Wigner small-d matrix) — `spin_rotation_wigner_d`
+### Spin rotation amplitude (Wigner small-d matrix), `spin_rotation_wigner_d`
 
 The amplitude $d^{j}_${m'm}(beta) = <j m'| exp(-i beta J_y/hbar) |j m> and the probability of finding m' after rotating |j $m> by$ beta about y.
 
@@ -1577,9 +1577,9 @@ $$
 - **Assumes:** |m|, |m'| <= j; $j  \leq  20$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Wigner small-d matrices d^j_{m′m}(β) for a rotation by β = π/2 about the y axis, j = 1/2 and j = 1: rows m′, columns m, every element from the package (negative ones in the second colour)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-rotation-wigner-d-matrix)
+![Wigner small-d matrices d^j_{m′m}(β) for a rotation by β = 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-rotation-wigner-d-matrix)
 
-*Wigner small-d matrices d^j_{m′m}(β) for a rotation by β = π/2 about the y axis, j = 1/2 and j = 1: rows m′, columns m, every element from the package (negative ones in the second colour). The squares are the probabilities of finding m′ after rotating the state m; each row's squares add up to 1.*
+*Wigner small-d matrices d^j_{m′m}(β) for a rotation by β = 1.5708 rad (90°, the worked example's) about the y axis, j = 1/2 and j = 1: rows m′, columns m, every element from the package (negative ones in the second colour). The squares are the probabilities of finding m′ after rotating the state m; each row's squares add up to 1. The worked example's element d^1/2_{+1/2,+1/2} = 0.707107.*
 
 ![d (Wigner small-d matrix element) against beta (rotation angle about the y axis (deg or rad)) from 0 rad to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-rotation-wigner-d-curve)
 
@@ -1610,7 +1610,7 @@ quantum_physics_ai999x.solve('spin_rotation_wigner_d', j=1, mp=0, m=0, beta=1.57
 
 <a id="infinite_well_levels"></a>
 
-### Energy levels of a particle in a box — `infinite_well_levels`
+### Energy levels of a particle in a box: `infinite_well_levels`
 
 Energy $E_n = n^{2}$ h^2/(8 m L^2), momentum and de Broglie wavelength of level n of a particle in a one-dimensional box of width L.
 
@@ -1660,7 +1660,7 @@ quantum_physics_ai999x.solve('infinite_well_levels', m=9.1093837139e-31, L=1e-10
 
 <a id="infinite_well_transition"></a>
 
-### Photon from a particle-in-a-box transition — `infinite_well_transition`
+### Photon from a particle-in-a-box transition, `infinite_well_transition`
 
 Energy, wavelength and frequency of the photon emitted when a particle in a box of width L drops from n_upper to n_lower.
 
@@ -1686,9 +1686,9 @@ $$
 - **Assumes:** n_upper > n_lower >= 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![An electron (m = 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-transition-diagram)
+![A particle of mass m = 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-transition-diagram)
 
-*An electron (m = 9.1094e-31 kg) in an infinite square well of width L = 1 nm: the four lowest levels the package gives (E ∝ n²) and the photon wavelength of each downward transition it computes, written beside the arrow in nm: 2→1: 1099.06 nm, 3→1: 412.148 nm, 4→1: 219.813 nm, 3→2: 659.438 nm, 4→2: 274.766 nm, 4→3: 471.027 nm.*
+*A particle of mass m = 9.1094e-31 kg in an infinite square well of width L = 1.0000e-09 m (the worked example): the lowest levels the package gives (E ∝ n²) and the photon wavelength of each downward transition it computes, written beside the arrow in nm: 2→1: 1099.06 nm, 3→1: 412.148 nm, 4→1: 219.813 nm, 3→2: 659.438 nm, 4→2: 274.766 nm, 4→3: 471.027 nm. The worked example's transition, 2→1, is drawn in the first colour.*
 
 ![lambda_nm (wavelength in nm) against n_upper (upper level) from 1 to 10](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-transition-curve)
 
@@ -1709,7 +1709,7 @@ quantum_physics_ai999x.solve('infinite_well_transition', m=9.1093837139e-31, L=1
 
 <a id="infinite_well_probability"></a>
 
-### Probability of finding a particle in part of a box — `infinite_well_probability`
+### Probability of finding a particle in part of a box, `infinite_well_probability`
 
 The probability that a particle in level n of a box of width L is found between x1 and x2.
 
@@ -1757,7 +1757,7 @@ quantum_physics_ai999x.solve('infinite_well_probability', n=2, L=1.0, x1=0.0, x2
 
 <a id="infinite_well_uncertainty"></a>
 
-### Position and momentum spread in a box — `infinite_well_uncertainty`
+### Position and momentum spread in a box: `infinite_well_uncertainty`
 
 <x>, the position spread dx, the momentum spread dp and the product dx dp of level n of a particle in a box of width L.
 
@@ -1801,7 +1801,7 @@ quantum_physics_ai999x.solve('infinite_well_uncertainty', n=1, L=1.0)
 
 <a id="harmonic_oscillator_levels"></a>
 
-### Quantum harmonic oscillator levels — `harmonic_oscillator_levels`
+### Quantum harmonic oscillator levels: `harmonic_oscillator_levels`
 
 Energy $(n + 1/2)$ hbar omega, zero-point energy, level spacing, classical amplitude and position spread of level n.
 
@@ -1856,7 +1856,7 @@ quantum_physics_ai999x.solve('harmonic_oscillator_levels', m=9.1093837139e-31, o
 
 <a id="harmonic_oscillator_forbidden_probability"></a>
 
-### Probability beyond the classical turning points (harmonic oscillator) — `harmonic_oscillator_forbidden_probability`
+### Probability beyond the classical turning points (harmonic oscillator), `harmonic_oscillator_forbidden_probability`
 
 The probability that a harmonic oscillator in level n is found in the classically forbidden region |x| > A_n.
 
@@ -1880,7 +1880,7 @@ $$
 
 ![Probability of finding a quantum harmonic oscillator outside its classical turning points (in the classically forbidden region) for levels n = 0 … 20, each from the package: 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/harmonic-oscillator-forbidden-probability-stems)
 
-*Probability of finding a quantum harmonic oscillator outside its classical turning points (in the classically forbidden region) for levels n = 0 … 20, each from the package: 0.157299 in the ground state, falling slowly to 0.0483977 at n = 20 as the quantum oscillator approaches the classical one.*
+*Probability of finding a quantum harmonic oscillator outside its classical turning points (in the classically forbidden region) for levels n = 0 … 20, each from the package: 0.157299 in the ground state, falling slowly to 0.0483977 at n = 20 as the quantum oscillator approaches the classical one. Marked: the worked example, n = 0.*
 
 ```python
 quantum_physics_ai999x.solve('harmonic_oscillator_forbidden_probability', n=0)
@@ -1902,7 +1902,7 @@ quantum_physics_ai999x.solve('harmonic_oscillator_forbidden_probability', n=1)
 
 <a id="finite_square_well"></a>
 
-### Bound states of a finite square well — `finite_square_well`
+### Bound states of a finite square well: `finite_square_well`
 
 The number and energies of the bound states of a particle of mass m in a square well of depth V0 and width a.
 
@@ -1950,7 +1950,7 @@ quantum_physics_ai999x.solve('finite_square_well', V0=1.602176634e-18, a=5e-10, 
 
 <a id="barrier_transmission"></a>
 
-### Transmission through a rectangular barrier — `barrier_transmission`
+### Transmission through a rectangular barrier, `barrier_transmission`
 
 Transmission and reflection probabilities of a particle of energy E meeting a rectangular barrier of height V0 and width a (below or above the top).
 
@@ -1982,7 +1982,7 @@ $$
 
 ![tunnelling (E < V0) or over the barrier (regime) over E (kinetic energy of the incident particle) from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/barrier-transmission-decision)
 
-*tunnelling (E < V0) or over the barrier (regime) over E (kinetic energy of the incident particle) from 1.6022e-20 J to 1.6022e-18 J and V0 (barrier height) from 3.2044e-20 J to 3.2044e-18 J (logarithmic axes): each of the 31 × 21 cells is one run of quantum-physics-ai999x, coloured by the verdict it returned — over the barrier (E > V0): 234 cells, tunnelling (E < V0): 417 cells. Other inputs as in the worked example: a = 5e-10 m, m = 9.1093837139e-31 kg. Marked: the worked example, E = 1.6022e-19 J, V0 = 3.2044e-19 J → tunnelling (E < V0).*
+*tunnelling (E < V0) or over the barrier (regime) over E (kinetic energy of the incident particle) from 1.6022e-20 J to 1.6022e-18 J and V0 (barrier height) from 3.2044e-20 J to 3.2044e-18 J (logarithmic axes): each of the 31 × 21 cells is one run of quantum-physics-ai999x, coloured by the verdict it returned, over the barrier (E > V0): 234 cells, tunnelling (E < V0): 417 cells. Other inputs as in the worked example: a = 5e-10 m, m = 9.1093837139e-31 kg. Marked: the worked example, E = 1.6022e-19 J, V0 = 3.2044e-19 J → tunnelling (E < V0).*
 
 ![T (transmission probability) against E (kinetic energy of the incident particle) from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/barrier-transmission-curve-2)
 
@@ -2008,7 +2008,7 @@ quantum_physics_ai999x.solve('barrier_transmission', E=3.204353268e-19, V0=3.204
 
 <a id="wkb_field_emission"></a>
 
-### WKB tunnelling through a triangular barrier (field emission) — `wkb_field_emission`
+### WKB tunnelling through a triangular barrier (field emission), `wkb_field_emission`
 
 The WKB tunnelling exponent and probability of an electron at the Fermi level through the triangular barrier W - eFx of a metal in a field F.
 
@@ -2056,7 +2056,7 @@ quantum_physics_ai999x.solve('wkb_field_emission', W=7.209794852999999e-19, F=50
 
 <a id="spin_half_measurement"></a>
 
-### Spin-1/2 measurement along an axis — `spin_half_measurement`
+### Spin-1/2 measurement along an axis: `spin_half_measurement`
 
 Probabilities of spin up and down along a direction n (angles theta_n, phi_n) for a spin-1/2 state pointing along (theta, phi) on the Bloch sphere.
 
@@ -2110,7 +2110,7 @@ quantum_physics_ai999x.solve('spin_half_measurement', theta=0.0, phi=0.0, theta_
 
 <a id="qubit_state_bloch"></a>
 
-### Qubit state on the Bloch sphere — `qubit_state_bloch`
+### Qubit state on the Bloch sphere: `qubit_state_bloch`
 
 Normalised measurement probabilities, Bloch vector, and Bloch angles of the qubit state alpha|0> + beta|1> (amplitudes need not be normalised).
 
@@ -2168,7 +2168,7 @@ quantum_physics_ai999x.solve('qubit_state_bloch', a_re=1.0, a_im=0.0, b_re=1.0, 
 
 <a id="single_qubit_circuit"></a>
 
-### State of a qubit after a sequence of gates — `single_qubit_circuit`
+### State of a qubit after a sequence of gates, `single_qubit_circuit`
 
 The amplitudes, measurement probabilities and Bloch vector of a qubit after gates such as H, X, S, T and rotations act on |0>, |1>, |+>, ...
 
@@ -2197,9 +2197,9 @@ $$
 - **Assumes:** gates from H, X, Y, Z, S, Sdg, T, Tdg, I, Rx(t), Ry(t), Rz(t), P(t); at most 500 gates
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Single-qubit circuits started in |0⟩ on the Bloch sphere (oblique view, x toward the viewer): the Bloch vector the package returns after each gate sequence — I: (0, 0, 1); H: (1, 0, 0); H T: (0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/single-qubit-circuit-bloch)
+![The worked example's single-qubit circuit started in |0⟩ on the Bloch sphere (oblique view, x toward the viewer): the Bloch vector the package returns after each gate in turn, I: (0, 0, 1); H: (1, 0, 0)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/single-qubit-circuit-bloch)
 
-*Single-qubit circuits started in |0⟩ on the Bloch sphere (oblique view, x toward the viewer): the Bloch vector the package returns after each gate sequence — I: (0, 0, 1); H: (1, 0, 0); H T: (0.707, 0.707, 0); H T T: (0, 1, 0); H T T T: (-0.707, 0.707, 0); H T T T T: (-1, 0, 0). H takes |0⟩ to the equator, and every T then turns it by 45° about z.*
+*The worked example's single-qubit circuit started in |0⟩ on the Bloch sphere (oblique view, x toward the viewer): the Bloch vector the package returns after each gate in turn, I: (0, 0, 1); H: (1, 0, 0). H takes |0⟩ to the equator; T turns about z by 45°, S by 90°, X, Y and Z by 180°.*
 
 ```python
 quantum_physics_ai999x.solve('single_qubit_circuit', start='0', gates='H')
@@ -2232,7 +2232,7 @@ quantum_physics_ai999x.solve('single_qubit_circuit', start='0', gates='Ry(pi/3)'
 
 <a id="two_qubit_circuit"></a>
 
-### Two-qubit circuit: probabilities and entanglement — `two_qubit_circuit`
+### Two-qubit circuit: probabilities and entanglement, `two_qubit_circuit`
 
 Measurement probabilities of |00>, |01>, |10>, |11> and the concurrence (entanglement) after a two-qubit gate sequence such as H0 CNOT01 (a Bell state).
 
@@ -2259,9 +2259,9 @@ $$
 - **Assumes:** gates from the documented set; at most 500 gates
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Two-qubit circuits started in |00⟩ — rows, top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0 — with the probability of each measurement outcome and the concurrence (1 = maximally entangled) the package computes; H0 CNOT01 makes the Bell state, P(00) = P(11) = 0](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/two-qubit-circuit-heatmap.svg)
+![Two-qubit circuits started in |00⟩ (rows, top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0), with the probability of each measurement outcome and the concurrence (1 = maximally entangled) the package computes; H0 CNOT01 makes the Bell state, P(00) = P(11) = 0](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/two-qubit-circuit-heatmap.svg)
 
-*Two-qubit circuits started in |00⟩ — rows, top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0 — with the probability of each measurement outcome and the concurrence (1 = maximally entangled) the package computes; H0 CNOT01 makes the Bell state, P(00) = P(11) = 0.5 with concurrence 1.*
+*Two-qubit circuits started in |00⟩ (rows, top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0), with the probability of each measurement outcome and the concurrence (1 = maximally entangled) the package computes; H0 CNOT01 makes the Bell state, P(00) = P(11) = 0.5 with concurrence 1.*
 
 ![p00 (probability of |00>) for each option of start (initial basis state |q0 q1>), one run of quantum-physics-ai999x per option: 00: 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-qubit-circuit-bars)
 
@@ -2293,7 +2293,7 @@ quantum_physics_ai999x.solve('two_qubit_circuit', start='10', gates='CNOT01')
 
 <a id="gate_rotation_axis"></a>
 
-### Bloch-sphere rotation of a single-qubit gate sequence — `gate_rotation_axis`
+### Bloch-sphere rotation of a single-qubit gate sequence, `gate_rotation_axis`
 
 The single rotation (axis n and angle) of the Bloch sphere that a sequence of single-qubit gates performs (global phase ignored).
 
@@ -2317,9 +2317,9 @@ $$
 - **Assumes:** gates from H, X, Y, Z, S, Sdg, T, Tdg, I, Rx(t), Ry(t), Rz(t), P(t)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Rotation axes of single-qubit gates on the Bloch sphere (oblique view, x toward the viewer): the unit axis n and rotation angle the package returns for each gate or gate sequence — X about (1, 0, 0) by 180°; Y about (0, 1, 0) by 180°; Z / S / T about (0, 0, 1) by 180°, 90°, 45°; H about (0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/gate-rotation-axis-bloch)
+![Rotation axes of single-qubit gates on the Bloch sphere (oblique view, x toward the viewer): the unit axis n and rotation angle the package returns for each gate or gate sequence, X about (1, 0, 0) by 180°; Y about (0, 1, 0) by 180°; Z / S / T about (0, 0, 1) by 180°, 90°, 45°; H about (0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/gate-rotation-axis-bloch)
 
-*Rotation axes of single-qubit gates on the Bloch sphere (oblique view, x toward the viewer): the unit axis n and rotation angle the package returns for each gate or gate sequence — X about (1, 0, 0) by 180°; Y about (0, 1, 0) by 180°; Z / S / T about (0, 0, 1) by 180°, 90°, 45°; H about (0.7071, 0, 0.7071) by 180°; H T about (-0.6786, -0.2811, -0.6786) by 148.6°. Z, S and T turn about the same axis by different angles.*
+*Rotation axes of single-qubit gates on the Bloch sphere (oblique view, x toward the viewer): the unit axis n and rotation angle the package returns for each gate or gate sequence, X about (1, 0, 0) by 180°; Y about (0, 1, 0) by 180°; Z / S / T about (0, 0, 1) by 180°, 90°, 45°; H about (0.7071, 0, 0.7071) by 180°; H T about (-0.6786, -0.2811, -0.6786) by 148.6°. Z, S and T turn about the same axis by different angles. The worked example's sequence, H, is drawn in the first colour.*
 
 ```python
 quantum_physics_ai999x.solve('gate_rotation_axis', gates='H')
@@ -2346,7 +2346,7 @@ quantum_physics_ai999x.solve('gate_rotation_axis', gates='H H')
 
 <a id="rabi_oscillation"></a>
 
-### Rabi oscillation of a driven two-level system — `rabi_oscillation`
+### Rabi oscillation of a driven two-level system, `rabi_oscillation`
 
 The probability of finding a two-level system (qubit) excited after driving it for time t with Rabi frequency Omega and detuning Delta.
 
@@ -2371,9 +2371,9 @@ $$
 - **Assumes:** $Omega > 0$; $t  \geq  0$; rotating-wave approximation, starting in the ground state
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Excited-state probability of a driven two-level system with Rabi frequency Ω = 1e+06 rad/s (the worked example) at three detunings, 141 times from 0 to 14 µs from the package: detuning speeds the oscillation and lowers its height — Δ = 0 Ω: P_max = 1, period 6](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/rabi-oscillation-curve)
+![Excited-state probability of a driven two-level system with Rabi frequency Ω = 1e+06 rad/s (the worked example) at three detunings, 141 times from 0 to 14 µs from the package: detuning speeds the oscillation and lowers its height, Δ = 0 Ω: P_max = 1, period 6](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/rabi-oscillation-curve)
 
-*Excited-state probability of a driven two-level system with Rabi frequency Ω = 1e+06 rad/s (the worked example) at three detunings, 141 times from 0 to 14 µs from the package: detuning speeds the oscillation and lowers its height — Δ = 0 Ω: P_max = 1, period 6.28319 µs; Δ = 1 Ω: P_max = 0.5, period 4.44288 µs; Δ = 2 Ω: P_max = 0.2, period 2.80993 µs.*
+*Excited-state probability of a driven two-level system with Rabi frequency Ω = 1e+06 rad/s (the worked example) at three detunings, 141 times from 0 to 14 µs from the package: detuning speeds the oscillation and lowers its height, Δ = 0 Ω: P_max = 1, period 6.28319 µs; Δ = 1 Ω: P_max = 0.5, period 4.44288 µs; Δ = 2 Ω: P_max = 0.2, period 2.80993 µs.*
 
 ```python
 quantum_physics_ai999x.solve('rabi_oscillation', Omega=1000000.0, Delta=0.0, t=3.1415926535897933e-06)
@@ -2395,7 +2395,7 @@ quantum_physics_ai999x.solve('rabi_oscillation', Omega=1000000.0, Delta=1000000.
 
 <a id="larmor_precession"></a>
 
-### Larmor precession of a spin-1/2 — `larmor_precession`
+### Larmor precession of a spin-1/2: `larmor_precession`
 
 Larmor angular frequency of an electron or proton spin in a field B, and the spin component along x after time t for a spin starting along +x.
 
@@ -2420,9 +2420,9 @@ $$
 - **Assumes:** $B > 0$; $t  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Larmor precession of a proton spin in B = 1 T, started along +x: the probability of measuring it along +x and the mean ⟨S_x⟩, 121 times over three periods from the package](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/larmor-precession-curve)
+![Larmor precession of a proton spin in B = 1 T (the worked example), started along +x: the probability of measuring it along +x and the mean ⟨S_x⟩, 121 times over 3 periods from the package](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/larmor-precession-curve)
 
-*Larmor precession of a proton spin in B = 1 T, started along +x: the probability of measuring it along +x and the mean ⟨S_x⟩, 121 times over three periods from the package. Marked: the package's Larmor frequency f_L = 4.2577e+07 Hz (ω_L = 2.6752e+08 rad/s), one period 23.4866 ns (1/f_L).*
+*Larmor precession of a proton spin in B = 1 T (the worked example), started along +x: the probability of measuring it along +x and the mean ⟨S_x⟩, 121 times over 3 periods from the package. Marked: the package's Larmor frequency f_L = 4.2577e+07 Hz (ω_L = 2.6752e+08 rad/s), one period 23.4866 ns (1/f_L), and the worked example's moment t = 0 s: P(+x) = 1.*
 
 ```python
 quantum_physics_ai999x.solve('larmor_precession', particle='proton', B=1.0, t=0.0)
@@ -2444,7 +2444,7 @@ quantum_physics_ai999x.solve('larmor_precession', particle='electron', B=1.0, t=
 
 <a id="qubit_entropy_purity"></a>
 
-### Purity and entropy of a qubit state — `qubit_entropy_purity`
+### Purity and entropy of a qubit state: `qubit_entropy_purity`
 
 Purity Tr(rho^2), von Neumann entropy (bits) and eigenvalues of the qubit density matrix with Bloch vector r.
 
@@ -2497,7 +2497,7 @@ quantum_physics_ai999x.solve('qubit_entropy_purity', r=[0.0, 0.0, 0.0])
 
 <a id="qubit_fidelity"></a>
 
-### Fidelity and trace distance of two qubit states — `qubit_fidelity`
+### Fidelity and trace distance of two qubit states, `qubit_fidelity`
 
 The (Uhlmann) fidelity and the trace distance between two qubit states given by their Bloch vectors r and s.
 
@@ -2526,7 +2526,7 @@ $$
 
 ![Fidelity and trace distance between |0⟩ (r = (0, 0, 1)) and a pure state turned by an angle from 0 to 180° in the x–z plane, 61 angles from the package: F = cos²(angle/2) falls from 1 to 0 as the trace distance rises](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-fidelity-curve)
 
-*Fidelity and trace distance between |0⟩ (r = (0, 0, 1)) and a pure state turned by an angle from 0 to 180° in the x–z plane, 61 angles from the package: F = cos²(angle/2) falls from 1 to 0 as the trace distance rises. Marked: 90°, F = 0.5, trace distance 0.707107.*
+*Fidelity and trace distance between |0⟩ (r = (0, 0, 1)) and a pure state turned by an angle from 0 to 180° in the x–z plane, 61 angles from the package: F = cos²(angle/2) falls from 1 to 0 as the trace distance rises. Marked: the worked example, r = [0.0, 0.0, 1.0] and s = [1.0, 0.0, 0.0], 90° apart: F = 0.5, trace distance 0.707107.*
 
 ```python
 quantum_physics_ai999x.solve('qubit_fidelity', r=[0.0, 0.0, 1.0], s=[1.0, 0.0, 0.0])
@@ -2548,7 +2548,7 @@ quantum_physics_ai999x.solve('qubit_fidelity', r=[0.0, 0.0, 0.0], s=[0.0, 0.0, 0
 
 <a id="chsh_bell_test"></a>
 
-### CHSH Bell-test value for the singlet state — `chsh_bell_test`
+### CHSH Bell-test value for the singlet state, `chsh_bell_test`
 
 Correlations E(a, b) = -cos(a - b) of spin measurements on a singlet pair and the CHSH combination $S = E$(a,b) - E(a,b') + E(a',b) + E(a',b').
 
@@ -2583,7 +2583,7 @@ $$
 
 ![whether |S| exceeds 2 (violates) over a (Alice's first setting (angle in the x-z plane)) from 0 rad to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/chsh-bell-test-decision)
 
-*whether |S| exceeds 2 (violates) over a (Alice's first setting (angle in the x-z plane)) from 0 rad to 1.5708 rad and a2 (Alice's second setting a') from 0 rad to 1.5708 rad: each of the 31 × 21 cells is one run of quantum-physics-ai999x, coloured by the verdict it returned — no: 391 cells, yes: 260 cells. Other inputs as in the worked example: b = 0.7853981633974483 rad, b2 = 2.356194490192345 rad. Marked: the worked example, a = 0 rad, a2 = 1.5708 rad → yes.*
+*whether |S| exceeds 2 (violates) over a (Alice's first setting (angle in the x-z plane)) from 0 rad to 1.5708 rad and a2 (Alice's second setting a') from 0 rad to 1.5708 rad: each of the 31 × 21 cells is one run of quantum-physics-ai999x, coloured by the verdict it returned, no: 391 cells, yes: 260 cells. Other inputs as in the worked example: b = 0.7853981633974483 rad, b2 = 2.356194490192345 rad. Marked: the worked example, a = 0 rad, a2 = 1.5708 rad → yes.*
 
 ```python
 quantum_physics_ai999x.solve('chsh_bell_test', a=0.0, a2=1.5707963267948966, b=0.7853981633974483, b2=2.356194490192345)
@@ -2604,7 +2604,7 @@ quantum_physics_ai999x.solve('chsh_bell_test', a=0.0, a2=0.0, b=0.0, b2=0.0)
 
 <a id="grover_search"></a>
 
-### Success probability of Grover's search — `grover_search`
+### Success probability of Grover's search: `grover_search`
 
 The probability of measuring a marked item after k Grover iterations on n qubits with M marked items, and the best number of iterations.
 
@@ -2629,9 +2629,9 @@ $$
 - **Assumes:** $1  \leq  M < N/2$; $0  \leq  k  \leq  10^{7}$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Grover search for one marked item among 2ⁿ: the probability of success after k = 0 … 12 iterations for 3, 4 and 5 qubits, from the package (stems side by side)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/grover-search-stems)
+![Grover search for 1 marked item among 2ⁿ: the probability of success after k = 0 … 12 iterations for 2, 3, 4 qubits, from the package (stems side by side)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/grover-search-stems)
 
-*Grover search for one marked item among 2ⁿ: the probability of success after k = 0 … 12 iterations for 3, 4 and 5 qubits, from the package (stems side by side). The probability rises to nearly 1 at the best k and then falls again — 3 qubits: best k = 2, P = 0.945312; 4 qubits: best k = 3, P = 0.961319; 5 qubits: best k = 4, P = 0.999182.*
+*Grover search for 1 marked item among 2ⁿ: the probability of success after k = 0 … 12 iterations for 2, 3, 4 qubits, from the package (stems side by side). The probability rises to nearly 1 at the best k and then falls again, 2 qubits: best k = 1, P = 1; 3 qubits: best k = 2, P = 0.945312; 4 qubits: best k = 3, P = 0.961319. Marked: the worked example, 2 qubits after k = 1: P = 1.*
 
 ```python
 quantum_physics_ai999x.solve('grover_search', n_qubits=2, M=1, k=1)
@@ -2653,7 +2653,7 @@ quantum_physics_ai999x.solve('grover_search', n_qubits=4, M=1, k=3)
 
 <a id="coherent_state_photon_statistics"></a>
 
-### Photon-number distribution of a coherent state — `coherent_state_photon_statistics`
+### Photon-number distribution of a coherent state, `coherent_state_photon_statistics`
 
 The probability of n photons in a coherent (laser) state |alpha>, its mean photon number and variance (Poisson statistics).
 
@@ -2677,9 +2677,9 @@ $$
 - **Assumes:** |alpha| >= 0; $n  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Photon-number distribution of coherent (laser) light for |α| = 1, 2, 3, P(n) for n = 0 … 15 from the package (stems side by side): Poisson distributions whose variance equals the mean — |α| = 1: mean 1, variance 1; |α| = 2: mean 4, variance 4; |α| = 3: mean 9, variance 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/coherent-state-photon-statistics-stems)
+![Photon-number distribution of coherent (laser) light for |α| = 1, 2, 3, P(n) for n = 0 … 15 from the package (stems side by side): Poisson distributions whose variance equals the mean, |α| = 1: mean 1, variance 1; |α| = 2: mean 4, variance 4; |α| = 3: mean 9, variance 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/coherent-state-photon-statistics-stems)
 
-*Photon-number distribution of coherent (laser) light for |α| = 1, 2, 3, P(n) for n = 0 … 15 from the package (stems side by side): Poisson distributions whose variance equals the mean — |α| = 1: mean 1, variance 1; |α| = 2: mean 4, variance 4; |α| = 3: mean 9, variance 9. Marked: the worked example |α| = 2, P(3) = 0.195367.*
+*Photon-number distribution of coherent (laser) light for |α| = 1, 2, 3, P(n) for n = 0 … 15 from the package (stems side by side): Poisson distributions whose variance equals the mean, |α| = 1: mean 1, variance 1; |α| = 2: mean 4, variance 4; |α| = 3: mean 9, variance 9. Marked: the worked example |α| = 2, P(3) = 0.195367.*
 
 ![P_n (probability of exactly n photons) against alpha (coherent amplitude |alpha|) from 1 to 3](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/coherent-state-photon-statistics-curve)
 
@@ -2705,7 +2705,7 @@ quantum_physics_ai999x.solve('coherent_state_photon_statistics', alpha=0.0, n=0)
 
 <a id="radioactive_decay_law"></a>
 
-### Radioactive decay law — `radioactive_decay_law`
+### Radioactive decay law: `radioactive_decay_law`
 
 Nuclei remaining, fraction, decay constant, mean life and activity after time t, from the half-life and the initial number of nuclei.
 
@@ -2757,7 +2757,7 @@ quantum_physics_ai999x.solve('radioactive_decay_law', T_half=3600.0, N0=1e+20, t
 
 <a id="radioactive_dating_age"></a>
 
-### Age from the remaining fraction (radioactive dating) — `radioactive_dating_age`
+### Age from the remaining fraction (radioactive dating), `radioactive_dating_age`
 
 The time needed for a radioactive sample to decay to a given fraction of its original amount (for example carbon-14 dating).
 
@@ -2809,7 +2809,7 @@ quantum_physics_ai999x.solve('radioactive_dating_age', fraction=1.0, T_half=5730
 
 <a id="nuclide_decay"></a>
 
-### Decay of a named radionuclide — `nuclide_decay`
+### Decay of a named radionuclide: `nuclide_decay`
 
 The fraction of a named radionuclide (C-14, $Co-60$, $I-131$, $U-238$, ...) left after time t, with its tabulated half-life, decay constant and mean life.
 
@@ -2859,7 +2859,7 @@ quantum_physics_ai999x.solve('nuclide_decay', nuclide='C-14', t=0.0)
 
 <a id="decay_chain_parent_daughter"></a>
 
-### Parent-daughter decay chain (Bateman) — `decay_chain_parent_daughter`
+### Parent-daughter decay chain (Bateman): `decay_chain_parent_daughter`
 
 Numbers and activities of a parent and its radioactive daughter after time t, starting from pure parent (Bateman solution).
 
@@ -2910,7 +2910,7 @@ quantum_physics_ai999x.solve('decay_chain_parent_daughter', T_half_P=1.0, T_half
 
 <a id="two_body_decay"></a>
 
-### Kinematics of a two-body decay — `two_body_decay`
+### Kinematics of a two-body decay: `two_body_decay`
 
 Q value, momentum and kinetic energies of the two products when a particle or nucleus at rest decays into two bodies (alpha decay, pi -> mu nu, ...).
 
@@ -2966,7 +2966,7 @@ quantum_physics_ai999x.solve('two_body_decay', M=139.57039, m1=105.6583755, m2=0
 
 <a id="nuclear_reaction_threshold"></a>
 
-### Q value and threshold energy of a nuclear reaction — `nuclear_reaction_threshold`
+### Q value and threshold energy of a nuclear reaction, `nuclear_reaction_threshold`
 
 Q value of a + X -> Y + b from the masses (in u) and, for an endothermic reaction, the minimum beam kinetic energy on a target at rest (relativistic).
 
@@ -2993,7 +2993,7 @@ $$
 
 ![whether the reaction needs energy (Q < 0) (endothermic) over m_a (projectile mass (u)) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/nuclear-reaction-threshold-decision)
 
-*whether the reaction needs energy (Q < 0) (endothermic) over m_a (projectile mass (u)) from 0.40026 to 40.026 and m_X (target mass (u)) from 1.40031 to 140.031 (logarithmic axes): each of the 31 × 21 cells is one run of quantum-physics-ai999x, coloured by the verdict it returned — no: 405 cells, yes: 246 cells. Other inputs as in the worked example: m_Y = 16.999131757, m_b = 1.00782503207. Marked: the worked example, m_a = 4.0026, m_X = 14.0031 → yes.*
+*whether the reaction needs energy (Q < 0) (endothermic) over m_a (projectile mass (u)) from 0.40026 to 40.026 and m_X (target mass (u)) from 1.40031 to 140.031 (logarithmic axes): each of the 31 × 21 cells is one run of quantum-physics-ai999x, coloured by the verdict it returned, no: 405 cells, yes: 246 cells. Other inputs as in the worked example: m_Y = 16.999131757, m_b = 1.00782503207. Marked: the worked example, m_a = 4.0026, m_X = 14.0031 → yes.*
 
 ![Q_MeV (Q value) against m_a (projectile mass (u)) from 2](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/nuclear-reaction-threshold-curve)
 
@@ -3014,7 +3014,7 @@ quantum_physics_ai999x.solve('nuclear_reaction_threshold', m_a=4.002603254, m_X=
 
 <a id="coulomb_barrier"></a>
 
-### Coulomb barrier between two nuclei — `coulomb_barrier`
+### Coulomb barrier between two nuclei: `coulomb_barrier`
 
 The Coulomb potential energy of two nuclei just touching, with radii $R = r_{0}$ $A^{1/3}$.
 
@@ -3059,7 +3059,7 @@ quantum_physics_ai999x.solve('coulomb_barrier', Z1=1, A1=1, Z2=1, A2=1, r0=1e-15
 
 <a id="particle_decay_length"></a>
 
-### Mean decay length of a relativistic unstable particle — `particle_decay_length`
+### Mean decay length of a relativistic unstable particle, `particle_decay_length`
 
 Lorentz factor, lab-frame lifetime and mean decay length beta gamma c tau of a pion, kaon, muon, hyperon, charm or bottom meson with momentum p.
 
@@ -3105,7 +3105,7 @@ quantum_physics_ai999x.solve('particle_decay_length', particle='mu-', p=0.105658
 
 <a id="wien_peak"></a>
 
-### Peak of blackbody radiation (Wien's displacement law) — `wien_peak`
+### Peak of blackbody radiation (Wien's displacement law), `wien_peak`
 
 The wavelength and frequency at which a blackbody at temperature T radiates most strongly.
 
@@ -3152,7 +3152,7 @@ quantum_physics_ai999x.solve('wien_peak', T=300.0)
 
 <a id="stefan_boltzmann"></a>
 
-### Radiated power (Stefan-Boltzmann law) — `stefan_boltzmann`
+### Radiated power (Stefan-Boltzmann law): `stefan_boltzmann`
 
 Radiant exitance and total power emitted by a surface of area A, emissivity e at temperature T.
 
@@ -3200,7 +3200,7 @@ quantum_physics_ai999x.solve('stefan_boltzmann', T=300.0, emissivity=0.5, A=2.0)
 
 <a id="planck_spectral_radiance"></a>
 
-### Spectral radiance of a blackbody (Planck's law) — `planck_spectral_radiance`
+### Spectral radiance of a blackbody (Planck's law), `planck_spectral_radiance`
 
 The spectral radiance B_lambda of a blackbody at temperature T and wavelength lambda, and the photon occupation number of that mode.
 
@@ -3251,7 +3251,7 @@ quantum_physics_ai999x.solve('planck_spectral_radiance', lam=5e-07, T=5778.0)
 
 <a id="blackbody_band_fraction"></a>
 
-### Fraction of blackbody radiation in a wavelength band — `blackbody_band_fraction`
+### Fraction of blackbody radiation in a wavelength band, `blackbody_band_fraction`
 
 The fraction of a blackbody's emitted power between two wavelengths at temperature T, and that band's radiant exitance.
 
@@ -3276,13 +3276,13 @@ $$
 - **Assumes:** $0 < lambda1 < lambda2$; $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The visible band 400–700 nm (chosen) shaded under the Planck spectrum of a T = 5778 K blackbody (121 wavelengths from the package's spectral radiance)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/blackbody-band-fraction-spectrum)
+![The band above 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/blackbody-band-fraction-spectrum)
 
-*The visible band 400–700 nm (chosen) shaded under the Planck spectrum of a T = 5778 K blackbody (121 wavelengths from the package's spectral radiance). Marked: the package's band fraction F = 0.366659 of all radiated power, with 0.122245 below 400 nm and 0.511095 above 700 nm (one minus its fraction below 700 nm); band exitance 2.3173e+07 W/m².*
+*The band above 0.001 nm (the whole spectrum) (the worked example's) shaded under the Planck spectrum of a T = 5778 K blackbody (121 wavelengths from the package's spectral radiance, drawn around the peak). Marked: the package's band fraction F = 1 of all radiated power, with 0 below 0.001 nm and 0 above the band (one minus its fraction below the upper edge); band exitance 6.3201e+07 W/m².*
 
-![Fraction of a blackbody's power emitted in the visible band 400–700 nm (chosen) against temperature, 61 temperatures from 1000 to 31 600 K from the package](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/blackbody-band-fraction-curve)
+![Fraction of a blackbody's power emitted in the band 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/blackbody-band-fraction-curve)
 
-*Fraction of a blackbody's power emitted in the visible band 400–700 nm (chosen) against temperature, 61 temperatures from 1000 to 31 600 K from the package. Marked: the largest drawn value 0.393002 at 7079.46 K, and T = 5778 K: 0.366659.*
+*Fraction of a blackbody's power emitted in the band 0.001–1.0000e+09 nm (the worked example's) against temperature, 61 temperatures from 1000 to 31623 K from the package. Marked: the largest drawn value 1 at 1000 K, and the worked example's T = 5778 K: 1.*
 
 ```python
 quantum_physics_ai999x.solve('blackbody_band_fraction', lam1=1e-12, lam2=1.0, T=5778.0)
@@ -3298,7 +3298,7 @@ quantum_physics_ai999x.solve('blackbody_band_fraction', lam1=1e-12, lam2=1.0, T=
 
 <a id="photon_gas"></a>
 
-### Energy and photon density of blackbody radiation — `photon_gas`
+### Energy and photon density of blackbody radiation, `photon_gas`
 
 Energy density, photon number density, mean photon energy and radiation pressure of thermal radiation at temperature T.
 
@@ -3341,7 +3341,7 @@ quantum_physics_ai999x.solve('photon_gas', T=2.725)
 
 <a id="two_level_thermodynamics"></a>
 
-### Thermodynamics of a two-level system — `two_level_thermodynamics`
+### Thermodynamics of a two-level system: `two_level_thermodynamics`
 
 Partition function, Boltzmann populations, mean energy, heat capacity (Schottky) and entropy of a two-level system with gap dE and degeneracies g0, g1.
 
@@ -3394,7 +3394,7 @@ quantum_physics_ai999x.solve('two_level_thermodynamics', dE=1.3806490000000001e-
 
 <a id="einstein_oscillator"></a>
 
-### Quantum oscillator thermodynamics (Einstein model) — `einstein_oscillator`
+### Quantum oscillator thermodynamics (Einstein model), `einstein_oscillator`
 
 Mean quantum number, mean energy, heat capacity and entropy of a quantum harmonic oscillator, and the molar heat capacity of an Einstein solid.
 
@@ -3442,7 +3442,7 @@ quantum_physics_ai999x.solve('einstein_oscillator', theta_E=300.0, T=300.0)
 
 <a id="debye_heat_capacity"></a>
 
-### Debye heat capacity of a solid — `debye_heat_capacity`
+### Debye heat capacity of a solid: `debye_heat_capacity`
 
 The molar heat capacity of a crystalline solid in the Debye model at temperature T.
 
@@ -3465,9 +3465,9 @@ $$
 - **Assumes:** $T > 0$; $theta_D > 0$; $theta_D/T  \leq  600$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Molar heat capacity of a solid in the Debye model and in the Einstein model with the same characteristic temperature θ = 300 K (chosen), 120 temperatures each from the package: both approach the classical value at high T, but at low T the Debye curve falls as T³ and the Einstein curve much faster](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/debye-heat-capacity-curve)
+![Molar heat capacity of a solid in the Debye model and in the Einstein model with the same characteristic temperature θ = 500 K (the worked example's), 120 temperatures each from the package: both approach the classical value at high T, but at low T the Debye curve falls as T³ and the Einstein curve much faster](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/debye-heat-capacity-curve)
 
-*Molar heat capacity of a solid in the Debye model and in the Einstein model with the same characteristic temperature θ = 300 K (chosen), 120 temperatures each from the package: both approach the classical value at high T, but at low T the Debye curve falls as T³ and the Einstein curve much faster. Marked: T = 30 K, Debye 1.89123 J/(mol·K), Einstein 0.113253 J/(mol·K).*
+*Molar heat capacity of a solid in the Debye model and in the Einstein model with the same characteristic temperature θ = 500 K (the worked example's), 120 temperatures each from the package: both approach the classical value at high T, but at low T the Debye curve falls as T³ and the Einstein curve much faster. Marked: the worked example's T = 1 K, Debye 1.5550e-05 J/(mol·K), Einstein 4.4428e-211 J/(mol·K).*
 
 ```python
 quantum_physics_ai999x.solve('debye_heat_capacity', T=1.0, theta_D=500.0)
@@ -3484,7 +3484,7 @@ quantum_physics_ai999x.solve('debye_heat_capacity', T=1.0, theta_D=500.0)
 
 <a id="fermi_energy_free_electrons"></a>
 
-### Fermi energy of a free-electron gas — `fermi_energy_free_electrons`
+### Fermi energy of a free-electron gas: `fermi_energy_free_electrons`
 
 Fermi energy, temperature, wavenumber and speed of a free-electron gas with electron density n.
 
@@ -3527,7 +3527,7 @@ quantum_physics_ai999x.solve('fermi_energy_free_electrons', n=8.47e+28)
 
 <a id="fermi_energy_metal"></a>
 
-### Fermi energy of a metal from its density — `fermi_energy_metal`
+### Fermi energy of a metal from its density: `fermi_energy_metal`
 
 Conduction-electron density and Fermi energy of a metal from its mass density, molar mass and valence (free-electron model).
 
@@ -3571,7 +3571,7 @@ quantum_physics_ai999x.solve('fermi_energy_metal', rho=8960.0, M=0.063546, z=1)
 
 <a id="fermi_dirac_occupation"></a>
 
-### Fermi-Dirac occupation of a state — `fermi_dirac_occupation`
+### Fermi-Dirac occupation of a state: `fermi_dirac_occupation`
 
 The probability that a single-particle state of energy E is occupied by a fermion at temperature T and chemical potential mu.
 
@@ -3619,7 +3619,7 @@ quantum_physics_ai999x.solve('fermi_dirac_occupation', E=8.05638710873212e-19, m
 
 <a id="bose_einstein_occupation"></a>
 
-### Bose-Einstein occupation of a mode — `bose_einstein_occupation`
+### Bose-Einstein occupation of a mode: `bose_einstein_occupation`
 
 The mean number of bosons in a single-particle state of energy E at temperature T and chemical potential mu $(mu < E)$.
 
@@ -3670,7 +3670,7 @@ quantum_physics_ai999x.solve('bose_einstein_occupation', E=4.550393873212011e-21
 
 <a id="fermi_gas_chemical_potential"></a>
 
-### Chemical potential of an ideal Fermi gas — `fermi_gas_chemical_potential`
+### Chemical potential of an ideal Fermi gas: `fermi_gas_chemical_potential`
 
 The chemical potential of an ideal spin-1/2 Fermi gas of density n and particle mass m at temperature T, from degenerate to classical.
 
@@ -3714,7 +3714,7 @@ quantum_physics_ai999x.solve('fermi_gas_chemical_potential', n=1e+28, T=100000.0
 
 <a id="bec_critical_temperature"></a>
 
-### Bose-Einstein condensation temperature — `bec_critical_temperature`
+### Bose-Einstein condensation temperature: `bec_critical_temperature`
 
 The critical temperature below which an ideal Bose gas of density n and particle mass m forms a condensate.
 
@@ -3760,7 +3760,7 @@ quantum_physics_ai999x.solve('bec_critical_temperature', n=1e+20, m=1.443e-25)
 
 <a id="photon_energy"></a>
 
-### Photon energy from wavelength — `photon_energy`
+### Photon energy from wavelength: `photon_energy`
 
 The energy $E = h$ c/lambda, frequency and momentum h/lambda of a photon of vacuum wavelength lambda.
 
@@ -3808,7 +3808,7 @@ quantum_physics_ai999x.solve('photon_energy', lam=6.199209921660013e-07)
 
 <a id="rest_energy"></a>
 
-### Rest energy (mass-energy equivalence) — `rest_energy`
+### Rest energy (mass-energy equivalence): `rest_energy`
 
 The rest energy $E = m$ $c^{2}$ of a mass m, in J, MeV and kWh.
 
@@ -3855,7 +3855,7 @@ quantum_physics_ai999x.solve('rest_energy', m=1.0)
 
 <a id="de_broglie_wavelength_mv"></a>
 
-### de Broglie wavelength of a moving particle — `de_broglie_wavelength_mv`
+### de Broglie wavelength of a moving particle, `de_broglie_wavelength_mv`
 
 The de Broglie wavelength lambda = h/(m v) of a particle of mass m moving at speed v, and the relativistic h/(gamma m v).
 
@@ -3915,7 +3915,7 @@ quantum_physics_ai999x.solve('de_broglie_wavelength_mv', m=9.1093837139e-31, v=1
 
 <a id="step_potential"></a>
 
-### Reflection and transmission at a potential step — `step_potential`
+### Reflection and transmission at a potential step, `step_potential`
 
 Reflection and transmission probabilities of a particle of energy E meeting a potential step of height V0 (V = 0 for $x < 0$, V0 for x > 0).
 
@@ -3968,7 +3968,7 @@ quantum_physics_ai999x.solve('step_potential', E=1.602176634e-19, V0=4.806529901
 
 <a id="semi_empirical_mass_formula"></a>
 
-### Semi-empirical mass formula (liquid-drop binding energy) — `semi_empirical_mass_formula`
+### Semi-empirical mass formula (liquid-drop binding energy), `semi_empirical_mass_formula`
 
 The liquid-drop (Bethe-Weizsaecker) binding energy of a nucleus with Z protons and mass number A, its terms, the binding energy per nucleon, the atomic mass and the most stable Z for that A.
 
@@ -4003,7 +4003,7 @@ $$
 
 ![Binding energy per nucleon along the valley of stability, A = 8 … 240 in steps of 4: for each A the proton number is the nearest integer to the package's most stable Z, and B/A is the package's value for that nucleus (59 nuclei)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/semi-empirical-mass-formula-curve)
 
-*Binding energy per nucleon along the valley of stability, A = 8 … 240 in steps of 4: for each A the proton number is the nearest integer to the package's most stable Z, and B/A is the package's value for that nucleus (59 nuclei). The curve peaks near iron: fusion releases energy below it, fission above. Marked: iron-56, B/A = 8.84614 MeV.*
+*Binding energy per nucleon along the valley of stability, A = 8 … 240 in steps of 4: for each A the proton number is the nearest integer to the package's most stable Z, and B/A is the package's value for that nucleus (59 nuclei). The curve peaks near iron: fusion releases energy below it, fission above. Marked: the worked example's nucleus, Z = 26, A = 56, B/A = 8.84614 MeV (most stable Z for this A: 25.2797).*
 
 ```python
 quantum_physics_ai999x.solve('semi_empirical_mass_formula', Z=26, A=56)

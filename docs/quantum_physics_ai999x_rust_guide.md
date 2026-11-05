@@ -1,4 +1,4 @@
-# quantum-physics: the Quantum Physics program — user guide
+# quantum-physics: the Quantum Physics program, user guide
 
 **quantum-physics-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
@@ -17,63 +17,63 @@ Quantum Physics covers special relativity, photons and matter waves, the hydroge
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Quantum Physics | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-quantum-physics-1.4.0-windows-x86_64.zip |
-| Desktop app: Quantum Physics | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-quantum-physics-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Quantum Physics | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-quantum-physics-1.5.0-windows-x86_64.zip |
+| Desktop app: Quantum Physics | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-quantum-physics-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Quantum Physics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-quantum-physics-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-quantum-physics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Quantum Physics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-quantum-physics-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-quantum-physics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-quantum-physics-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-quantum-physics-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-quantum-physics-1.4.0-linux-x86_64.tar.gz
-./ai999x-quantum-physics-1.4.0-linux-x86_64/ai999x-quantum-physics
+tar xzf ai999x-quantum-physics-1.5.0-linux-x86_64.tar.gz
+./ai999x-quantum-physics-1.5.0-linux-x86_64/ai999x-quantum-physics
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
-./ai999x-1.4.0-linux-x86_64/ai999x
+tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
+./ai999x-1.5.0-linux-x86_64/ai999x
 ```
 
-### Command line — Linux
+### Command line: Linux
 
 The bundle holds one program per model; `quantum-physics` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 quantum-physics --version
 ```
 
-### Command line — Windows (PowerShell)
+### Command line: Windows (PowerShell)
 
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 quantum-physics --version
 ```
@@ -96,27 +96,59 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ quantum-physics --version
-quantum-physics-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
+quantum-physics-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
 ```
 
-### 2.2 List the capabilities
+### 2.2 Ask in words
+
+Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+
+```shell
+$ quantum-physics ask "Lorentz factor: v = 0.8 c"
+Read as: Lorentz factor
+gamma = 1.666666667
+beta = 0.8
+gamma_minus_1 = 0.6666666667
+  by: Lorentz factor  (gamma = 1/sqrt((1 - beta)(1 + beta)), beta = v/c)
+  v = 239833966.4 m/s
+  assumes: 0 <= v < c
+```
+
+### 2.3 Find a capability
+
+Search the capabilities by what you want to know; the first column is the id to pass to info and solve.
+
+```shell
+$ quantum-physics search "photon from a hydrogen-like transition (rydberg formula)"
+hydrogen_transition                  Photon from a hydrogen-like transition (Rydberg formula)  (hydrogen atom / spectral lines)
+hydrogen_transition_reduced_mass     Hydrogen-like transition with the reduced-mass correction  (hydrogen atom / spectral lines and isotope shift)
+hydrogen_radial_expectations         Radial expectation values of a hydrogen-like state  (hydrogen atom / wavefunctions)
+bohr_energy_level                    Energy level of a hydrogen-like atom (Bohr model)  (hydrogen atom / energy levels)
+infinite_well_transition             Photon from a particle-in-a-box transition  (quantum wells / infinite square well)
+moseley_k_alpha                      K-alpha X-ray line (Moseley's law)  (hydrogen atom / X-ray spectra)
+semi_empirical_mass_formula          Semi-empirical mass formula (liquid-drop binding energy)  (nuclear and particle physics / binding energy)
+coherent_state_photon_statistics     Photon-number distribution of a coherent state  (photons and matter waves / coherent states of light)
+… 12 more
+```
+
+### 2.4 List the capabilities
 
 Every capability the program answers: its id (what you pass to solve) and its name.
 
 ```shell
 $ quantum-physics list
+barrier_transmission                     Transmission through a rectangular barrier
 bec_critical_temperature                 Bose-Einstein condensation temperature
+blackbody_band_fraction                  Fraction of blackbody radiation in a wavelength band
 bohr_energy_level                        Energy level of a hydrogen-like atom (Bohr model)
 bose_einstein_occupation                 Bose-Einstein occupation of a mode
+chsh_bell_test                           CHSH Bell-test value for the singlet state
 clebsch_gordan                           Clebsch-Gordan coefficient
 coherent_state_photon_statistics         Photon-number distribution of a coherent state
-compton_scattering                       Compton scattering
-coulomb_barrier                          Coulomb barrier between two nuclei
-de_broglie_accelerated                   de Broglie wavelength of an accelerated particle
-… 54 more
+… 67 more
 ```
 
-### 2.3 What a capability needs
+### 2.5 What a capability needs
 
 The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
 
@@ -134,7 +166,7 @@ Photon from a hydrogen-like transition (Rydberg formula)
   out  series   spectral series (Lyman, Balmer, ...) []
 ```
 
-### 2.4 Solve
+### 2.6 Solve
 
 Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
 
@@ -149,7 +181,7 @@ series = Balmer
   assumes: n_upper > n_lower >= 1; infinitely heavy nucleus
 ```
 
-### 2.5 Machine-readable answer
+### 2.7 Machine-readable answer
 
 --json prints the same answer as one line of JSON (values in SI): for scripts and other programs.
 
@@ -158,7 +190,7 @@ $ quantum-physics solve hydrogen_transition Z=1 n_upper=3 n_lower=2 --json
 {"outcome":"SOLVED","message":"","value":656.112276419,"unit":"nm","solved_for":"lambda_nm","values":[["E_photon_eV",1.88967960042,"eV"],["lam",6.56112276419e-7,"m"],["lambda_nm",656.112276419,"nm"],["f",456922494479000.0,"Hz"],["series","Balmer",""]],"target":"lambda_nm","phrase":"photon energy","assumptions":["n_upper > n_lower >= 1","infinitely heavy nucleus"],"name":"Photon from a hydrogen-like transition (Rydberg formula)","equation":"1/lambda = R_inf Z^2 (1/n_lower^2 - 1/n_upper^2)"}
 ```
 
-### 2.6 When an input is missing
+### 2.8 When an input is missing
 
 No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.
 
@@ -167,7 +199,7 @@ $ quantum-physics solve hydrogen_transition Z=1 n_upper=3
 NEEDS_INPUT: hydrogen_transition needs n_lower (lower level). Example: solve('hydrogen_transition', Z=1, n_upper=3, n_lower=2).
 ```
 
-### 2.7 Many questions at once
+### 2.9 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | quantum-physics batch
 
@@ -263,7 +295,7 @@ By topic. For each: what it does, what it needs and gives, when it applies, and 
 
 <a id="clebsch_gordan"></a>
 
-#### Clebsch-Gordan coefficient — `clebsch_gordan`
+#### Clebsch-Gordan coefficient: `clebsch_gordan`
 
 The coefficient <j1 m1; j2 m2 | J M> for coupling two angular momenta (Condon-Shortley convention), with its exact square.
 
@@ -273,15 +305,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `j1` | in | first angular momentum (whole or half-whole) | — |
-| `m1` | in | its projection | — |
-| `j2` | in | second angular momentum | — |
-| `m2` | in | its projection | — |
-| `J` | in | total angular momentum | — |
-| `M` | in | total projection | — |
-| `cg` | out | Clebsch-Gordan coefficient | — |
-| `cg_squared` | out | its square (a probability) | — |
-| `cg_squared_exact` | out | the square as an exact fraction | — |
+| `j1` | in | first angular momentum (whole or half-whole) | - |
+| `m1` | in | its projection | - |
+| `j2` | in | second angular momentum | - |
+| `m2` | in | its projection | - |
+| `J` | in | total angular momentum | - |
+| `M` | in | total projection | - |
+| `cg` | out | Clebsch-Gordan coefficient | - |
+| `cg_squared` | out | its square (a probability) | - |
+| `cg_squared_exact` | out | the square as an exact fraction | - |
 
 **Applies when:** each j >= 0 and whole or half-whole; |m| <= j with j - m whole.
 
@@ -291,12 +323,12 @@ cg = 0.7071067812
 cg_squared = 0.5
 cg_squared_exact = 1/2
   by: Clebsch-Gordan coefficient  (Racah's formula in exact rational arithmetic; zero unless m1 + m2 = M and |j1 - j2| <= J <= j1 + j2)
-  j1 = 0.5   []
-  m1 = 0.5   []
-  j2 = 0.5   []
-  m2 = -0.5   []
-  J = 1   []
-  M = 0   []
+  j1 = 0.5
+  m1 = 0.5
+  j2 = 0.5
+  m2 = -0.5
+  J = 1
+  M = 0
   assumes: each j >= 0 and whole or half-whole; |m| <= j with j - m whole
 ```
 
@@ -304,7 +336,7 @@ cg_squared_exact = 1/2
 
 <a id="wigner_3j_symbol"></a>
 
-#### Wigner 3j symbol — `wigner_3j_symbol`
+#### Wigner 3j symbol: `wigner_3j_symbol`
 
 The Wigner 3j symbol (j1 j2 J; m1 m2 M), nonzero only when m1 + m2 + M = 0.
 
@@ -314,14 +346,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `j1` | in | first angular momentum (whole or half-whole) | — |
-| `m1` | in | its projection | — |
-| `j2` | in | second angular momentum | — |
-| `m2` | in | its projection | — |
-| `J` | in | total angular momentum | — |
-| `M` | in | total projection | — |
-| `w3j` | out | the 3j symbol | — |
-| `w3j_squared` | out | its square | — |
+| `j1` | in | first angular momentum (whole or half-whole) | - |
+| `m1` | in | its projection | - |
+| `j2` | in | second angular momentum | - |
+| `m2` | in | its projection | - |
+| `J` | in | total angular momentum | - |
+| `M` | in | total projection | - |
+| `w3j` | out | the 3j symbol | - |
+| `w3j_squared` | out | its square | - |
 
 **Applies when:** each j >= 0 and whole or half-whole; |m| <= j with j - m whole.
 
@@ -330,12 +362,12 @@ $ quantum-physics solve wigner_3j_symbol j1=1 m1=1 j2=1 m2=-1 J=0 M=0
 w3j = 0.5773502692
 w3j_squared = 0.3333333333
   by: Wigner 3j symbol  (from the exact Clebsch-Gordan coefficient: (-1)^(j1 - j2 - M) <j1 m1; j2 m2 | J, -M> / sqrt(2J + 1))
-  j1 = 1   []
-  m1 = 1   []
-  j2 = 1   []
-  m2 = -1   []
-  J = 0   []
-  M = 0   []
+  j1 = 1
+  m1 = 1
+  j2 = 1
+  m2 = -1
+  J = 0
+  M = 0
   assumes: each j >= 0 and whole or half-whole; |m| <= j with j - m whole
 ```
 
@@ -345,7 +377,7 @@ w3j_squared = 0.3333333333
 
 <a id="bohr_energy_level"></a>
 
-#### Energy level of a hydrogen-like atom (Bohr model) — `bohr_energy_level`
+#### Energy level of a hydrogen-like atom (Bohr model), `bohr_energy_level`
 
 Energy, ionization energy, orbit radius and orbital speed of level n of a one-electron atom or ion with nuclear charge Z.
 
@@ -355,8 +387,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Z` | in | atomic number (nuclear charge; 1 for hydrogen, 2 for He+ ...) | — |
-| `n` | in | principal quantum number | — |
+| `Z` | in | atomic number (nuclear charge; 1 for hydrogen, 2 for He+ ...) | - |
+| `n` | in | principal quantum number | - |
 | `E_eV` | out | energy of the level (negative: bound) | eV |
 | `E` | out | the same in J | J |
 | `ionization_eV` | out | energy needed to ionize from this level | eV |
@@ -382,7 +414,7 @@ v = 2187691.262 m/s
 
 <a id="hydrogen_transition_reduced_mass"></a>
 
-#### Hydrogen-like transition with the reduced-mass correction — `hydrogen_transition_reduced_mass`
+#### Hydrogen-like transition with the reduced-mass correction, `hydrogen_transition_reduced_mass`
 
 Photon energy and wavelength of a transition of a one-electron atom whose nucleus has mass M (in u): R_M = R_inf mu/m_e.
 
@@ -392,26 +424,37 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Z` | in | atomic number (1 for hydrogen) | — |
-| `n_upper` | in | upper level | — |
-| `n_lower` | in | lower level | — |
-| `M_u` | in | mass of the nucleus in u (1.007276 for the proton, 2.013553 for the deuteron) | — |
+| `Z` | in | atomic number (1 for hydrogen) | - |
+| `n_upper` | in | upper level | - |
+| `n_lower` | in | lower level | - |
+| `M_u` | in | mass of the nucleus in u (1.007276 for the proton, 2.013553 for the deuteron) | - |
 | `E_photon_eV` | out | photon energy | eV |
 | `lam` | out | vacuum wavelength | m |
 | `lambda_nm` | out | vacuum wavelength in nm | nm |
 | `f` | out | frequency | Hz |
-| `series` | out | spectral series (Lyman, Balmer, ...) | — |
-| `mu_ratio` | out | mu/m_e | — |
+| `series` | out | spectral series (Lyman, Balmer, ...) | - |
+| `mu_ratio` | out | mu/m_e | - |
 
 **Applies when:** n_upper > n_lower >= 1; M > 0.
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve hydrogen_transition_reduced_mass Z=1 n_upper=3 n_lower=2 M_u=1.007276467
+E_photon_eV = 1.888651009 eV
+lam = 6.564696063e-07 m
+lambda_nm = 656.4696063 nm
+f = 4.566737822e+14 Hz
+series = Balmer
+mu_ratio = 0.9994556794
+  by: Hydrogen-like transition with the reduced-mass correction  (1/lambda = R_inf (mu/m_e) Z^2 (1/n_lower^2 - 1/n_upper^2), mu = m_e M/(m_e + M))
+  M_u = 1.007276467
+  assumes: n_upper > n_lower >= 1; M > 0
+```
 
 **What the worked example means:** This calculation determines the spectral properties of a hydrogen-like atom by adjusting the Rydberg constant for the finite mass of the nucleus. Using an atomic number of 1 and levels from 2 to 3, the reduced mass correction yields a factor of 0.999456. The resulting photon energy is 1.88865 eV, corresponding to a vacuum wavelength of 656.47 nm and a frequency of 4.56674e+14 Hz. This refinement distinguishes isotopes, such as comparing hydrogen to deuterium.
 
 <a id="moseley_k_alpha"></a>
 
-#### K-alpha X-ray line (Moseley's law) — `moseley_k_alpha`
+#### K-alpha X-ray line (Moseley's law): `moseley_k_alpha`
 
 Energy and wavelength of the K-alpha X-ray line of element Z, with one unit of screening (Z - 1).
 
@@ -421,7 +464,7 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Z` | in | atomic number of the target element | — |
+| `Z` | in | atomic number of the target element | - |
 | `E_keV` | out | photon energy | keV |
 | `lam` | out | wavelength | m |
 | `lambda_nm` | out | wavelength in nm | nm |
@@ -445,7 +488,7 @@ f = 1.934427073e+18 Hz
 
 <a id="lande_g_zeeman"></a>
 
-#### Landé g factor and anomalous Zeeman shift — `lande_g_zeeman`
+#### Landé g factor and anomalous Zeeman shift, `lande_g_zeeman`
 
 The Landé g factor of a level L, S, J (with g_s = 2) and the energy shift g_J mu_B B mJ in a weak magnetic field.
 
@@ -455,15 +498,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `L` | in | orbital angular momentum quantum number | — |
-| `S` | in | spin quantum number | — |
-| `J` | in | total angular momentum quantum number | — |
-| `mJ` | in | magnetic quantum number | — |
+| `L` | in | orbital angular momentum quantum number | - |
+| `S` | in | spin quantum number | - |
+| `J` | in | total angular momentum quantum number | - |
+| `mJ` | in | magnetic quantum number | - |
 | `B` | in | magnetic field (T) | T |
-| `g_J` | out | Landé g factor | — |
+| `g_J` | out | Landé g factor | - |
 | `dE` | out | Zeeman energy shift | J |
 | `dE_eV` | out | the shift in eV | eV |
-| `g_J_exact` | out | g_J as an exact fraction | — |
+| `g_J_exact` | out | g_J as an exact fraction | - |
 
 **Applies when:** |L - S| <= J <= L + S, J > 0; |mJ| <= J; weak field (LS coupling holds).
 
@@ -474,11 +517,11 @@ dE = 6.182673377e-24 J
 dE_eV = 3.858921199e-05 eV
 g_J_exact = 4/3
   by: Landé g factor and anomalous Zeeman shift  (g_J = 1 + [J(J+1) + S(S+1) - L(L+1)] / [2 J(J+1)], dE = g_J mu_B B mJ)
-  L = 1   []
-  S = 0.5   []
-  J = 1.5   []
-  mJ = 0.5   []
-  B = 1 T   []
+  L = 1
+  S = 0.5
+  J = 1.5
+  mJ = 0.5
+  B = 1 T
   assumes: |L - S| <= J <= L + S, J > 0; |mJ| <= J; weak field (LS coupling holds)
 ```
 
@@ -486,7 +529,7 @@ g_J_exact = 4/3
 
 <a id="hydrogen_transition"></a>
 
-#### Photon from a hydrogen-like transition (Rydberg formula) — `hydrogen_transition`
+#### Photon from a hydrogen-like transition (Rydberg formula), `hydrogen_transition`
 
 Energy, wavelength and frequency of the photon emitted when a one-electron atom drops from n_upper to n_lower.
 
@@ -496,14 +539,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Z` | in | atomic number (1 for hydrogen) | — |
-| `n_upper` | in | upper level | — |
-| `n_lower` | in | lower level | — |
+| `Z` | in | atomic number (1 for hydrogen) | - |
+| `n_upper` | in | upper level | - |
+| `n_lower` | in | lower level | - |
 | `E_photon_eV` | out | photon energy | eV |
 | `lam` | out | vacuum wavelength | m |
 | `lambda_nm` | out | vacuum wavelength in nm | nm |
 | `f` | out | frequency | Hz |
-| `series` | out | spectral series (Lyman, Balmer, ...) | — |
+| `series` | out | spectral series (Lyman, Balmer, ...) | - |
 
 **Applies when:** n_upper > n_lower >= 1; infinitely heavy nucleus.
 
@@ -522,7 +565,7 @@ series = Balmer
 
 <a id="hydrogen_radial_probability"></a>
 
-#### Probability of finding the electron within a radius — `hydrogen_radial_probability`
+#### Probability of finding the electron within a radius, `hydrogen_radial_probability`
 
 The probability that the electron of the hydrogen-like state n, l lies within distance R of the nucleus.
 
@@ -532,23 +575,31 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | principal quantum number | — |
-| `l` | in | orbital quantum number (0 <= l < n) | — |
-| `Z` | in | atomic number | — |
+| `n` | in | principal quantum number | - |
+| `l` | in | orbital quantum number (0 <= l < n) | - |
+| `Z` | in | atomic number | - |
 | `R` | in | radius (pm, nm, m) | m |
-| `P_inside` | out | probability within R | — |
-| `P_outside` | out | probability beyond R | — |
-| `R_a0` | out | R in units of a0 | — |
+| `P_inside` | out | probability within R | - |
+| `P_outside` | out | probability beyond R | - |
+| `R_a0` | out | R in units of a0 | - |
 
 **Applies when:** n >= 1; 0 <= l <= n - 1; R > 0; infinitely heavy nucleus.
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve hydrogen_radial_probability n=1 l=0 Z=1 "R=52.91772105 pm"
+P_inside = 0.3233235838
+P_outside = 0.6766764162
+R_a0 = 0.9999999999
+  by: Probability of finding the electron within a radius  (P = integral_0^R r^2 R_nl^2 dr / integral_0^inf r^2 R_nl^2 dr (30-digit quadrature))
+  R = 5.291772105e-11 m
+  assumes: n >= 1; 0 <= l <= n - 1; R > 0; infinitely heavy nucleus
+```
 
 **What the worked example means:** This calculation determines the likelihood that an electron in a hydrogen-like state defined by quantum numbers 1 and 0 resides within a distance 52.9177 pm from the nucleus. The result, expressed as 0.323324, represents the cumulative radial probability up to that radius, while 0.676676 accounts for the remaining probability beyond it. The radius is also normalized to atomic units as 1 to facilitate comparison with standard orbital scales.
 
 <a id="hydrogen_radial_expectations"></a>
 
-#### Radial expectation values of a hydrogen-like state — `hydrogen_radial_expectations`
+#### Radial expectation values of a hydrogen-like state, `hydrogen_radial_expectations`
 
 <r>, <r^2>, <1/r> and the radial spread of the state n, l of a one-electron atom with nuclear charge Z (in Bohr radii).
 
@@ -558,14 +609,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | principal quantum number | — |
-| `l` | in | orbital quantum number (0 <= l < n) | — |
-| `Z` | in | atomic number | — |
-| `r_mean_a0` | out | <r> in units of a0 | — |
-| `r2_mean_a0sq` | out | <r^2> in units of a0^2 | — |
-| `inv_r_mean_per_a0` | out | <1/r> in units of 1/a0 | — |
+| `n` | in | principal quantum number | - |
+| `l` | in | orbital quantum number (0 <= l < n) | - |
+| `Z` | in | atomic number | - |
+| `r_mean_a0` | out | <r> in units of a0 | - |
+| `r2_mean_a0sq` | out | <r^2> in units of a0^2 | - |
+| `inv_r_mean_per_a0` | out | <1/r> in units of 1/a0 | - |
 | `r_mean` | out | <r> in m | m |
-| `dr_a0` | out | radial spread sqrt(<r^2> - <r>^2) in a0 | — |
+| `dr_a0` | out | radial spread sqrt(<r^2> - <r>^2) in a0 | - |
 
 **Applies when:** n >= 1; 0 <= l <= n - 1; infinitely heavy nucleus.
 
@@ -586,7 +637,7 @@ dr_a0 = 2.236067977
 
 <a id="two_body_decay"></a>
 
-#### Kinematics of a two-body decay — `two_body_decay`
+#### Kinematics of a two-body decay: `two_body_decay`
 
 Q value, momentum and kinetic energies of the two products when a particle or nucleus at rest decays into two bodies (alpha decay, pi -> mu nu, ...).
 
@@ -596,10 +647,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `M` | in | mass of the parent | — |
-| `m1` | in | mass of product 1 | — |
-| `m2` | in | mass of product 2 (0 for a photon or neutrino) | — |
-| `unit` | in | unit of the masses: MeV/c^2 (default) or u (optional) | — |
+| `M` | in | mass of the parent | - |
+| `m1` | in | mass of product 1 | - |
+| `m2` | in | mass of product 2 (0 for a photon or neutrino) | - |
+| `unit` | in | unit of the masses: MeV/c^2 (default) or u (optional) | - |
 | `Q_MeV` | out | Q value (M - m1 - m2) c^2 | MeV |
 | `p_MeV` | out | momentum of each product times c | MeV |
 | `E1_MeV` | out | total energy of product 1 | MeV |
@@ -618,9 +669,9 @@ E2_MeV = 29.79214091 MeV
 K1_MeV = 4.11987359 MeV
 K2_MeV = 29.79214091 MeV
   by: Kinematics of a two-body decay  (p = sqrt[(M^2 - (m1 + m2)^2)(M^2 - (m1 - m2)^2)]/(2M), E_i = sqrt(p^2 + m_i^2), K_i = p^2/(E_i + m_i) (relativistic))
-  M = 139.57039   []
-  m1 = 105.6583755   []
-  m2 = 0   []
+  M = 139.57039
+  m1 = 105.6583755
+  m2 = 0
   assumes: M > m1 + m2; m1, m2 >= 0
 ```
 
@@ -628,7 +679,7 @@ K2_MeV = 29.79214091 MeV
 
 <a id="semi_empirical_mass_formula"></a>
 
-#### Semi-empirical mass formula (liquid-drop binding energy) — `semi_empirical_mass_formula`
+#### Semi-empirical mass formula (liquid-drop binding energy), `semi_empirical_mass_formula`
 
 The liquid-drop (Bethe-Weizsaecker) binding energy of a nucleus with Z protons and mass number A, its terms, the binding energy per nucleon, the atomic mass and the most stable Z for that A.
 
@@ -638,17 +689,17 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Z` | in | number of protons | — |
-| `A` | in | mass number | — |
+| `Z` | in | number of protons | - |
+| `A` | in | mass number | - |
 | `B_MeV` | out | binding energy | MeV |
 | `B_per_A_MeV` | out | binding energy per nucleon | MeV |
-| `mass_u` | out | atomic mass in u (Z m(1H) + N m_n - B/c^2) | — |
+| `mass_u` | out | atomic mass in u (Z m(1H) + N m_n - B/c^2) | - |
 | `volume_MeV` | out | volume term a_V A | MeV |
 | `surface_MeV` | out | surface term a_S A^(2/3) | MeV |
 | `coulomb_MeV` | out | Coulomb term a_C Z(Z - 1)/A^(1/3) | MeV |
 | `asymmetry_MeV` | out | asymmetry term a_A (A - 2Z)^2/A | MeV |
 | `pairing_MeV` | out | pairing term (+ even-even, 0 odd A, - odd-odd) | MeV |
-| `Z_stable` | out | most stable (continuous) Z for this A, where dB/dZ = 0 | — |
+| `Z_stable` | out | most stable (continuous) Z for this A, where dB/dZ = 0 | - |
 
 **Applies when:** 1 <= Z <= A; A >= 2; a liquid-drop estimate: poor for light nuclei.
 
@@ -673,7 +724,7 @@ Z_stable = 25.27970457
 
 <a id="radioactive_dating_age"></a>
 
-#### Age from the remaining fraction (radioactive dating) — `radioactive_dating_age`
+#### Age from the remaining fraction (radioactive dating), `radioactive_dating_age`
 
 The time needed for a radioactive sample to decay to a given fraction of its original amount (for example carbon-14 dating).
 
@@ -683,10 +734,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `fraction` | in | fraction of the original nuclei (or activity) remaining, 0 < f <= 1 (or a percentage) | — |
+| `fraction` | in | fraction of the original nuclei (or activity) remaining, 0 < f <= 1 (or a percentage) | - |
 | `T_half` | in | half-life | s |
 | `t` | out | elapsed time (age) | s |
-| `half_lives` | out | number of half-lives | — |
+| `half_lives` | out | number of half-lives | - |
 | `decay_constant` | out | decay constant | 1/s |
 
 **Applies when:** 0 < fraction <= 1; T_half > 0.
@@ -697,8 +748,8 @@ t = 3.61650096e+11 s
 half_lives = 2
 decay_constant = 3.833247596e-12 1/s
   by: Age from the remaining fraction (radioactive dating)  (t = T_half log2(1/f) = ln(1/f)/lambda)
-  fraction = 0.25   []
-  T_half = 1.80825048e+11 s   []
+  fraction = 0.25
+  T_half = 1.80825048e+11 s
   assumes: 0 < fraction <= 1; T_half > 0
 ```
 
@@ -706,7 +757,7 @@ decay_constant = 3.833247596e-12 1/s
 
 <a id="coulomb_barrier"></a>
 
-#### Coulomb barrier between two nuclei — `coulomb_barrier`
+#### Coulomb barrier between two nuclei: `coulomb_barrier`
 
 The Coulomb potential energy of two nuclei just touching, with radii R = r0 A^(1/3).
 
@@ -716,10 +767,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `Z1` | in | charge number of nucleus 1 | — |
-| `A1` | in | mass number of nucleus 1 | — |
-| `Z2` | in | charge number of nucleus 2 | — |
-| `A2` | in | mass number of nucleus 2 | — |
+| `Z1` | in | charge number of nucleus 1 | - |
+| `A1` | in | mass number of nucleus 1 | - |
+| `Z2` | in | charge number of nucleus 2 | - |
+| `A2` | in | mass number of nucleus 2 | - |
 | `r0` | in | radius parameter (typically 1.2 fm) | m |
 | `V_MeV` | out | Coulomb barrier height | MeV |
 | `R` | out | touching distance r0 (A1^(1/3) + A2^(1/3)) | m |
@@ -733,7 +784,7 @@ V_MeV = 0.7199822734 MeV
 R = 2e-15 m
 R_fm = 2 fm
   by: Coulomb barrier between two nuclei  (V = Z1 Z2 e^2/(4 pi eps0 R) = Z1 Z2 alpha hbar c/R)
-  r0 = 1e-15 m   []
+  r0 = 1e-15 m
   assumes: 1 <= Z <= A; r0 > 0
 ```
 
@@ -741,7 +792,7 @@ R_fm = 2 fm
 
 <a id="nuclide_decay"></a>
 
-#### Decay of a named radionuclide — `nuclide_decay`
+#### Decay of a named radionuclide: `nuclide_decay`
 
 The fraction of a named radionuclide (C-14, Co-60, I-131, U-238, ...) left after time t, with its tabulated half-life, decay constant and mean life.
 
@@ -751,11 +802,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `nuclide` | in | the radionuclide (e.g. C-14, Cs-137, I-131) | — |
+| `nuclide` | in | the radionuclide (e.g. C-14, Cs-137, I-131) | - |
 | `t` | in | elapsed time | s |
-| `fraction` | out | fraction of the parent nuclide remaining | — |
+| `fraction` | out | fraction of the parent nuclide remaining | - |
 | `half_life` | out | half-life (ICRP-107) | s |
-| `half_life_years` | out | half-life in Julian years | — |
+| `half_life_years` | out | half-life in Julian years | - |
 | `decay_constant` | out | decay constant | 1/s |
 | `mean_life` | out | mean life | s |
 | `specific_activity_per_atom` | out | activity per original atom at time t (Bq) | 1/s |
@@ -771,7 +822,7 @@ decay_constant = 1.000229009e-06 1/s
 mean_life = 999771.0435 s
 specific_activity_per_atom = 2.500572522e-07 1/s
   by: Decay of a named radionuclide  (N/N0 = 2^(-t/T_half) with the ICRP-107 half-life of the nuclide)
-  t = 1385976.96 s   []
+  t = 1385976.96 s
   nuclide = I-131
   assumes: t >= 0; one of the tabulated nuclides
 ```
@@ -780,7 +831,7 @@ specific_activity_per_atom = 2.500572522e-07 1/s
 
 <a id="decay_chain_parent_daughter"></a>
 
-#### Parent-daughter decay chain (Bateman) — `decay_chain_parent_daughter`
+#### Parent-daughter decay chain (Bateman): `decay_chain_parent_daughter`
 
 Numbers and activities of a parent and its radioactive daughter after time t, starting from pure parent (Bateman solution).
 
@@ -792,13 +843,13 @@ $$
 |---|---|---|---|
 | `T_half_P` | in | half-life of the parent | s |
 | `T_half_D` | in | half-life of the daughter | s |
-| `N0` | in | initial number of parent nuclei | — |
+| `N0` | in | initial number of parent nuclei | - |
 | `t` | in | elapsed time | s |
-| `N_parent` | out | parent nuclei | — |
-| `N_daughter` | out | daughter nuclei | — |
+| `N_parent` | out | parent nuclei | - |
+| `N_daughter` | out | daughter nuclei | - |
 | `A_parent` | out | parent activity (Bq) | 1/s |
 | `A_daughter` | out | daughter activity (Bq) | 1/s |
-| `activity_ratio` | out | A_daughter/A_parent (tends to 1 in secular equilibrium) | — |
+| `activity_ratio` | out | A_daughter/A_parent (tends to 1 in secular equilibrium) | - |
 
 **Applies when:** half-lives and N0 positive; t >= 0; no daughter at t = 0.
 
@@ -810,10 +861,10 @@ A_parent = 0.1732867951 1/s
 A_daughter = 0.1732867951 1/s
 activity_ratio = 1
   by: Parent-daughter decay chain (Bateman)  (N_D = N0 lambda_P (e^(-lambda_P t) - e^(-lambda_D t))/(lambda_D - lambda_P), evaluated without cancellation when the decay constants are close)
-  T_half_P = 2 s   []
-  T_half_D = 1 s   []
-  N0 = 1   []
-  t = 2 s   []
+  T_half_P = 2 s
+  T_half_D = 1 s
+  N0 = 1
+  t = 2 s
   assumes: half-lives and N0 positive; t >= 0; no daughter at t = 0
 ```
 
@@ -821,7 +872,7 @@ activity_ratio = 1
 
 <a id="nuclear_reaction_threshold"></a>
 
-#### Q value and threshold energy of a nuclear reaction — `nuclear_reaction_threshold`
+#### Q value and threshold energy of a nuclear reaction, `nuclear_reaction_threshold`
 
 Q value of a + X -> Y + b from the masses (in u) and, for an endothermic reaction, the minimum beam kinetic energy on a target at rest (relativistic).
 
@@ -831,13 +882,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `m_a` | in | projectile mass (u) | — |
-| `m_X` | in | target mass (u) | — |
-| `m_Y` | in | heavy product mass (u) | — |
-| `m_b` | in | light product mass (u) | — |
+| `m_a` | in | projectile mass (u) | - |
+| `m_X` | in | target mass (u) | - |
+| `m_Y` | in | heavy product mass (u) | - |
+| `m_b` | in | light product mass (u) | - |
 | `Q_MeV` | out | Q value | MeV |
 | `K_threshold_MeV` | out | threshold kinetic energy of the projectile (0 if exothermic) | MeV |
-| `endothermic` | out | whether the reaction needs energy (Q < 0) | — |
+| `endothermic` | out | whether the reaction needs energy (Q < 0) | - |
 
 **Applies when:** masses >= 0; target at rest.
 
@@ -847,10 +898,10 @@ Q_MeV = -1.191882102 MeV
 K_threshold_MeV = 1.532621122 MeV
 endothermic = yes
   by: Q value and threshold energy of a nuclear reaction  (Q = (m_a + m_X - m_Y - m_b) c^2; K_th = -Q (m_a + m_X + m_Y + m_b)/(2 m_X) (exact relativistic form))
-  m_a = 4.002603254   []
-  m_X = 14.003074   []
-  m_Y = 16.99913176   []
-  m_b = 1.007825032   []
+  m_a = 4.002603254
+  m_X = 14.003074
+  m_Y = 16.99913176
+  m_b = 1.007825032
   assumes: masses >= 0; target at rest
 ```
 
@@ -858,7 +909,7 @@ endothermic = yes
 
 <a id="radioactive_decay_law"></a>
 
-#### Radioactive decay law — `radioactive_decay_law`
+#### Radioactive decay law: `radioactive_decay_law`
 
 Nuclei remaining, fraction, decay constant, mean life and activity after time t, from the half-life and the initial number of nuclei.
 
@@ -869,15 +920,15 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `T_half` | in | half-life | s |
-| `N0` | in | initial number of nuclei | — |
+| `N0` | in | initial number of nuclei | - |
 | `t` | in | elapsed time | s |
-| `N` | out | nuclei remaining | — |
-| `fraction` | out | fraction remaining N/N0 | — |
+| `N` | out | nuclei remaining | - |
+| `fraction` | out | fraction remaining N/N0 | - |
 | `decay_constant` | out | decay constant ln2/T_half | 1/s |
 | `mean_life` | out | mean life 1/lambda | s |
 | `A0` | out | initial activity (Bq) | 1/s |
 | `A` | out | activity at time t (Bq) | 1/s |
-| `half_lives` | out | number of half-lives elapsed | — |
+| `half_lives` | out | number of half-lives elapsed | - |
 
 **Applies when:** T_half > 0; N0 > 0; t >= 0.
 
@@ -891,9 +942,9 @@ A0 = 383324759.6 1/s
 A = 95831189.9 1/s
 half_lives = 2
   by: Radioactive decay law  (N = N0 2^(-t/T_half), lambda = ln 2/T_half, A = lambda N)
-  T_half = 1.80825048e+11 s   []
-  N0 = 1e+20   []
-  t = 3.61650096e+11 s   []
+  T_half = 1.80825048e+11 s
+  N0 = 1e+20
+  t = 3.61650096e+11 s
   assumes: T_half > 0; N0 > 0; t >= 0
 ```
 
@@ -903,7 +954,7 @@ half_lives = 2
 
 <a id="particle_decay_length"></a>
 
-#### Mean decay length of a relativistic unstable particle — `particle_decay_length`
+#### Mean decay length of a relativistic unstable particle, `particle_decay_length`
 
 Lorentz factor, lab-frame lifetime and mean decay length beta gamma c tau of a pion, kaon, muon, hyperon, charm or bottom meson with momentum p.
 
@@ -913,15 +964,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `particle` | in | the particle (pi+, K+, K_S0, K_L0, mu-, tau-, n, Lambda, ...) | — |
-| `p` | in | momentum in GeV/c | — |
-| `gamma` | out | Lorentz factor | — |
-| `beta` | out | v/c | — |
-| `beta_gamma` | out | beta gamma = p/(m c) | — |
+| `particle` | in | the particle (pi+, K+, K_S0, K_L0, mu-, tau-, n, Lambda, ...) | - |
+| `p` | in | momentum in GeV/c | - |
+| `gamma` | out | Lorentz factor | - |
+| `beta` | out | v/c | - |
+| `beta_gamma` | out | beta gamma = p/(m c) | - |
 | `lifetime_lab` | out | mean lifetime in the lab | s |
 | `mean_decay_length` | out | mean decay length beta gamma c tau | m |
 | `proper_lifetime` | out | mean proper lifetime (PDG) | s |
-| `mass_MeV` | out | mass (MeV/c^2, PDG) | — |
+| `mass_MeV` | out | mass (MeV/c^2, PDG) | - |
 
 **Applies when:** p >= 0; one of the tabulated particles.
 
@@ -935,7 +986,7 @@ mean_decay_length = 658.6383866 m
 proper_lifetime = 2.196981175e-06 s
 mass_MeV = 105.6583755
   by: Mean decay length of a relativistic unstable particle  (beta gamma = p/(m c), L = beta gamma c tau, t_lab = gamma tau)
-  p = 0.1056583755   []
+  p = 0.1056583755
   particle = mu-
   assumes: p >= 0; one of the tabulated particles
 ```
@@ -946,7 +997,7 @@ mass_MeV = 105.6583755
 
 <a id="compton_scattering"></a>
 
-#### Compton scattering — `compton_scattering`
+#### Compton scattering: `compton_scattering`
 
 Wavelength and energy of a photon scattered by a free electron at rest through angle theta, and the electron's kinetic energy.
 
@@ -976,8 +1027,8 @@ E_in_keV = 17.46256316 keV
 E_out_keV = 16.88552755 keV
 K_electron_keV = 0.5770356102 keV
   by: Compton scattering  (lambda' - lambda = (h/(m_e c))(1 - cos theta) = 2 (h/(m_e c)) sin^2(theta/2))
-  lam = 7.1e-11 m   []
-  theta = 1.570796327 rad   []
+  lam = 7.1e-11 m
+  theta = 1.570796327 rad
   assumes: lambda > 0; 0 <= theta <= 180 deg
 ```
 
@@ -985,7 +1036,7 @@ In the worked example, lam = 71 pm, theta = 90 deg go through the equation above
 
 <a id="de_broglie_wavelength_mv"></a>
 
-#### de Broglie wavelength of a moving particle — `de_broglie_wavelength_mv`
+#### de Broglie wavelength of a moving particle, `de_broglie_wavelength_mv`
 
 The de Broglie wavelength lambda = h/(m v) of a particle of mass m moving at speed v, and the relativistic h/(gamma m v).
 
@@ -1001,8 +1052,8 @@ $$
 | `lam` | out | de Broglie wavelength h/(m v) | m |
 | `lambda_nm` | out | the same in nm | nm |
 | `lambda_rel_nm` | out | relativistic wavelength h/(gamma m v) in nm | nm |
-| `inv_lambda` | out | 1/lambda = m v/h in 1/m (well scaled for heavy bodies, whose lambda is tiny) | — |
-| `beta` | out | v/c | — |
+| `inv_lambda` | out | 1/lambda = m v/h in 1/m (well scaled for heavy bodies, whose lambda is tiny) | - |
+| `beta` | out | v/c | - |
 
 **Applies when:** m > 0; 0 < v < c.
 
@@ -1015,8 +1066,8 @@ lambda_rel_nm = 0.7273854627 nm
 inv_lambda = 1374779244
 beta = 0.003335640952
   by: de Broglie wavelength of a moving particle  (lambda = h/(m v) (non-relativistic momentum); lambda_rel = h/(gamma m v))
-  m = 9.109383714e-31 kg   []
-  v = 1000000 m/s   []
+  m = 9.109383714e-31 kg
+  v = 1000000 m/s
   assumes: m > 0; 0 < v < c
 ```
 
@@ -1024,7 +1075,7 @@ beta = 0.003335640952
 
 <a id="de_broglie_accelerated"></a>
 
-#### de Broglie wavelength of an accelerated particle — `de_broglie_accelerated`
+#### de Broglie wavelength of an accelerated particle, `de_broglie_accelerated`
 
 The de Broglie wavelength of an electron or proton accelerated from rest through a voltage V, non-relativistic and relativistic.
 
@@ -1035,7 +1086,7 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `V` | in | accelerating voltage | V |
-| `particle` | in | the accelerated particle (charge e) | — |
+| `particle` | in | the accelerated particle (charge e) | - |
 | `lambda_nonrel` | out | wavelength h/sqrt(2 m e V) | m |
 | `lambda_nonrel_nm` | out | the same in nm | nm |
 | `lambda_rel` | out | relativistic wavelength | m |
@@ -1054,7 +1105,7 @@ lambda_rel_nm = 0.1226365968 nm
 p = 5.403012087e-24 kg*m/s
 K_eV = 100 eV
   by: de Broglie wavelength of an accelerated particle  (lambda = h/p with p = sqrt(2 m e V) (non-relativistic) or p = sqrt(K (K + 2 m c^2))/c, K = e V)
-  V = 100 V   []
+  V = 100 V
   particle = electron
   assumes: V > 0
 ```
@@ -1063,7 +1114,7 @@ K_eV = 100 eV
 
 <a id="heisenberg_minimum_uncertainty"></a>
 
-#### Minimum momentum uncertainty (Heisenberg) — `heisenberg_minimum_uncertainty`
+#### Minimum momentum uncertainty (Heisenberg): `heisenberg_minimum_uncertainty`
 
 The smallest momentum and velocity uncertainty compatible with a position uncertainty dx: dp = hbar/(2 dx).
 
@@ -1076,7 +1127,7 @@ $$
 | `dx` | in | position uncertainty (standard deviation) | m |
 | `m` | in | mass of the particle | kg |
 | `dp` | out | minimum momentum uncertainty | kg*m/s |
-| `dp_eV_per_c` | out | the same in eV/c | — |
+| `dp_eV_per_c` | out | the same in eV/c | - |
 | `dv` | out | minimum velocity uncertainty | m/s |
 
 **Applies when:** dx > 0; m > 0.
@@ -1087,8 +1138,8 @@ dp = 5.272859088e-25 kg*m/s
 dp_eV_per_c = 986.6349023
 dv = 578838.1798 m/s
   by: Minimum momentum uncertainty (Heisenberg)  (dp = hbar/(2 dx) (a minimum-uncertainty Gaussian packet), dv = dp/m)
-  dx = 1e-10 m   []
-  m = 9.109383714e-31 kg   []
+  dx = 1e-10 m
+  m = 9.109383714e-31 kg
   assumes: dx > 0; m > 0
 ```
 
@@ -1096,7 +1147,7 @@ dv = 578838.1798 m/s
 
 <a id="photoelectric_effect"></a>
 
-#### Photoelectric effect — `photoelectric_effect`
+#### Photoelectric effect: `photoelectric_effect`
 
 Maximum kinetic energy of photoelectrons, stopping potential and threshold wavelength from the light's wavelength and the metal's work function.
 
@@ -1126,8 +1177,8 @@ lambda_threshold = 2.883353452e-07 m
 lambda_threshold_nm = 288.3353452 nm
 f_threshold = 1.039735374e+15 Hz
   by: Photoelectric effect  (K_max = h c/lambda - W, V_stop = K_max/e, lambda_0 = h c/W)
-  lam = 2.5e-07 m   []
-  W = 6.889359526e-19 J   []
+  lam = 2.5e-07 m
+  W = 6.889359526e-19 J
   assumes: wavelength and work function positive; photon energy at least the work function
 ```
 
@@ -1135,7 +1186,7 @@ f_threshold = 1.039735374e+15 Hz
 
 <a id="photon_energy"></a>
 
-#### Photon energy from wavelength — `photon_energy`
+#### Photon energy from wavelength: `photon_energy`
 
 The energy E = h c/lambda, frequency and momentum h/lambda of a photon of vacuum wavelength lambda.
 
@@ -1160,7 +1211,7 @@ E_eV = 2.479683969 eV
 f = 5.99584916e+14 Hz
 p = 1.32521403e-27 kg*m/s
   by: Photon energy from wavelength  (E = h c/lambda, f = c/lambda, p = h/lambda)
-  lam = 5e-07 m   []
+  lam = 5e-07 m
   assumes: lambda > 0; in vacuum
 ```
 
@@ -1168,7 +1219,7 @@ p = 1.32521403e-27 kg*m/s
 
 <a id="coherent_state_photon_statistics"></a>
 
-#### Photon-number distribution of a coherent state — `coherent_state_photon_statistics`
+#### Photon-number distribution of a coherent state, `coherent_state_photon_statistics`
 
 The probability of n photons in a coherent (laser) state |alpha>, its mean photon number and variance (Poisson statistics).
 
@@ -1178,12 +1229,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | coherent amplitude \|alpha\| | — |
-| `n` | in | photon number | — |
-| `P_n` | out | probability of exactly n photons | — |
-| `mean_n` | out | mean photon number \|alpha\|^2 | — |
-| `variance` | out | photon-number variance \|alpha\|^2 | — |
-| `P_0` | out | probability of no photons | — |
+| `alpha` | in | coherent amplitude \|alpha\| | - |
+| `n` | in | photon number | - |
+| `P_n` | out | probability of exactly n photons | - |
+| `mean_n` | out | mean photon number \|alpha\|^2 | - |
+| `variance` | out | photon-number variance \|alpha\|^2 | - |
+| `P_0` | out | probability of no photons | - |
 
 **Applies when:** |alpha| >= 0; n >= 0.
 
@@ -1194,7 +1245,7 @@ mean_n = 4
 variance = 4
 P_0 = 0.01831563889
   by: Photon-number distribution of a coherent state  (P(n) = exp(-|alpha|^2) |alpha|^(2n)/n! (computed in logarithms))
-  alpha = 2   []
+  alpha = 2
   assumes: |alpha| >= 0; n >= 0
 ```
 
@@ -1204,7 +1255,7 @@ P_0 = 0.01831563889
 
 <a id="gate_rotation_axis"></a>
 
-#### Bloch-sphere rotation of a single-qubit gate sequence — `gate_rotation_axis`
+#### Bloch-sphere rotation of a single-qubit gate sequence, `gate_rotation_axis`
 
 The single rotation (axis n and angle) of the Bloch sphere that a sequence of single-qubit gates performs (global phase ignored).
 
@@ -1214,22 +1265,32 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `gates` | in | gates applied left to right, e.g. 'H T Rz(pi/2) X' | — |
+| `gates` | in | gates applied left to right, e.g. 'H T Rz(pi/2) X' | - |
 | `angle` | out | rotation angle in [0, pi] (rad) | rad |
-| `angle_deg` | out | rotation angle in degrees | — |
-| `nx` | out | axis x | — |
-| `ny` | out | axis y | — |
-| `nz` | out | axis z | — |
+| `angle_deg` | out | rotation angle in degrees | - |
+| `nx` | out | axis x | - |
+| `ny` | out | axis y | - |
+| `nz` | out | axis z | - |
 
 **Applies when:** gates from H, X, Y, Z, S, Sdg, T, Tdg, I, Rx(t), Ry(t), Rz(t), P(t).
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve gate_rotation_axis gates=H
+angle = 3.141592654 rad
+angle_deg = 180
+nx = 0.7071067812
+ny = 0
+nz = 0.7071067812
+  by: Bloch-sphere rotation of a single-qubit gate sequence  (U/sqrt(det U) = cos(t/2) I - i sin(t/2) n.sigma; angle = 2 atan2(|a|, a0), n = a/|a|)
+  gates = H
+  assumes: gates from H, X, Y, Z, S, Sdg, T, Tdg, I, Rx(t), Ry(t), Rz(t), P(t)
+```
 
 **What the worked example means:** This calculation determines the single equivalent rotation on the Bloch sphere for a sequence of single-qubit gates. Multiplying the unitary matrices of each gate in the provided order gives an overall transformation that ignores global phase. The result specifies the rotation angle as 3.14159 rad radians and defines the axis of rotation using the normalized vector components 0.707107, 0, and 0.707107. This simplifies complex circuit sequences into a basic geometric operation.
 
 <a id="single_qubit_circuit"></a>
 
-#### State of a qubit after a sequence of gates — `single_qubit_circuit`
+#### State of a qubit after a sequence of gates, `single_qubit_circuit`
 
 The amplitudes, measurement probabilities and Bloch vector of a qubit after gates such as H, X, S, T and rotations act on |0>, |1>, |+>, ...
 
@@ -1239,27 +1300,42 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `start` | in | initial state \|0>, \|1>, \|+>, \|->, \|+i> or \|-i> | — |
-| `gates` | in | gates applied left to right, e.g. 'H T Rz(pi/2) X' | — |
-| `alpha_re` | out | Re alpha (global phase fixed: first non-zero amplitude real positive) | — |
-| `alpha_im` | out | Im alpha | — |
-| `beta_re` | out | Re beta | — |
-| `beta_im` | out | Im beta | — |
-| `p0` | out | probability of measuring 0 | — |
-| `p1` | out | probability of measuring 1 | — |
-| `bx` | out | Bloch x | — |
-| `by` | out | Bloch y | — |
-| `bz` | out | Bloch z | — |
+| `start` | in | initial state \|0>, \|1>, \|+>, \|->, \|+i> or \|-i> | - |
+| `gates` | in | gates applied left to right, e.g. 'H T Rz(pi/2) X' | - |
+| `alpha_re` | out | Re alpha (global phase fixed: first non-zero amplitude real positive) | - |
+| `alpha_im` | out | Im alpha | - |
+| `beta_re` | out | Re beta | - |
+| `beta_im` | out | Im beta | - |
+| `p0` | out | probability of measuring 0 | - |
+| `p1` | out | probability of measuring 1 | - |
+| `bx` | out | Bloch x | - |
+| `by` | out | Bloch y | - |
+| `bz` | out | Bloch z | - |
 
 **Applies when:** gates from H, X, Y, Z, S, Sdg, T, Tdg, I, Rx(t), Ry(t), Rz(t), P(t); at most 500 gates.
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve single_qubit_circuit gates=H start=0
+alpha_re = 0.7071067812
+alpha_im = 0
+beta_re = 0.7071067812
+beta_im = 0
+p0 = 0.5
+p1 = 0.5
+bx = 1
+by = 0
+bz = 0
+  by: State of a qubit after a sequence of gates  (the state vector multiplied by each gate's 2x2 matrix in turn)
+  start = 0
+  gates = H
+  assumes: gates from H, X, Y, Z, S, Sdg, T, Tdg, I, Rx(t), Ry(t), Rz(t), P(t); at most 500 gates
+```
 
 **What the worked example means:** This calculation determines the quantum state of a single qubit after it passes through a sequence of logic gates. Starting from the initial configuration specified as 0, each gate in the list H is applied sequentially by multiplying the current state vector by that gate's matrix representation. The resulting complex numbers define the new amplitudes, which dictate the likelihood of observing specific outcomes upon measurement. Specifically, the probability of measuring the zero state is 0.5, while the probability of measuring the one state is 0.5. These probabilities are derived directly from the squared magnitudes of the computed amplitudes, providing a complete statistical description of the qubit's behavior at the end of the circuit.
 
 <a id="grover_search"></a>
 
-#### Success probability of Grover's search — `grover_search`
+#### Success probability of Grover's search: `grover_search`
 
 The probability of measuring a marked item after k Grover iterations on n qubits with M marked items, and the best number of iterations.
 
@@ -1269,12 +1345,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n_qubits` | in | number of qubits (search space N = 2^n) | — |
-| `M` | in | number of marked items | — |
-| `k` | in | number of Grover iterations | — |
-| `P_success` | out | probability of a marked item after k iterations | — |
-| `k_opt` | out | best iteration count floor(pi/(4 theta)) | — |
-| `P_at_k_opt` | out | success probability at k_opt | — |
+| `n_qubits` | in | number of qubits (search space N = 2^n) | - |
+| `M` | in | number of marked items | - |
+| `k` | in | number of Grover iterations | - |
+| `P_success` | out | probability of a marked item after k iterations | - |
+| `k_opt` | out | best iteration count floor(pi/(4 theta)) | - |
+| `P_at_k_opt` | out | success probability at k_opt | - |
 | `theta` | out | rotation half-angle asin(sqrt(M/N)) | rad |
 
 **Applies when:** 1 <= M < N/2; 0 <= k <= 10^7.
@@ -1293,7 +1369,7 @@ In the worked example, n_qubits = 2, M = 1, k = 1 go through the equation above 
 
 <a id="two_qubit_circuit"></a>
 
-#### Two-qubit circuit: probabilities and entanglement — `two_qubit_circuit`
+#### Two-qubit circuit: probabilities and entanglement, `two_qubit_circuit`
 
 Measurement probabilities of |00>, |01>, |10>, |11> and the concurrence (entanglement) after a two-qubit gate sequence such as H0 CNOT01 (a Bell state).
 
@@ -1303,19 +1379,32 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `start` | in | initial basis state \|q0 q1> | — |
-| `gates` | in | gates left to right: H0, X1, Rz0(t), ..., CNOT01 (control q0), CNOT10, CZ, SWAP | — |
-| `p00` | out | probability of \|00> | — |
-| `p01` | out | probability of \|01> | — |
-| `p10` | out | probability of \|10> | — |
-| `p11` | out | probability of \|11> | — |
-| `concurrence` | out | concurrence 2\|a00 a11 - a01 a10\| (0 product, 1 maximally entangled) | — |
-| `p_q0_is_1` | out | probability that q0 reads 1 | — |
-| `p_q1_is_1` | out | probability that q1 reads 1 | — |
+| `start` | in | initial basis state \|q0 q1> | - |
+| `gates` | in | gates left to right: H0, X1, Rz0(t), ..., CNOT01 (control q0), CNOT10, CZ, SWAP | - |
+| `p00` | out | probability of \|00> | - |
+| `p01` | out | probability of \|01> | - |
+| `p10` | out | probability of \|10> | - |
+| `p11` | out | probability of \|11> | - |
+| `concurrence` | out | concurrence 2\|a00 a11 - a01 a10\| (0 product, 1 maximally entangled) | - |
+| `p_q0_is_1` | out | probability that q0 reads 1 | - |
+| `p_q1_is_1` | out | probability that q1 reads 1 | - |
 
 **Applies when:** gates from the documented set; at most 500 gates.
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve two_qubit_circuit "gates=H0 CNOT01" start=00
+p00 = 0.5
+p01 = 0
+p10 = 0
+p11 = 0.5
+concurrence = 1
+p_q0_is_1 = 0.5
+p_q1_is_1 = 0.5
+  by: Two-qubit circuit: probabilities and entanglement  (the four-amplitude state vector updated gate by gate (index 2 q0 + q1))
+  start = 00
+  gates = H0 CNOT01
+  assumes: gates from the documented set; at most 500 gates
+```
 
 **What the worked example means:** This calculation determines the measurement outcomes for a two-qubit system starting from 00 after applying the sequence H0 CNOT01. It computes the joint probability for each basis state, resulting in 0.5 for both zeros, 0 for zero then one, 0 for one then zero, and 0.5 for both ones. The marginal probability that the first qubit reads one is 0.5, while the second qubit reads one with probability 0.5. Entanglement is quantified by the concurrence value of 1, where higher values indicate stronger quantum correlations between the two qubits.
 
@@ -1323,7 +1412,7 @@ $$
 
 <a id="finite_square_well"></a>
 
-#### Bound states of a finite square well — `finite_square_well`
+#### Bound states of a finite square well: `finite_square_well`
 
 The number and energies of the bound states of a particle of mass m in a square well of depth V0 and width a.
 
@@ -1336,10 +1425,10 @@ $$
 | `V0` | in | depth of the well (eV, J) | J |
 | `a` | in | width of the well | m |
 | `m` | in | particle mass | kg |
-| `n_bound` | out | number of bound states | — |
+| `n_bound` | out | number of bound states | - |
 | `E1_eV` | out | ground-state energy above the bottom of the well | eV |
-| `energies_eV` | out | all bound-state energies above the bottom (eV), ascending | — |
-| `z0` | out | well strength (a/2) sqrt(2 m V0)/hbar | — |
+| `energies_eV` | out | all bound-state energies above the bottom (eV), ascending | - |
+| `z0` | out | well strength (a/2) sqrt(2 m V0)/hbar | - |
 
 **Applies when:** V0, a, m > 0; at most 127 bound states; no state exactly at the top of the well.
 
@@ -1350,9 +1439,9 @@ E1_eV = 0.9610429053 eV
 energies_eV = [0.961042905296,3.75528284703,7.95049450889]
 z0 = 4.050219315
   by: Bound states of a finite square well  (even states z tan z = sqrt(z0^2 - z^2), odd states -z cot z = sqrt(z0^2 - z^2), z = (a/2) sqrt(2 m E)/hbar, solved by bisection)
-  V0 = 1.602176634e-18 J   []
-  a = 5e-10 m   []
-  m = 9.109383714e-31 kg   []
+  V0 = 1.602176634e-18 J
+  a = 5e-10 m
+  m = 9.109383714e-31 kg
   assumes: V0, a, m > 0; at most 127 bound states; no state exactly at the top of the well
 ```
 
@@ -1360,7 +1449,7 @@ z0 = 4.050219315
 
 <a id="infinite_well_levels"></a>
 
-#### Energy levels of a particle in a box — `infinite_well_levels`
+#### Energy levels of a particle in a box: `infinite_well_levels`
 
 Energy E_n = n^2 h^2/(8 m L^2), momentum and de Broglie wavelength of level n of a particle in a one-dimensional box of width L.
 
@@ -1372,7 +1461,7 @@ $$
 |---|---|---|---|
 | `m` | in | particle mass | kg |
 | `L` | in | width of the box | m |
-| `n` | in | quantum number (1, 2, 3, ...) | — |
+| `n` | in | quantum number (1, 2, 3, ...) | - |
 | `E` | out | energy of level n | J |
 | `E_eV` | out | the same in eV | eV |
 | `E1_eV` | out | ground-state energy | eV |
@@ -1389,8 +1478,8 @@ E1_eV = 0.3760301621 eV
 p = 3.313035075e-25 kg*m/s
 wavelength = 2e-09 m
   by: Energy levels of a particle in a box  (E_n = (n pi hbar/L)^2/(2m) = n^2 h^2/(8 m L^2))
-  m = 9.109383714e-31 kg   []
-  L = 1e-09 m   []
+  m = 9.109383714e-31 kg
+  L = 1e-09 m
   assumes: m > 0; L > 0; n >= 1; infinitely high walls
 ```
 
@@ -1398,7 +1487,7 @@ wavelength = 2e-09 m
 
 <a id="infinite_well_transition"></a>
 
-#### Photon from a particle-in-a-box transition — `infinite_well_transition`
+#### Photon from a particle-in-a-box transition, `infinite_well_transition`
 
 Energy, wavelength and frequency of the photon emitted when a particle in a box of width L drops from n_upper to n_lower.
 
@@ -1410,8 +1499,8 @@ $$
 |---|---|---|---|
 | `m` | in | particle mass | kg |
 | `L` | in | width of the box | m |
-| `n_upper` | in | upper level | — |
-| `n_lower` | in | lower level | — |
+| `n_upper` | in | upper level | - |
+| `n_lower` | in | lower level | - |
 | `E_photon_eV` | out | photon energy | eV |
 | `lam` | out | wavelength | m |
 | `lambda_nm` | out | wavelength in nm | nm |
@@ -1426,8 +1515,8 @@ lam = 1.09906253e-06 m
 lambda_nm = 1099.06253 nm
 f = 2.72771066e+14 Hz
   by: Photon from a particle-in-a-box transition  (E = (n_u^2 - n_l^2) h^2/(8 m L^2), lambda = h c/E)
-  m = 9.109383714e-31 kg   []
-  L = 1e-09 m   []
+  m = 9.109383714e-31 kg
+  L = 1e-09 m
   assumes: n_upper > n_lower >= 1
 ```
 
@@ -1435,7 +1524,7 @@ f = 2.72771066e+14 Hz
 
 <a id="infinite_well_uncertainty"></a>
 
-#### Position and momentum spread in a box — `infinite_well_uncertainty`
+#### Position and momentum spread in a box: `infinite_well_uncertainty`
 
 <x>, the position spread dx, the momentum spread dp and the product dx dp of level n of a particle in a box of width L.
 
@@ -1445,13 +1534,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | quantum number | — |
+| `n` | in | quantum number | - |
 | `L` | in | width of the box | m |
 | `x_mean` | out | <x> (the centre) | m |
 | `dx` | out | position spread | m |
-| `dx_over_L` | out | dx/L | — |
+| `dx_over_L` | out | dx/L | - |
 | `dp` | out | momentum spread n pi hbar/L | kg*m/s |
-| `product_over_hbar` | out | dx dp / hbar (at least 1/2) | — |
+| `product_over_hbar` | out | dx dp / hbar (at least 1/2) | - |
 
 **Applies when:** n >= 1; L > 0.
 
@@ -1463,7 +1552,7 @@ dx_over_L = 0.1807560276
 dp = 3.313035075e-34 kg*m/s
 product_over_hbar = 0.5678618084
   by: Position and momentum spread in a box  (<x^2> = L^2 (1/3 - 1/(2 n^2 pi^2)), dx = sqrt(<x^2> - L^2/4), dp = n pi hbar/L)
-  L = 1 m   []
+  L = 1 m
   assumes: n >= 1; L > 0
 ```
 
@@ -1471,7 +1560,7 @@ product_over_hbar = 0.5678618084
 
 <a id="harmonic_oscillator_forbidden_probability"></a>
 
-#### Probability beyond the classical turning points (harmonic oscillator) — `harmonic_oscillator_forbidden_probability`
+#### Probability beyond the classical turning points (harmonic oscillator), `harmonic_oscillator_forbidden_probability`
 
 The probability that a harmonic oscillator in level n is found in the classically forbidden region |x| > A_n.
 
@@ -1481,20 +1570,27 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | quantum number (0 to 60) | — |
-| `P_forbidden` | out | probability outside the turning points | — |
-| `P_allowed` | out | probability inside | — |
-| `xi_turning` | out | turning point in units of sqrt(hbar/(m omega)) | — |
+| `n` | in | quantum number (0 to 60) | - |
+| `P_forbidden` | out | probability outside the turning points | - |
+| `P_allowed` | out | probability inside | - |
+| `xi_turning` | out | turning point in units of sqrt(hbar/(m omega)) | - |
 
 **Applies when:** 0 <= n <= 60.
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve harmonic_oscillator_forbidden_probability n=0
+P_forbidden = 0.1572992071
+P_allowed = 0.8427007929
+xi_turning = 1
+  by: Probability beyond the classical turning points (harmonic oscillator)  (integral of H_n(xi)^2 exp(-xi^2) over |xi| < sqrt(2n + 1), term by term with the incomplete gamma function (50 digits))
+  assumes: 0 <= n <= 60
+```
 
 **What the worked example means:** This calculation determines the quantum tunneling probability for a harmonic oscillator in energy level 0 by integrating the wave function squared beyond the classical limits. The result shows that there is a 0.157299 chance of detecting the particle in the classically forbidden region, which corresponds to a position magnitude greater than 1 scaled units. Conversely, the probability of finding the particle inside the classical bounds is 0.842701. This illustrates how quantum mechanics allows particles to exist where classical physics would strictly forbid them due to insufficient kinetic energy.
 
 <a id="infinite_well_probability"></a>
 
-#### Probability of finding a particle in part of a box — `infinite_well_probability`
+#### Probability of finding a particle in part of a box, `infinite_well_probability`
 
 The probability that a particle in level n of a box of width L is found between x1 and x2.
 
@@ -1504,12 +1600,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | quantum number | — |
+| `n` | in | quantum number | - |
 | `L` | in | width of the box | m |
 | `x1` | in | left end of the interval (from the wall) | m |
 | `x2` | in | right end of the interval | m |
-| `P` | out | probability | — |
-| `classical` | out | classical (uniform) probability (x2 - x1)/L | — |
+| `P` | out | probability | - |
+| `classical` | out | classical (uniform) probability (x2 - x1)/L | - |
 
 **Applies when:** 0 <= x1 < x2 <= L; n >= 1.
 
@@ -1518,9 +1614,9 @@ $ quantum-physics solve infinite_well_probability n=1 "L=1 nm" "x1=0.25 nm" "x2=
 P = 0.8183098862
 classical = 0.5
   by: Probability of finding a particle in part of a box  (P = (x2 - x1)/L - [sin(2 n pi x2/L) - sin(2 n pi x1/L)]/(2 n pi), evaluated without cancellation)
-  L = 1e-09 m   []
-  x1 = 2.5e-10 m   []
-  x2 = 7.5e-10 m   []
+  L = 1e-09 m
+  x1 = 2.5e-10 m
+  x2 = 7.5e-10 m
   assumes: 0 <= x1 < x2 <= L; n >= 1
 ```
 
@@ -1528,7 +1624,7 @@ classical = 0.5
 
 <a id="harmonic_oscillator_levels"></a>
 
-#### Quantum harmonic oscillator levels — `harmonic_oscillator_levels`
+#### Quantum harmonic oscillator levels: `harmonic_oscillator_levels`
 
 Energy (n + 1/2) hbar omega, zero-point energy, level spacing, classical amplitude and position spread of level n.
 
@@ -1540,7 +1636,7 @@ $$
 |---|---|---|---|
 | `m` | in | mass | kg |
 | `omega` | in | angular frequency | rad/s |
-| `n` | in | quantum number (0, 1, 2, ...) | — |
+| `n` | in | quantum number (0, 1, 2, ...) | - |
 | `E` | out | energy of level n | J |
 | `E_eV` | out | the same in eV | eV |
 | `E0_eV` | out | zero-point energy | eV |
@@ -1559,8 +1655,8 @@ spacing_eV = 0.0658211957 eV
 amplitude = 2.510956493e-11 m
 dx = 1.775514363e-11 m
   by: Quantum harmonic oscillator levels  (E_n = (n + 1/2) hbar omega, A = sqrt((2n + 1) hbar/(m omega)), dx = sqrt((n + 1/2) hbar/(m omega)))
-  m = 1.672621926e-27 kg   []
-  omega = 1e+14 rad/s   []
+  m = 1.672621926e-27 kg
+  omega = 1e+14 rad/s
   assumes: m > 0; omega > 0; n >= 0
 ```
 
@@ -1568,7 +1664,7 @@ In the worked example, m = 1.672621926e-27 kg, omega = 1e+14 rad/s, n = 0 go thr
 
 <a id="step_potential"></a>
 
-#### Reflection and transmission at a potential step — `step_potential`
+#### Reflection and transmission at a potential step, `step_potential`
 
 Reflection and transmission probabilities of a particle of energy E meeting a potential step of height V0 (V = 0 for x < 0, V0 for x > 0).
 
@@ -1580,10 +1676,10 @@ $$
 |---|---|---|---|
 | `E` | in | kinetic energy of the incident particle (on the low side) | J |
 | `V0` | in | height of the step | J |
-| `R` | out | reflection probability | — |
-| `T` | out | transmission probability (ratio of probability currents) | — |
-| `k2_over_k1` | out | ratio of wavenumbers sqrt((E - V0)/E) (0 when E <= V0) | — |
-| `regime` | out | partial transmission (E > V0) or total reflection | — |
+| `R` | out | reflection probability | - |
+| `T` | out | transmission probability (ratio of probability currents) | - |
+| `k2_over_k1` | out | ratio of wavenumbers sqrt((E - V0)/E) (0 when E <= V0) | - |
+| `regime` | out | partial transmission (E > V0) or total reflection | - |
 
 **Applies when:** E > 0; V0 > 0; the particle comes from x < 0.
 
@@ -1594,8 +1690,8 @@ T = 0.8888888889
 k2_over_k1 = 0.5
 regime = partial transmission (E > V0)
   by: Reflection and transmission at a potential step  (R = ((k1 - k2)/(k1 + k2))^2, T = 4 k1 k2/(k1 + k2)^2 for E > V0; R = 1, T = 0 for E <= V0)
-  E = 6.408706536e-19 J   []
-  V0 = 4.806529902e-19 J   []
+  E = 6.408706536e-19 J
+  V0 = 4.806529902e-19 J
   assumes: E > 0; V0 > 0; the particle comes from x < 0
 ```
 
@@ -1603,7 +1699,7 @@ regime = partial transmission (E > V0)
 
 <a id="barrier_transmission"></a>
 
-#### Transmission through a rectangular barrier — `barrier_transmission`
+#### Transmission through a rectangular barrier, `barrier_transmission`
 
 Transmission and reflection probabilities of a particle of energy E meeting a rectangular barrier of height V0 and width a (below or above the top).
 
@@ -1617,20 +1713,32 @@ $$
 | `V0` | in | barrier height | J |
 | `a` | in | barrier width | m |
 | `m` | in | particle mass | kg |
-| `T` | out | transmission probability | — |
-| `R` | out | reflection probability | — |
-| `kappa_a` | out | kappa a = a sqrt(2m(V0 - E))/hbar (0 above the barrier) | — |
-| `regime` | out | tunnelling (E < V0) or over the barrier | — |
+| `T` | out | transmission probability | - |
+| `R` | out | reflection probability | - |
+| `kappa_a` | out | kappa a = a sqrt(2m(V0 - E))/hbar (0 above the barrier) | - |
+| `regime` | out | tunnelling (E < V0) or over the barrier | - |
 
 **Applies when:** E, V0, a, m > 0.
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve barrier_transmission "E=1 eV" "V0=2 eV" "a=0.5 nm" "m=9.109383714e-31 kg"
+T = 0.02354711984
+R = 0.9764528802
+kappa_a = 2.561583612
+regime = tunnelling (E < V0)
+  by: Transmission through a rectangular barrier  (T = 1/(1 + V0^2 sinh^2(kappa a)/(4E(V0 - E))) for E < V0, sin for E > V0, written as sinh(x)/x to stay finite at E = V0)
+  E = 1.602176634e-19 J
+  V0 = 3.204353268e-19 J
+  a = 5e-10 m
+  m = 9.109383714e-31 kg
+  assumes: E, V0, a, m > 0
+```
 
 **What the worked example means:** This calculation determines how likely a particle is to pass through or bounce off a rectangular barrier. Given an incident energy of 1 eV, a barrier height of 2 eV, and a width of 0.5 nm, the model computes the transmission probability as 0.0235471 and the reflection probability as 0.976453. The result indicates whether the particle tunnels through when its energy is lower than the barrier, or scatters over it when higher.
 
 <a id="wkb_field_emission"></a>
 
-#### WKB tunnelling through a triangular barrier (field emission) — `wkb_field_emission`
+#### WKB tunnelling through a triangular barrier (field emission), `wkb_field_emission`
 
 The WKB tunnelling exponent and probability of an electron at the Fermi level through the triangular barrier W - eFx of a metal in a field F.
 
@@ -1642,9 +1750,9 @@ $$
 |---|---|---|---|
 | `W` | in | barrier height above the electron's energy (work function, eV) | J |
 | `F` | in | applied electric field (V/m) | N/C |
-| `exponent` | out | WKB exponent 2 integral kappa dx | — |
-| `T` | out | tunnelling probability exp(-exponent) | — |
-| `log10_T` | out | log10 of the probability | — |
+| `exponent` | out | WKB exponent 2 integral kappa dx | - |
+| `T` | out | tunnelling probability exp(-exponent) | - |
+| `log10_T` | out | log10 of the probability | - |
 | `width` | out | barrier width W/(eF) | m |
 | `width_nm` | out | width in nm | nm |
 
@@ -1658,8 +1766,8 @@ log10_T = -5.66383178
 width = 9e-10 m
 width_nm = 0.9 nm
   by: WKB tunnelling through a triangular barrier (field emission)  (T = exp(-(4/3) sqrt(2 m_e) W^(3/2)/(e hbar F)) (Fowler-Nordheim exponent, no image force))
-  W = 7.209794853e-19 J   []
-  F = 5000000000 N/C   []
+  W = 7.209794853e-19 J
+  F = 5000000000 N/C
   assumes: W > 0; F > 0; WKB: exponent much larger than 1
 ```
 
@@ -1669,7 +1777,7 @@ width_nm = 0.9 nm
 
 <a id="fixed_target_cm_energy"></a>
 
-#### Centre-of-mass energy of a fixed-target collision — `fixed_target_cm_energy`
+#### Centre-of-mass energy of a fixed-target collision, `fixed_target_cm_energy`
 
 sqrt(s) for a beam particle of mass m1 and total energy E1 striking a target of mass m2 at rest (natural units, GeV).
 
@@ -1679,13 +1787,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `m1` | in | beam particle mass (GeV/c^2) | — |
-| `E1` | in | beam particle total energy (GeV) | — |
-| `m2` | in | target mass (GeV/c^2) | — |
-| `sqrt_s` | out | centre-of-mass energy sqrt(s) (GeV) | — |
-| `available` | out | energy available for new particles, sqrt(s) - m1 - m2 (GeV) | — |
-| `beta_cm` | out | speed of the centre-of-mass frame / c | — |
-| `gamma_cm` | out | its Lorentz factor | — |
+| `m1` | in | beam particle mass (GeV/c^2) | - |
+| `E1` | in | beam particle total energy (GeV) | - |
+| `m2` | in | target mass (GeV/c^2) | - |
+| `sqrt_s` | out | centre-of-mass energy sqrt(s) (GeV) | - |
+| `available` | out | energy available for new particles, sqrt(s) - m1 - m2 (GeV) | - |
+| `beta_cm` | out | speed of the centre-of-mass frame / c | - |
+| `gamma_cm` | out | its Lorentz factor | - |
 
 **Applies when:** E1 >= m1 >= 0; m2 > 0.
 
@@ -1696,9 +1804,9 @@ available = 2
 beta_cm = 0.8660254038
 gamma_cm = 2
   by: Centre-of-mass energy of a fixed-target collision  (s = m1^2 + m2^2 + 2 E1 m2)
-  m1 = 1   []
-  E1 = 7   []
-  m2 = 1   []
+  m1 = 1
+  E1 = 7
+  m2 = 1
   assumes: E1 >= m1 >= 0; m2 > 0
 ```
 
@@ -1706,7 +1814,7 @@ gamma_cm = 2
 
 <a id="invariant_mass"></a>
 
-#### Invariant mass of two particles — `invariant_mass`
+#### Invariant mass of two particles: `invariant_mass`
 
 The invariant mass M = sqrt((E1 + E2)^2 - |p1 + p2|^2) of two particles, in natural units (GeV, GeV/c, GeV/c^2).
 
@@ -1716,14 +1824,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `E1` | in | energy of particle 1 (GeV) | — |
-| `p1` | in | momentum of particle 1 (px, py, pz in GeV/c) | — |
-| `E2` | in | energy of particle 2 (GeV) | — |
-| `p2` | in | momentum of particle 2 (px, py, pz in GeV/c) | — |
-| `M` | out | invariant mass (GeV/c^2) | — |
-| `P` | out | magnitude of the total momentum (GeV/c) | — |
-| `beta_cm` | out | speed of the centre-of-mass frame / c | — |
-| `gamma_cm` | out | Lorentz factor of the centre-of-mass frame | — |
+| `E1` | in | energy of particle 1 (GeV) | - |
+| `p1` | in | momentum of particle 1 (px, py, pz in GeV/c) | - |
+| `E2` | in | energy of particle 2 (GeV) | - |
+| `p2` | in | momentum of particle 2 (px, py, pz in GeV/c) | - |
+| `M` | out | invariant mass (GeV/c^2) | - |
+| `P` | out | magnitude of the total momentum (GeV/c) | - |
+| `beta_cm` | out | speed of the centre-of-mass frame / c | - |
+| `gamma_cm` | out | Lorentz factor of the centre-of-mass frame | - |
 
 **Applies when:** E >= |p| for each particle; a positive invariant mass.
 
@@ -1734,8 +1842,8 @@ P = 0
 beta_cm = 0
 gamma_cm = 1
   by: Invariant mass of two particles  (M^2 = (E - |P|)(E + |P|) with E = E1 + E2 and P = p1 + p2)
-  E1 = 50   []
-  E2 = 50   []
+  E1 = 50
+  E2 = 50
   assumes: E >= |p| for each particle; a positive invariant mass
 ```
 
@@ -1743,7 +1851,7 @@ gamma_cm = 1
 
 <a id="length_contraction"></a>
 
-#### Length contraction — `length_contraction`
+#### Length contraction: `length_contraction`
 
 The length L = L0/gamma of a rod moving along its length at speed v, given its proper length L0.
 
@@ -1756,7 +1864,7 @@ $$
 | `L0` | in | proper length (in the rod's rest frame) | m |
 | `v` | in | speed of the rod (may be written as a fraction of c) | m/s |
 | `L` | out | contracted length measured in the frame where the rod moves | m |
-| `gamma` | out | Lorentz factor | — |
+| `gamma` | out | Lorentz factor | - |
 | `shortening` | out | L0 - L | m |
 
 **Applies when:** L0 > 0; 0 <= v < c.
@@ -1767,8 +1875,8 @@ L = 80 m
 gamma = 1.25
 shortening = 20 m
   by: Length contraction  (L = L0 sqrt(1 - v^2/c^2))
-  L0 = 100 m   []
-  v = 179875474.8 m/s   []
+  L0 = 100 m
+  v = 179875474.8 m/s
   assumes: L0 > 0; 0 <= v < c
 ```
 
@@ -1776,7 +1884,7 @@ shortening = 20 m
 
 <a id="lorentz_factor"></a>
 
-#### Lorentz factor — `lorentz_factor`
+#### Lorentz factor: `lorentz_factor`
 
 The Lorentz factor gamma = 1/sqrt(1 - v^2/c^2) of a speed v.
 
@@ -1787,9 +1895,9 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `v` | in | speed (may be written as a fraction of c, e.g. 0.8 c) | m/s |
-| `gamma` | out | Lorentz factor | — |
-| `beta` | out | v/c | — |
-| `gamma_minus_1` | out | gamma - 1 (computed without cancellation) | — |
+| `gamma` | out | Lorentz factor | - |
+| `beta` | out | v/c | - |
+| `gamma_minus_1` | out | gamma - 1 (computed without cancellation) | - |
 
 **Applies when:** 0 <= v < c.
 
@@ -1799,7 +1907,7 @@ gamma = 1.25
 beta = 0.6
 gamma_minus_1 = 0.25
   by: Lorentz factor  (gamma = 1/sqrt((1 - beta)(1 + beta)), beta = v/c)
-  v = 179875474.8 m/s   []
+  v = 179875474.8 m/s
   assumes: 0 <= v < c
 ```
 
@@ -1807,7 +1915,7 @@ gamma_minus_1 = 0.25
 
 <a id="relativistic_aberration"></a>
 
-#### Relativistic aberration of light — `relativistic_aberration`
+#### Relativistic aberration of light: `relativistic_aberration`
 
 The direction of a light ray seen from a frame moving at speed v along +x, given its direction theta (from +x) in the rest frame.
 
@@ -1820,8 +1928,8 @@ $$
 | `theta` | in | direction of travel of the light in the rest frame, from the +x axis (rad or deg) | rad |
 | `v` | in | speed of the moving frame along +x (may be a fraction of c) | m/s |
 | `theta_prime` | out | direction of travel in the moving frame (rad) | rad |
-| `theta_prime_deg` | out | the same angle in degrees | — |
-| `doppler_factor` | out | photon energy ratio E'/E | — |
+| `theta_prime_deg` | out | the same angle in degrees | - |
+| `doppler_factor` | out | photon energy ratio E'/E | - |
 
 **Applies when:** 0 <= theta <= 180 deg; |v| < c.
 
@@ -1831,8 +1939,8 @@ theta_prime = 2.214297436 rad
 theta_prime_deg = 126.8698976
 doppler_factor = 1.25
   by: Relativistic aberration of light  (cos(theta') = (cos(theta) - beta)/(1 - beta cos(theta)), from the boosted photon four-momentum)
-  theta = 1.570796327 rad   []
-  v = 179875474.8 m/s   []
+  theta = 1.570796327 rad
+  v = 179875474.8 m/s
   assumes: 0 <= theta <= 180 deg; |v| < c
 ```
 
@@ -1840,7 +1948,7 @@ doppler_factor = 1.25
 
 <a id="relativistic_doppler"></a>
 
-#### Relativistic Doppler shift — `relativistic_doppler`
+#### Relativistic Doppler shift: `relativistic_doppler`
 
 The observed frequency of light from a source approaching or receding at speed v (along the line of sight).
 
@@ -1852,10 +1960,10 @@ $$
 |---|---|---|---|
 | `f` | in | frequency in the source frame | Hz |
 | `v` | in | relative speed (may be a fraction of c) | m/s |
-| `motion` | in | whether source and observer approach or recede | — |
+| `motion` | in | whether source and observer approach or recede | - |
 | `f_obs` | out | observed frequency | Hz |
-| `ratio` | out | f_obs / f | — |
-| `z` | out | redshift z = f/f_obs - 1 (negative for a blueshift) | — |
+| `ratio` | out | f_obs / f | - |
+| `z` | out | redshift z = f/f_obs - 1 (negative for a blueshift) | - |
 
 **Applies when:** f > 0; 0 <= v < c.
 
@@ -1865,8 +1973,8 @@ f_obs = 2e+14 Hz
 ratio = 2
 z = -0.5
   by: Relativistic Doppler shift  (f_obs = f sqrt((1 + beta)/(1 - beta)) approaching, f sqrt((1 - beta)/(1 + beta)) receding)
-  f = 1e+14 Hz   []
-  v = 179875474.8 m/s   []
+  f = 1e+14 Hz
+  v = 179875474.8 m/s
   motion = approaching
   assumes: f > 0; 0 <= v < c
 ```
@@ -1875,7 +1983,7 @@ z = -0.5
 
 <a id="relativistic_energy_from_momentum"></a>
 
-#### Relativistic energy from momentum — `relativistic_energy_from_momentum`
+#### Relativistic energy from momentum: `relativistic_energy_from_momentum`
 
 Total and kinetic energy and speed of a particle of mass m with momentum p, from E^2 = (pc)^2 + (mc^2)^2.
 
@@ -1890,8 +1998,8 @@ $$
 | `E` | out | total energy | J |
 | `K` | out | kinetic energy | J |
 | `v` | out | speed | m/s |
-| `beta` | out | v/c | — |
-| `gamma` | out | Lorentz factor | — |
+| `beta` | out | v/c | - |
+| `gamma` | out | Lorentz factor | - |
 | `E_MeV` | out | total energy in MeV | MeV |
 | `K_MeV` | out | kinetic energy in MeV | MeV |
 
@@ -1907,8 +2015,8 @@ gamma = 1.25
 E_MeV = 7.011985755e+29 MeV
 K_MeV = 1.402397151e+29 MeV
   by: Relativistic energy from momentum  (E = sqrt((pc)^2 + (mc^2)^2), K = (pc)^2/(E + mc^2), v = pc^2/E)
-  m = 1 kg   []
-  p = 224844343.5 kg*m/s   []
+  m = 1 kg
+  p = 224844343.5 kg*m/s
   assumes: m > 0; p >= 0
 ```
 
@@ -1916,7 +2024,7 @@ K_MeV = 1.402397151e+29 MeV
 
 <a id="relativistic_momentum_energy"></a>
 
-#### Relativistic momentum and energy — `relativistic_momentum_energy`
+#### Relativistic momentum and energy: `relativistic_momentum_energy`
 
 Momentum p = gamma m v, total energy E = gamma m c^2, kinetic energy (gamma - 1) m c^2 and rest energy of a mass m at speed v.
 
@@ -1932,7 +2040,7 @@ $$
 | `E` | out | total energy | J |
 | `K` | out | kinetic energy | J |
 | `E0` | out | rest energy m c^2 | J |
-| `gamma` | out | Lorentz factor | — |
+| `gamma` | out | Lorentz factor | - |
 | `E_MeV` | out | total energy in MeV | MeV |
 | `K_MeV` | out | kinetic energy in MeV | MeV |
 | `pc_MeV` | out | momentum times c in MeV | MeV |
@@ -1950,8 +2058,8 @@ E_MeV = 9.34931434e+29 MeV
 K_MeV = 3.739725736e+29 MeV
 pc_MeV = 7.479451472e+29 MeV
   by: Relativistic momentum and energy  (p = gamma m v, E = gamma m c^2, K = (gamma - 1) m c^2)
-  m = 1 kg   []
-  v = 239833966.4 m/s   []
+  m = 1 kg
+  v = 239833966.4 m/s
   assumes: m > 0; 0 <= v < c
 ```
 
@@ -1959,7 +2067,7 @@ pc_MeV = 7.479451472e+29 MeV
 
 <a id="relativistic_velocity_addition"></a>
 
-#### Relativistic velocity addition — `relativistic_velocity_addition`
+#### Relativistic velocity addition: `relativistic_velocity_addition`
 
 The velocity u = (u' + v)/(1 + u'v/c^2) of an object moving at u' in a frame that moves at v (signed, along x).
 
@@ -1972,7 +2080,7 @@ $$
 | `u_prime` | in | velocity of the object in the moving frame (signed; may be a fraction of c) | m/s |
 | `v` | in | velocity of the moving frame (signed; may be a fraction of c) | m/s |
 | `u` | out | velocity of the object in the rest frame | m/s |
-| `beta` | out | u/c | — |
+| `beta` | out | u/c | - |
 
 **Applies when:** |u'| <= c; |v| < c.
 
@@ -1981,8 +2089,8 @@ $ quantum-physics solve relativistic_velocity_addition "u_prime=149896229 m/s" "
 u = 239833966.4 m/s
 beta = 0.8
   by: Relativistic velocity addition  (u = (u' + v)/(1 + u' v/c^2))
-  u_prime = 149896229 m/s   []
-  v = 149896229 m/s   []
+  u_prime = 149896229 m/s
+  v = 149896229 m/s
   assumes: |u'| <= c; |v| < c
 ```
 
@@ -1990,7 +2098,7 @@ beta = 0.8
 
 <a id="rest_energy"></a>
 
-#### Rest energy (mass-energy equivalence) — `rest_energy`
+#### Rest energy (mass-energy equivalence): `rest_energy`
 
 The rest energy E = m c^2 of a mass m, in J, MeV and kWh.
 
@@ -2003,7 +2111,7 @@ $$
 | `m` | in | rest mass (kg, g ...) | kg |
 | `E` | out | rest energy in J | J |
 | `E_MeV` | out | rest energy in MeV | MeV |
-| `E_kWh` | out | rest energy in kWh | — |
+| `E_kWh` | out | rest energy in kWh | - |
 
 **Applies when:** m > 0.
 
@@ -2013,7 +2121,7 @@ E = 8.187105788e-14 J
 E_MeV = 0.5109989507 MeV
 E_kWh = 2.274196052e-20
   by: Rest energy (mass-energy equivalence)  (E = m c^2 (c = 299792458 m/s exactly))
-  m = 9.109383714e-31 kg   []
+  m = 9.109383714e-31 kg
   assumes: m > 0
 ```
 
@@ -2021,7 +2129,7 @@ E_kWh = 2.274196052e-20
 
 <a id="spacetime_interval"></a>
 
-#### Spacetime interval between two events — `spacetime_interval`
+#### Spacetime interval between two events: `spacetime_interval`
 
 The invariant interval s^2 = (c dt)^2 - dx^2 between two events, its type, and the proper time or proper distance.
 
@@ -2034,7 +2142,7 @@ $$
 | `dt` | in | time between the events (signed) | s |
 | `dx` | in | distance between the events along x (signed) | m |
 | `s2` | out | interval s^2 = (c dt)^2 - dx^2 | m^2 |
-| `nature` | out | timelike, spacelike or lightlike | — |
+| `nature` | out | timelike, spacelike or lightlike | - |
 | `tau` | out | proper time (timelike; else 0) | s |
 | `proper_length` | out | proper distance (spacelike; else 0) | m |
 
@@ -2047,8 +2155,8 @@ nature = timelike
 tau = 4 s
 proper_length = 0 m
   by: Spacetime interval between two events  (s^2 = (c dt - dx)(c dt + dx); tau = sqrt(s^2)/c or L = sqrt(-s^2))
-  dt = 5 s   []
-  dx = 899377374 m   []
+  dt = 5 s
+  dx = 899377374 m
   assumes: the events are distinct
 ```
 
@@ -2056,7 +2164,7 @@ proper_length = 0 m
 
 <a id="relativistic_speed_from_kinetic_energy"></a>
 
-#### Speed from relativistic kinetic energy — `relativistic_speed_from_kinetic_energy`
+#### Speed from relativistic kinetic energy: `relativistic_speed_from_kinetic_energy`
 
 The speed, Lorentz factor and momentum of a particle of mass m with kinetic energy K.
 
@@ -2069,8 +2177,8 @@ $$
 | `m` | in | rest mass | kg |
 | `K` | in | kinetic energy (J, eV, MeV ...) | J |
 | `v` | out | speed | m/s |
-| `beta` | out | v/c | — |
-| `gamma` | out | Lorentz factor | — |
+| `beta` | out | v/c | - |
+| `gamma` | out | Lorentz factor | - |
 | `p` | out | momentum | kg*m/s |
 | `pc_MeV` | out | momentum times c in MeV | MeV |
 
@@ -2084,8 +2192,8 @@ gamma = 1.25
 p = 224844343.5 kg*m/s
 pc_MeV = 4.207191453e+29 MeV
   by: Speed from relativistic kinetic energy  (gamma = 1 + K/(m c^2), pc = sqrt(K (K + 2 m c^2)), beta = pc/(K + m c^2))
-  m = 1 kg   []
-  K = 2.246887947e+16 J   []
+  m = 1 kg
+  K = 2.246887947e+16 J
   assumes: m > 0; K >= 0
 ```
 
@@ -2093,7 +2201,7 @@ pc_MeV = 4.207191453e+29 MeV
 
 <a id="time_dilation"></a>
 
-#### Time dilation — `time_dilation`
+#### Time dilation: `time_dilation`
 
 The time t = gamma t0 between two ticks of a clock that moves at speed v, given its proper time t0.
 
@@ -2106,7 +2214,7 @@ $$
 | `t0` | in | proper time (measured by the moving clock) | s |
 | `v` | in | speed of the clock (may be written as a fraction of c) | m/s |
 | `t` | out | dilated time measured in the frame where the clock moves | s |
-| `gamma` | out | Lorentz factor | — |
+| `gamma` | out | Lorentz factor | - |
 | `difference` | out | t - t0 | s |
 
 **Applies when:** t0 > 0; 0 <= v < c.
@@ -2117,8 +2225,8 @@ t = 1.25 s
 gamma = 1.25
 difference = 0.25 s
   by: Time dilation  (t = gamma t0)
-  t0 = 1 s   []
-  v = 179875474.8 m/s   []
+  t0 = 1 s
+  v = 179875474.8 m/s
   assumes: t0 > 0; 0 <= v < c
 ```
 
@@ -2128,7 +2236,7 @@ difference = 0.25 s
 
 <a id="chsh_bell_test"></a>
 
-#### CHSH Bell-test value for the singlet state — `chsh_bell_test`
+#### CHSH Bell-test value for the singlet state, `chsh_bell_test`
 
 Correlations E(a, b) = -cos(a - b) of spin measurements on a singlet pair and the CHSH combination S = E(a,b) - E(a,b') + E(a',b) + E(a',b').
 
@@ -2142,23 +2250,38 @@ $$
 | `a2` | in | Alice's second setting a' | rad |
 | `b` | in | Bob's first setting | rad |
 | `b2` | in | Bob's second setting b' | rad |
-| `S` | out | CHSH value | — |
-| `abs_S` | out | \|S\| (local hidden variables allow at most 2) | — |
-| `E_ab` | out | E(a, b) | — |
-| `E_ab2` | out | E(a, b') | — |
-| `E_a2b` | out | E(a', b) | — |
-| `E_a2b2` | out | E(a', b') | — |
-| `violates` | out | whether \|S\| exceeds 2 | — |
+| `S` | out | CHSH value | - |
+| `abs_S` | out | \|S\| (local hidden variables allow at most 2) | - |
+| `E_ab` | out | E(a, b) | - |
+| `E_ab2` | out | E(a, b') | - |
+| `E_a2b` | out | E(a', b) | - |
+| `E_a2b2` | out | E(a', b') | - |
+| `violates` | out | whether \|S\| exceeds 2 | - |
 
 **Applies when:** the spin singlet state; measurement directions in one plane.
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve chsh_bell_test "a=0 deg" "a2=90 deg" "b=45 deg" "b2=135 deg"
+S = -2.828427125
+abs_S = 2.828427125
+E_ab = -0.7071067812
+E_ab2 = 0.7071067812
+E_a2b = -0.7071067812
+E_a2b2 = -0.7071067812
+violates = yes
+  by: CHSH Bell-test value for the singlet state  (E(x, y) = -cos(x - y); S = E(a,b) - E(a,b') + E(a',b) + E(a',b'))
+  a = 0 rad
+  a2 = 1.570796327 rad
+  b = 0.7853981634 rad
+  b2 = 2.35619449 rad
+  assumes: the spin singlet state; measurement directions in one plane
+```
 
 **What the worked example means:** This calculation determines the degree of quantum correlation for a singlet state pair based on four measurement angles. The individual correlations are computed as E(a,b) = -0.707107, E(a,b') = 0.707107, E(a',b) = -0.707107, and E(a',b') = -0.707107. These values combine into the CHSH parameter S = -2.82843. If the absolute value 2.82843 exceeds two, it indicates a violation of Bell inequalities, suggesting that no local hidden variable theory can explain the observed correlations.
 
 <a id="qubit_fidelity"></a>
 
-#### Fidelity and trace distance of two qubit states — `qubit_fidelity`
+#### Fidelity and trace distance of two qubit states, `qubit_fidelity`
 
 The (Uhlmann) fidelity and the trace distance between two qubit states given by their Bloch vectors r and s.
 
@@ -2168,11 +2291,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `r` | in | Bloch vector of the first state | — |
-| `s` | in | Bloch vector of the second state | — |
-| `F` | out | fidelity (Tr sqrt(sqrt(rho) sigma sqrt(rho)))^2 | — |
-| `sqrt_F` | out | root fidelity | — |
-| `trace_distance` | out | trace distance \|r - s\|/2 | — |
+| `r` | in | Bloch vector of the first state | - |
+| `s` | in | Bloch vector of the second state | - |
+| `F` | out | fidelity (Tr sqrt(sqrt(rho) sigma sqrt(rho)))^2 | - |
+| `sqrt_F` | out | root fidelity | - |
+| `trace_distance` | out | trace distance \|r - s\|/2 | - |
 
 **Applies when:** |r|, |s| <= 1.
 
@@ -2189,7 +2312,7 @@ trace_distance = 0.7071067812
 
 <a id="larmor_precession"></a>
 
-#### Larmor precession of a spin-1/2 — `larmor_precession`
+#### Larmor precession of a spin-1/2: `larmor_precession`
 
 Larmor angular frequency of an electron or proton spin in a field B, and the spin component along x after time t for a spin starting along +x.
 
@@ -2199,23 +2322,34 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `particle` | in | the spin-1/2 particle | — |
+| `particle` | in | the spin-1/2 particle | - |
 | `B` | in | magnetic field along z | T |
 | `t` | in | time since the spin pointed along +x | s |
 | `omega_L` | out | Larmor angular frequency \|gamma\| B | rad/s |
 | `f_L` | out | Larmor frequency | Hz |
-| `Sx_mean` | out | <sigma_x> at time t (mean spin along x in units of hbar/2) | — |
-| `P_plus_x` | out | probability of measuring spin up along +x at time t | — |
+| `Sx_mean` | out | <sigma_x> at time t (mean spin along x in units of hbar/2) | - |
+| `P_plus_x` | out | probability of measuring spin up along +x at time t | - |
 
 **Applies when:** B > 0; t >= 0.
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve larmor_precession particle=proton "B=1 T" "t=0 s"
+omega_L = 267522187.1 rad/s
+f_L = 42577478.46 Hz
+Sx_mean = 1
+P_plus_x = 1
+  by: Larmor precession of a spin-1/2  (omega = |gamma| B (CODATA gyromagnetic ratios), <sigma_x> = cos(omega t), P(+x) = cos^2(omega t/2))
+  B = 1 T
+  t = 0 s
+  particle = proton
+  assumes: B > 0; t >= 0
+```
 
 **What the worked example means:** This calculation determines the precession dynamics of a spin-1/2 particle in a static magnetic field. Using the gyromagnetic ratio for the specified particle, it computes the Larmor angular frequency as 2.67522e+08 rad/s and the corresponding linear frequency as 4.25775e+07 Hz. Based on the elapsed time since the spin was aligned along the positive x-axis, it predicts the mean spin component along x to be 1 and the probability of finding the spin up along that axis to be 1. These values describe how the quantum state rotates around the magnetic field direction.
 
 <a id="qubit_entropy_purity"></a>
 
-#### Purity and entropy of a qubit state — `qubit_entropy_purity`
+#### Purity and entropy of a qubit state: `qubit_entropy_purity`
 
 Purity Tr(rho^2), von Neumann entropy (bits) and eigenvalues of the qubit density matrix with Bloch vector r.
 
@@ -2225,12 +2359,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `r` | in | Bloch vector (rx, ry, rz), length at most 1 | — |
-| `length` | out | \|r\| | — |
-| `purity` | out | Tr(rho^2) = (1 + \|r\|^2)/2 | — |
-| `S_bits` | out | von Neumann entropy in bits | — |
-| `lambda_max` | out | larger eigenvalue (1 + \|r\|)/2 | — |
-| `lambda_min` | out | smaller eigenvalue (1 - \|r\|)/2 | — |
+| `r` | in | Bloch vector (rx, ry, rz), length at most 1 | - |
+| `length` | out | \|r\| | - |
+| `purity` | out | Tr(rho^2) = (1 + \|r\|^2)/2 | - |
+| `S_bits` | out | von Neumann entropy in bits | - |
+| `lambda_max` | out | larger eigenvalue (1 + \|r\|)/2 | - |
+| `lambda_min` | out | smaller eigenvalue (1 - \|r\|)/2 | - |
 
 **Applies when:** |r| <= 1.
 
@@ -2249,7 +2383,7 @@ lambda_min = 0.2
 
 <a id="qubit_state_bloch"></a>
 
-#### Qubit state on the Bloch sphere — `qubit_state_bloch`
+#### Qubit state on the Bloch sphere: `qubit_state_bloch`
 
 Normalised measurement probabilities, Bloch vector, and Bloch angles of the qubit state alpha|0> + beta|1> (amplitudes need not be normalised).
 
@@ -2259,18 +2393,18 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a_re` | in | real part of alpha | — |
-| `a_im` | in | imaginary part of alpha | — |
-| `b_re` | in | real part of beta | — |
-| `b_im` | in | imaginary part of beta | — |
-| `p0` | out | probability of 0 | — |
-| `p1` | out | probability of 1 | — |
-| `x` | out | Bloch x = <sigma_x> | — |
-| `y` | out | Bloch y = <sigma_y> | — |
-| `z` | out | Bloch z = <sigma_z> | — |
+| `a_re` | in | real part of alpha | - |
+| `a_im` | in | imaginary part of alpha | - |
+| `b_re` | in | real part of beta | - |
+| `b_im` | in | imaginary part of beta | - |
+| `p0` | out | probability of 0 | - |
+| `p1` | out | probability of 1 | - |
+| `x` | out | Bloch x = <sigma_x> | - |
+| `y` | out | Bloch y = <sigma_y> | - |
+| `z` | out | Bloch z = <sigma_z> | - |
 | `theta` | out | polar angle (rad) | rad |
 | `phi` | out | azimuth in [0, 2 pi) (0 when one amplitude is zero) | rad |
-| `norm` | out | norm of the given amplitudes | — |
+| `norm` | out | norm of the given amplitudes | - |
 
 **Applies when:** not both amplitudes zero.
 
@@ -2285,10 +2419,10 @@ theta = 1.854590436 rad
 phi = 1.570796327 rad
 norm = 1
   by: Qubit state on the Bloch sphere  (normalise; x + iy = 2 conj(alpha) beta, z = |alpha|^2 - |beta|^2, theta = 2 atan2(|beta|, |alpha|), phi = arg(beta) - arg(alpha))
-  a_re = 0.6   []
-  a_im = 0   []
-  b_re = 0   []
-  b_im = 0.8   []
+  a_re = 0.6
+  a_im = 0
+  b_re = 0
+  b_im = 0.8
   assumes: not both amplitudes zero
 ```
 
@@ -2296,7 +2430,7 @@ norm = 1
 
 <a id="rabi_oscillation"></a>
 
-#### Rabi oscillation of a driven two-level system — `rabi_oscillation`
+#### Rabi oscillation of a driven two-level system, `rabi_oscillation`
 
 The probability of finding a two-level system (qubit) excited after driving it for time t with Rabi frequency Omega and detuning Delta.
 
@@ -2309,20 +2443,31 @@ $$
 | `Omega` | in | Rabi angular frequency | rad/s |
 | `Delta` | in | detuning (drive minus transition angular frequency) | rad/s |
 | `t` | in | driving time | s |
-| `P_excited` | out | excited-state probability | — |
+| `P_excited` | out | excited-state probability | - |
 | `W` | out | generalised Rabi frequency sqrt(Omega^2 + Delta^2) | rad/s |
-| `P_max` | out | largest excitation probability Omega^2/W^2 | — |
+| `P_max` | out | largest excitation probability Omega^2/W^2 | - |
 | `period` | out | oscillation period 2 pi/W | s |
 
 **Applies when:** Omega > 0; t >= 0; rotating-wave approximation, starting in the ground state.
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve rabi_oscillation "Omega=1000000 rad/s" "Delta=0 rad/s" "t=1.570796327 us"
+P_excited = 0.5000000001
+W = 1000000 rad/s
+P_max = 1
+period = 6.283185307e-06 s
+  by: Rabi oscillation of a driven two-level system  (P = (Omega^2/W^2) sin^2(W t/2), W = sqrt(Omega^2 + Delta^2))
+  Omega = 1000000 rad/s
+  Delta = 0 rad/s
+  t = 1.570796327e-06 s
+  assumes: Omega > 0; t >= 0; rotating-wave approximation, starting in the ground state
+```
 
 **What the worked example means:** This calculation determines the probability that a two-level system is in its excited state after being driven for time 1.5708 us. The result, 0.5, depends on the Rabi frequency 1e+06 rad/s and detuning 0 rad/s. The oscillation occurs at the generalized Rabi frequency 1e+06 rad/s, reaching a peak probability of 1 every 6.28319e-06 s seconds.
 
 <a id="spin_rotation_wigner_d"></a>
 
-#### Spin rotation amplitude (Wigner small-d matrix) — `spin_rotation_wigner_d`
+#### Spin rotation amplitude (Wigner small-d matrix), `spin_rotation_wigner_d`
 
 The amplitude d^j_{m'm}(beta) = <j m'| exp(-i beta J_y/hbar) |j m> and the probability of finding m' after rotating |j m> by beta about y.
 
@@ -2332,22 +2477,32 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `j` | in | angular momentum quantum number (whole or half-whole, at most 20) | — |
-| `mp` | in | final projection m' | — |
-| `m` | in | initial projection m | — |
+| `j` | in | angular momentum quantum number (whole or half-whole, at most 20) | - |
+| `mp` | in | final projection m' | - |
+| `m` | in | initial projection m | - |
 | `beta` | in | rotation angle about the y axis (deg or rad) | rad |
-| `d` | out | Wigner small-d matrix element | — |
-| `probability` | out | probability \|d\|^2 of measuring m' along the original axis | — |
+| `d` | out | Wigner small-d matrix element | - |
+| `probability` | out | probability \|d\|^2 of measuring m' along the original axis | - |
 
 **Applies when:** |m|, |m'| <= j; j <= 20.
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve spin_rotation_wigner_d j=0.5 mp=0.5 m=0.5 "beta=90 deg"
+d = 0.7071067812
+probability = 0.5
+  by: Spin rotation amplitude (Wigner small-d matrix)  (Wigner's formula summed in 40-digit arithmetic)
+  j = 0.5
+  mp = 0.5
+  m = 0.5
+  beta = 1.570796327 rad
+  assumes: |m|, |m'| <= j; j <= 20
+```
 
 **What the worked example means:** This calculation determines the quantum amplitude for a spin state with initial projection 0.5 to transform into final projection 0.5 after a rotation of angle 90 deg about the y-axis. The resulting Wigner small-d matrix element, denoted as 0.707107, represents this complex amplitude. Squaring its magnitude yields the probability 0.5, which indicates the likelihood of measuring the system in the new projection state along the original quantization axis.
 
 <a id="spin_half_measurement"></a>
 
-#### Spin-1/2 measurement along an axis — `spin_half_measurement`
+#### Spin-1/2 measurement along an axis: `spin_half_measurement`
 
 Probabilities of spin up and down along a direction n (angles theta_n, phi_n) for a spin-1/2 state pointing along (theta, phi) on the Bloch sphere.
 
@@ -2361,9 +2516,9 @@ $$
 | `phi` | in | azimuth of the state's Bloch vector | rad |
 | `theta_n` | in | polar angle of the measurement axis | rad |
 | `phi_n` | in | azimuth of the measurement axis | rad |
-| `P_up` | out | probability of +hbar/2 along n | — |
-| `P_down` | out | probability of -hbar/2 along n | — |
-| `expectation` | out | <sigma_n> (the mean spin along n in units of hbar/2) | — |
+| `P_up` | out | probability of +hbar/2 along n | - |
+| `P_down` | out | probability of -hbar/2 along n | - |
+| `expectation` | out | <sigma_n> (the mean spin along n in units of hbar/2) | - |
 
 **Applies when:** polar angles between 0 and 180 degrees.
 
@@ -2373,10 +2528,10 @@ P_up = 0.75
 P_down = 0.25
 expectation = 0.5
   by: Spin-1/2 measurement along an axis  (P_up = (1 + r . n)/2 with r and n the unit vectors of the state and the axis)
-  theta = 1.047197551 rad   []
-  phi = 0 rad   []
-  theta_n = 0 rad   []
-  phi_n = 0 rad   []
+  theta = 1.047197551 rad
+  phi = 0 rad
+  theta_n = 0 rad
+  phi_n = 0 rad
   assumes: polar angles between 0 and 180 degrees
 ```
 
@@ -2386,7 +2541,7 @@ expectation = 0.5
 
 <a id="bec_critical_temperature"></a>
 
-#### Bose-Einstein condensation temperature — `bec_critical_temperature`
+#### Bose-Einstein condensation temperature: `bec_critical_temperature`
 
 The critical temperature below which an ideal Bose gas of density n and particle mass m forms a condensate.
 
@@ -2400,7 +2555,7 @@ $$
 | `m` | in | particle mass | kg |
 | `T_c` | out | critical temperature | K |
 | `lambda_c` | out | thermal wavelength at T_c | m |
-| `n_lambda3` | out | phase-space density at T_c, zeta(3/2) | — |
+| `n_lambda3` | out | phase-space density at T_c, zeta(3/2) | - |
 
 **Applies when:** n > 0; m > 0; ideal gas, spin 0, uniform box.
 
@@ -2410,8 +2565,8 @@ T_c = 3.983751061e-07 K
 lambda_c = 2.967188877e-07 m
 n_lambda3 = 2.612375349
   by: Bose-Einstein condensation temperature  (T_c = (2 pi hbar^2/(m k)) (n/zeta(3/2))^(2/3))
-  n = 1e+20 1/m^3   []
-  m = 1.443e-25 kg   []
+  n = 1e+20 1/m^3
+  m = 1.443e-25 kg
   assumes: n > 0; m > 0; ideal gas, spin 0, uniform box
 ```
 
@@ -2419,7 +2574,7 @@ n_lambda3 = 2.612375349
 
 <a id="bose_einstein_occupation"></a>
 
-#### Bose-Einstein occupation of a mode — `bose_einstein_occupation`
+#### Bose-Einstein occupation of a mode: `bose_einstein_occupation`
 
 The mean number of bosons in a single-particle state of energy E at temperature T and chemical potential mu (mu < E).
 
@@ -2432,9 +2587,9 @@ $$
 | `E` | in | energy of the state | J |
 | `mu` | in | chemical potential (0 for photons and phonons) | J |
 | `T` | in | temperature | K |
-| `n` | out | mean occupation 1/(e^x - 1) | — |
-| `x` | out | (E - mu)/kT | — |
-| `classical_limit` | out | Maxwell-Boltzmann value e^(-x) | — |
+| `n` | out | mean occupation 1/(e^x - 1) | - |
+| `x` | out | (E - mu)/kT | - |
+| `classical_limit` | out | Maxwell-Boltzmann value e^(-x) | - |
 
 **Applies when:** T > 0; E > mu.
 
@@ -2444,9 +2599,9 @@ n = 1
 x = 0.6931471806
 classical_limit = 0.5
   by: Bose-Einstein occupation of a mode  (n = 1/(exp((E - mu)/kT) - 1) (expm1 for small x))
-  E = 2.870978885e-21 J   []
-  mu = 0 J   []
-  T = 300 K   []
+  E = 2.870978885e-21 J
+  mu = 0 J
+  T = 300 K
   assumes: T > 0; E > mu
 ```
 
@@ -2454,7 +2609,7 @@ classical_limit = 0.5
 
 <a id="fermi_gas_chemical_potential"></a>
 
-#### Chemical potential of an ideal Fermi gas — `fermi_gas_chemical_potential`
+#### Chemical potential of an ideal Fermi gas: `fermi_gas_chemical_potential`
 
 The chemical potential of an ideal spin-1/2 Fermi gas of density n and particle mass m at temperature T, from degenerate to classical.
 
@@ -2468,10 +2623,10 @@ $$
 | `T` | in | temperature | K |
 | `m` | in | particle mass | kg |
 | `mu_eV` | out | chemical potential | eV |
-| `eta` | out | mu/kT | — |
+| `eta` | out | mu/kT | - |
 | `E_F_eV` | out | Fermi energy at T = 0 | eV |
-| `mu_over_EF` | out | mu/E_F | — |
-| `T_over_TF` | out | T/T_F | — |
+| `mu_over_EF` | out | mu/E_F | - |
+| `T_over_TF` | out | T/T_F | - |
 
 **Applies when:** n, T, m > 0; T >= 0.02 T_F; |mu/kT| <= 60.
 
@@ -2483,9 +2638,9 @@ E_F_eV = 1.692532188 eV
 mu_over_EF = -13.76139397
 T_over_TF = 5.09138516
   by: Chemical potential of an ideal Fermi gas  (n lambda_th^3 / 2 = f_{3/2}(e^(mu/kT)) solved by safeguarded Newton; the Fermi-Dirac integral by the trapezoidal rule in x = t^2)
-  n = 1e+28 1/m^3   []
-  T = 100000 K   []
-  m = 9.109383714e-31 kg   []
+  n = 1e+28 1/m^3
+  T = 100000 K
+  m = 9.109383714e-31 kg
   assumes: n, T, m > 0; T >= 0.02 T_F; |mu/kT| <= 60
 ```
 
@@ -2493,7 +2648,7 @@ T_over_TF = 5.09138516
 
 <a id="debye_heat_capacity"></a>
 
-#### Debye heat capacity of a solid — `debye_heat_capacity`
+#### Debye heat capacity of a solid: `debye_heat_capacity`
 
 The molar heat capacity of a crystalline solid in the Debye model at temperature T.
 
@@ -2506,18 +2661,27 @@ $$
 | `T` | in | temperature | K |
 | `theta_D` | in | Debye temperature | K |
 | `C_molar` | out | molar heat capacity C_V | J/(mol*K) |
-| `C_over_3R` | out | C_V / 3R (tends to 1 at high T) | — |
-| `debye_integral` | out | integral_0^(theta/T) x^4 e^x/(e^x - 1)^2 dx | — |
+| `C_over_3R` | out | C_V / 3R (tends to 1 at high T) | - |
+| `debye_integral` | out | integral_0^(theta/T) x^4 e^x/(e^x - 1)^2 dx | - |
 
 **Applies when:** T > 0; theta_D > 0; theta_D/T <= 600.
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve debye_heat_capacity "T=1 K" "theta_D=500 K"
+C_molar = 1.555016152e-05 J/(mol*K)
+C_over_3R = 6.234181826e-07
+debye_integral = 25.97575761
+  by: Debye heat capacity of a solid  (C_V = 9 R (T/theta_D)^3 integral_0^(theta_D/T) x^4 e^x/(e^x - 1)^2 dx (25-digit quadrature))
+  T = 1 K
+  theta_D = 500 K
+  assumes: T > 0; theta_D > 0; theta_D/T <= 600
+```
 
 **What the worked example means:** This calculation determines the molar heat capacity of a crystalline solid using the Debye model. By evaluating the integral with temperature 1 K and Debye temperature 500 K, it yields a value of 1.55502e-05 J/(mol*K). The dimensionless ratio 6.23418e-07 indicates how close the solid is to the classical Dulong-Petit limit, while the raw integral value 25.9758 represents the core mathematical component of this physical property.
 
 <a id="photon_gas"></a>
 
-#### Energy and photon density of blackbody radiation — `photon_gas`
+#### Energy and photon density of blackbody radiation, `photon_gas`
 
 Energy density, photon number density, mean photon energy and radiation pressure of thermal radiation at temperature T.
 
@@ -2531,7 +2695,7 @@ $$
 | `u` | out | energy density (J/m^3) | Pa |
 | `n` | out | photon number density | 1/m^3 |
 | `mean_E_eV` | out | mean photon energy | eV |
-| `mean_E_over_kT` | out | mean photon energy in units of kT (2.701...) | — |
+| `mean_E_over_kT` | out | mean photon energy in units of kT (2.701...) | - |
 | `pressure` | out | radiation pressure u/3 | Pa |
 
 **Applies when:** T > 0.
@@ -2544,7 +2708,7 @@ mean_E_eV = 0.0006342969232 eV
 mean_E_over_kT = 2.701178033
 pressure = 1.390579417e-14 Pa
   by: Energy and photon density of blackbody radiation  (u = (pi^2/15)(kT)^4/(hbar c)^3, n = (2 zeta(3)/pi^2)(kT/(hbar c))^3)
-  T = 2.725 K   []
+  T = 2.725 K
   assumes: T > 0
 ```
 
@@ -2552,7 +2716,7 @@ pressure = 1.390579417e-14 Pa
 
 <a id="fermi_energy_free_electrons"></a>
 
-#### Fermi energy of a free-electron gas — `fermi_energy_free_electrons`
+#### Fermi energy of a free-electron gas: `fermi_energy_free_electrons`
 
 Fermi energy, temperature, wavenumber and speed of a free-electron gas with electron density n.
 
@@ -2579,7 +2743,7 @@ T_F = 81611.80588 K
 k_F = 1.358630845e+10 1/m
 v_F = 1572854.811 m/s
   by: Fermi energy of a free-electron gas  (k_F = (3 pi^2 n)^(1/3), E_F = hbar^2 k_F^2/(2 m_e))
-  n = 8.47e+28 1/m^3   []
+  n = 8.47e+28 1/m^3
   assumes: n > 0; free electrons with spin 1/2, T = 0
 ```
 
@@ -2587,7 +2751,7 @@ v_F = 1572854.811 m/s
 
 <a id="fermi_energy_metal"></a>
 
-#### Fermi energy of a metal from its density — `fermi_energy_metal`
+#### Fermi energy of a metal from its density: `fermi_energy_metal`
 
 Conduction-electron density and Fermi energy of a metal from its mass density, molar mass and valence (free-electron model).
 
@@ -2599,7 +2763,7 @@ $$
 |---|---|---|---|
 | `rho` | in | mass density of the metal | kg/m^3 |
 | `M` | in | molar mass (g/mol or kg/mol) | kg/mol |
-| `z` | in | conduction electrons per atom (valence) | — |
+| `z` | in | conduction electrons per atom (valence) | - |
 | `n` | out | conduction-electron density | 1/m^3 |
 | `E_F_eV` | out | Fermi energy | eV |
 | `T_F` | out | Fermi temperature | K |
@@ -2614,8 +2778,8 @@ E_F_eV = 7.044509066 eV
 T_F = 81748.13311 K
 v_F = 1574167.939 m/s
   by: Fermi energy of a metal from its density  (n = z rho N_A / M, E_F = hbar^2 (3 pi^2 n)^(2/3)/(2 m_e))
-  rho = 8960 kg/m^3   []
-  M = 0.063546 kg/mol   []
+  rho = 8960 kg/m^3
+  M = 0.063546 kg/mol
   assumes: rho, M > 0; z >= 1
 ```
 
@@ -2623,7 +2787,7 @@ v_F = 1574167.939 m/s
 
 <a id="fermi_dirac_occupation"></a>
 
-#### Fermi-Dirac occupation of a state — `fermi_dirac_occupation`
+#### Fermi-Dirac occupation of a state: `fermi_dirac_occupation`
 
 The probability that a single-particle state of energy E is occupied by a fermion at temperature T and chemical potential mu.
 
@@ -2636,9 +2800,9 @@ $$
 | `E` | in | energy of the state | J |
 | `mu` | in | chemical potential (Fermi level) | J |
 | `T` | in | temperature | K |
-| `f` | out | occupation probability 1/(e^x + 1) | — |
-| `one_minus_f` | out | probability the state is empty | — |
-| `x` | out | (E - mu)/kT | — |
+| `f` | out | occupation probability 1/(e^x + 1) | - |
+| `one_minus_f` | out | probability the state is empty | - |
+| `x` | out | (E - mu)/kT | - |
 
 **Applies when:** T > 0.
 
@@ -2648,9 +2812,9 @@ f = 0.5
 one_minus_f = 0.5
 x = 0
   by: Fermi-Dirac occupation of a state  (f = 1/(exp((E - mu)/kT) + 1), evaluated without overflow)
-  E = 8.01088317e-19 J   []
-  mu = 8.01088317e-19 J   []
-  T = 300 K   []
+  E = 8.01088317e-19 J
+  mu = 8.01088317e-19 J
+  T = 300 K
   assumes: T > 0
 ```
 
@@ -2658,7 +2822,7 @@ x = 0
 
 <a id="blackbody_band_fraction"></a>
 
-#### Fraction of blackbody radiation in a wavelength band — `blackbody_band_fraction`
+#### Fraction of blackbody radiation in a wavelength band, `blackbody_band_fraction`
 
 The fraction of a blackbody's emitted power between two wavelengths at temperature T, and that band's radiant exitance.
 
@@ -2671,20 +2835,31 @@ $$
 | `lam1` | in | shorter wavelength | m |
 | `lam2` | in | longer wavelength | m |
 | `T` | in | temperature | K |
-| `F_band` | out | fraction of the total emission between lambda1 and lambda2 | — |
-| `F_below_lam1` | out | fraction emitted below lambda1 | — |
-| `F_below_lam2` | out | fraction emitted below lambda2 | — |
+| `F_band` | out | fraction of the total emission between lambda1 and lambda2 | - |
+| `F_below_lam1` | out | fraction emitted below lambda1 | - |
+| `F_below_lam2` | out | fraction emitted below lambda2 | - |
 | `M_band` | out | radiant exitance in the band (blackbody) | W/m^2 |
 
 **Applies when:** 0 < lambda1 < lambda2; T > 0.
 
-*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ quantum-physics solve blackbody_band_fraction lam1=1e-12 lam2=1.0 T=5778.0
+F_band = 1
+F_below_lam1 = 0
+F_below_lam2 = 1
+M_band = 63200699.74 W/m^2
+  by: Fraction of blackbody radiation in a wavelength band  (F(0 -> lambda) = (15/pi^4) integral_x^inf t^3/(e^t - 1) dt, x = hc/(lambda k T), by exponential or Bernoulli series)
+  lam1 = 1e-12 m
+  lam2 = 1 m
+  T = 5778 K
+  assumes: 0 < lambda1 < lambda2; T > 0
+```
 
 **What the worked example means:** This calculation determines the portion of a blackbody's power radiated within a specific wavelength band defined by the shorter limit 1e-12 m and the longer limit 1 m at temperature 5778 K. The result, expressed as the dimensionless fraction 1, indicates how much of the total energy falls inside this window. This value is multiplied by the Stefan-Boltzmann law to find the actual radiant exitance in that band, which is reported as 6.32007e+07 W/m^2. Additionally, the cumulative fractions emitted below each boundary are provided as 0 and 1 to help visualize the distribution.
 
 <a id="wien_peak"></a>
 
-#### Peak of blackbody radiation (Wien's displacement law) — `wien_peak`
+#### Peak of blackbody radiation (Wien's displacement law), `wien_peak`
 
 The wavelength and frequency at which a blackbody at temperature T radiates most strongly.
 
@@ -2709,7 +2884,7 @@ lambda_max_nm = 501.5181646 nm
 nu_max = 3.396843303e+14 Hz
 b = 0.002897771955 m*K
   by: Peak of blackbody radiation (Wien's displacement law)  (lambda_max = h c/(x k T) with x = 5(1 - e^-x) = 4.9651...; nu_max = x' k T/h with x' = 3(1 - e^-x') = 2.8214...)
-  T = 5778 K   []
+  T = 5778 K
   assumes: T > 0
 ```
 
@@ -2717,7 +2892,7 @@ In the worked example, T = 5778 K go through the equation above and give lambda_
 
 <a id="einstein_oscillator"></a>
 
-#### Quantum oscillator thermodynamics (Einstein model) — `einstein_oscillator`
+#### Quantum oscillator thermodynamics (Einstein model), `einstein_oscillator`
 
 Mean quantum number, mean energy, heat capacity and entropy of a quantum harmonic oscillator, and the molar heat capacity of an Einstein solid.
 
@@ -2729,11 +2904,11 @@ $$
 |---|---|---|---|
 | `theta_E` | in | Einstein temperature hbar omega/k | K |
 | `T` | in | temperature | K |
-| `n_mean` | out | mean number of quanta 1/(e^x - 1) | — |
+| `n_mean` | out | mean number of quanta 1/(e^x - 1) | - |
 | `U_eV` | out | mean energy including the zero-point energy | eV |
-| `C_over_k` | out | heat capacity per oscillator in units of k | — |
+| `C_over_k` | out | heat capacity per oscillator in units of k | - |
 | `C_molar` | out | molar heat capacity of an Einstein solid 3R C/k | J/(mol*K) |
-| `S_over_k` | out | entropy per oscillator in units of k | — |
+| `S_over_k` | out | entropy per oscillator in units of k | - |
 
 **Applies when:** theta_E > 0; T > 0.
 
@@ -2745,8 +2920,8 @@ C_over_k = 0.9206735942
 C_molar = 22.96471855 J/(mol*K)
 S_over_k = 1.040651852
   by: Quantum oscillator thermodynamics (Einstein model)  (x = theta_E/T; n = 1/(e^x - 1); C/k = x^2 e^x/(e^x - 1)^2; C_molar = 3R C/k)
-  theta_E = 300 K   []
-  T = 300 K   []
+  theta_E = 300 K
+  T = 300 K
   assumes: theta_E > 0; T > 0
 ```
 
@@ -2754,7 +2929,7 @@ S_over_k = 1.040651852
 
 <a id="stefan_boltzmann"></a>
 
-#### Radiated power (Stefan-Boltzmann law) — `stefan_boltzmann`
+#### Radiated power (Stefan-Boltzmann law): `stefan_boltzmann`
 
 Radiant exitance and total power emitted by a surface of area A, emissivity e at temperature T.
 
@@ -2765,7 +2940,7 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `T` | in | surface temperature | K |
-| `emissivity` | in | emissivity (1 for a blackbody) | — |
+| `emissivity` | in | emissivity (1 for a blackbody) | - |
 | `A` | in | radiating area | m^2 |
 | `sigma` | out | Stefan-Boltzmann constant 2 pi^5 k^4/(15 h^3 c^2) | W/(m^2*K^4) |
 | `M` | out | radiant exitance e sigma T^4 | W/m^2 |
@@ -2779,9 +2954,9 @@ sigma = 5.670374419e-08 W/(m^2*K^4)
 M = 56703.74419 W/m^2
 P = 56703.74419 W
   by: Radiated power (Stefan-Boltzmann law)  (P = e sigma A T^4, sigma = 2 pi^5 k^4/(15 h^3 c^2))
-  T = 1000 K   []
-  emissivity = 1   []
-  A = 1 m^2   []
+  T = 1000 K
+  emissivity = 1
+  A = 1 m^2
   assumes: T > 0; A > 0; 0 < emissivity <= 1
 ```
 
@@ -2789,7 +2964,7 @@ P = 56703.74419 W
 
 <a id="planck_spectral_radiance"></a>
 
-#### Spectral radiance of a blackbody (Planck's law) — `planck_spectral_radiance`
+#### Spectral radiance of a blackbody (Planck's law), `planck_spectral_radiance`
 
 The spectral radiance B_lambda of a blackbody at temperature T and wavelength lambda, and the photon occupation number of that mode.
 
@@ -2802,9 +2977,9 @@ $$
 | `lam` | in | wavelength | m |
 | `T` | in | temperature | K |
 | `B_lambda` | out | spectral radiance (W per m^2 per sr per m of wavelength) | W/m^3 |
-| `B_lambda_per_nm` | out | spectral radiance in W/(m^2 sr nm) | — |
-| `occupation` | out | mean photon number 1/(e^x - 1) | — |
-| `x` | out | h c/(lambda k T) | — |
+| `B_lambda_per_nm` | out | spectral radiance in W/(m^2 sr nm) | - |
+| `occupation` | out | mean photon number 1/(e^x - 1) | - |
+| `x` | out | h c/(lambda k T) | - |
 
 **Applies when:** lambda > 0; T > 0.
 
@@ -2815,8 +2990,8 @@ B_lambda_per_nm = 26375.66987
 occupation = 0.006920318598
 x = 4.980189953
   by: Spectral radiance of a blackbody (Planck's law)  (B_lambda = (2 h c^2/lambda^5) / (exp(h c/(lambda k T)) - 1))
-  lam = 5e-07 m   []
-  T = 5778 K   []
+  lam = 5e-07 m
+  T = 5778 K
   assumes: lambda > 0; T > 0
 ```
 
@@ -2824,7 +2999,7 @@ x = 4.980189953
 
 <a id="thermal_de_broglie_wavelength"></a>
 
-#### Thermal de Broglie wavelength — `thermal_de_broglie_wavelength`
+#### Thermal de Broglie wavelength: `thermal_de_broglie_wavelength`
 
 The thermal de Broglie wavelength h/sqrt(2 pi m k T) and the quantum concentration 1/lambda^3.
 
@@ -2848,8 +3023,8 @@ lambda_th = 4.303475437e-09 m
 lambda_th_nm = 4.303475437 nm
 n_Q = 1.254706115e+25 1/m^3
   by: Thermal de Broglie wavelength  (lambda = h/sqrt(2 pi m k T))
-  m = 9.109383714e-31 kg   []
-  T = 300 K   []
+  m = 9.109383714e-31 kg
+  T = 300 K
   assumes: m > 0; T > 0
 ```
 
@@ -2857,7 +3032,7 @@ n_Q = 1.254706115e+25 1/m^3
 
 <a id="two_level_thermodynamics"></a>
 
-#### Thermodynamics of a two-level system — `two_level_thermodynamics`
+#### Thermodynamics of a two-level system: `two_level_thermodynamics`
 
 Partition function, Boltzmann populations, mean energy, heat capacity (Schottky) and entropy of a two-level system with gap dE and degeneracies g0, g1.
 
@@ -2869,15 +3044,15 @@ $$
 |---|---|---|---|
 | `dE` | in | energy gap (eV, J) | J |
 | `T` | in | temperature | K |
-| `g0` | in | degeneracy of the lower level | — |
-| `g1` | in | degeneracy of the upper level | — |
-| `Z` | out | partition function g0 + g1 e^(-dE/kT) | — |
-| `p0` | out | population of the lower level | — |
-| `p1` | out | population of the upper level | — |
-| `ratio` | out | population ratio N1/N0 (Boltzmann factor) | — |
+| `g0` | in | degeneracy of the lower level | - |
+| `g1` | in | degeneracy of the upper level | - |
+| `Z` | out | partition function g0 + g1 e^(-dE/kT) | - |
+| `p0` | out | population of the lower level | - |
+| `p1` | out | population of the upper level | - |
+| `ratio` | out | population ratio N1/N0 (Boltzmann factor) | - |
 | `U_eV` | out | mean energy above the lower level | eV |
-| `C_over_k` | out | heat capacity per system in units of k | — |
-| `S_over_k` | out | entropy per system in units of k | — |
+| `C_over_k` | out | heat capacity per system in units of k | - |
+| `S_over_k` | out | entropy per system in units of k | - |
 
 **Applies when:** dE > 0; T > 0; g0, g1 >= 1.
 
@@ -2891,11 +3066,11 @@ U_eV = 0.006886756298 eV
 C_over_k = 0.1866477065
 S_over_k = 0.5886240855
   by: Thermodynamics of a two-level system  (Z = g0 + g1 e^(-x), x = dE/kT; p1 = g1 e^(-x)/Z; U = dE p1; C/k = x^2 p0 p1; S/k = ln Z + x p1)
-  dE = 4.005441585e-21 J   []
-  T = 300 K   []
+  dE = 4.005441585e-21 J
+  T = 300 K
   assumes: dE > 0; T > 0; g0, g1 >= 1
 ```
 
 **What the worked example means:** This calculation determines the thermodynamic properties of a two-level system defined by an energy gap of 0.025 eV at temperature 300 K. With lower level degeneracy 1 and upper level degeneracy 1, the resulting partition function is 1.38021. The populations are found to be 0.72453 for the ground state and 0.27547 for the excited state, leading to a Boltzmann ratio of 0.380206. Consequently, the average internal energy above the ground state is 0.00688676 eV, while the dimensionless heat capacity and entropy are 0.186648 and 0.588624 respectively.
 
-Questions and reports: support@ai999x.com. AI999X — The Future Is Self-Improving.
+Questions and reports: support@ai999x.com. AI999X, The Future Is Self-Improving.
