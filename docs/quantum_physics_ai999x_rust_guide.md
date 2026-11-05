@@ -1,6 +1,6 @@
 # quantum-physics: the Quantum Physics program — user guide
 
-**quantum-physics-ai999x 1.0.3**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**quantum-physics-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Quantum Physics covers special relativity, photons and matter waves, the hydrogen atom, quantum wells and tunnelling, spin and qubits, quantum gates, nuclear and particle physics and statistical physics. This guide is about `quantum-physics`, the model as a self-contained program for Windows and Linux: 75 capabilities in 11 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/quantum-physics-ai999x/); the Python package (`pip install quantum-physics-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -99,56 +99,24 @@ $ quantum-physics --version
 quantum-physics-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
 ```
 
-### 2.2 Ask in words
-
-Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
-
-```shell
-$ quantum-physics ask "Lorentz factor: v = 0.8 c"
-Read as: Lorentz factor
-gamma = 1.666666667
-beta = 0.8
-gamma_minus_1 = 0.6666666667
-  by: Lorentz factor  (gamma = 1/sqrt((1 - beta)(1 + beta)), beta = v/c)
-  v = 239833966.4 m/s
-  assumes: 0 <= v < c
-```
-
-### 2.3 Find a capability
-
-Search the capabilities by what you want to know; the first column is the id to pass to info and solve.
-
-```shell
-$ quantum-physics search "photon from a hydrogen-like transition (rydberg formula)"
-hydrogen_transition                  Photon from a hydrogen-like transition (Rydberg formula)  (hydrogen atom / spectral lines)
-hydrogen_transition_reduced_mass     Hydrogen-like transition with the reduced-mass correction  (hydrogen atom / spectral lines and isotope shift)
-hydrogen_radial_expectations         Radial expectation values of a hydrogen-like state  (hydrogen atom / wavefunctions)
-bohr_energy_level                    Energy level of a hydrogen-like atom (Bohr model)  (hydrogen atom / energy levels)
-infinite_well_transition             Photon from a particle-in-a-box transition  (quantum wells / infinite square well)
-moseley_k_alpha                      K-alpha X-ray line (Moseley's law)  (hydrogen atom / X-ray spectra)
-semi_empirical_mass_formula          Semi-empirical mass formula (liquid-drop binding energy)  (nuclear and particle physics / binding energy)
-coherent_state_photon_statistics     Photon-number distribution of a coherent state  (photons and matter waves / coherent states of light)
-… 12 more
-```
-
-### 2.4 List the capabilities
+### 2.2 List the capabilities
 
 Every capability the program answers: its id (what you pass to solve) and its name.
 
 ```shell
 $ quantum-physics list
-barrier_transmission                     Transmission through a rectangular barrier
 bec_critical_temperature                 Bose-Einstein condensation temperature
-blackbody_band_fraction                  Fraction of blackbody radiation in a wavelength band
 bohr_energy_level                        Energy level of a hydrogen-like atom (Bohr model)
 bose_einstein_occupation                 Bose-Einstein occupation of a mode
-chsh_bell_test                           CHSH Bell-test value for the singlet state
 clebsch_gordan                           Clebsch-Gordan coefficient
 coherent_state_photon_statistics         Photon-number distribution of a coherent state
-… 67 more
+compton_scattering                       Compton scattering
+coulomb_barrier                          Coulomb barrier between two nuclei
+de_broglie_accelerated                   de Broglie wavelength of an accelerated particle
+… 54 more
 ```
 
-### 2.5 What a capability needs
+### 2.3 What a capability needs
 
 The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
 
@@ -166,7 +134,7 @@ Photon from a hydrogen-like transition (Rydberg formula)
   out  series   spectral series (Lyman, Balmer, ...) []
 ```
 
-### 2.6 Solve
+### 2.4 Solve
 
 Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
 
@@ -181,7 +149,7 @@ series = Balmer
   assumes: n_upper > n_lower >= 1; infinitely heavy nucleus
 ```
 
-### 2.7 Machine-readable answer
+### 2.5 Machine-readable answer
 
 --json prints the same answer as one line of JSON (values in SI): for scripts and other programs.
 
@@ -190,7 +158,7 @@ $ quantum-physics solve hydrogen_transition Z=1 n_upper=3 n_lower=2 --json
 {"outcome":"SOLVED","message":"","value":656.112276419,"unit":"nm","solved_for":"lambda_nm","values":[["E_photon_eV",1.88967960042,"eV"],["lam",6.56112276419e-7,"m"],["lambda_nm",656.112276419,"nm"],["f",456922494479000.0,"Hz"],["series","Balmer",""]],"target":"lambda_nm","phrase":"photon energy","assumptions":["n_upper > n_lower >= 1","infinitely heavy nucleus"],"name":"Photon from a hydrogen-like transition (Rydberg formula)","equation":"1/lambda = R_inf Z^2 (1/n_lower^2 - 1/n_upper^2)"}
 ```
 
-### 2.8 When an input is missing
+### 2.6 When an input is missing
 
 No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.
 
@@ -199,29 +167,7 @@ $ quantum-physics solve hydrogen_transition Z=1 n_upper=3
 NEEDS_INPUT: hydrogen_transition needs n_lower (lower level). Example: solve('hydrogen_transition', Z=1, n_upper=3, n_lower=2).
 ```
 
-### 2.9 Draw the figures
-
-The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```shell
-$ quantum-physics figures lorentz_factor "v=239833966.4 m/s" --out .
-[
-  {
-    "slug": "lorentz-factor-live-1",
-    "title": "Lorentz factor as speed (may be written as a fraction of c, e.g.... varies",
-    "caption": "Lorentz factor as v runs from 5.996e+07 to 2.938e+08 m/s, every other input as you entered it (27 solutions). Marked: your v = 2.398e+08 m/s gives gamma = 1.667. Your inputs: v = 239833966.4 m/s.",
-    "file": ".\\lorentz-factor-live-1.svg"
-  },
-  {
-    "slug": "lorentz-factor-live-2",
-    "title": "The computed values side by side",
-    "caption": "Every answer of one unit for your inputs: gamma (Lorentz factor) = 1.667; beta (v/c) = 0.8; gamma_minus_1 (gamma - 1 (computed without cancellation)) = 0.6667. Your inputs: v = 239833966.4 m/s.",
-    "file": ".\\lorentz-factor-live-2.svg"
-  }
-]
-```
-
-### 2.10 Many questions at once
+### 2.7 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | quantum-physics batch
 
@@ -294,24 +240,6 @@ answers = [json.loads(line) for line in out.splitlines()]
 
 `quantum-physics figures <capability> name=value ... --out DIR` draws the live figures for those inputs and writes each as an SVG file into DIR (an existing folder); without `--out` the SVG text comes back as JSON. The desktop app and the model page draw the same figures as soon as you press Compute.
 
-```shell
-$ quantum-physics figures lorentz_factor "v=239833966.4 m/s" --out .
-[
-  {
-    "slug": "lorentz-factor-live-1",
-    "title": "Lorentz factor as speed (may be written as a fraction of c, e.g.... varies",
-    "caption": "Lorentz factor as v runs from 5.996e+07 to 2.938e+08 m/s, every other input as you entered it (27 solutions). Marked: your v = 2.398e+08 m/s gives gamma = 1.667. Your inputs: v = 239833966.4 m/s.",
-    "file": ".\\lorentz-factor-live-1.svg"
-  },
-  {
-    "slug": "lorentz-factor-live-2",
-    "title": "The computed values side by side",
-    "caption": "Every answer of one unit for your inputs: gamma (Lorentz factor) = 1.667; beta (v/c) = 0.8; gamma_minus_1 (gamma - 1 (computed without cancellation)) = 0.6667. Your inputs: v = 239833966.4 m/s.",
-    "file": ".\\lorentz-factor-live-2.svg"
-  }
-]
-```
-
 ## 7. In a web page or Node.js: WebAssembly
 
 The same model is a WebAssembly module, `quantum_physics_ai999x.wasm` (https://www.ai999x.com/compute/rust/quantum_physics_ai999x.wasm), with a small loader, `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js). It runs in a browser, a Web Worker or Node.js, with no server.
@@ -363,12 +291,12 @@ cg = 0.7071067812
 cg_squared = 0.5
 cg_squared_exact = 1/2
   by: Clebsch-Gordan coefficient  (Racah's formula in exact rational arithmetic; zero unless m1 + m2 = M and |j1 - j2| <= J <= j1 + j2)
-  j1 = 0.5
-  m1 = 0.5
-  j2 = 0.5
-  m2 = -0.5
-  J = 1
-  M = 0
+  j1 = 0.5   []
+  m1 = 0.5   []
+  j2 = 0.5   []
+  m2 = -0.5   []
+  J = 1   []
+  M = 0   []
   assumes: each j >= 0 and whole or half-whole; |m| <= j with j - m whole
 ```
 
@@ -402,12 +330,12 @@ $ quantum-physics solve wigner_3j_symbol j1=1 m1=1 j2=1 m2=-1 J=0 M=0
 w3j = 0.5773502692
 w3j_squared = 0.3333333333
   by: Wigner 3j symbol  (from the exact Clebsch-Gordan coefficient: (-1)^(j1 - j2 - M) <j1 m1; j2 m2 | J, -M> / sqrt(2J + 1))
-  j1 = 1
-  m1 = 1
-  j2 = 1
-  m2 = -1
-  J = 0
-  M = 0
+  j1 = 1   []
+  m1 = 1   []
+  j2 = 1   []
+  m2 = -1   []
+  J = 0   []
+  M = 0   []
   assumes: each j >= 0 and whole or half-whole; |m| <= j with j - m whole
 ```
 
@@ -477,18 +405,7 @@ $$
 
 **Applies when:** n_upper > n_lower >= 1; M > 0.
 
-```shell
-$ quantum-physics solve hydrogen_transition_reduced_mass Z=1 n_upper=3 n_lower=2 M_u=1.007276467
-E_photon_eV = 1.888651009 eV
-lam = 6.564696063e-07 m
-lambda_nm = 656.4696063 nm
-f = 4.566737822e+14 Hz
-series = Balmer
-mu_ratio = 0.9994556794
-  by: Hydrogen-like transition with the reduced-mass correction  (1/lambda = R_inf (mu/m_e) Z^2 (1/n_lower^2 - 1/n_upper^2), mu = m_e M/(m_e + M))
-  M_u = 1.007276467
-  assumes: n_upper > n_lower >= 1; M > 0
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the spectral properties of a hydrogen-like atom by adjusting the Rydberg constant for the finite mass of the nucleus. Using an atomic number of 1 and levels from 2 to 3, the reduced mass correction yields a factor of 0.999456. The resulting photon energy is 1.88865 eV, corresponding to a vacuum wavelength of 656.47 nm and a frequency of 4.56674e+14 Hz. This refinement distinguishes isotopes, such as comparing hydrogen to deuterium.
 
@@ -557,11 +474,11 @@ dE = 6.182673377e-24 J
 dE_eV = 3.858921199e-05 eV
 g_J_exact = 4/3
   by: Landé g factor and anomalous Zeeman shift  (g_J = 1 + [J(J+1) + S(S+1) - L(L+1)] / [2 J(J+1)], dE = g_J mu_B B mJ)
-  L = 1
-  S = 0.5
-  J = 1.5
-  mJ = 0.5
-  B = 1 T
+  L = 1   []
+  S = 0.5   []
+  J = 1.5   []
+  mJ = 0.5   []
+  B = 1 T   []
   assumes: |L - S| <= J <= L + S, J > 0; |mJ| <= J; weak field (LS coupling holds)
 ```
 
@@ -625,15 +542,7 @@ $$
 
 **Applies when:** n >= 1; 0 <= l <= n - 1; R > 0; infinitely heavy nucleus.
 
-```shell
-$ quantum-physics solve hydrogen_radial_probability n=1 l=0 Z=1 "R=52.91772105 pm"
-P_inside = 0.3233235838
-P_outside = 0.6766764162
-R_a0 = 0.9999999999
-  by: Probability of finding the electron within a radius  (P = integral_0^R r^2 R_nl^2 dr / integral_0^inf r^2 R_nl^2 dr (30-digit quadrature))
-  R = 5.291772105e-11 m
-  assumes: n >= 1; 0 <= l <= n - 1; R > 0; infinitely heavy nucleus
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the likelihood that an electron in a hydrogen-like state defined by quantum numbers 1 and 0 resides within a distance 52.9177 pm from the nucleus. The result, expressed as 0.323324, represents the cumulative radial probability up to that radius, while 0.676676 accounts for the remaining probability beyond it. The radius is also normalized to atomic units as 1 to facilitate comparison with standard orbital scales.
 
@@ -709,9 +618,9 @@ E2_MeV = 29.79214091 MeV
 K1_MeV = 4.11987359 MeV
 K2_MeV = 29.79214091 MeV
   by: Kinematics of a two-body decay  (p = sqrt[(M^2 - (m1 + m2)^2)(M^2 - (m1 - m2)^2)]/(2M), E_i = sqrt(p^2 + m_i^2), K_i = p^2/(E_i + m_i) (relativistic))
-  M = 139.57039
-  m1 = 105.6583755
-  m2 = 0
+  M = 139.57039   []
+  m1 = 105.6583755   []
+  m2 = 0   []
   assumes: M > m1 + m2; m1, m2 >= 0
 ```
 
@@ -788,8 +697,8 @@ t = 3.61650096e+11 s
 half_lives = 2
 decay_constant = 3.833247596e-12 1/s
   by: Age from the remaining fraction (radioactive dating)  (t = T_half log2(1/f) = ln(1/f)/lambda)
-  fraction = 0.25
-  T_half = 1.80825048e+11 s
+  fraction = 0.25   []
+  T_half = 1.80825048e+11 s   []
   assumes: 0 < fraction <= 1; T_half > 0
 ```
 
@@ -824,7 +733,7 @@ V_MeV = 0.7199822734 MeV
 R = 2e-15 m
 R_fm = 2 fm
   by: Coulomb barrier between two nuclei  (V = Z1 Z2 e^2/(4 pi eps0 R) = Z1 Z2 alpha hbar c/R)
-  r0 = 1e-15 m
+  r0 = 1e-15 m   []
   assumes: 1 <= Z <= A; r0 > 0
 ```
 
@@ -862,7 +771,7 @@ decay_constant = 1.000229009e-06 1/s
 mean_life = 999771.0435 s
 specific_activity_per_atom = 2.500572522e-07 1/s
   by: Decay of a named radionuclide  (N/N0 = 2^(-t/T_half) with the ICRP-107 half-life of the nuclide)
-  t = 1385976.96 s
+  t = 1385976.96 s   []
   nuclide = I-131
   assumes: t >= 0; one of the tabulated nuclides
 ```
@@ -901,10 +810,10 @@ A_parent = 0.1732867951 1/s
 A_daughter = 0.1732867951 1/s
 activity_ratio = 1
   by: Parent-daughter decay chain (Bateman)  (N_D = N0 lambda_P (e^(-lambda_P t) - e^(-lambda_D t))/(lambda_D - lambda_P), evaluated without cancellation when the decay constants are close)
-  T_half_P = 2 s
-  T_half_D = 1 s
-  N0 = 1
-  t = 2 s
+  T_half_P = 2 s   []
+  T_half_D = 1 s   []
+  N0 = 1   []
+  t = 2 s   []
   assumes: half-lives and N0 positive; t >= 0; no daughter at t = 0
 ```
 
@@ -938,10 +847,10 @@ Q_MeV = -1.191882102 MeV
 K_threshold_MeV = 1.532621122 MeV
 endothermic = yes
   by: Q value and threshold energy of a nuclear reaction  (Q = (m_a + m_X - m_Y - m_b) c^2; K_th = -Q (m_a + m_X + m_Y + m_b)/(2 m_X) (exact relativistic form))
-  m_a = 4.002603254
-  m_X = 14.003074
-  m_Y = 16.99913176
-  m_b = 1.007825032
+  m_a = 4.002603254   []
+  m_X = 14.003074   []
+  m_Y = 16.99913176   []
+  m_b = 1.007825032   []
   assumes: masses >= 0; target at rest
 ```
 
@@ -982,9 +891,9 @@ A0 = 383324759.6 1/s
 A = 95831189.9 1/s
 half_lives = 2
   by: Radioactive decay law  (N = N0 2^(-t/T_half), lambda = ln 2/T_half, A = lambda N)
-  T_half = 1.80825048e+11 s
-  N0 = 1e+20
-  t = 3.61650096e+11 s
+  T_half = 1.80825048e+11 s   []
+  N0 = 1e+20   []
+  t = 3.61650096e+11 s   []
   assumes: T_half > 0; N0 > 0; t >= 0
 ```
 
@@ -1026,7 +935,7 @@ mean_decay_length = 658.6383866 m
 proper_lifetime = 2.196981175e-06 s
 mass_MeV = 105.6583755
   by: Mean decay length of a relativistic unstable particle  (beta gamma = p/(m c), L = beta gamma c tau, t_lab = gamma tau)
-  p = 0.1056583755
+  p = 0.1056583755   []
   particle = mu-
   assumes: p >= 0; one of the tabulated particles
 ```
@@ -1067,8 +976,8 @@ E_in_keV = 17.46256316 keV
 E_out_keV = 16.88552755 keV
 K_electron_keV = 0.5770356102 keV
   by: Compton scattering  (lambda' - lambda = (h/(m_e c))(1 - cos theta) = 2 (h/(m_e c)) sin^2(theta/2))
-  lam = 7.1e-11 m
-  theta = 1.570796327 rad
+  lam = 7.1e-11 m   []
+  theta = 1.570796327 rad   []
   assumes: lambda > 0; 0 <= theta <= 180 deg
 ```
 
@@ -1106,8 +1015,8 @@ lambda_rel_nm = 0.7273854627 nm
 inv_lambda = 1374779244
 beta = 0.003335640952
   by: de Broglie wavelength of a moving particle  (lambda = h/(m v) (non-relativistic momentum); lambda_rel = h/(gamma m v))
-  m = 9.109383714e-31 kg
-  v = 1000000 m/s
+  m = 9.109383714e-31 kg   []
+  v = 1000000 m/s   []
   assumes: m > 0; 0 < v < c
 ```
 
@@ -1145,7 +1054,7 @@ lambda_rel_nm = 0.1226365968 nm
 p = 5.403012087e-24 kg*m/s
 K_eV = 100 eV
   by: de Broglie wavelength of an accelerated particle  (lambda = h/p with p = sqrt(2 m e V) (non-relativistic) or p = sqrt(K (K + 2 m c^2))/c, K = e V)
-  V = 100 V
+  V = 100 V   []
   particle = electron
   assumes: V > 0
 ```
@@ -1178,8 +1087,8 @@ dp = 5.272859088e-25 kg*m/s
 dp_eV_per_c = 986.6349023
 dv = 578838.1798 m/s
   by: Minimum momentum uncertainty (Heisenberg)  (dp = hbar/(2 dx) (a minimum-uncertainty Gaussian packet), dv = dp/m)
-  dx = 1e-10 m
-  m = 9.109383714e-31 kg
+  dx = 1e-10 m   []
+  m = 9.109383714e-31 kg   []
   assumes: dx > 0; m > 0
 ```
 
@@ -1217,8 +1126,8 @@ lambda_threshold = 2.883353452e-07 m
 lambda_threshold_nm = 288.3353452 nm
 f_threshold = 1.039735374e+15 Hz
   by: Photoelectric effect  (K_max = h c/lambda - W, V_stop = K_max/e, lambda_0 = h c/W)
-  lam = 2.5e-07 m
-  W = 6.889359526e-19 J
+  lam = 2.5e-07 m   []
+  W = 6.889359526e-19 J   []
   assumes: wavelength and work function positive; photon energy at least the work function
 ```
 
@@ -1251,7 +1160,7 @@ E_eV = 2.479683969 eV
 f = 5.99584916e+14 Hz
 p = 1.32521403e-27 kg*m/s
   by: Photon energy from wavelength  (E = h c/lambda, f = c/lambda, p = h/lambda)
-  lam = 5e-07 m
+  lam = 5e-07 m   []
   assumes: lambda > 0; in vacuum
 ```
 
@@ -1285,7 +1194,7 @@ mean_n = 4
 variance = 4
 P_0 = 0.01831563889
   by: Photon-number distribution of a coherent state  (P(n) = exp(-|alpha|^2) |alpha|^(2n)/n! (computed in logarithms))
-  alpha = 2
+  alpha = 2   []
   assumes: |alpha| >= 0; n >= 0
 ```
 
@@ -1314,17 +1223,7 @@ $$
 
 **Applies when:** gates from H, X, Y, Z, S, Sdg, T, Tdg, I, Rx(t), Ry(t), Rz(t), P(t).
 
-```shell
-$ quantum-physics solve gate_rotation_axis gates=H
-angle = 3.141592654 rad
-angle_deg = 180
-nx = 0.7071067812
-ny = 0
-nz = 0.7071067812
-  by: Bloch-sphere rotation of a single-qubit gate sequence  (U/sqrt(det U) = cos(t/2) I - i sin(t/2) n.sigma; angle = 2 atan2(|a|, a0), n = a/|a|)
-  gates = H
-  assumes: gates from H, X, Y, Z, S, Sdg, T, Tdg, I, Rx(t), Ry(t), Rz(t), P(t)
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the single equivalent rotation on the Bloch sphere for a sequence of single-qubit gates. Multiplying the unitary matrices of each gate in the provided order gives an overall transformation that ignores global phase. The result specifies the rotation angle as 3.14159 rad radians and defines the axis of rotation using the normalized vector components 0.707107, 0, and 0.707107. This simplifies complex circuit sequences into a basic geometric operation.
 
@@ -1354,22 +1253,7 @@ $$
 
 **Applies when:** gates from H, X, Y, Z, S, Sdg, T, Tdg, I, Rx(t), Ry(t), Rz(t), P(t); at most 500 gates.
 
-```shell
-$ quantum-physics solve single_qubit_circuit gates=H start=0
-alpha_re = 0.7071067812
-alpha_im = 0
-beta_re = 0.7071067812
-beta_im = 0
-p0 = 0.5
-p1 = 0.5
-bx = 1
-by = 0
-bz = 0
-  by: State of a qubit after a sequence of gates  (the state vector multiplied by each gate's 2x2 matrix in turn)
-  gates = H
-  start = 0
-  assumes: gates from H, X, Y, Z, S, Sdg, T, Tdg, I, Rx(t), Ry(t), Rz(t), P(t); at most 500 gates
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the quantum state of a single qubit after it passes through a sequence of logic gates. Starting from the initial configuration specified as 0, each gate in the list H is applied sequentially by multiplying the current state vector by that gate's matrix representation. The resulting complex numbers define the new amplitudes, which dictate the likelihood of observing specific outcomes upon measurement. Specifically, the probability of measuring the zero state is 0.5, while the probability of measuring the one state is 0.5. These probabilities are derived directly from the squared magnitudes of the computed amplitudes, providing a complete statistical description of the qubit's behavior at the end of the circuit.
 
@@ -1431,20 +1315,7 @@ $$
 
 **Applies when:** gates from the documented set; at most 500 gates.
 
-```shell
-$ quantum-physics solve two_qubit_circuit "gates=H0 CNOT01" start=00
-p00 = 0.5
-p01 = 0
-p10 = 0
-p11 = 0.5
-concurrence = 1
-p_q0_is_1 = 0.5
-p_q1_is_1 = 0.5
-  by: Two-qubit circuit: probabilities and entanglement  (the four-amplitude state vector updated gate by gate (index 2 q0 + q1))
-  gates = H0 CNOT01
-  start = 00
-  assumes: gates from the documented set; at most 500 gates
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the measurement outcomes for a two-qubit system starting from 00 after applying the sequence H0 CNOT01. It computes the joint probability for each basis state, resulting in 0.5 for both zeros, 0 for zero then one, 0 for one then zero, and 0.5 for both ones. The marginal probability that the first qubit reads one is 0.5, while the second qubit reads one with probability 0.5. Entanglement is quantified by the concurrence value of 1, where higher values indicate stronger quantum correlations between the two qubits.
 
@@ -1479,9 +1350,9 @@ E1_eV = 0.9610429053 eV
 energies_eV = [0.961042905296,3.75528284703,7.95049450889]
 z0 = 4.050219315
   by: Bound states of a finite square well  (even states z tan z = sqrt(z0^2 - z^2), odd states -z cot z = sqrt(z0^2 - z^2), z = (a/2) sqrt(2 m E)/hbar, solved by bisection)
-  V0 = 1.602176634e-18 J
-  a = 5e-10 m
-  m = 9.109383714e-31 kg
+  V0 = 1.602176634e-18 J   []
+  a = 5e-10 m   []
+  m = 9.109383714e-31 kg   []
   assumes: V0, a, m > 0; at most 127 bound states; no state exactly at the top of the well
 ```
 
@@ -1518,8 +1389,8 @@ E1_eV = 0.3760301621 eV
 p = 3.313035075e-25 kg*m/s
 wavelength = 2e-09 m
   by: Energy levels of a particle in a box  (E_n = (n pi hbar/L)^2/(2m) = n^2 h^2/(8 m L^2))
-  m = 9.109383714e-31 kg
-  L = 1e-09 m
+  m = 9.109383714e-31 kg   []
+  L = 1e-09 m   []
   assumes: m > 0; L > 0; n >= 1; infinitely high walls
 ```
 
@@ -1555,8 +1426,8 @@ lam = 1.09906253e-06 m
 lambda_nm = 1099.06253 nm
 f = 2.72771066e+14 Hz
   by: Photon from a particle-in-a-box transition  (E = (n_u^2 - n_l^2) h^2/(8 m L^2), lambda = h c/E)
-  m = 9.109383714e-31 kg
-  L = 1e-09 m
+  m = 9.109383714e-31 kg   []
+  L = 1e-09 m   []
   assumes: n_upper > n_lower >= 1
 ```
 
@@ -1592,7 +1463,7 @@ dx_over_L = 0.1807560276
 dp = 3.313035075e-34 kg*m/s
 product_over_hbar = 0.5678618084
   by: Position and momentum spread in a box  (<x^2> = L^2 (1/3 - 1/(2 n^2 pi^2)), dx = sqrt(<x^2> - L^2/4), dp = n pi hbar/L)
-  L = 1 m
+  L = 1 m   []
   assumes: n >= 1; L > 0
 ```
 
@@ -1617,14 +1488,7 @@ $$
 
 **Applies when:** 0 <= n <= 60.
 
-```shell
-$ quantum-physics solve harmonic_oscillator_forbidden_probability n=0
-P_forbidden = 0.1572992071
-P_allowed = 0.8427007929
-xi_turning = 1
-  by: Probability beyond the classical turning points (harmonic oscillator)  (integral of H_n(xi)^2 exp(-xi^2) over |xi| < sqrt(2n + 1), term by term with the incomplete gamma function (50 digits))
-  assumes: 0 <= n <= 60
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the quantum tunneling probability for a harmonic oscillator in energy level 0 by integrating the wave function squared beyond the classical limits. The result shows that there is a 0.157299 chance of detecting the particle in the classically forbidden region, which corresponds to a position magnitude greater than 1 scaled units. Conversely, the probability of finding the particle inside the classical bounds is 0.842701. This illustrates how quantum mechanics allows particles to exist where classical physics would strictly forbid them due to insufficient kinetic energy.
 
@@ -1654,9 +1518,9 @@ $ quantum-physics solve infinite_well_probability n=1 "L=1 nm" "x1=0.25 nm" "x2=
 P = 0.8183098862
 classical = 0.5
   by: Probability of finding a particle in part of a box  (P = (x2 - x1)/L - [sin(2 n pi x2/L) - sin(2 n pi x1/L)]/(2 n pi), evaluated without cancellation)
-  L = 1e-09 m
-  x1 = 2.5e-10 m
-  x2 = 7.5e-10 m
+  L = 1e-09 m   []
+  x1 = 2.5e-10 m   []
+  x2 = 7.5e-10 m   []
   assumes: 0 <= x1 < x2 <= L; n >= 1
 ```
 
@@ -1695,8 +1559,8 @@ spacing_eV = 0.0658211957 eV
 amplitude = 2.510956493e-11 m
 dx = 1.775514363e-11 m
   by: Quantum harmonic oscillator levels  (E_n = (n + 1/2) hbar omega, A = sqrt((2n + 1) hbar/(m omega)), dx = sqrt((n + 1/2) hbar/(m omega)))
-  m = 1.672621926e-27 kg
-  omega = 1e+14 rad/s
+  m = 1.672621926e-27 kg   []
+  omega = 1e+14 rad/s   []
   assumes: m > 0; omega > 0; n >= 0
 ```
 
@@ -1730,8 +1594,8 @@ T = 0.8888888889
 k2_over_k1 = 0.5
 regime = partial transmission (E > V0)
   by: Reflection and transmission at a potential step  (R = ((k1 - k2)/(k1 + k2))^2, T = 4 k1 k2/(k1 + k2)^2 for E > V0; R = 1, T = 0 for E <= V0)
-  E = 6.408706536e-19 J
-  V0 = 4.806529902e-19 J
+  E = 6.408706536e-19 J   []
+  V0 = 4.806529902e-19 J   []
   assumes: E > 0; V0 > 0; the particle comes from x < 0
 ```
 
@@ -1760,19 +1624,7 @@ $$
 
 **Applies when:** E, V0, a, m > 0.
 
-```shell
-$ quantum-physics solve barrier_transmission "E=1 eV" "V0=2 eV" "a=0.5 nm" "m=9.109383714e-31 kg"
-T = 0.02354711984
-R = 0.9764528802
-kappa_a = 2.561583612
-regime = tunnelling (E < V0)
-  by: Transmission through a rectangular barrier  (T = 1/(1 + V0^2 sinh^2(kappa a)/(4E(V0 - E))) for E < V0, sin for E > V0, written as sinh(x)/x to stay finite at E = V0)
-  E = 1.602176634e-19 J
-  V0 = 3.204353268e-19 J
-  a = 5e-10 m
-  m = 9.109383714e-31 kg
-  assumes: E, V0, a, m > 0
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines how likely a particle is to pass through or bounce off a rectangular barrier. Given an incident energy of 1 eV, a barrier height of 2 eV, and a width of 0.5 nm, the model computes the transmission probability as 0.0235471 and the reflection probability as 0.976453. The result indicates whether the particle tunnels through when its energy is lower than the barrier, or scatters over it when higher.
 
@@ -1806,8 +1658,8 @@ log10_T = -5.66383178
 width = 9e-10 m
 width_nm = 0.9 nm
   by: WKB tunnelling through a triangular barrier (field emission)  (T = exp(-(4/3) sqrt(2 m_e) W^(3/2)/(e hbar F)) (Fowler-Nordheim exponent, no image force))
-  W = 7.209794853e-19 J
-  F = 5000000000 N/C
+  W = 7.209794853e-19 J   []
+  F = 5000000000 N/C   []
   assumes: W > 0; F > 0; WKB: exponent much larger than 1
 ```
 
@@ -1844,9 +1696,9 @@ available = 2
 beta_cm = 0.8660254038
 gamma_cm = 2
   by: Centre-of-mass energy of a fixed-target collision  (s = m1^2 + m2^2 + 2 E1 m2)
-  m1 = 1
-  E1 = 7
-  m2 = 1
+  m1 = 1   []
+  E1 = 7   []
+  m2 = 1   []
   assumes: E1 >= m1 >= 0; m2 > 0
 ```
 
@@ -1882,8 +1734,8 @@ P = 0
 beta_cm = 0
 gamma_cm = 1
   by: Invariant mass of two particles  (M^2 = (E - |P|)(E + |P|) with E = E1 + E2 and P = p1 + p2)
-  E1 = 50
-  E2 = 50
+  E1 = 50   []
+  E2 = 50   []
   assumes: E >= |p| for each particle; a positive invariant mass
 ```
 
@@ -1915,8 +1767,8 @@ L = 80 m
 gamma = 1.25
 shortening = 20 m
   by: Length contraction  (L = L0 sqrt(1 - v^2/c^2))
-  L0 = 100 m
-  v = 179875474.8 m/s
+  L0 = 100 m   []
+  v = 179875474.8 m/s   []
   assumes: L0 > 0; 0 <= v < c
 ```
 
@@ -1947,7 +1799,7 @@ gamma = 1.25
 beta = 0.6
 gamma_minus_1 = 0.25
   by: Lorentz factor  (gamma = 1/sqrt((1 - beta)(1 + beta)), beta = v/c)
-  v = 179875474.8 m/s
+  v = 179875474.8 m/s   []
   assumes: 0 <= v < c
 ```
 
@@ -1979,8 +1831,8 @@ theta_prime = 2.214297436 rad
 theta_prime_deg = 126.8698976
 doppler_factor = 1.25
   by: Relativistic aberration of light  (cos(theta') = (cos(theta) - beta)/(1 - beta cos(theta)), from the boosted photon four-momentum)
-  theta = 1.570796327 rad
-  v = 179875474.8 m/s
+  theta = 1.570796327 rad   []
+  v = 179875474.8 m/s   []
   assumes: 0 <= theta <= 180 deg; |v| < c
 ```
 
@@ -2013,8 +1865,8 @@ f_obs = 2e+14 Hz
 ratio = 2
 z = -0.5
   by: Relativistic Doppler shift  (f_obs = f sqrt((1 + beta)/(1 - beta)) approaching, f sqrt((1 - beta)/(1 + beta)) receding)
-  f = 1e+14 Hz
-  v = 179875474.8 m/s
+  f = 1e+14 Hz   []
+  v = 179875474.8 m/s   []
   motion = approaching
   assumes: f > 0; 0 <= v < c
 ```
@@ -2055,8 +1907,8 @@ gamma = 1.25
 E_MeV = 7.011985755e+29 MeV
 K_MeV = 1.402397151e+29 MeV
   by: Relativistic energy from momentum  (E = sqrt((pc)^2 + (mc^2)^2), K = (pc)^2/(E + mc^2), v = pc^2/E)
-  m = 1 kg
-  p = 224844343.5 kg*m/s
+  m = 1 kg   []
+  p = 224844343.5 kg*m/s   []
   assumes: m > 0; p >= 0
 ```
 
@@ -2098,8 +1950,8 @@ E_MeV = 9.34931434e+29 MeV
 K_MeV = 3.739725736e+29 MeV
 pc_MeV = 7.479451472e+29 MeV
   by: Relativistic momentum and energy  (p = gamma m v, E = gamma m c^2, K = (gamma - 1) m c^2)
-  m = 1 kg
-  v = 239833966.4 m/s
+  m = 1 kg   []
+  v = 239833966.4 m/s   []
   assumes: m > 0; 0 <= v < c
 ```
 
@@ -2129,8 +1981,8 @@ $ quantum-physics solve relativistic_velocity_addition "u_prime=149896229 m/s" "
 u = 239833966.4 m/s
 beta = 0.8
   by: Relativistic velocity addition  (u = (u' + v)/(1 + u' v/c^2))
-  u_prime = 149896229 m/s
-  v = 149896229 m/s
+  u_prime = 149896229 m/s   []
+  v = 149896229 m/s   []
   assumes: |u'| <= c; |v| < c
 ```
 
@@ -2161,7 +2013,7 @@ E = 8.187105788e-14 J
 E_MeV = 0.5109989507 MeV
 E_kWh = 2.274196052e-20
   by: Rest energy (mass-energy equivalence)  (E = m c^2 (c = 299792458 m/s exactly))
-  m = 9.109383714e-31 kg
+  m = 9.109383714e-31 kg   []
   assumes: m > 0
 ```
 
@@ -2195,8 +2047,8 @@ nature = timelike
 tau = 4 s
 proper_length = 0 m
   by: Spacetime interval between two events  (s^2 = (c dt - dx)(c dt + dx); tau = sqrt(s^2)/c or L = sqrt(-s^2))
-  dt = 5 s
-  dx = 899377374 m
+  dt = 5 s   []
+  dx = 899377374 m   []
   assumes: the events are distinct
 ```
 
@@ -2232,8 +2084,8 @@ gamma = 1.25
 p = 224844343.5 kg*m/s
 pc_MeV = 4.207191453e+29 MeV
   by: Speed from relativistic kinetic energy  (gamma = 1 + K/(m c^2), pc = sqrt(K (K + 2 m c^2)), beta = pc/(K + m c^2))
-  m = 1 kg
-  K = 2.246887947e+16 J
+  m = 1 kg   []
+  K = 2.246887947e+16 J   []
   assumes: m > 0; K >= 0
 ```
 
@@ -2265,8 +2117,8 @@ t = 1.25 s
 gamma = 1.25
 difference = 0.25 s
   by: Time dilation  (t = gamma t0)
-  t0 = 1 s
-  v = 179875474.8 m/s
+  t0 = 1 s   []
+  v = 179875474.8 m/s   []
   assumes: t0 > 0; 0 <= v < c
 ```
 
@@ -2300,22 +2152,7 @@ $$
 
 **Applies when:** the spin singlet state; measurement directions in one plane.
 
-```shell
-$ quantum-physics solve chsh_bell_test "a=0 deg" "a2=90 deg" "b=45 deg" "b2=135 deg"
-S = -2.828427125
-abs_S = 2.828427125
-E_ab = -0.7071067812
-E_ab2 = 0.7071067812
-E_a2b = -0.7071067812
-E_a2b2 = -0.7071067812
-violates = yes
-  by: CHSH Bell-test value for the singlet state  (E(x, y) = -cos(x - y); S = E(a,b) - E(a,b') + E(a',b) + E(a',b'))
-  a = 0 rad
-  a2 = 1.570796327 rad
-  b = 0.7853981634 rad
-  b2 = 2.35619449 rad
-  assumes: the spin singlet state; measurement directions in one plane
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the degree of quantum correlation for a singlet state pair based on four measurement angles. The individual correlations are computed as E(a,b) = -0.707107, E(a,b') = 0.707107, E(a',b) = -0.707107, and E(a',b') = -0.707107. These values combine into the CHSH parameter S = -2.82843. If the absolute value 2.82843 exceeds two, it indicates a violation of Bell inequalities, suggesting that no local hidden variable theory can explain the observed correlations.
 
@@ -2372,18 +2209,7 @@ $$
 
 **Applies when:** B > 0; t >= 0.
 
-```shell
-$ quantum-physics solve larmor_precession particle=proton "B=1 T" "t=0 s"
-omega_L = 267522187.1 rad/s
-f_L = 42577478.46 Hz
-Sx_mean = 1
-P_plus_x = 1
-  by: Larmor precession of a spin-1/2  (omega = |gamma| B (CODATA gyromagnetic ratios), <sigma_x> = cos(omega t), P(+x) = cos^2(omega t/2))
-  B = 1 T
-  t = 0 s
-  particle = proton
-  assumes: B > 0; t >= 0
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the precession dynamics of a spin-1/2 particle in a static magnetic field. Using the gyromagnetic ratio for the specified particle, it computes the Larmor angular frequency as 2.67522e+08 rad/s and the corresponding linear frequency as 4.25775e+07 Hz. Based on the elapsed time since the spin was aligned along the positive x-axis, it predicts the mean spin component along x to be 1 and the probability of finding the spin up along that axis to be 1. These values describe how the quantum state rotates around the magnetic field direction.
 
@@ -2459,10 +2285,10 @@ theta = 1.854590436 rad
 phi = 1.570796327 rad
 norm = 1
   by: Qubit state on the Bloch sphere  (normalise; x + iy = 2 conj(alpha) beta, z = |alpha|^2 - |beta|^2, theta = 2 atan2(|beta|, |alpha|), phi = arg(beta) - arg(alpha))
-  a_re = 0.6
-  a_im = 0
-  b_re = 0
-  b_im = 0.8
+  a_re = 0.6   []
+  a_im = 0   []
+  b_re = 0   []
+  b_im = 0.8   []
   assumes: not both amplitudes zero
 ```
 
@@ -2490,18 +2316,7 @@ $$
 
 **Applies when:** Omega > 0; t >= 0; rotating-wave approximation, starting in the ground state.
 
-```shell
-$ quantum-physics solve rabi_oscillation "Omega=1000000 rad/s" "Delta=0 rad/s" "t=1.570796327 us"
-P_excited = 0.5000000001
-W = 1000000 rad/s
-P_max = 1
-period = 6.283185307e-06 s
-  by: Rabi oscillation of a driven two-level system  (P = (Omega^2/W^2) sin^2(W t/2), W = sqrt(Omega^2 + Delta^2))
-  Omega = 1000000 rad/s
-  Delta = 0 rad/s
-  t = 1.570796327e-06 s
-  assumes: Omega > 0; t >= 0; rotating-wave approximation, starting in the ground state
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the probability that a two-level system is in its excited state after being driven for time 1.5708 us. The result, 0.5, depends on the Rabi frequency 1e+06 rad/s and detuning 0 rad/s. The oscillation occurs at the generalized Rabi frequency 1e+06 rad/s, reaching a peak probability of 1 every 6.28319e-06 s seconds.
 
@@ -2526,17 +2341,7 @@ $$
 
 **Applies when:** |m|, |m'| <= j; j <= 20.
 
-```shell
-$ quantum-physics solve spin_rotation_wigner_d j=0.5 mp=0.5 m=0.5 "beta=90 deg"
-d = 0.7071067812
-probability = 0.5
-  by: Spin rotation amplitude (Wigner small-d matrix)  (Wigner's formula summed in 40-digit arithmetic)
-  j = 0.5
-  mp = 0.5
-  m = 0.5
-  beta = 1.570796327 rad
-  assumes: |m|, |m'| <= j; j <= 20
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the quantum amplitude for a spin state with initial projection 0.5 to transform into final projection 0.5 after a rotation of angle 90 deg about the y-axis. The resulting Wigner small-d matrix element, denoted as 0.707107, represents this complex amplitude. Squaring its magnitude yields the probability 0.5, which indicates the likelihood of measuring the system in the new projection state along the original quantization axis.
 
@@ -2568,10 +2373,10 @@ P_up = 0.75
 P_down = 0.25
 expectation = 0.5
   by: Spin-1/2 measurement along an axis  (P_up = (1 + r . n)/2 with r and n the unit vectors of the state and the axis)
-  theta = 1.047197551 rad
-  phi = 0 rad
-  theta_n = 0 rad
-  phi_n = 0 rad
+  theta = 1.047197551 rad   []
+  phi = 0 rad   []
+  theta_n = 0 rad   []
+  phi_n = 0 rad   []
   assumes: polar angles between 0 and 180 degrees
 ```
 
@@ -2605,8 +2410,8 @@ T_c = 3.983751061e-07 K
 lambda_c = 2.967188877e-07 m
 n_lambda3 = 2.612375349
   by: Bose-Einstein condensation temperature  (T_c = (2 pi hbar^2/(m k)) (n/zeta(3/2))^(2/3))
-  n = 1e+20 1/m^3
-  m = 1.443e-25 kg
+  n = 1e+20 1/m^3   []
+  m = 1.443e-25 kg   []
   assumes: n > 0; m > 0; ideal gas, spin 0, uniform box
 ```
 
@@ -2639,9 +2444,9 @@ n = 1
 x = 0.6931471806
 classical_limit = 0.5
   by: Bose-Einstein occupation of a mode  (n = 1/(exp((E - mu)/kT) - 1) (expm1 for small x))
-  E = 2.870978885e-21 J
-  mu = 0 J
-  T = 300 K
+  E = 2.870978885e-21 J   []
+  mu = 0 J   []
+  T = 300 K   []
   assumes: T > 0; E > mu
 ```
 
@@ -2678,9 +2483,9 @@ E_F_eV = 1.692532188 eV
 mu_over_EF = -13.76139397
 T_over_TF = 5.09138516
   by: Chemical potential of an ideal Fermi gas  (n lambda_th^3 / 2 = f_{3/2}(e^(mu/kT)) solved by safeguarded Newton; the Fermi-Dirac integral by the trapezoidal rule in x = t^2)
-  n = 1e+28 1/m^3
-  T = 100000 K
-  m = 9.109383714e-31 kg
+  n = 1e+28 1/m^3   []
+  T = 100000 K   []
+  m = 9.109383714e-31 kg   []
   assumes: n, T, m > 0; T >= 0.02 T_F; |mu/kT| <= 60
 ```
 
@@ -2706,16 +2511,7 @@ $$
 
 **Applies when:** T > 0; theta_D > 0; theta_D/T <= 600.
 
-```shell
-$ quantum-physics solve debye_heat_capacity "T=1 K" "theta_D=500 K"
-C_molar = 1.555016152e-05 J/(mol*K)
-C_over_3R = 6.234181826e-07
-debye_integral = 25.97575761
-  by: Debye heat capacity of a solid  (C_V = 9 R (T/theta_D)^3 integral_0^(theta_D/T) x^4 e^x/(e^x - 1)^2 dx (25-digit quadrature))
-  T = 1 K
-  theta_D = 500 K
-  assumes: T > 0; theta_D > 0; theta_D/T <= 600
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the molar heat capacity of a crystalline solid using the Debye model. By evaluating the integral with temperature 1 K and Debye temperature 500 K, it yields a value of 1.55502e-05 J/(mol*K). The dimensionless ratio 6.23418e-07 indicates how close the solid is to the classical Dulong-Petit limit, while the raw integral value 25.9758 represents the core mathematical component of this physical property.
 
@@ -2748,7 +2544,7 @@ mean_E_eV = 0.0006342969232 eV
 mean_E_over_kT = 2.701178033
 pressure = 1.390579417e-14 Pa
   by: Energy and photon density of blackbody radiation  (u = (pi^2/15)(kT)^4/(hbar c)^3, n = (2 zeta(3)/pi^2)(kT/(hbar c))^3)
-  T = 2.725 K
+  T = 2.725 K   []
   assumes: T > 0
 ```
 
@@ -2783,7 +2579,7 @@ T_F = 81611.80588 K
 k_F = 1.358630845e+10 1/m
 v_F = 1572854.811 m/s
   by: Fermi energy of a free-electron gas  (k_F = (3 pi^2 n)^(1/3), E_F = hbar^2 k_F^2/(2 m_e))
-  n = 8.47e+28 1/m^3
+  n = 8.47e+28 1/m^3   []
   assumes: n > 0; free electrons with spin 1/2, T = 0
 ```
 
@@ -2818,8 +2614,8 @@ E_F_eV = 7.044509066 eV
 T_F = 81748.13311 K
 v_F = 1574167.939 m/s
   by: Fermi energy of a metal from its density  (n = z rho N_A / M, E_F = hbar^2 (3 pi^2 n)^(2/3)/(2 m_e))
-  rho = 8960 kg/m^3
-  M = 0.063546 kg/mol
+  rho = 8960 kg/m^3   []
+  M = 0.063546 kg/mol   []
   assumes: rho, M > 0; z >= 1
 ```
 
@@ -2852,9 +2648,9 @@ f = 0.5
 one_minus_f = 0.5
 x = 0
   by: Fermi-Dirac occupation of a state  (f = 1/(exp((E - mu)/kT) + 1), evaluated without overflow)
-  E = 8.01088317e-19 J
-  mu = 8.01088317e-19 J
-  T = 300 K
+  E = 8.01088317e-19 J   []
+  mu = 8.01088317e-19 J   []
+  T = 300 K   []
   assumes: T > 0
 ```
 
@@ -2882,18 +2678,7 @@ $$
 
 **Applies when:** 0 < lambda1 < lambda2; T > 0.
 
-```shell
-$ quantum-physics solve blackbody_band_fraction lam1=1e-12 lam2=1.0 T=5778.0
-F_band = 1
-F_below_lam1 = 0
-F_below_lam2 = 1
-M_band = 63200699.74 W/m^2
-  by: Fraction of blackbody radiation in a wavelength band  (F(0 -> lambda) = (15/pi^4) integral_x^inf t^3/(e^t - 1) dt, x = hc/(lambda k T), by exponential or Bernoulli series)
-  lam1 = 1e-12 m
-  lam2 = 1 m
-  T = 5778 K
-  assumes: 0 < lambda1 < lambda2; T > 0
-```
+*Not in `quantum-physics` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the portion of a blackbody's power radiated within a specific wavelength band defined by the shorter limit 1e-12 m and the longer limit 1 m at temperature 5778 K. The result, expressed as the dimensionless fraction 1, indicates how much of the total energy falls inside this window. This value is multiplied by the Stefan-Boltzmann law to find the actual radiant exitance in that band, which is reported as 6.32007e+07 W/m^2. Additionally, the cumulative fractions emitted below each boundary are provided as 0 and 1 to help visualize the distribution.
 
@@ -2924,7 +2709,7 @@ lambda_max_nm = 501.5181646 nm
 nu_max = 3.396843303e+14 Hz
 b = 0.002897771955 m*K
   by: Peak of blackbody radiation (Wien's displacement law)  (lambda_max = h c/(x k T) with x = 5(1 - e^-x) = 4.9651...; nu_max = x' k T/h with x' = 3(1 - e^-x') = 2.8214...)
-  T = 5778 K
+  T = 5778 K   []
   assumes: T > 0
 ```
 
@@ -2960,8 +2745,8 @@ C_over_k = 0.9206735942
 C_molar = 22.96471855 J/(mol*K)
 S_over_k = 1.040651852
   by: Quantum oscillator thermodynamics (Einstein model)  (x = theta_E/T; n = 1/(e^x - 1); C/k = x^2 e^x/(e^x - 1)^2; C_molar = 3R C/k)
-  theta_E = 300 K
-  T = 300 K
+  theta_E = 300 K   []
+  T = 300 K   []
   assumes: theta_E > 0; T > 0
 ```
 
@@ -2994,9 +2779,9 @@ sigma = 5.670374419e-08 W/(m^2*K^4)
 M = 56703.74419 W/m^2
 P = 56703.74419 W
   by: Radiated power (Stefan-Boltzmann law)  (P = e sigma A T^4, sigma = 2 pi^5 k^4/(15 h^3 c^2))
-  T = 1000 K
-  emissivity = 1
-  A = 1 m^2
+  T = 1000 K   []
+  emissivity = 1   []
+  A = 1 m^2   []
   assumes: T > 0; A > 0; 0 < emissivity <= 1
 ```
 
@@ -3030,8 +2815,8 @@ B_lambda_per_nm = 26375.66987
 occupation = 0.006920318598
 x = 4.980189953
   by: Spectral radiance of a blackbody (Planck's law)  (B_lambda = (2 h c^2/lambda^5) / (exp(h c/(lambda k T)) - 1))
-  lam = 5e-07 m
-  T = 5778 K
+  lam = 5e-07 m   []
+  T = 5778 K   []
   assumes: lambda > 0; T > 0
 ```
 
@@ -3063,8 +2848,8 @@ lambda_th = 4.303475437e-09 m
 lambda_th_nm = 4.303475437 nm
 n_Q = 1.254706115e+25 1/m^3
   by: Thermal de Broglie wavelength  (lambda = h/sqrt(2 pi m k T))
-  m = 9.109383714e-31 kg
-  T = 300 K
+  m = 9.109383714e-31 kg   []
+  T = 300 K   []
   assumes: m > 0; T > 0
 ```
 
@@ -3106,8 +2891,8 @@ U_eV = 0.006886756298 eV
 C_over_k = 0.1866477065
 S_over_k = 0.5886240855
   by: Thermodynamics of a two-level system  (Z = g0 + g1 e^(-x), x = dE/kT; p1 = g1 e^(-x)/Z; U = dE p1; C/k = x^2 p0 p1; S/k = ln Z + x p1)
-  dE = 4.005441585e-21 J
-  T = 300 K
+  dE = 4.005441585e-21 J   []
+  T = 300 K   []
   assumes: dE > 0; T > 0; g0, g1 >= 1
 ```
 
