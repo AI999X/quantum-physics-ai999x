@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "quantum-physics-ai999x"
-version = "1.0.3"
+version = "1.1.0"
 description = "Offline quantum physics solver: special relativity, photons and matter waves, the hydrogen atom, quantum wells and tunnelling, spin and qubits, quantum gates, nuclear and particle physics and statistical physics, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "Apache-2.0"}
-authors = [{name = "Ibnul Jaif Farabi"}]
-maintainers = [{name = "AI999X"}]
+authors = [{name = "AI999X Labs", email = "support@ai999x.com"}, {name = "Ibnul Jaif Farabi", email = "ibnuljaiffarabi@ai999x.com"}]
+maintainers = [{name = "AI999X Labs", email = "support@ai999x.com"}]
 keywords = ["quantum physics", "special relativity", "hydrogen atom", "particle in a box", "tunnelling", "qubit", "quantum gates", "Bell state", "radioactive decay", "blackbody radiation", "Fermi energy", "ai999x", "offline", "cpu", "stem", "education", "step-by-step", "latex", "solver"]
 classifiers = ["License :: OSI Approved :: Apache Software License", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only", "Operating System :: OS Independent", "Intended Audience :: Education", "Intended Audience :: Science/Research", "Intended Audience :: Developers", "Topic :: Scientific/Engineering", "Topic :: Education", "Development Status :: 5 - Production/Stable"]
 dependencies = ["sympy>=1.12", "mpmath>=1.3"]
