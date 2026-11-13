@@ -386,13 +386,13 @@ $$
 - **Assumes:** $m > 0$; $0  \leq  v < c$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![K_MeV (kinetic energy in MeV) against v (speed (may be written as a fraction of c)) from 8](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-momentum-energy-curve)
+![K_MeV (kinetic energy in MeV) against v (speed (may be written as a fraction of c)) from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-momentum-energy-curve)
 
-*K_MeV (kinetic energy in MeV) against v (speed (may be written as a fraction of c)) from 8.9938e+07 m/s to 2.6981e+08 m/s. One curve for each value of m (rest mass): 9.1094e-31 kg, 4.5547e-31 kg, 1.8219e-30 kg. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, v = 1.7988e+08 m/s, K_MeV = 0.12775 MeV.*
+*K_MeV (kinetic energy in MeV) against v (speed (may be written as a fraction of c)) from 1.1992e+08 m/s to 3.5975e+08 m/s. One curve for each value of m (rest mass): 1 kg, 0.5 kg, 2 kg. 23 points per curve computed by quantum-physics-ai999x; marked: the worked example, v = 2.3983e+08 m/s, K_MeV = 3.7397e+29 MeV.*
 
-![K_MeV (kinetic energy in MeV) over m (rest mass) from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-momentum-energy-field)
+![K_MeV (kinetic energy in MeV) over m (rest mass) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-momentum-energy-field)
 
-*K_MeV (kinetic energy in MeV) over m (rest mass) from 4.5547e-31 kg to 1.3664e-30 kg and v (speed (may be written as a fraction of c)) from 8.9938e+07 m/s to 2.6981e+08 m/s: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 0.0123368 MeV to dark 0.99197 MeV); iso-lines at K_MeV = 0.2, 0.4, 0.6, 0.8 MeV. Marked: the worked example, m = 9.1094e-31 kg, v = 1.7988e+08 m/s, K_MeV = 0.12775 MeV.*
+*K_MeV (kinetic energy in MeV) over m (rest mass) from 0.5 kg to 1.5 kg and v (speed (may be written as a fraction of c)) from 1.1992e+08 m/s to 3.5975e+08 m/s: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 2.5549e+28 MeV to dark 2.7040e+30 MeV); iso-lines at K_MeV = 5.00e29, 1.00e30, 1.50e30, 2.00e30, 2.50e30 MeV; blank cells: inputs the capability refuses. Marked: the worked example, m = 1 kg, v = 2.3983e+08 m/s, K_MeV = 3.7397e+29 MeV.*
 
 ```python
 quantum_physics_ai999x.solve('relativistic_momentum_energy', m=9.1093837139e-31, v=179875474.79999998)
@@ -870,7 +870,7 @@ $$
 
 ![K_max_eV (maximum kinetic energy of the photoelectrons) over lam (wavelength of the light (nm, m ](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/photoelectric-effect-field)
 
-*K_max_eV (maximum kinetic energy of the photoelectrons) over lam (wavelength of the light (nm, m ...)) from 1.0332e-07 m to 3.0996e-07 m and W (work function of the metal (eV, J)) from 1.6022e-19 J to 4.8065e-19 J: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 1 eV to dark 11 eV); iso-lines at K_max_eV = 2, 4, 6, 8, 10 eV. Marked: the worked example, lam = 2.0664e-07 m, W = 3.2044e-19 J, K_max_eV = 4 eV.*
+*K_max_eV (maximum kinetic energy of the photoelectrons) over lam (wavelength of the light (nm, m ...)) from 1.2500e-07 m to 3.7500e-07 m and W (work function of the metal (eV, J)) from 3.4447e-19 J to 1.0334e-18 J: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 0.0124939 eV to dark 7.76874 eV); iso-lines at K_max_eV = 2, 4, 6 eV; blank cells: inputs the capability refuses. Marked: the worked example, lam = 2.5000e-07 m, W = 6.8894e-19 J, K_max_eV = 0.659368 eV.*
 
 ```python
 quantum_physics_ai999x.solve('photoelectric_effect', lam=2.0664033072200046e-07, W=3.204353268e-19)
@@ -2083,9 +2083,9 @@ $$
 - **Assumes:** polar angles between 0 and 180 degrees
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![P_up (probability of +hbar/2 along n) against theta (polar angle of the state's Bloch vector) from 0 rad to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-half-measurement-curve)
+![P_up (probability of +hbar/2 along n) against theta_n (polar angle of the measurement axis) from 0 rad to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-half-measurement-curve)
 
-*P_up (probability of +hbar/2 along n) against theta (polar angle of the state's Bloch vector) from 0 rad to 1.5708 rad. One curve for each value of theta_n (polar angle of the measurement axis): 0 rad, 0.392699 rad, 1.1781 rad. Other inputs as in the worked example: phi = 0.0 rad, phi_n = 0.0 rad. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, theta = 1.5708 rad, P_up = 0.5.*
+*P_up (probability of +hbar/2 along n) against theta_n (polar angle of the measurement axis) from 0 rad to 1.5708 rad. One curve for each value of theta (polar angle of the state's Bloch vector): 1.0472 rad, 0.392699 rad, 1.1781 rad. Other inputs as in the worked example: phi = 0.0 rad, phi_n = 0.0 rad. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, theta_n = 0 rad, P_up = 0.75.*
 
 ```python
 quantum_physics_ai999x.solve('spin_half_measurement', theta=1.5707963267948966, phi=0.0, theta_n=0.0, phi_n=0.0)
@@ -2735,9 +2735,9 @@ $$
 - **Assumes:** T_half > 0; $N_{0} > 0$; $t  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![fraction (fraction remaining N/N0) against T_half (half-life) from 1 s to 100 s on a logarithmic axis](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-decay-law-curve)
+![fraction (fraction remaining N/N0) against T_half (half-life) from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-decay-law-curve)
 
-*fraction (fraction remaining N/N0) against T_half (half-life) from 1 s to 100 s on a logarithmic axis. One curve for each value of t (elapsed time): 20 s, 10 s, 40 s. Other inputs as in the worked example: N0 = 1000.0. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, T_half = 10 s, fraction = 0.25.*
+*fraction (fraction remaining N/N0) against T_half (half-life) from 1.8083e+10 s to 1.8083e+12 s on a logarithmic axis. One curve for each value of t (elapsed time): 3.6165e+11 s, 1.8083e+11 s, 7.2330e+11 s. Other inputs as in the worked example: N0 = 1e+20. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, T_half = 1.8083e+11 s, fraction = 0.25.*
 
 ```python
 quantum_physics_ai999x.solve('radioactive_decay_law', T_half=10.0, N0=1000.0, t=20.0)
@@ -2784,11 +2784,11 @@ $$
 
 ![t (elapsed time (age)) against fraction (fraction of the original nuclei (or activity) remaining, 0 < f <= 1 (or a percentage)) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-dating-age-curve)
 
-*t (elapsed time (age)) against fraction (fraction of the original nuclei (or activity) remaining, 0 < f <= 1 (or a percentage)) from 0.02 to 0.98. One curve for each value of T_half (half-life): 5730 s, 2865 s, 11460 s. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, fraction = 0.25, t = 11460 s.*
+*t (elapsed time (age)) against fraction (fraction of the original nuclei (or activity) remaining, 0 < f <= 1 (or a percentage)) from 0.02 to 0.98. One curve for each value of T_half (half-life): 1.8083e+11 s, 9.0413e+10 s, 3.6165e+11 s. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, fraction = 0.25, t = 3.6165e+11 s.*
 
-![t (elapsed time (age)) over T_half (half-life) from 2865 s to 8595 s and fraction (fraction of the original nuclei (or activity) remaining, 0 < f <= 1 (or a percentage)) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-dating-age-field)
+![t (elapsed time (age)) over T_half (half-life) from 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-dating-age-field)
 
-*t (elapsed time (age)) over T_half (half-life) from 2865 s to 8595 s and fraction (fraction of the original nuclei (or activity) remaining, 0 < f <= 1 (or a percentage)) from 0.02 to 0.98: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 83.5043 s to dark 48508.9 s); iso-lines at t = 10000, 20000, 30000, 40000 s. Marked: the worked example, T_half = 5730 s, fraction = 0.25, t = 11460 s.*
+*t (elapsed time (age)) over T_half (half-life) from 9.0413e+10 s to 2.7124e+11 s and fraction (fraction of the original nuclei (or activity) remaining, 0 < f <= 1 (or a percentage)) from 0.02 to 0.98: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 2.6352e+09 s to dark 1.5308e+12 s); iso-lines at t = 5.00e11, 1.00e12 s. Marked: the worked example, T_half = 1.8083e+11 s, fraction = 0.25, t = 3.6165e+11 s.*
 
 ```python
 quantum_physics_ai999x.solve('radioactive_dating_age', fraction=0.25, T_half=5730.0)
@@ -2944,9 +2944,9 @@ $$
 
 *A particle of mass M = 10 MeV/c² at rest decaying into m₁ = 3 and m₂ = 4 MeV/c² (the worked example): the products fly apart back to back with equal momentum (arrow lengths to scale). Marked: the package's p = 3.55282 MeV/c, energies E₁ = 4.65 and E₂ = 5.35 MeV, kinetic energies K₁ = 1.65 and K₂ = 1.35 MeV, Q = 3 MeV.*
 
-![K1_MeV (kinetic energy of product 1) against m1 (mass of product 1) from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-body-decay-curve)
+![K1_MeV (kinetic energy of product 1) against m1 (mass of product 1) from 52](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-body-decay-curve)
 
-*K1_MeV (kinetic energy of product 1) against m1 (mass of product 1) from 1.5 to 4.5. One curve for each value of M (mass of the parent): 10, 20. Other inputs as in the worked example: m2 = 4.0. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, m1 = 3, K1_MeV = 1.65 MeV.*
+*K1_MeV (kinetic energy of product 1) against m1 (mass of product 1) from 52.8292 to 158.488. One curve for each value of M (mass of the parent): 139.57, 279.141. Other inputs as in the worked example: m2 = 0.0. 25 points per curve computed by quantum-physics-ai999x; marked: the worked example, m1 = 105.658, K1_MeV = 4.11987 MeV.*
 
 ```python
 quantum_physics_ai999x.solve('two_body_decay', M=10.0, m1=3.0, m2=4.0)
@@ -4053,9 +4053,9 @@ $$
 - **Assumes:** $E  \geq  0$; $m > 0$; $1  \leq  w_R  \leq  20$; the energy is absorbed uniformly in the mass m
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![H (equivalent dose (Sv = J/kg)) against m (mass of the absorbing tissue) from 35 kg to 105 kg](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radiation-dose-curve)
+![H (equivalent dose (Sv = J/kg)) against m (mass of the absorbing tissue) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radiation-dose-curve)
 
-*H (equivalent dose (Sv = J/kg)) against m (mass of the absorbing tissue) from 35 kg to 105 kg. One curve for each value of E (radiation energy absorbed by the tissue (J, mJ, MeV ...)): 0.5 J, 0.25 J, 1 J. Other inputs as in the worked example: w_R = 2.0. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, m = 70 kg, H = 0.0142857 J/kg.*
+*H (equivalent dose (Sv = J/kg)) against m (mass of the absorbing tissue) from 0.25 kg to 0.75 kg. One curve for each value of E (radiation energy absorbed by the tissue (J, mJ, MeV ...)): 0.002 J, 0.001 J, 0.004 J. Other inputs as in the worked example: w_R = 20.0. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, m = 0.5 kg, H = 0.08 J/kg.*
 
 ```python
 quantum_physics_ai999x.solve('radiation_dose', E=0.5, m=70.0, w_R=2.0)
