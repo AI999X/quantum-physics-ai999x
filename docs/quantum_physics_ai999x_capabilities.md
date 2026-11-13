@@ -29,6 +29,7 @@ result.show()
 | Nuclear and particle physics / decay kinematics and Q value | [Kinematics of a two-body decay](#two_body_decay) |
 | Nuclear physics / decay chains and equilibrium | [Parent-daughter decay chain (Bateman)](#decay_chain_parent_daughter) |
 | Nuclear physics / nuclear size and the Coulomb barrier | [Coulomb barrier between two nuclei](#coulomb_barrier) |
+| Nuclear physics / radiation dose (medical applications) | [Absorbed dose and equivalent dose](#radiation_dose) |
 | Nuclear physics / radioactive dating | [Age from the remaining fraction (radioactive dating)](#radioactive_dating_age) |
 | Nuclear physics / radioactive decay | [Radioactive decay law](#radioactive_decay_law) |
 | Nuclear physics / radioactive decay of real nuclides | [Decay of a named radionuclide](#nuclide_decay) |
@@ -197,6 +198,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 | de_broglie_wavelength_mv | de Broglie wavelength of a moving particle | m, v | p, lam, lambda_nm, lambda_rel_nm, inv_lambda, beta |
 | step_potential | Reflection and transmission at a potential step | E, V0 | R, T, k2_over_k1, regime |
 | semi_empirical_mass_formula | Semi-empirical mass formula (liquid-drop binding energy) | Z, A | B_MeV, B_per_A_MeV, mass_u, volume_MeV, surface_MeV, coulomb_MeV, asymmetry_MeV, pairing_MeV, Z_stable |
+| radiation_dose | Absorbed dose and equivalent dose | E, m, w_R | D, H, D_mGy, H_mSv, H_rem |
 
 <a id="lorentz_factor"></a>
 
@@ -4022,3 +4024,55 @@ quantum_physics_ai999x.solve('semi_empirical_mass_formula', Z=92, A=235)
 | Semi-empirical mass formula: Z = 26, A = 56 | SOLVED | B_MeV = 495.384 MeV, B_per_A_MeV = 8.84614 MeV, mass_u = 55.9316, volume_MeV = 882 MeV, surface_MeV = 260.543 MeV, coulomb_MeV = 120.796 MeV, asymmetry_MeV = 6.77143 MeV, pairing_MeV = 1.49399 MeV, Z_stable = 25.2797 |
 | Semi-empirical mass formula: Z = 30, A = 20 | INVALID_INPUT | Semi-empirical mass formula (liquid-drop binding energy): give 1 <= Z <= A and A >= 2. |
 | Semi-empirical mass formula: Z = 26 | NEEDS_INPUT | semi_empirical_mass_formula needs A (mass number). Example: solve('semi_empirical_mass_formula', Z=26, A=56). |
+
+<a id="radiation_dose"></a>
+
+### Absorbed dose and equivalent dose: `radiation_dose`
+
+The absorbed dose $D = E/m$ $(Gy = J/kg)$ of tissue that absorbs radiation energy E, and the equivalent dose $H = w_R$ D (Sv) with the radiation weighting factor (RBE, quality factor) of the radiation.
+
+$$
+D = \frac{E}{m},\quad H = w_R\,D
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `E` | radiation energy absorbed by the tissue (J, mJ, MeV ...) |  |
+| `m` | mass of the absorbing tissue |  |
+| `w_R` | radiation weighting factor (RBE or quality factor): 1 for photons and electrons, about 2 for protons, 20 for alpha particles |  |
+
+| output | meaning |
+|---|---|
+| `D` | absorbed dose $(Gy = J/kg)$ |
+| `H` | equivalent dose $(Sv = J/kg)$ |
+| `D_mGy` | absorbed dose in mGy |
+| `H_mSv` | equivalent dose in mSv |
+| `H_rem` | equivalent dose in rem (1 rem = 0.01 Sv) |
+
+- **Method:** $D = E/m$, $H = w_R$ D
+- **Assumes:** $E  \geq  0$; $m > 0$; $1  \leq  w_R  \leq  20$; the energy is absorbed uniformly in the mass m
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![H (equivalent dose (Sv = J/kg)) against m (mass of the absorbing tissue) from 35 kg to 105 kg](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radiation-dose-curve)
+
+*H (equivalent dose (Sv = J/kg)) against m (mass of the absorbing tissue) from 35 kg to 105 kg. One curve for each value of E (radiation energy absorbed by the tissue (J, mJ, MeV ...)): 0.5 J, 0.25 J, 1 J. Other inputs as in the worked example: w_R = 2.0. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, m = 70 kg, H = 0.0142857 J/kg.*
+
+```python
+quantum_physics_ai999x.solve('radiation_dose', E=0.5, m=70.0, w_R=2.0)
+# -> D = 0.00714286 J/kg, H = 0.0142857 J/kg, D_mGy = 7.14286, H_mSv = 14.2857, H_rem = 1.42857   (SOLVED)
+```
+
+```python
+quantum_physics_ai999x.solve('radiation_dose', E=0.002, m=0.5, w_R=20.0)
+# -> D = 0.004 J/kg, H = 0.08 J/kg, D_mGy = 4, H_mSv = 80, H_rem = 8   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Radiation dose: E = 2 mJ, m = 500 g, w_R = 20 | SOLVED | D = 0.004 J/kg, H = 0.08 J/kg, D_mGy = 4, H_mSv = 80, H_rem = 8 |
+| Radiation dose: E = 0.5 J, m = 70 kg, w_R = 1 | SOLVED | D = 0.00714286 J/kg, H = 0.00714286 J/kg, D_mGy = 7.14286, H_mSv = 7.14286, H_rem = 0.714286 |
+| Radiation dose: E = 2 mJ, m = 0 kg, w_R = 20 | INVALID_INPUT | Absorbed dose and equivalent dose: the mass of the absorbing tissue must be positive. |
+| Radiation dose: E = 2 mJ, m = 500 g, w_R = 50 | INVALID_INPUT | Absorbed dose and equivalent dose: the radiation weighting factor lies between 1 (photons, electrons) and 20 (alpha part |
+| Radiation dose: E = 2 mJ, m = 500 g | NEEDS_INPUT | radiation_dose needs w_R (radiation weighting factor (RBE or quality factor): 1 for photons and electrons, about 2 for p |

@@ -212,5 +212,11 @@
  },
  "wien_constant": {
   "unit": "m*K"
+ },
+ "absorbed_dose": {
+  "unit": "J/kg"
+ },
+ "equivalent_dose": {
+  "unit": "J/kg"
  }
 }

@@ -74,9 +74,10 @@
   "rest_energy",
   "de_broglie_wavelength_mv",
   "step_potential",
-  "semi_empirical_mass_formula"
+  "semi_empirical_mass_formula",
+  "radiation_dose"
  ],
- "generated": "2026-10-24",
+ "generated": "2026-11-13",
  "tool": "tools/certify_procedures.py",
  "report": "release/procedure_certification.json",
  "weak_references": {

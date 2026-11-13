@@ -1,8 +1,8 @@
 # quantum-physics: the Quantum Physics program, user guide
 
-**quantum-physics-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**quantum-physics-ai999x 1.6.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
-Quantum Physics covers special relativity, photons and matter waves, the hydrogen atom, quantum wells and tunnelling, spin and qubits, quantum gates, nuclear and particle physics and statistical physics. This guide is about `quantum-physics`, the model as a self-contained program for Windows and Linux: 75 capabilities in 11 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/quantum-physics-ai999x/); the Python package (`pip install quantum-physics-ai999x`) has its own guide. Every command output printed here is what the program printed.
+Quantum Physics covers special relativity, photons and matter waves, the hydrogen atom, quantum wells and tunnelling, spin and qubits, quantum gates, nuclear and particle physics and statistical physics. This guide is about `quantum-physics`, the model as a self-contained program for Windows and Linux: 76 capabilities in 11 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/quantum-physics-ai999x/); the Python package (`pip install quantum-physics-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
 ## Contents
 
@@ -17,37 +17,37 @@ Quantum Physics covers special relativity, photons and matter waves, the hydroge
 
 ## 1. Get it
 
-Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.6.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Quantum Physics | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-quantum-physics-1.5.0-windows-x86_64.zip |
-| Desktop app: Quantum Physics | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-quantum-physics-1.5.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: Quantum Physics | Windows x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-quantum-physics-1.6.0-windows-x86_64.zip |
+| Desktop app: Quantum Physics | Linux x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-quantum-physics-1.6.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Quantum Physics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-quantum-physics-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-quantum-physics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Quantum Physics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-quantum-physics-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-quantum-physics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-quantum-physics-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-quantum-physics-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-quantum-physics-1.5.0-linux-x86_64.tar.gz
-./ai999x-quantum-physics-1.5.0-linux-x86_64/ai999x-quantum-physics
+tar xzf ai999x-quantum-physics-1.6.0-linux-x86_64.tar.gz
+./ai999x-quantum-physics-1.6.0-linux-x86_64/ai999x-quantum-physics
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
-./ai999x-1.5.0-linux-x86_64/ai999x
+tar xzf ai999x-1.6.0-linux-x86_64.tar.gz
+./ai999x-1.6.0-linux-x86_64/ai999x
 ```
 
 ### Command line: Linux
@@ -55,11 +55,11 @@ tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
 The bundle holds one program per model; `quantum-physics` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.6.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.6.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 quantum-physics --version
 ```
 
@@ -68,12 +68,12 @@ quantum-physics --version
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.6.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.6.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.6.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 quantum-physics --version
 ```
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ quantum-physics --version
-quantum-physics-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
+quantum-physics-ai999x 1.6.0 (Rust build, ax-engine 1.6.0)
 ```
 
 ### 2.2 Ask in words
@@ -145,7 +145,7 @@ bose_einstein_occupation                 Bose-Einstein occupation of a mode
 chsh_bell_test                           CHSH Bell-test value for the singlet state
 clebsch_gordan                           Clebsch-Gordan coefficient
 coherent_state_photon_statistics         Photon-number distribution of a coherent state
-… 67 more
+… 68 more
 ```
 
 ### 2.5 What a capability needs
@@ -720,7 +720,46 @@ Z_stable = 25.27970457
 
 **What the worked example means:** This calculation applies the liquid-drop model to estimate nuclear stability. It sums the volume, surface, Coulomb, asymmetry, and pairing terms using proton number 26 and mass number 56. The resulting binding energy is 495.384 MeV, while the most stable proton count for this mass number is 25.2797.
 
-### Nuclear physics (6)
+### Nuclear physics (7)
+
+<a id="radiation_dose"></a>
+
+#### Absorbed dose and equivalent dose: `radiation_dose`
+
+The absorbed dose D = E/m (Gy = J/kg) of tissue that absorbs radiation energy E, and the equivalent dose H = w_R D (Sv) with the radiation weighting factor (RBE, quality factor) of the radiation.
+
+$$
+D = \frac{E}{m},\quad H = w_R\,D
+$$
+
+| symbol |  | meaning | SI unit |
+|---|---|---|---|
+| `E` | in | radiation energy absorbed by the tissue (J, mJ, MeV ...) | J |
+| `m` | in | mass of the absorbing tissue | kg |
+| `w_R` | in | radiation weighting factor (RBE or quality factor): 1 for photons and electrons, about 2 for protons, 20 for alpha particles | - |
+| `D` | out | absorbed dose (Gy = J/kg) | J/kg |
+| `H` | out | equivalent dose (Sv = J/kg) | J/kg |
+| `D_mGy` | out | absorbed dose in mGy | - |
+| `H_mSv` | out | equivalent dose in mSv | - |
+| `H_rem` | out | equivalent dose in rem (1 rem = 0.01 Sv) | - |
+
+**Applies when:** E >= 0; m > 0; 1 <= w_R <= 20; the energy is absorbed uniformly in the mass m.
+
+```shell
+$ quantum-physics solve radiation_dose "E=2 mJ" "m=500 g" w_R=20
+D = 0.004 J/kg
+H = 0.08 J/kg
+D_mGy = 4
+H_mSv = 80
+H_rem = 8
+  by: Absorbed dose and equivalent dose  (D = E/m, H = w_R D)
+  E = 0.002 J
+  m = 0.5 kg
+  w_R = 20
+  assumes: E >= 0; m > 0; 1 <= w_R <= 20; the energy is absorbed uniformly in the mass m
+```
+
+In the worked example, E = 2 mJ, m = 500 g, w_R = 20 go through the equation above and give D = 0.004 J/kg, H = 0.08 J/kg, D_mGy = 4, H_mSv = 80. It applies only when E >= 0; m > 0; 1 <= w_R <= 20; the energy is absorbed uniformly in the mass m: outside that it says what is wrong instead of returning a number.
 
 <a id="radioactive_dating_age"></a>
 

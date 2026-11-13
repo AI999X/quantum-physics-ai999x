@@ -1,14 +1,14 @@
 {
- "package": "1.5.0",
+ "package": "1.6.0",
  "pack": "1.0.1",
  "knowledge_db": null,
  "files": {
-  "dictionary/kinds.json": "11707a2ad52a2c98b9c4c689191050b6c1216bbf29632d98dc9578225662d008",
+  "dictionary/kinds.json": "28e92bd145785cb840f4a7f59009bef442318bd0c21515d990a23fc3b608240c",
   "dictionary/terms.json": "3781eac9e78cc74a52dfbb7f7c6ecd5f218e2a208be5aad6dabd1094f82ddc60",
   "knowledge/relations.json": "766f46c93028fa30356ab664ea31b05d869e380a080b2f07040c962c69054dda",
   "knowledge/reference_cases.json": "7414a14e2c4202a7fae8cdd14e1a2ef7267f35a9665b0633001349c698d4e4e7",
-  "capabilities/procedures.py": "027945adca42cb577d54862666e7ac1c1c88aa4006445578989fc6a48a16c4c0",
-  "capabilities/procedures_certified.json": "d7bae8fd09955568f574fb17e57313e352c5f4b2557d1e2e7e036d704733b037",
+  "capabilities/procedures.py": "bd1df9192170425a1bce4d869d1a947fb3ba3340c64173566e81c30cf22df01b",
+  "capabilities/procedures_certified.json": "a8abc8cde31c61ce907b14f7c3c174449873857bbc9944381a959832c254239f",
   "quantum_physics_knowledge_public.sqlite": "53650994f8a9ea0a8cdb90c8570ebacaeed9c9c64edeca372606451506bd18f4"
  },
  "engine": [

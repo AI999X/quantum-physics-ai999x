@@ -1808,8 +1808,20 @@ _add("infinite_well_uncertainty",
                 {"q": "Particle in a box uncertainty: n = 1", "outcome": "NEEDS_INPUT"}])
 
 
+_HO_DVR_CACHE = []
+
+
 def _ref_ho_dvr():
-    """Colbert-Miller sinc-DVR of H = -1/2 d^2/dx^2 + x^2/2 (dimensionless): eigenvalues and <x^2> of each state."""
+    """Colbert-Miller sinc-DVR of H = -1/2 d^2/dx^2 + x^2/2 (dimensionless): eigenvalues and <x^2> of each state.
+    It does not depend on the inputs, so it is computed once (recomputed per case it ran out of the 60 s budget on a
+    busy box, 2026-11-12)."""
+    if _HO_DVR_CACHE:
+        return _HO_DVR_CACHE[0]
+    _HO_DVR_CACHE.append(_ref_ho_dvr_compute())
+    return _HO_DVR_CACHE[0]
+
+
+def _ref_ho_dvr_compute():
     import numpy as np
     from scipy.linalg import eigh
     d = 0.1
@@ -4375,3 +4387,61 @@ _add("semi_empirical_mass_formula",
                  "outputs": {"B_MeV": 15.75 * 56 - 17.8 * 56 ** (2 / 3) - 0.711 * 26 * 25 / 56 ** (1 / 3) - 23.7 * 16 / 56 + 11.18 / 56 ** 0.5}},
                 {"q": "Semi-empirical mass formula: Z = 30, A = 20", "outcome": "INVALID_INPUT"},
                 {"q": "Semi-empirical mass formula: Z = 26", "outcome": "NEEDS_INPUT"}])
+
+
+# ================================================================================================ core additions (2026-11-12)
+# The dose calculation of the medical-physics chapter. (The binding energy from a measured mass defect is computed by the
+# chemistry model, chemistry.procedure.nuclear_binding_energy, and the effective half-life by nuclear engineering,
+# nuc_effective_half_life: they are not duplicated here.)
+
+def radiation_dose(E, m, w_R):
+    if not (math.isfinite(E) and E >= 0):
+        raise ValueError("the absorbed energy must be zero or positive")
+    if not (math.isfinite(m) and m > 0):
+        raise ValueError("the mass of the absorbing tissue must be positive")
+    if not (math.isfinite(w_R) and 1 <= w_R <= 20):
+        raise ValueError("the radiation weighting factor lies between 1 (photons, electrons) and 20 (alpha particles, heavy ions)")
+    D = E / m
+    H = w_R * D
+    return _out(D=D, H=H, D_mGy=1000 * D, H_mSv=1000 * H, H_rem=100 * H)
+
+
+def ref_radiation_dose(E, m, w_R):
+    # exact rational arithmetic (sympy): the energy balance D m = E solved for D, then H = w_R D. A restatement of the
+    # definitions: a weaker reference, documented.
+    import sympy as sp
+
+    def rat(x):
+        f = Fraction(repr(float(x)))
+        return sp.Rational(f.numerator, f.denominator)
+    D = sp.Symbol("D")
+    Dv = sp.solve(sp.Eq(D * rat(m), rat(E)), D)[0]
+    Hv = rat(w_R) * Dv
+    return {"D": float(Dv), "H": float(Hv), "D_mGy": float(1000 * Dv), "H_mSv": float(1000 * Hv), "H_rem": float(100 * Hv)}
+
+
+_add("radiation_dose",
+     name="Absorbed dose and equivalent dose", topic="nuclear physics / radiation dose (medical applications)",
+     purpose="The absorbed dose D = E/m (Gy = J/kg) of tissue that absorbs radiation energy E, and the equivalent dose H = w_R D (Sv) with the radiation weighting factor (RBE, quality factor) of the radiation.",
+     inputs=[_phys("E", "energy", "radiation energy absorbed by the tissue (J, mJ, MeV ...)"), _phys("m", "mass", "mass of the absorbing tissue"),
+             _numin("w_R", "radiation weighting factor (RBE or quality factor): 1 for photons and electrons, about 2 for protons, 20 for alpha particles")],
+     outputs=[_o("D", "absorbed_dose", "absorbed dose (Gy = J/kg)"), _o("H", "equivalent_dose", "equivalent dose (Sv = J/kg)"),
+              _o("D_mGy", "number", "absorbed dose in mGy"), _o("H_mSv", "number", "equivalent dose in mSv"),
+              _o("H_rem", "number", "equivalent dose in rem (1 rem = 0.01 Sv)")],
+     primary="H", conditions=["E >= 0", "m > 0", "1 <= w_R <= 20", "the energy is absorbed uniformly in the mass m"],
+     method="D = E/m, H = w_R D",
+     latex=r"D = \frac{E}{m},\quad H = w_R\,D",
+     run=radiation_dose, verify=_recheck(radiation_dose),
+     parse=lambda q: _pairs(q, r"radiation dose|absorbed (?:and equivalent )?dose|equivalent dose",
+                            {"e": "E", "m": "m", "w_r": "w_R", "wr": "w_R", "rbe": "w_R", "qf": "w_R"}, units={"E", "m"}),
+     reference=ref_radiation_dose,
+     wrong=_safe(lambda E, m, w_R: (lambda D: _out(D=D, H=D, D_mGy=1000 * D, H_mSv=1000 * D, H_rem=100 * D))(E / m)),   # w_R forgotten
+     random_inputs=lambda rng: {"E": _lu(rng, 1e-6, 10.0), "m": _lu(rng, 1e-3, 100.0), "w_R": rng.choice([2.0, 5.0, 10.0, 20.0, rng.uniform(1.5, 20.0)])},
+     templates=["Radiation dose: E = 2 mJ, m = 500 g, w_R = 20", "Radiation dose: E = 0.5 J, m = 70 kg, w_R = 1"],
+     examples=[{"inputs": {"E": 0.5, "m": 70.0, "w_R": 2.0}, "outputs": {"D": 0.5 / 70, "H": 1.0 / 70}},
+               {"inputs": {"E": 2e-3, "m": 0.5, "w_R": 20.0}, "outputs": {"D": 0.004, "H": 0.08, "H_mSv": 80.0, "H_rem": 8.0}}],
+     questions=[{"q": "Radiation dose: E = 2 mJ, m = 500 g, w_R = 20", "outputs": {"D": 0.004, "H": 0.08}},
+                {"q": "Radiation dose: E = 0.5 J, m = 70 kg, w_R = 1", "outputs": {"D": 0.5 / 70}},
+                {"q": "Radiation dose: E = 2 mJ, m = 0 kg, w_R = 20", "outcome": "INVALID_INPUT"},
+                {"q": "Radiation dose: E = 2 mJ, m = 500 g, w_R = 50", "outcome": "INVALID_INPUT"},
+                {"q": "Radiation dose: E = 2 mJ, m = 500 g", "outcome": "NEEDS_INPUT"}])
