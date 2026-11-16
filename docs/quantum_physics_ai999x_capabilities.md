@@ -866,7 +866,7 @@ $$
 
 ![Einstein's photoelectric lines: the largest photoelectron energy against photon energy for three work functions (stated), from the package at wavelengths 100–700 nm; a metal emits only above its threshold, every line has the same slope](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/photoelectric-effect-curve)
 
-*Einstein's photoelectric lines: the largest photoelectron energy against photon energy for three work functions (stated), from the package at wavelengths 100–700 nm; a metal emits only above its threshold, every line has the same slope. W = 2 eV: threshold 619.921 nm; W = 3 eV: threshold 413.281 nm; W = 4.5 eV: threshold 275.52 nm. Marked: the worked example λ = 206.64 nm, W = 2 eV, K_max = 4 eV, stopping voltage 4 V.*
+*Einstein's photoelectric lines: the largest photoelectron energy against photon energy for three work functions (stated), from the package at wavelengths 100–700 nm; a metal emits only above its threshold, every line has the same slope. W = 2 eV: threshold 619.921 nm; W = 3 eV: threshold 413.281 nm; W = 4.5 eV: threshold 275.52 nm. Marked: the worked example λ = 250 nm, W = 4.3 eV, K_max = 0.659368 eV, stopping voltage 0.659368 V.*
 
 ![K_max_eV (maximum kinetic energy of the photoelectrons) over lam (wavelength of the light (nm, m ](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/photoelectric-effect-field)
 
@@ -1324,7 +1324,7 @@ $$
 
 ![Mean radius ⟨r⟩ of the electron of a one-electron atom with Z = 1 (the worked example's; dots) with its spread Δr (bars), for every state n = 1 … 4 and l = 0 … n − 1, from the package (in a₀): 1s 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-radial-expectations-points)
 
-*Mean radius ⟨r⟩ of the electron of a one-electron atom with Z = 1 (the worked example's; dots) with its spread Δr (bars), for every state n = 1 … 4 and l = 0 … n − 1, from the package (in a₀): 1s 1.5, 2s 6, 3s 13.5, 4s 24, 2p 5, 3p 12.5, 4p 23, 3d 10.5, 4d 21, 4f 18. ⟨r⟩ grows as n²/Z; at fixed n a larger l sits slightly closer in and is less spread. Marked: the worked example's state, 1s.*
+*Mean radius ⟨r⟩ of the electron of a one-electron atom with Z = 1 (the worked example's; dots) with its spread Δr (bars), for every state n = 1 … 4 and l = 0 … n − 1, from the package (in a₀): 1s 1.5, 2s 6, 3s 13.5, 4s 24, 2p 5, 3p 12.5, 4p 23, 3d 10.5, 4d 21, 4f 18. ⟨r⟩ grows as n²/Z; at fixed n a larger l sits slightly closer in and is less spread. Marked: the worked example's state, 2p.*
 
 ```python
 quantum_physics_ai999x.solve('hydrogen_radial_expectations', n=1, l=0, Z=1)
@@ -2940,9 +2940,9 @@ $$
 - **Assumes:** $M > m_{1} + m_{2}$; m1, $m_{2}  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A particle of mass M = 10 MeV/c² at rest decaying into m₁ = 3 and m₂ = 4 MeV/c² (the worked example): the products fly apart back to back with equal momentum (arrow lengths to scale)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-body-decay-diagram)
+![A particle of mass M = 139](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-body-decay-diagram)
 
-*A particle of mass M = 10 MeV/c² at rest decaying into m₁ = 3 and m₂ = 4 MeV/c² (the worked example): the products fly apart back to back with equal momentum (arrow lengths to scale). Marked: the package's p = 3.55282 MeV/c, energies E₁ = 4.65 and E₂ = 5.35 MeV, kinetic energies K₁ = 1.65 and K₂ = 1.35 MeV, Q = 3 MeV.*
+*A particle of mass M = 139.57 MeV/c² at rest decaying into m₁ = 105.658 and m₂ = 0 MeV/c² (the worked example): the products fly apart back to back with equal momentum (arrow lengths to scale). Marked: the package's p = 29.7921 MeV/c, energies E₁ = 109.778 and E₂ = 29.7921 MeV, kinetic energies K₁ = 4.11987 and K₂ = 29.7921 MeV, Q = 33.912 MeV.*
 
 ![K1_MeV (kinetic energy of product 1) against m1 (mass of product 1) from 52](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-body-decay-curve)
 
@@ -3372,9 +3372,9 @@ $$
 - **Assumes:** $dE > 0$; $T > 0$; g0, $g_{1}  \geq  1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A two-level system with gap ΔE = 2](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-level-thermodynamics-curve)
+![A two-level system with gap ΔE = 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-level-thermodynamics-curve)
 
-*A two-level system with gap ΔE = 2.8710e-21 J (0.0179192 eV, the worked example) and equal degeneracies, 81 temperatures from 5 to 2000 K from the package: the populations (top) approach 1/2 each, and the heat capacity (bottom) shows the Schottky peak. Marked: the largest drawn C/k = 0.439202 at T = 86.0994 K.*
+*A two-level system with gap ΔE = 4.0054e-21 J (0.025 eV, the worked example) and equal degeneracies, 81 temperatures from 5 to 2000 K from the package: the populations (top) approach 1/2 each, and the heat capacity (bottom) shows the Schottky peak. Marked: the largest drawn C/k = 0.438481 at T = 125.17 K.*
 
 ```python
 quantum_physics_ai999x.solve('two_level_thermodynamics', dE=2.870978885078724e-21, T=300.0, g0=1, g1=1)
