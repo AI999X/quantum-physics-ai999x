@@ -1,0 +1,70 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Quantum Physics: desktop app user guide</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<style>
+@page{size:A4;margin:16mm 15mm}
+body{font-family:"Segoe UI",Arial,sans-serif;font-size:10.5pt;line-height:1.45;color:#1b1f24;max-width:880px;margin:auto}
+h1{font-size:22pt;border-bottom:2px solid #2b5c8a;padding-bottom:4px;margin-top:28px;page-break-before:always}
+h1:first-of-type{page-break-before:avoid}
+h2{font-size:15pt;color:#2b5c8a;margin-top:22px;page-break-after:avoid}
+h3{font-size:12pt;margin-top:16px;page-break-after:avoid}
+pre{background:#f4f6f8;border:1px solid #dde3e8;border-radius:4px;padding:8px 10px;font-size:8.8pt;white-space:pre-wrap;page-break-inside:avoid}
+code{font-family:Consolas,monospace;font-size:9pt;background:#f4f6f8;padding:0 2px}
+pre code{background:none;padding:0}
+table{border-collapse:collapse;margin:8px 0;font-size:9pt;width:100%;page-break-inside:auto}
+th,td{border:1px solid #cfd6dd;padding:3px 6px;vertical-align:top;text-align:left}
+th{background:#eaf0f5}
+.math{margin:6px 0;overflow-x:auto}
+.badge{display:inline-block;color:#fff;border-radius:3px;padding:0 5px;font-size:8.5pt;white-space:nowrap}
+figure{margin:10px 0;text-align:center;page-break-inside:avoid}figure img{max-width:88%}.svgfig svg{max-width:88%;height:auto}
+figcaption{font-size:9pt;color:#555}
+.pb{page-break-after:always}
+</style></head><body>
+<h1>Quantum Physics: the desktop app, user guide</h1>
+<p><strong>Quantum Physics</strong>, desktop app 1.6.5 for Windows and Linux. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
+<p>Quantum Physics covers special relativity, photons and matter waves, the hydrogen atom, quantum wells and tunnelling, spin and qubits, quantum gates, nuclear and particle physics and statistical physics. Its desktop app holds all 76 calculations in 11 topics: pick one, change its inputs and the answer, a live scene and charts follow at once. It runs on your own computer with no network connection and nothing else to install. The pictures in this guide were taken in this app.</p>
+<h2>Contents</h2>
+<ul><li>1. Get it and start it</li><li>2. The window</li><li>3. Compute a calculation</li><li>4. Ask in words</li><li>5. The live scene and the charts</li><li>6. Light and dark</li><li>7. Every calculation</li><li>8. Other ways to use it</li></ul>
+<h2>1. Get it and start it</h2>
+<table><thead><tr><th>system</th><th>download</th></tr></thead><tbody><tr><td>Windows x86-64</td><td>https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-quantum-physics-1.6.5-windows-x86_64.zip</td></tr><tr><td>Linux x86-64</td><td>https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-quantum-physics-1.6.5-linux-x86_64.tar.gz</td></tr></tbody></table>
+<p>Windows: Download ai999x-quantum-physics-1.6.5-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-quantum-physics.exe. If Windows SmartScreen asks, choose More info → Run anyway.</p>
+<p>Linux:</p>
+<pre><code class="shell">curl -LO https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-quantum-physics-1.6.5-linux-x86_64.tar.gz
+curl -LO https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+tar xzf ai999x-quantum-physics-1.6.5-linux-x86_64.tar.gz
+./ai999x-quantum-physics-1.6.5-linux-x86_64/ai999x-quantum-physics</code></pre>
+<p>Checksums of every download: https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/SHA256SUMS. Install steps for every app: https://www.ai999x.com/desktop-cli/</p>
+<h2>2. The window</h2>
+<figure><img src="https://www.ai999x.com/?ax_shot=quantum-physics-ai999x/hero.webp"><figcaption>The Quantum Physics app, opened on Lorentz factor with its worked example.</figcaption></figure>
+<p>On the left, a search box and the topics with their calculations. In the middle, the chosen calculation: its answer at the top, then the live scene (or its charts), what the answer means and the formula. On the right, its inputs, each with a slider where that makes sense, and the Compute and Reset buttons. At the bottom, a box for a question in words.</p>
+<h2>3. Compute a calculation</h2>
+<p>Open Special relativity › Lorentz factor (or type part of its name in the search box). It opens with a worked example filled in: “Lorentz factor: v = 0.6 c” The answer: gamma = 1.25, beta = 0.6, gamma_minus_1 = 0.25.</p>
+<p>Change any input (type a number with its unit, or drag its slider) and the answer, the scene and the charts follow; Compute recomputes after typing, Reset brings back the worked example. An input outside the range the formula holds for is refused with the reason, never answered with a guessed number.</p>
+<figure><img src="https://www.ai999x.com/?ax_shot=quantum-physics-ai999x/scene-1.webp"><figcaption>Lorentz factor: the live scene of the worked example.</figcaption></figure>
+<h2>4. Ask in words</h2>
+<p>Type a question as you would say it, for example “Lorentz factor: v = 0.8 c”. The app reads the quantities and their units, picks the calculation and answers; the command-line program reads it the same way and printed:</p>
+<pre><code class="text">Read as: Lorentz factor
+gamma = 1.666666667
+beta = 0.8</code></pre>
+<p>When a question names a quantity the app cannot place, it says what is missing instead of guessing.</p>
+<h2>5. The live scene and the charts</h2>
+<p>Every calculation draws a scene from its answer: it moves as an input changes. The Charts button shows charts that vary one input around your values; Enlarge opens one in a large view. Scenes from other topics:</p>
+<figure><img src="https://www.ai999x.com/?ax_shot=quantum-physics-ai999x/scene-2.webp"><figcaption>Photon from a hydrogen-like transition (Rydberg formula)</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=quantum-physics-ai999x/scene-3.webp"><figcaption>Photoelectric effect</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=quantum-physics-ai999x/scene-4.webp"><figcaption>Two-qubit circuit: probabilities and entanglement</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=quantum-physics-ai999x/scene-5.webp"><figcaption>Transmission through a rectangular barrier</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=quantum-physics-ai999x/scene-6.webp"><figcaption>Clebsch-Gordan coefficient</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=quantum-physics-ai999x/scene-7.webp"><figcaption>Semi-empirical mass formula (liquid-drop binding energy)</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=quantum-physics-ai999x/scene-8.webp"><figcaption>Absorbed dose and equivalent dose</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=quantum-physics-ai999x/chart-1.webp"><figcaption>Lorentz factor: a chart, enlarged.</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=quantum-physics-ai999x/chart-2.webp"><figcaption>Photon from a hydrogen-like transition (Rydberg formula): a chart, enlarged.</figcaption></figure>
+<h2>6. Light and dark</h2>
+<p>The app follows a light or a dark theme (the switch is in its top bar).</p>
+<figure><img src="https://www.ai999x.com/?ax_shot=quantum-physics-ai999x/hero-dark.webp"><figcaption>The Quantum Physics app in the dark theme.</figcaption></figure>
+<h2>7. Every calculation</h2>
+<p>76 calculations in 11 topics; each has its own entry on the model&#x27;s page (https://www.ai999x.com/models/quantum-physics-ai999x/) with its formula, worked example and charts.</p>
+<table><thead><tr><th>topic</th><th>calculations</th></tr></thead><tbody><tr><td>Angular momentum</td><td>Clebsch-Gordan coefficient, Wigner 3j symbol</td></tr><tr><td>Hydrogen atom</td><td>Energy level of a hydrogen-like atom (Bohr model), Hydrogen-like transition with the reduced-mass correction, K-alpha X-ray line (Moseley&#x27;s law), Landé g factor and anomalous Zeeman shift, Photon from a hydrogen-like transition (Rydberg formula), Probability of finding the electron within a radius, Radial expectation values of a hydrogen-like state</td></tr><tr><td>Nuclear and particle physics</td><td>Kinematics of a two-body decay, Semi-empirical mass formula (liquid-drop binding energy)</td></tr><tr><td>Nuclear physics</td><td>Absorbed dose and equivalent dose, Age from the remaining fraction (radioactive dating), Coulomb barrier between two nuclei, Decay of a named radionuclide, Parent-daughter decay chain (Bateman), Q value and threshold energy of a nuclear reaction, Radioactive decay law</td></tr><tr><td>Particle physics</td><td>Mean decay length of a relativistic unstable particle</td></tr><tr><td>Photons and matter waves</td><td>Compton scattering, de Broglie wavelength of a moving particle, de Broglie wavelength of an accelerated particle, Minimum momentum uncertainty (Heisenberg), Photoelectric effect, Photon energy from wavelength, Photon-number distribution of a coherent state</td></tr><tr><td>Quantum gates</td><td>Bloch-sphere rotation of a single-qubit gate sequence, State of a qubit after a sequence of gates, Success probability of Grover&#x27;s search, Two-qubit circuit: probabilities and entanglement</td></tr><tr><td>Quantum wells</td><td>Bound states of a finite square well, Energy levels of a particle in a box, Photon from a particle-in-a-box transition, Position and momentum spread in a box, Probability beyond the classical turning points (harmonic oscillator), Probability of finding a particle in part of a box, Quantum harmonic oscillator levels, Reflection and transmission at a potential step, Transmission through a rectangular barrier, WKB tunnelling through a triangular barrier (field emission)</td></tr><tr><td>Special relativity</td><td>Centre-of-mass energy of a fixed-target collision, Invariant mass of two particles, Length contraction, Lorentz factor, Relativistic aberration of light, Relativistic Doppler shift, Relativistic energy from momentum, Relativistic momentum and energy, Relativistic velocity addition, Rest energy (mass-energy equivalence), Spacetime interval between two events, Speed from relativistic kinetic energy, Time dilation</td></tr><tr><td>Spin and qubits</td><td>CHSH Bell-test value for the singlet state, Fidelity and trace distance of two qubit states, Larmor precession of a spin-1/2, Purity and entropy of a qubit state, Qubit state on the Bloch sphere, Rabi oscillation of a driven two-level system, Spin rotation amplitude (Wigner small-d matrix), Spin-1/2 measurement along an axis</td></tr><tr><td>Statistical physics</td><td>Bose-Einstein condensation temperature, Bose-Einstein occupation of a mode, Chemical potential of an ideal Fermi gas, Debye heat capacity of a solid, Energy and photon density of blackbody radiation, Fermi energy of a free-electron gas, Fermi energy of a metal from its density, Fermi-Dirac occupation of a state, Fraction of blackbody radiation in a wavelength band, Peak of blackbody radiation (Wien&#x27;s displacement law), Quantum oscillator thermodynamics (Einstein model), Radiated power (Stefan-Boltzmann law), Spectral radiance of a blackbody (Planck&#x27;s law), Thermal de Broglie wavelength, Thermodynamics of a two-level system</td></tr></tbody></table>
+<h2>8. Other ways to use it</h2>
+<p>The same engine runs on the command line (<code>quantum-physics</code>, its own guide), in Python (<code>pip install quantum-physics-ai999x</code>, <code>import quantum_physics_ai999x</code>, its own guide) and in the browser on https://www.ai999x.com/models/quantum-physics-ai999x/.</p>
+<p>Licence: Apache-2.0 · AI999X · https://www.ai999x.com/models/quantum-physics-ai999x/</p></body></html>
