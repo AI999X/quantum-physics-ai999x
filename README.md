@@ -10,8 +10,8 @@ Quantum Physics covers special relativity, photons and matter waves, the hydroge
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-quantum-physics-1.6.5-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-quantum-physics-1.6.5-linux-x86_64.tar.gz) |
-| **Command line** `quantum-physics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-quantum-physics-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-quantum-physics-1.6.6-linux-x86_64.tar.gz) |
+| **Command line** `quantum-physics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/quantum-physics-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install quantum-physics-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -220,140 +220,6 @@ half_lives = 2
 decay_constant = 3.833247596e-12 1/s
 ```
 
-## Rust library: 15 examples
-
-The crate `quantum-physics-ai999x` (in `rust/` of the GitHub repository) answers a JSON request with `quantum_physics_ai999x::solve_json`. Each call below was compiled and run on this release; the comment under it is what it printed. The whole program is `rust/quantum-physics/examples/readme.rs`: `cd rust && cargo run --release --example readme -p quantum-physics-ai999x`.
-
-```rust
-use serde_json::{json, Value};
-
-fn show(request: Value) {
-    let answer: Value = serde_json::from_str(&quantum_physics_ai999x::solve_json(&request.to_string())).unwrap();
-    println!("{}", answer["outcome"].as_str().unwrap_or(""));
-    for v in answer["values"].as_array().into_iter().flatten() {
-        let unit = v[2].as_str().unwrap_or("");
-        let unit = if unit.is_empty() || unit == "1" { String::new() } else { format!(" {unit}") };
-        println!("{} = {}{}", v[0].as_str().unwrap_or(""), v[1], unit);
-    }
-}
-
-show(json!({"key": "clebsch_gordan", "inputs": {"j1": "0.5", "m1": "0.5", "j2": "0.5", "m2": "-0.5", "J": "1", "M": "0"}}));
-// SOLVED
-// cg = 0.707106781187
-// cg_squared = 0.5
-// cg_squared_exact = "1/2"
-
-show(json!({"key": "bohr_energy_level", "inputs": {"Z": "1", "n": "1"}}));
-// SOLVED
-// E_eV = -13.605693123 eV
-// E = -2.1798723611e-18 J
-// ionization_eV = 13.605693123 eV
-// r = 5.29177210544e-11 m
-// r_nm = 0.0529177210544 nm
-// v = 2187691.26214 m/s
-
-show(json!({"key": "two_body_decay", "inputs": {"M": "139.57039", "m1": "105.6583755", "m2": "0"}}));
-// SOLVED
-// Q_MeV = 33.9120145 MeV
-// p_MeV = 29.7921409099 MeV
-// E1_MeV = 109.77824909 MeV
-// E2_MeV = 29.7921409099 MeV
-// K1_MeV = 4.11987359012 MeV
-// K2_MeV = 29.7921409099 MeV
-
-show(json!({"key": "radiation_dose", "inputs": {"E": "2 mJ", "m": "500 g", "w_R": "20"}}));
-// SOLVED
-// D = 0.004 J/kg
-// H = 0.08 J/kg
-// D_mGy = 4.0
-// H_mSv = 80.0
-// H_rem = 8.0
-
-show(json!({"key": "particle_decay_length", "inputs": {"particle": "mu-", "p": "0.1056583755"}}));
-// SOLVED
-// gamma = 1.41421356237
-// beta = 0.707106781187
-// beta_gamma = 1.0
-// lifetime_lab = 3.10700057382e-6 s
-// mean_decay_length = 658.638386603 m
-// proper_lifetime = 2.1969811749e-6 s
-
-show(json!({"key": "compton_scattering", "inputs": {"lam": "71 pm", "theta": "90 deg"}}));
-// SOLVED
-// lambda_prime = 7.34263102354e-11 m
-// lambda_prime_pm = 73.4263102354 pm
-// shift_pm = 2.42631023538 pm
-// E_in_keV = 17.4625631596 keV
-// E_out_keV = 16.8855275494 keV
-// K_electron_keV = 0.577035610183 keV
-
-show(json!({"key": "gate_rotation_axis", "inputs": {"gates": "H"}}));
-// SOLVED
-// angle = 3.14159265359 rad
-// angle_deg = 180.0
-// nx = 0.707106781187
-// ny = 0.0
-// nz = 0.707106781187
-
-show(json!({"key": "finite_square_well", "inputs": {"V0": "10 eV", "a": "0.5 nm", "m": "9.109383714e-31 kg"}}));
-// SOLVED
-// n_bound = 3.0
-// E1_eV = 0.961042905296 eV
-// energies_eV = [0.961042905296,3.75528284703,7.95049450889]
-// z0 = 4.0502193148
-
-show(json!({"key": "fixed_target_cm_energy", "inputs": {"m1": "1", "E1": "7", "m2": "1"}}));
-// SOLVED
-// sqrt_s = 4.0
-// available = 2.0
-// beta_cm = 0.866025403784
-// gamma_cm = 2.0
-
-show(json!({"key": "chsh_bell_test", "inputs": {"a": "0 deg", "a2": "90 deg", "b": "45 deg", "b2": "135 deg"}}));
-// SOLVED
-// S = -2.82842712475
-// abs_S = 2.82842712475
-// E_ab = -0.707106781187
-// E_ab2 = 0.707106781187
-// E_a2b = -0.707106781187
-// E_a2b2 = -0.707106781187
-
-show(json!({"key": "bec_critical_temperature", "inputs": {"n": "1e+20 m^-3", "m": "1.443e-25 kg"}}));
-// SOLVED
-// T_c = 3.98375106058e-7 K
-// lambda_c = 2.96718887712e-7 m
-// n_lambda3 = 2.61237534869
-
-show(json!({"key": "wigner_3j_symbol", "inputs": {"j1": "1", "m1": "1", "j2": "1", "m2": "-1", "J": "0", "M": "0"}}));
-// SOLVED
-// w3j = 0.57735026919
-// w3j_squared = 0.333333333333
-
-show(json!({"key": "hydrogen_transition_reduced_mass", "inputs": {"Z": "1", "n_upper": "3", "n_lower": "2", "M_u": "1.007276467"}}));
-// SOLVED
-// E_photon_eV = 1.88865100893 eV
-// lam = 6.56469606333e-7 m
-// lambda_nm = 656.469606333 nm
-// f = 456673782164000.0 Hz
-// series = "Balmer"
-// mu_ratio = 0.999455679425
-
-show(json!({"key": "semi_empirical_mass_formula", "inputs": {"Z": "26", "A": "56"}}));
-// SOLVED
-// B_MeV = 495.38369994 MeV
-// B_per_A_MeV = 8.84613749892 MeV
-// mass_u = 55.9315820711
-// volume_MeV = 882.0 MeV
-// surface_MeV = 260.542566554 MeV
-// coulomb_MeV = 120.796295278 MeV
-
-show(json!({"key": "radioactive_dating_age", "inputs": {"fraction": "0.25", "T_half": "5730 yr"}}));
-// SOLVED
-// t = 361650096000.0 s
-// half_lives = 2.0
-// decay_constant = 3.8332475961e-12 1/s
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/quantum-physics-ai999x/blob/main/docs/quantum_physics_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/quantum-physics-ai999x/blob/main/docs/quantum_physics_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/quantum-physics-ai999x/blob/main/docs/quantum_physics_ai999x_desktop_guide.md)
@@ -362,7 +228,7 @@ show(json!({"key": "radioactive_dating_age", "inputs": {"fraction": "0.25", "T_h
 
 Every calculation, with its formula, a worked example and its figures: **[Quantum Physics on ai999x.com](https://www.ai999x.com/models/quantum-physics-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.4 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
