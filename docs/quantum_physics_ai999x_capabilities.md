@@ -9,7 +9,7 @@ Every capability quantum-physics-ai999x supports, generated from its certified c
 ```python
 import quantum_physics_ai999x
 
-result = quantum_physics_ai999x.solve('lorentz_factor', v='1.79875e+08 m/s')
+result = quantum_physics_ai999x.solve('lorentz_factor', v='179875474.79999998 m/s')
 result.show()
 # gamma = 1.25, beta = 0.599998, gamma_minus_1 = 0.249998
 ```
@@ -224,9 +224,9 @@ $$
 - **Assumes:** $0  \leq  v < c$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![gamma (Lorentz factor) against v (speed (may be written as a fraction of c, e](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/lorentz-factor-curve)
+![Lorentz factor as v runs from 1](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/lorentz-factor-live-1.svg)
 
-*gamma (Lorentz factor) against v (speed (may be written as a fraction of c, e.g. 0.8 c)) from 8.9938e+07 m/s to 2.6981e+08 m/s. 31 points computed by quantum-physics-ai999x; marked: the worked example, v = 1.7988e+08 m/s, gamma = 1.25.*
+*Lorentz factor as v runs from 1.2e+08 to 2.8e+08 m/s, every other input as you entered it (41 solutions). Marked: your v = 2e+08 m/s gives γ = 1.342. Your inputs: v = 2.0e8 m/s.*
 
 ```python
 quantum_physics_ai999x.solve('lorentz_factor', v=179875474.79999998)
@@ -277,13 +277,17 @@ $$
 - **Assumes:** $t_{0} > 0$; $0  \leq  v < c$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![t (dilated time measured in the frame where the clock moves) against v (speed of the clock (may be written as a fraction of c)) from 8](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/time-dilation-curve)
+![t (dilated time measured in the frame where the clock moves) over t0 (proper time (measured by the moving clock)) from 500 ms to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/time-dilation-field)
 
-*t (dilated time measured in the frame where the clock moves) against v (speed of the clock (may be written as a fraction of c)) from 8.9938e+07 m/s to 2.6981e+08 m/s. One curve for each value of t0 (proper time (measured by the moving clock)): 1 s, 0.5 s, 2 s. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, v = 1.7988e+08 m/s, t = 1.25 s.*
+*t (dilated time measured in the frame where the clock moves) over t0 (proper time (measured by the moving clock)) from 500 ms to 1.5 s and v (speed of the clock (may be written as a fraction of c)) from 4.497e+07 m/s to 2.698e+08 m/s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 505.7 ms to dark 3.441 s); iso-lines at t = 1, 1.5, 2, 2.5, 3. Marked: the given point, t0 = 1 s, v = 1.799e+08 m/s, t = 1.25 s. Your inputs: t0 = 1 s, v = 179875474.79999998 m/s.*
 
-![t (dilated time measured in the frame where the clock moves) over t0 (proper time (measured by the moving clock)) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/time-dilation-field)
+![Dilated time measured in the frame where the](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/time-dilation-live-1)
 
-*t (dilated time measured in the frame where the clock moves) over t0 (proper time (measured by the moving clock)) from 0.5 s to 1.5 s and v (speed of the clock (may be written as a fraction of c)) from 8.9938e+07 m/s to 2.6981e+08 m/s: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 0.524142 s to dark 3.44124 s); iso-lines at t = 1, 1.5, 2, 2.5, 3 s. Marked: the worked example, t0 = 1 s, v = 1.7988e+08 m/s, t = 1.25 s.*
+*Dilated time measured in the frame where the... as v runs from 1.079e+08 to 2.518e+08 m/s, every other input as you entered it (41 solutions). Marked: your v = 1.799e+08 m/s gives t = 1.25. Your inputs: t0 = 1 s, v = 179875474.79999998 m/s.*
+
+![Dilated time measured in the frame where the](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/time-dilation-live-2)
+
+*Dilated time measured in the frame where the... as t0 runs from 0.6 to 1.4 s, every other input as you entered it (29 solutions). Marked: your t0 = 1 s gives t = 1.25. Your inputs: t0 = 1 s, v = 179875474.79999998 m/s.*
 
 ```python
 quantum_physics_ai999x.solve('time_dilation', t0=1.0, v=179875474.79999998)
@@ -302,7 +306,7 @@ quantum_physics_ai999x.solve('time_dilation', t0=2.2e-06, v=239833966.4)
 | Time dilation: t0 = 1 s, v = 0.6 c | SOLVED | t = 1.25 s, gamma = 1.25, difference = 0.25 s |
 | Time dilation: t0 = 2.2 us, v = 0.8 c | SOLVED | t = 3.66667e-06 s, gamma = 1.66667, difference = 1.46667e-06 s |
 | Time dilation: t0 = 1 s, v = 3e8 m/s | INVALID_INPUT | Time dilation: the speed must be smaller than the speed of light (\|v\| < c). |
-| Time dilation: v = 0.6 c | NEEDS_INPUT | time_dilation needs t0 (proper time (measured by the moving clock)). Example: solve('time_dilation', t0='1 s', v='1.7987 |
+| Time dilation: v = 0.6 c | NEEDS_INPUT | time_dilation needs t0 (proper time (measured by the moving clock)). Example: solve('time_dilation', t0='1 s', v='179875 |
 
 <a id="length_contraction"></a>
 
@@ -329,13 +333,17 @@ $$
 - **Assumes:** $L_{0} > 0$; $0  \leq  v < c$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![L (contracted length measured in the frame where the rod moves) against L0 (proper length (in the rod's rest frame)) from 50 m to 150 m](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/length-contraction-curve)
+![L (contracted length measured in the frame where the rod moves) over L0 (proper length (in the rod's rest frame)) from 50 m to 150 m and v (speed of the rod (may be written as a fraction of c)) from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/length-contraction-field)
 
-*L (contracted length measured in the frame where the rod moves) against L0 (proper length (in the rod's rest frame)) from 50 m to 150 m. One curve for each value of v (speed of the rod (may be written as a fraction of c)): 1.7988e+08 m/s, 8.9938e+07 m/s. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, L0 = 100 m, L = 80 m.*
+*L (contracted length measured in the frame where the rod moves) over L0 (proper length (in the rod's rest frame)) from 50 m to 150 m and v (speed of the rod (may be written as a fraction of c)) from 4.497e+07 m/s to 2.698e+08 m/s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 21.79 m to dark 148.3 m); iso-lines at L = 40, 60, 80, 100, 120, 140. Marked: the given point, L0 = 100 m, v = 1.799e+08 m/s, L = 80 m. Your inputs: L0 = 100 m, v = 179875474.79999998 m/s.*
 
-![L (contracted length measured in the frame where the rod moves) over L0 (proper length (in the rod's rest frame)) from 50 m to 150 m and v (speed of the rod (may be written as a fraction of c)) from 8](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/length-contraction-field)
+![Contracted length measured in the frame](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/length-contraction-live-1)
 
-*L (contracted length measured in the frame where the rod moves) over L0 (proper length (in the rod's rest frame)) from 50 m to 150 m and v (speed of the rod (may be written as a fraction of c)) from 8.9938e+07 m/s to 2.6981e+08 m/s: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 21.7945 m to dark 143.091 m); iso-lines at L = 25, 50, 75, 100, 125 m. Marked: the worked example, L0 = 100 m, v = 1.7988e+08 m/s, L = 80 m.*
+*Contracted length measured in the frame... as v runs from 1.079e+08 to 2.518e+08 m/s, every other input as you entered it (41 solutions). Marked: your v = 1.799e+08 m/s gives L = 80. Your inputs: L0 = 100 m, v = 179875474.79999998 m/s.*
+
+![Contracted length measured in the frame](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/length-contraction-live-2)
+
+*Contracted length measured in the frame... as L0 runs from 60 to 140 m, every other input as you entered it (29 solutions). Marked: your L0 = 100 m gives L = 80. Your inputs: L0 = 100 m, v = 179875474.79999998 m/s.*
 
 ```python
 quantum_physics_ai999x.solve('length_contraction', L0=100.0, v=179875474.79999998)
@@ -386,13 +394,17 @@ $$
 - **Assumes:** $m > 0$; $0  \leq  v < c$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![K_MeV (kinetic energy in MeV) against v (speed (may be written as a fraction of c)) from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-momentum-energy-curve)
+![K_MeV (kinetic energy in MeV) over m (rest mass) from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-momentum-energy-field)
 
-*K_MeV (kinetic energy in MeV) against v (speed (may be written as a fraction of c)) from 1.1992e+08 m/s to 3.5975e+08 m/s. One curve for each value of m (rest mass): 1 kg, 0.5 kg, 2 kg. 23 points per curve computed by quantum-physics-ai999x; marked: the worked example, v = 2.3983e+08 m/s, K_MeV = 3.7397e+29 MeV.*
+*K_MeV (kinetic energy in MeV) over m (rest mass) from 4.555e-31 kg to 1.366e-30 kg and v (speed (may be written as a fraction of c)) from 4.497e+07 m/s to 2.698e+08 m/s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0.002924 MeV to dark 0.992 MeV); iso-lines at K_MeV = 0.2, 0.4, 0.6, 0.8. Marked: the given point, m = 9.109e-31 kg, v = 1.799e+08 m/s, K_MeV = 0.1277 MeV. Your inputs: m = 9.1093837139e-31 kg, v = 179875474.79999998 m/s.*
 
-![K_MeV (kinetic energy in MeV) over m (rest mass) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-momentum-energy-field)
+![Kinetic energy in MeV as v runs from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-momentum-energy-live-1)
 
-*K_MeV (kinetic energy in MeV) over m (rest mass) from 0.5 kg to 1.5 kg and v (speed (may be written as a fraction of c)) from 1.1992e+08 m/s to 3.5975e+08 m/s: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 2.5549e+28 MeV to dark 2.7040e+30 MeV); iso-lines at K_MeV = 5.00e29, 1.00e30, 1.50e30, 2.00e30, 2.50e30 MeV; blank cells: inputs the capability refuses. Marked: the worked example, m = 1 kg, v = 2.3983e+08 m/s, K_MeV = 3.7397e+29 MeV.*
+*Kinetic energy in MeV as v runs from 1.079e+08 to 2.518e+08 m/s, every other input as you entered it (41 solutions). Marked: your v = 1.799e+08 m/s gives K_MeV = 0.1277. Your inputs: m = 9.1093837139e-31 kg, v = 179875474.79999998 m/s.*
+
+![Kinetic energy in MeV as m runs from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-momentum-energy-live-2)
+
+*Kinetic energy in MeV as m runs from 5.466e-31 to 1.275e-30 kg, every other input as you entered it (29 solutions). Marked: your m = 9.109e-31 kg gives K_MeV = 0.1277. Your inputs: m = 9.1093837139e-31 kg, v = 179875474.79999998 m/s.*
 
 ```python
 quantum_physics_ai999x.solve('relativistic_momentum_energy', m=9.1093837139e-31, v=179875474.79999998)
@@ -410,7 +422,7 @@ quantum_physics_ai999x.solve('relativistic_momentum_energy', m=1.0, v=239833966.
 |---|---|---|
 | Relativistic momentum and energy: m = 1 kg, v = 0.8 c | SOLVED | p = 3.99723e+08 kg*m/s, E = 1.49793e+17 J, K = 5.9917e+16 J, E0 = 8.98755e+16 J, gamma = 1.66667, E_MeV = 9.34931e+29 MeV, K_MeV = 3.73973e+29 MeV, pc_MeV = 7.47945e+29 MeV |
 | Relativistic momentum and energy: m = 1 kg, v = 1.5 c | INVALID_INPUT | Relativistic momentum and energy: the speed must be smaller than the speed of light (\|v\| < c). |
-| Relativistic momentum and energy: v = 0.5 c | NEEDS_INPUT | relativistic_momentum_energy needs m (rest mass). Example: solve('relativistic_momentum_energy', m='9.10938e-31 kg', v=' |
+| Relativistic momentum and energy: v = 0.5 c | NEEDS_INPUT | relativistic_momentum_energy needs m (rest mass). Example: solve('relativistic_momentum_energy', m='9.1093837139e-31 kg' |
 
 <a id="relativistic_energy_from_momentum"></a>
 
@@ -441,13 +453,17 @@ $$
 - **Assumes:** $m > 0$; $p  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![E_MeV (total energy in MeV) against p (momentum) from 2](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-energy-from-momentum-curve)
+![E_MeV (total energy in MeV) over m (rest mass) from 8](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-energy-from-momentum-field)
 
-*E_MeV (total energy in MeV) against p (momentum) from 2.2484e+07 kg*m/s to 2.2484e+09 kg*m/s on a logarithmic axis. One curve for each value of m (rest mass): 1 kg, 0.5 kg, 2 kg. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, p = 2.2484e+08 kg*m/s, E_MeV = 7.0120e+29 MeV.*
+*E_MeV (total energy in MeV) over m (rest mass) from 8.365e-28 kg to 2.51e-27 kg and p (momentum) from 2.5e-19 kg·m/s to 7.5e-19 kg·m/s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 662.6 MeV to dark 1988 MeV); iso-lines at E_MeV = 800, 1000, 1200, 1400, 1600, 1800. Marked: the given point, m = 1.673e-27 kg, p = 5e-19 kg·m/s, E_MeV = 1325 MeV. Your inputs: m = 1.673e-27 kg, p = 5.0e-19 kg*m/s.*
 
-![E_MeV (total energy in MeV) over m (rest mass) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-energy-from-momentum-field)
+![Total energy in MeV and kinetic energy in MeV as p runs from 3e-19 to 7e-19 kg*m/s, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-energy-from-momentum-live-1)
 
-*E_MeV (total energy in MeV) over m (rest mass) from 0.1 kg to 10 kg and p (momentum) from 2.2484e+07 kg*m/s to 2.2484e+09 kg*m/s (logarithmic axes): each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 7.0120e+28 MeV to dark 7.0120e+30 MeV); iso-lines at E_MeV = 2.00e30, 4.00e30, 6.00e30 MeV. Marked: the worked example, m = 1 kg, p = 2.2484e+08 kg*m/s, E_MeV = 7.0120e+29 MeV.*
+*Total energy in MeV and kinetic energy in MeV as p runs from 3e-19 to 7e-19 kg*m/s, every other input as you entered it (41 solutions). Marked: your p = 5e-19 kg*m/s gives E_MeV = 1325. Your inputs: m = 1.673e-27 kg, p = 5.0e-19 kg*m/s.*
+
+![Total energy in MeV and kinetic energy in MeV as m runs from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-energy-from-momentum-live-2)
+
+*Total energy in MeV and kinetic energy in MeV as m runs from 1.004e-27 to 2.342e-27 kg, every other input as you entered it (29 solutions). Marked: your m = 1.673e-27 kg gives E_MeV = 1325. Your inputs: m = 1.673e-27 kg, p = 5.0e-19 kg*m/s.*
 
 ```python
 quantum_physics_ai999x.solve('relativistic_energy_from_momentum', m=1.0, p=224844343.5)
@@ -494,13 +510,17 @@ $$
 - **Assumes:** $m > 0$; $K  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![beta (v/c) against m (rest mass) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-speed-from-kinetic-energy-curve)
+![beta (v/c) over m (rest mass) from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-speed-from-kinetic-energy-field)
 
-*beta (v/c) against m (rest mass) from 0.1 kg to 10 kg on a logarithmic axis. One curve for each value of K (kinetic energy (J, eV, MeV ...)): 2.2469e+16 J, 1.1234e+16 J, 4.4938e+16 J. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, m = 1 kg, beta = 0.6.*
+*beta (v/c) over m (rest mass) from 4.554e-31 kg to 1.366e-30 kg and K (kinetic energy (J, eV, MeV ...)) from 8.011e-14 J to 2.403e-13 J: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0.7961 to dark 0.9894); iso-lines at beta = 0.8, 0.85, 0.9, 0.95. Marked: the given point, m = 9.109e-31 kg, K = 1.602e-13 J, beta = 0.9411. Your inputs: m = 9.109e-31 kg, K = 1 MeV.*
 
-![beta (v/c) over m (rest mass) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-speed-from-kinetic-energy-field)
+![Beta as K runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-speed-from-kinetic-energy-live-1)
 
-*beta (v/c) over m (rest mass) from 0.1 kg to 10 kg and K (kinetic energy (J, eV, MeV ...)) from 2.2469e+15 J to 2.2469e+17 J (logarithmic axes): each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 0.0705784 to dark 0.99926); iso-lines at beta = 0.2, 0.4, 0.6, 0.8. Marked: the worked example, m = 1 kg, K = 2.2469e+16 J, beta = 0.6.*
+*Beta as K runs from 0.6 to 1.4 MeV, every other input as you entered it (41 solutions). Marked: your K = 1 MeV gives β = 0.9411. Your inputs: m = 9.109e-31 kg, K = 1 MeV.*
+
+![Beta as m runs from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-speed-from-kinetic-energy-live-2)
+
+*Beta as m runs from 5.465e-31 to 1.275e-30 kg, every other input as you entered it (29 solutions). Marked: your m = 9.109e-31 kg gives β = 0.9411. Your inputs: m = 9.109e-31 kg, K = 1 MeV.*
 
 ```python
 quantum_physics_ai999x.solve('relativistic_speed_from_kinetic_energy', m=1.0, K=2.246887946842044e+16)
@@ -544,13 +564,17 @@ $$
 - **Assumes:** |u'| <= c; |v| < c
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![u (velocity of the object in the rest frame) against u_prime (velocity of the object in the moving frame (signed; may be a fraction of c)) from 7](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-velocity-addition-curve)
-
-*u (velocity of the object in the rest frame) against u_prime (velocity of the object in the moving frame (signed; may be a fraction of c)) from 7.4948e+07 m/s to 2.2484e+08 m/s. One curve for each value of v (velocity of the moving frame (signed; may be a fraction of c)): 1.4990e+08 m/s, 7.4948e+07 m/s. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, u_prime = 1.4990e+08 m/s, u = 2.3983e+08 m/s.*
-
 ![u (velocity of the object in the rest frame) over u_prime (velocity of the object in the moving frame (signed; may be a fraction of c)) from 7](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-velocity-addition-field)
 
-*u (velocity of the object in the rest frame) over u_prime (velocity of the object in the moving frame (signed; may be a fraction of c)) from 7.4948e+07 m/s to 2.2484e+08 m/s and v (velocity of the moving frame (signed; may be a fraction of c)) from 7.4948e+07 m/s to 2.2484e+08 m/s: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 1.4108e+08 m/s to dark 2.8780e+08 m/s); iso-lines at u = 1.50e8, 1.75e8, 2.00e8, 2.25e8, 2.50e8, 2.75e8 m/s. Marked: the worked example, u_prime = 1.4990e+08 m/s, v = 1.4990e+08 m/s, u = 2.3983e+08 m/s.*
+*u (velocity of the object in the rest frame) over u_prime (velocity of the object in the moving frame (signed; may be a fraction of c)) from 7.495e+07 m/s to 2.248e+08 m/s and v (velocity of the moving frame (signed; may be a fraction of c)) from 7.495e+07 m/s to 2.248e+08 m/s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 1.411e+08 m/s to dark 2.878e+08 m/s); iso-lines at u = 1.6e+08, 1.8e+08, 2e+08, 2.2e+08, 2.4e+08, 2.6e+08, 2.8e+08. Marked: the given point, u_prime = 1.499e+08 m/s, v = 1.499e+08 m/s, u = 2.398e+08 m/s. Your inputs: u_prime = 149896229 m/s, v = 149896229 m/s.*
+
+![Velocity of the object in the rest frame as u_prime runs from 8](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-velocity-addition-live-1)
+
+*Velocity of the object in the rest frame as u_prime runs from 8.994e+07 to 2.099e+08 m/s, every other input as you entered it (41 solutions). Marked: your u_prime = 1.499e+08 m/s gives u = 2.398e+08. Your inputs: u_prime = 149896229 m/s, v = 149896229 m/s.*
+
+![Velocity of the object in the rest frame as v runs from 8](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-velocity-addition-live-2)
+
+*Velocity of the object in the rest frame as v runs from 8.994e+07 to 2.099e+08 m/s, every other input as you entered it (29 solutions). Marked: your v = 1.499e+08 m/s gives u = 2.398e+08. Your inputs: u_prime = 149896229 m/s, v = 149896229 m/s.*
 
 ```python
 quantum_physics_ai999x.solve('relativistic_velocity_addition', u_prime=149896229.0, v=149896229.0)
@@ -602,13 +626,21 @@ $$
 - **Assumes:** $f > 0$; $0  \leq  v < c$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![f_obs (observed frequency) against v (relative speed (may be a fraction of c)) from 8](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-doppler-curve)
+![f_obs (observed frequency) over f (frequency in the source frame) from 50 THz to 150 THz and v (relative speed (may be a fraction of c)) from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-doppler-field)
 
-*f_obs (observed frequency) against v (relative speed (may be a fraction of c)) from 8.9938e+07 m/s to 2.6981e+08 m/s. One curve for each value of f (frequency in the source frame): 1.0000e+14 Hz, 5.0000e+13 Hz, 2.0000e+14 Hz. Other inputs as in the worked example: motion = approaching. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, v = 1.7988e+08 m/s, f_obs = 2.0000e+14 Hz.*
+*f_obs (observed frequency) over f (frequency in the source frame) from 50 THz to 150 THz and v (relative speed (may be a fraction of c)) from 4.497e+07 m/s to 2.698e+08 m/s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 58.16 THz to dark 653.8 THz); iso-lines at f_obs = 1e+14, 2e+14, 3e+14, 4e+14, 5e+14, 6e+14. Marked: the given point, f = 100 THz, v = 1.799e+08 m/s, f_obs = 200 THz. Your inputs: f = 100000000000000 Hz, v = 179875474.79999998 m/s, motion = approaching.*
 
-![f_obs (observed frequency) over f (frequency in the source frame) from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-doppler-field)
+![Observed frequency as v runs from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-doppler-live-1)
 
-*f_obs (observed frequency) over f (frequency in the source frame) from 5.0000e+13 Hz to 1.5000e+14 Hz and v (relative speed (may be a fraction of c)) from 8.9938e+07 m/s to 2.6981e+08 m/s: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 6.8139e+13 Hz to dark 6.5383e+14 Hz); iso-lines at f_obs = 1.00e14, 2.00e14, 3.00e14, 4.00e14, 5.00e14, 6.00e14 Hz. Other inputs as in the worked example: motion = approaching. Marked: the worked example, f = 1.0000e+14 Hz, v = 1.7988e+08 m/s, f_obs = 2.0000e+14 Hz.*
+*Observed frequency as v runs from 1.079e+08 to 2.518e+08 m/s, every other input as you entered it (41 solutions). Marked: your v = 1.799e+08 m/s gives f_obs = 2e+14. Your inputs: f = 100000000000000 Hz, v = 179875474.79999998 m/s, motion = approaching.*
+
+![Observed frequency for every choice of motion, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-doppler-live-2)
+
+*Observed frequency for every choice of motion, every other input as you entered it (highlighted: your choice). approaching: 2e+14; receding: 5e+13. Your inputs: f = 100000000000000 Hz, v = 179875474.79999998 m/s, motion = approaching.*
+
+![Observed frequency as f runs from 6e+13 to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-doppler-live-3)
+
+*Observed frequency as f runs from 6e+13 to 1.4e+14 Hz, every other input as you entered it (29 solutions). Marked: your f = 1e+14 Hz gives f_obs = 2e+14. Your inputs: f = 100000000000000 Hz, v = 179875474.79999998 m/s, motion = approaching.*
 
 ```python
 quantum_physics_ai999x.solve('relativistic_doppler', f=100000000000000.0, v=179875474.79999998, motion='approaching')
@@ -654,13 +686,17 @@ $$
 - **Assumes:** $0  \leq  \theta  \leq  180$ deg; |v| < c
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Relativistic aberration at relative speed v = 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-aberration-diagram)
+![Relativistic aberration at relative speed v = 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-aberration-diagram)
 
-*Relativistic aberration at relative speed v = 1.7988e+08 m/s (0.6 c): rays at θ = 15°, 30° … 165° from the x axis in one frame (grey) and the directions θ′ the package gives in the other (arrows): 15°→29.5°, 30°→56.4°, 45°→79.3°, 60°→98.2°, 75°→113.8°, 90°→126.9°, 105°→138.0°, 120°→147.8°, 135°→156.6°, 150°→164.7°, 165°→172.5°. Marked: the worked example θ = 90° → θ′ = 126.87°.*
+*Relativistic aberration at relative speed v = 0.6 c: rays at 15° steps from the x axis in one frame (grey) and the directions the model gives in the other (violet arrows): 15°→29.5°, 30°→56.37°, 45°→79.28°, 60°→98.21°, 75°→113.8°, 90°→126.9°, 105°→138°, 120°→147.8°, 135°→156.6°, 150°→164.7°, 165°→172.5°. Marked: the given direction 90° becomes 126.9°. In SI units: theta_prime = 2.214 rad. Your inputs: theta = 1.5707963267948966 rad, v = 179875474.79999998 m/s.*
 
-![theta_prime (direction of travel in the moving frame (rad)) against theta (direction of travel of the light in the rest frame, from the +x axis (rad or deg)) from 0 rad to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-aberration-curve)
+![Direction of travel in the moving frame as θ runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-aberration-live-1)
 
-*theta_prime (direction of travel in the moving frame (rad)) against theta (direction of travel of the light in the rest frame, from the +x axis (rad or deg)) from 0 rad to 1.5708 rad. One curve for each value of v (speed of the moving frame along +x (may be a fraction of c)): 1.7988e+08 m/s, 8.9938e+07 m/s. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, theta = 1.5708 rad, theta_prime = 2.2143 rad.*
+*Direction of travel in the moving frame as θ runs from 0.9425 to 2.199 rad, every other input as you entered it (41 solutions). Marked: your θ = 1.571 rad gives θ_prime = 2.214. Your inputs: theta = 1.5707963267948966 rad, v = 179875474.79999998 m/s.*
+
+![Direction of travel in the moving frame as v runs from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/relativistic-aberration-live-2)
+
+*Direction of travel in the moving frame as v runs from 1.079e+08 to 2.518e+08 m/s, every other input as you entered it (29 solutions). Marked: your v = 1.799e+08 m/s gives θ_prime = 2.214. Your inputs: theta = 1.5707963267948966 rad, v = 179875474.79999998 m/s.*
 
 ```python
 quantum_physics_ai999x.solve('relativistic_aberration', theta=1.5707963267948966, v=179875474.79999998)
@@ -706,13 +742,21 @@ $$
 - **Assumes:** the events are distinct
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A Minkowski diagram with the origin event and three others (Δt, Δx stated; Δx in light-seconds = Δx / c, c = 299 792 458 m/s): events inside the light cone are timelike (reachable, with a proper time τ), outside spacelike (a proper length, written here in light-seconds), on it lightlike, each classification, s², τ and length from the package: (Δt = 5 s, Δx = 3 light-seconds): timelike, s² = 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spacetime-interval-diagram)
+![A Minkowski diagram with the origin event and three others (the given one, one 2](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spacetime-interval-diagram)
 
-*A Minkowski diagram with the origin event and three others (Δt, Δx stated; Δx in light-seconds = Δx / c, c = 299 792 458 m/s): events inside the light cone are timelike (reachable, with a proper time τ), outside spacelike (a proper length, written here in light-seconds), on it lightlike, each classification, s², τ and length from the package: (Δt = 5 s, Δx = 3 light-seconds): timelike, s² = 1.4380e+18 m²; (Δt = 2 s, Δx = 4 light-seconds): spacelike, s² = -1.0785e+18 m²; (Δt = 3 s, Δx = 3 light-seconds): lightlike, s² = 0 m². The first is the worked example.*
+*A Minkowski diagram with the origin event and three others (the given one, one 2.5 times farther in space, one at half the time and a fifth of the distance; distances in light-seconds = Δx / c): events inside the light cone are timelike (a proper time τ), outside spacelike (a proper length), each classification and value from the model: Δt = 5 s, Δx = 3.002 ls: timelike τ = 3.998 s; Δt = 5 s, Δx = 7.505 ls: spacelike length 5.597 ls; Δt = 2.5 s, Δx = 0.6004 ls: timelike τ = 2.427 s. In SI units: s2 = 1.437e+18 m^2. Your inputs: dt = 5 s, dx = 9e8 m.*
 
-![timelike, spacelike or lightlike (nature) over dt (time between the events (signed)) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spacetime-interval-decision)
+![S2 as dt runs from 3 to 7 s, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spacetime-interval-live-1)
 
-*timelike, spacelike or lightlike (nature) over dt (time between the events (signed)) from 0.5 s to 50 s and dx (distance between the events along x (signed)) from 8.9938e+07 m to 8.9938e+09 m (logarithmic axes): each of the 31 × 21 cells is one run of quantum-physics-ai999x, coloured by the verdict it returned, spacelike: 261 cells, timelike: 390 cells. Marked: the worked example, dt = 5 s, dx = 8.9938e+08 m → timelike.*
+*S2 as dt runs from 3 to 7 s, every other input as you entered it (41 solutions). Marked: your dt = 5 s gives s2 = 1.437e+18. Shaded by timelike, spacelike or lightlike: spacelike, timelike. Your inputs: dt = 5 s, dx = 9e8 m.*
+
+![Timelike, spacelike or lightlike for 25 5 x 5 combinations of dt and dx around your inputs (the other inputs as entered); the ring marks your inputs, which give timelike](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spacetime-interval-live-2)
+
+*Timelike, spacelike or lightlike for 25 5 x 5 combinations of dt and dx around your inputs (the other inputs as entered); the ring marks your inputs, which give timelike. Blank cells admit no answer. Your inputs: dt = 5 s, dx = 9e8 m.*
+
+![S2 as dx runs from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spacetime-interval-live-3)
+
+*S2 as dx runs from 5.4e+08 to 1.26e+09 m, every other input as you entered it (29 solutions). Marked: your dx = 9e+08 m gives s2 = 1.437e+18. Your inputs: dt = 5 s, dx = 9e8 m.*
 
 ```python
 quantum_physics_ai999x.solve('spacetime_interval', dt=5.0, dx=899377374.0)
@@ -765,9 +809,13 @@ $$
 - **Assumes:** E >= |p| for each particle; a positive invariant mass
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![M (invariant mass (GeV/c^2)) against E1 (energy of particle 1 (GeV)) from 25 to 75](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/invariant-mass-curve)
+![Invariant mass as E1 runs from 50 to 87](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/invariant-mass-live-1)
 
-*M (invariant mass (GeV/c^2)) against E1 (energy of particle 1 (GeV)) from 25 to 75. One curve for each value of E2 (energy of particle 2 (GeV)): 50, 100. Other inputs as in the worked example: p1 = [30.0, 0.0, 40.0], p2 = [-30.0, 0.0, -40.0]. 16 points per curve computed by quantum-physics-ai999x; marked: the worked example, E1 = 50, M = 100.*
+*Invariant mass as E1 runs from 50 to 87.5, every other input as you entered it (21 solutions). Marked: your E1 = 50 gives M = 100. Your inputs: E1 = 50, p1 = 30, 0, 40, E2 = 50, p2 = -30, 0, -40.*
+
+![Invariant mass as E2 runs from 50 to 87](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/invariant-mass-live-2)
+
+*Invariant mass as E2 runs from 50 to 87.5, every other input as you entered it (15 solutions). Marked: your E2 = 50 gives M = 100. Your inputs: E1 = 50, p1 = 30, 0, 40, E2 = 50, p2 = -30, 0, -40.*
 
 ```python
 quantum_physics_ai999x.solve('invariant_mass', E1=50.0, p1=[30.0, 0.0, 40.0], E2=50.0, p2=[-30.0, 0.0, -40.0])
@@ -814,9 +862,13 @@ $$
 - **Assumes:** $E_{1}  \geq  m_{1}  \geq  0$; $m_{2} > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![sqrt_s (centre-of-mass energy sqrt(s) (GeV)) against m2 (target mass (GeV/c^2)) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fixed-target-cm-energy-curve)
+![Sqrt s as E1 runs from 1750 to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fixed-target-cm-energy-live-1)
 
-*sqrt_s (centre-of-mass energy sqrt(s) (GeV)) against m2 (target mass (GeV/c^2)) from 0.1 to 10 on a logarithmic axis. One curve for each value of E1 (beam particle total energy (GeV)): 7, 3.5, 14. Other inputs as in the worked example: m1 = 1.0. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, m2 = 1, sqrt_s = 4.*
+*Sqrt s as E1 runs from 1750 to 1.225e+04, every other input as you entered it (41 solutions). Marked: your E1 = 7000 gives sqrt_s = 114.6. Your inputs: m1 = 0.938272, E1 = 7000, m2 = 0.938272.*
+
+![Sqrt s as m2 runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fixed-target-cm-energy-live-2)
+
+*Sqrt s as m2 runs from 0.2346 to 1.642, every other input as you entered it (29 solutions). Marked: your m2 = 0.9383 gives sqrt_s = 114.6. Your inputs: m1 = 0.938272, E1 = 7000, m2 = 0.938272.*
 
 ```python
 quantum_physics_ai999x.solve('fixed_target_cm_energy', m1=1.0, E1=7.0, m2=1.0)
@@ -864,13 +916,17 @@ $$
 - **Assumes:** wavelength and work function positive; photon energy at least the work function
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Einstein's photoelectric lines: the largest photoelectron energy against photon energy for three work functions (stated), from the package at wavelengths 100–700 nm; a metal emits only above its threshold, every line has the same slope](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/photoelectric-effect-curve)
+![K_max_eV (maximum kinetic energy of the photoelectrons) over lam (wavelength of the light (nm, m ](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/photoelectric-effect-field.svg)
 
-*Einstein's photoelectric lines: the largest photoelectron energy against photon energy for three work functions (stated), from the package at wavelengths 100–700 nm; a metal emits only above its threshold, every line has the same slope. W = 2 eV: threshold 619.921 nm; W = 3 eV: threshold 413.281 nm; W = 4.5 eV: threshold 275.52 nm. Marked: the worked example λ = 250 nm, W = 4.3 eV, K_max = 0.659368 eV, stopping voltage 0.659368 V.*
+*K_max_eV (maximum kinetic energy of the photoelectrons) over lam (wavelength of the light (nm, m ...)) from 103.3 nm to 206.6 nm and W (work function of the metal (eV, J)) from 1.602e-19 J to 4.807e-19 J: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 3 eV to dark 11 eV); iso-lines at K_max_eV = 4, 6, 8, 10. Marked: the given point, lam = 206.6 nm, W = 3.204e-19 J, K_max_eV = 4 eV. Your inputs: lam = 2.0664033072200046e-07 m, W = 3.204353268e-19 J.*
 
-![K_max_eV (maximum kinetic energy of the photoelectrons) over lam (wavelength of the light (nm, m ](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/photoelectric-effect-field)
+![Maximum kinetic energy of the photoelectrons as λ runs from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/photoelectric-effect-live-1)
 
-*K_max_eV (maximum kinetic energy of the photoelectrons) over lam (wavelength of the light (nm, m ...)) from 1.2500e-07 m to 3.7500e-07 m and W (work function of the metal (eV, J)) from 3.4447e-19 J to 1.0334e-18 J: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 0.0124939 eV to dark 7.76874 eV); iso-lines at K_max_eV = 2, 4, 6 eV; blank cells: inputs the capability refuses. Marked: the worked example, lam = 2.5000e-07 m, W = 6.8894e-19 J, K_max_eV = 0.659368 eV.*
+*Maximum kinetic energy of the photoelectrons as λ runs from 1.24e-07 to 2.893e-07 m, every other input as you entered it (41 solutions). Marked: your λ = 2.066e-07 m gives K_max_eV = 4. Your inputs: lam = 2.0664033072200046e-07 m, W = 3.204353268e-19 J.*
+
+![Maximum kinetic energy of the photoelectrons as W runs from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/photoelectric-effect-live-2)
+
+*Maximum kinetic energy of the photoelectrons as W runs from 1.923e-19 to 4.486e-19 J, every other input as you entered it (29 solutions). Marked: your W = 3.204e-19 J gives K_max_eV = 4. Your inputs: lam = 2.0664033072200046e-07 m, W = 3.204353268e-19 J.*
 
 ```python
 quantum_physics_ai999x.solve('photoelectric_effect', lam=2.0664033072200046e-07, W=3.204353268e-19)
@@ -888,7 +944,7 @@ quantum_physics_ai999x.solve('photoelectric_effect', lam=2.5e-07, W=6.8893595261
 |---|---|---|
 | Photoelectric effect: lambda = 250 nm, W = 4.3 eV | SOLVED | E_photon_eV = 4.95937 eV, K_max_eV = 0.659368 eV, V_stop = 0.659368 V, lambda_threshold = 2.88335e-07 m, lambda_threshold_nm = 288.335 nm, f_threshold = 1.03974e+15 Hz |
 | Photoelectric effect: lambda = 700 nm, W = 4.3 eV | INVALID_INPUT | Photoelectric effect: no electrons are emitted: the photon energy is below the work function. |
-| Photoelectric effect: lambda = 250 nm | NEEDS_INPUT | photoelectric_effect needs W (work function of the metal (eV, J)). Example: solve('photoelectric_effect', lam='2.0664e-0 |
+| Photoelectric effect: lambda = 250 nm | NEEDS_INPUT | photoelectric_effect needs W (work function of the metal (eV, J)). Example: solve('photoelectric_effect', lam='2.0664033 |
 
 <a id="compton_scattering"></a>
 
@@ -918,9 +974,13 @@ $$
 - **Assumes:** $\lambda > 0$; $0  \leq  \theta  \leq  180$ deg
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Compton scattering of λ = 71 pm X-rays (the worked example) against the scattering angle, 61 angles from the package: the wavelength shift (top) and the kinetic energy given to the electron (bottom), both largest for back-scattering](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/compton-scattering-curve)
+![Scattered wavelength in pm as λ runs from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/compton-scattering-live-1)
 
-*Compton scattering of λ = 71 pm X-rays (the worked example) against the scattering angle, 61 angles from the package: the wavelength shift (top) and the kinetic energy given to the electron (bottom), both largest for back-scattering. Marked: θ = 90°, Δλ = 2.42631 pm, λ′ = 73.4263 pm, recoil 0.577036 keV.*
+*Scattered wavelength in pm as λ runs from 4.26e-11 to 9.94e-11 m, every other input as you entered it (41 solutions). Marked: your λ = 7.1e-11 m gives λ_prime_pm = 73.43. Your inputs: lam = 7.1e-11 m, theta = 1.5707963267948966 rad.*
+
+![Scattered wavelength in pm as θ runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/compton-scattering-live-2)
+
+*Scattered wavelength in pm as θ runs from 0.9425 to 2.199 rad, every other input as you entered it (29 solutions). Marked: your θ = 1.571 rad gives λ_prime_pm = 73.43. Your inputs: lam = 7.1e-11 m, theta = 1.5707963267948966 rad.*
 
 ```python
 quantum_physics_ai999x.solve('compton_scattering', lam=7.1e-11, theta=1.5707963267948966)
@@ -968,9 +1028,13 @@ $$
 - **Assumes:** $V > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![lambda_rel_nm (the same in nm) against V (accelerating voltage) from 50 V to 150 V](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/de-broglie-accelerated-curve)
+![The same in nm and the same in nm as V runs from 60 to 140 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/de-broglie-accelerated-live-1)
 
-*lambda_rel_nm (the same in nm) against V (accelerating voltage) from 50 V to 150 V. One curve for each value of particle (the accelerated particle (charge e)): electron, proton. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, V = 100 V, lambda_rel_nm = 0.122637 nm.*
+*The same in nm and the same in nm as V runs from 60 to 140 V, every other input as you entered it (41 solutions). Marked: your V = 100 V gives λ_rel_nm = 0.1226. Your inputs: V = 100 V, particle = electron.*
+
+![The same in nm for every choice of particle, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/de-broglie-accelerated-live-2)
+
+*The same in nm for every choice of particle, every other input as you entered it (highlighted: your choice). electron: 0.1226; proton: 0.002862. Your inputs: V = 100 V, particle = electron.*
 
 ```python
 quantum_physics_ai999x.solve('de_broglie_accelerated', V=100.0, particle='electron')
@@ -1015,13 +1079,17 @@ $$
 - **Assumes:** $dx > 0$; $m > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![dv (minimum velocity uncertainty) against dx (position uncertainty (standard deviation)) from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/heisenberg-minimum-uncertainty-curve)
+![dv (minimum velocity uncertainty) over dx (position uncertainty (standard deviation)) from 50 pm to 150 pm and m (mass of the particle) from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/heisenberg-minimum-uncertainty-field)
 
-*dv (minimum velocity uncertainty) against dx (position uncertainty (standard deviation)) from 5.0000e-11 m to 1.5000e-10 m. One curve for each value of m (mass of the particle): 9.1094e-31 kg, 4.5547e-31 kg, 1.8219e-30 kg. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, dx = 1.0000e-10 m, dv = 578838 m/s.*
+*dv (minimum velocity uncertainty) over dx (position uncertainty (standard deviation)) from 50 pm to 150 pm and m (mass of the particle) from 4.554e-31 kg to 1.366e-30 kg: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 2.573e+05 m/s to dark 2.315e+06 m/s); iso-lines at dv = 5e+05, 1e+06, 1.5e+06, 2e+06. Marked: the given point, dx = 100 pm, m = 9.109e-31 kg, dv = 5.789e+05 m/s. Your inputs: dx = 0.1 nm, m = 9.109e-31 kg.*
 
-![dv (minimum velocity uncertainty) over dx (position uncertainty (standard deviation)) from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/heisenberg-minimum-uncertainty-field)
+![Minimum velocity uncertainty as dx runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/heisenberg-minimum-uncertainty-live-1)
 
-*dv (minimum velocity uncertainty) over dx (position uncertainty (standard deviation)) from 5.0000e-11 m to 1.5000e-10 m and m (mass of the particle) from 4.5547e-31 kg to 1.3664e-30 kg: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 257261 m/s to dark 2.31535e+06 m/s); iso-lines at dv = 5.00e5, 1.00e6, 1.50e6, 2.00e6 m/s. Marked: the worked example, dx = 1.0000e-10 m, m = 9.1094e-31 kg, dv = 578838 m/s.*
+*Minimum velocity uncertainty as dx runs from 0.06 to 0.14 nm, every other input as you entered it (41 solutions). Marked: your dx = 0.1 nm gives dv = 5.789e+05. Your inputs: dx = 0.1 nm, m = 9.109e-31 kg.*
+
+![Minimum velocity uncertainty as m runs from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/heisenberg-minimum-uncertainty-live-2)
+
+*Minimum velocity uncertainty as m runs from 5.465e-31 to 1.275e-30 kg, every other input as you entered it (29 solutions). Marked: your m = 9.109e-31 kg gives dv = 5.789e+05. Your inputs: dx = 0.1 nm, m = 9.109e-31 kg.*
 
 ```python
 quantum_physics_ai999x.solve('heisenberg_minimum_uncertainty', dx=1e-10, m=9.1093837139e-31)
@@ -1066,13 +1134,17 @@ $$
 - **Assumes:** $m > 0$; $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![lambda_th_nm (the same in nm) against m (particle mass) from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/thermal-de-broglie-wavelength-curve)
+![lambda_th_nm (the same in nm) over m (particle mass) from 3](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/thermal-de-broglie-wavelength-field)
 
-*lambda_th_nm (the same in nm) against m (particle mass) from 4.5547e-31 kg to 1.3664e-30 kg. One curve for each value of T (temperature): 300 K, 150 K, 600 K. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, m = 9.1094e-31 kg, lambda_th_nm = 4.30348 nm.*
+*lambda_th_nm (the same in nm) over m (particle mass) from 3.323e-27 kg to 9.969e-27 kg and T (temperature) from 150 K to 450 K: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0.03359 nm to dark 0.1008 nm); iso-lines at lambda_th_nm = 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1. Marked: the given point, m = 6.646e-27 kg, T = 300 K, lambda_th_nm = 0.05038 nm. Your inputs: m = 6.646e-27 kg, T = 300 K.*
 
-![lambda_th_nm (the same in nm) over m (particle mass) from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/thermal-de-broglie-wavelength-field)
+![The same in nm as m runs from 3](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/thermal-de-broglie-wavelength-live-1)
 
-*lambda_th_nm (the same in nm) over m (particle mass) from 4.5547e-31 kg to 1.3664e-30 kg and T (temperature) from 150 K to 450 K: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 2.86898 nm to dark 8.60695 nm); iso-lines at lambda_th_nm = 3, 4, 5, 6, 7, 8 nm. Marked: the worked example, m = 9.1094e-31 kg, T = 300 K, lambda_th_nm = 4.30348 nm.*
+*The same in nm as m runs from 3.988e-27 to 9.304e-27 kg, every other input as you entered it (41 solutions). Marked: your m = 6.646e-27 kg gives λ_th_nm = 0.05038. Your inputs: m = 6.646e-27 kg, T = 300 K.*
+
+![The same in nm as T runs from 260 to 340 K, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/thermal-de-broglie-wavelength-live-2)
+
+*The same in nm as T runs from 260 to 340 K, every other input as you entered it (29 solutions). Marked: your T = 300 K gives λ_th_nm = 0.05038. Your inputs: m = 6.646e-27 kg, T = 300 K.*
 
 ```python
 quantum_physics_ai999x.solve('thermal_de_broglie_wavelength', m=9.1093837139e-31, T=300.0)
@@ -1085,7 +1157,7 @@ quantum_physics_ai999x.solve('thermal_de_broglie_wavelength', m=9.1093837139e-31
 |---|---|---|
 | Thermal de Broglie wavelength: m = 9.1093837139e-31 kg, T = 300 K | SOLVED | lambda_th = 4.30348e-09 m, lambda_th_nm = 4.30348 nm, n_Q = 1.25471e+25 1/m^3 |
 | Thermal de Broglie wavelength: m = 1e-26 kg, T = -3 K | INVALID_INPUT | Thermal de Broglie wavelength: the mass and the temperature must be positive. |
-| Thermal de Broglie wavelength: T = 300 K | NEEDS_INPUT | thermal_de_broglie_wavelength needs m (particle mass). Example: solve('thermal_de_broglie_wavelength', m='9.10938e-31 kg |
+| Thermal de Broglie wavelength: T = 300 K | NEEDS_INPUT | thermal_de_broglie_wavelength needs m (particle mass). Example: solve('thermal_de_broglie_wavelength', m='9.1093837139e- |
 
 <a id="bohr_energy_level"></a>
 
@@ -1115,13 +1187,17 @@ $$
 - **Assumes:** $Z  \geq  1$; $n  \geq  1$; infinitely heavy nucleus (no reduced-mass correction)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Bohr orbits of a one-electron atom with Z = 1 (the worked example's) for n = 1 … 4 drawn to scale, the radius and energy of each from the package, n = 1: r = 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bohr-energy-level-orbit)
+![Bohr orbits of a one-electron atom with Z = 1 for n = 1 to 4 drawn to scale, the radius, energy and speed of each from the model: n = 1: r = 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bohr-energy-level-orbit)
 
-*Bohr orbits of a one-electron atom with Z = 1 (the worked example's) for n = 1 … 4 drawn to scale, the radius and energy of each from the package, n = 1: r = 0.0529177 nm, E = -13.6057 eV, v = 2.18769e+06 m/s; n = 2: r = 0.211671 nm, E = -3.40142 eV, v = 1.09385e+06 m/s; n = 3: r = 0.476259 nm, E = -1.51174 eV, v = 729230 m/s; n = 4: r = 0.846684 nm, E = -0.850356 eV, v = 546923 m/s. The radius grows as n², the binding energy falls as 1/n². Highlighted: the worked example's level, n = 1.*
+*Bohr orbits of a one-electron atom with Z = 1 for n = 1 to 4 drawn to scale, the radius, energy and speed of each from the model: n = 1: r = 0.05292 nm, E = -13.61 eV, v = 2.188e+06 m/s; n = 2: r = 0.2117 nm, E = -3.401 eV, v = 1.094e+06 m/s; n = 3: r = 0.4763 nm, E = -1.512 eV, v = 7.292e+05 m/s; n = 4: r = 0.8467 nm, E = -0.8504 eV, v = 5.469e+05 m/s. Highlighted: the given n = 2. Your inputs: Z = 1, n = 2.*
 
-![E_eV (energy of the level (negative: bound)) against n (principal quantum number) from 1 to 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bohr-energy-level-curve)
+![Energy of the level (negative: bound) as n runs from 1 to 6, every other input as you entered it (6 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bohr-energy-level-live-1)
 
-*E_eV (energy of the level (negative: bound)) against n (principal quantum number) from 1 to 9. One curve for each value of Z (atomic number (nuclear charge; 1 for hydrogen, 2 for He+ ...)): 1, 2, 3. 9 points per curve computed by quantum-physics-ai999x; marked: the worked example, n = 1, E_eV = -13.6057 eV.*
+*Energy of the level (negative: bound) as n runs from 1 to 6, every other input as you entered it (6 solutions). Marked: your n = 2 gives E_eV = -3.401. Your inputs: Z = 1, n = 2.*
+
+![Energy of the level (negative: bound) as Z runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bohr-energy-level-live-2)
+
+*Energy of the level (negative: bound) as Z runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your Z = 1 gives E_eV = -3.401. Your inputs: Z = 1, n = 2.*
 
 ```python
 quantum_physics_ai999x.solve('bohr_energy_level', Z=1, n=1)
@@ -1170,17 +1246,25 @@ $$
 - **Assumes:** n_upper > n_lower >= 1; infinitely heavy nucleus
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Energy levels of hydrogen, E_n from the package for n = 1 … 6 (E₁ = -13](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/hydrogen-transition-diagram.svg)
+![Energy levels of a one-electron atom with Z = 1, E_n from the model for n = 1 to 6 (E1 = -13](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/hydrogen-transition-diagram.svg)
 
-*Energy levels of hydrogen, E_n from the package for n = 1 … 6 (E₁ = -13.6057 eV), with the photon wavelengths of Lyman and Balmer transitions it computes: 2→1: 121.502 nm, 3→1: 102.518 nm, 3→2: 656.112 nm, 4→2: 486.009 nm, 5→2: 433.937 nm, 6→2: 410.07 nm.*
+*Energy levels of a one-electron atom with Z = 1, E_n from the model for n = 1 to 6 (E1 = -13.61 eV), with the photon wavelengths of the Lyman (violet) and Balmer (accent) transitions it computes: 2→1: 121.5 nm, 3→1: 102.5 nm, 3→2: 656.1 nm, 4→2: 486 nm, 5→2: 433.9 nm, 6→2: 410.1 nm. Your inputs: Z = 1, n_upper = 3, n_lower = 2.*
 
-![The hydrogen emission spectrum: the first six lines of the Lyman, Balmer and Paschen series, each wavelength and photon energy computed by the package (Lyman 121](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/hydrogen-transition-spectrum.svg)
+![The emission spectrum: the first six lines of the Lyman, Balmer and Paschen series for the given Z, each wavelength computed by the model (Lyman 121](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-transition-spectrum)
 
-*The hydrogen emission spectrum: the first six lines of the Lyman, Balmer and Paschen series, each wavelength and photon energy computed by the package (Lyman 121.502–93.0252 nm; Balmer 656.112–388.807 nm; Paschen 1874.61–922.658 nm); the dashed lines bound the visible range 380–750 nm, where only Balmer lines fall.*
+*The emission spectrum: the first six lines of the Lyman, Balmer and Paschen series for the given Z, each wavelength computed by the model (Lyman 121.5 to 93.03 nm; Balmer 656.1 to 388.8 nm; Paschen 1875 to 922.7 nm); the shaded band is the visible range 380 to 750 nm. Marked: the given line at 656.1 nm. Your inputs: Z = 1, n_upper = 3, n_lower = 2.*
 
-![lambda_nm (vacuum wavelength in nm) against Z (atomic number (1 for hydrogen)) from 1 to 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-transition-curve)
+![Vacuum wavelength in nm as n_lower runs from 1 to 2, every other input as you entered it (2 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-transition-live-1)
 
-*lambda_nm (vacuum wavelength in nm) against Z (atomic number (1 for hydrogen)) from 1 to 9. Other inputs as in the worked example: n_upper = 3, n_lower = 2. 9 points computed by quantum-physics-ai999x; marked: the worked example, Z = 1, lambda_nm = 656.112 nm.*
+*Vacuum wavelength in nm as n_lower runs from 1 to 2, every other input as you entered it (2 solutions). Marked: your n_lower = 2 gives λ_nm = 656.1. Shaded by spectral series (Lyman, Balmer, ...): Lyman, Balmer. Your inputs: Z = 1, n_upper = 3, n_lower = 2.*
+
+![Spectral series (Lyman, Balmer, ](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-transition-live-2)
+
+*Spectral series (Lyman, Balmer, ...) for 10 6 x 5 combinations of n_lower and Z around your inputs (the other inputs as entered); the ring marks your inputs, which give Balmer. Blank cells admit no answer. Your inputs: Z = 1, n_upper = 3, n_lower = 2.*
+
+![Vacuum wavelength in nm as Z runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-transition-live-3)
+
+*Vacuum wavelength in nm as Z runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your Z = 1 gives λ_nm = 656.1. Your inputs: Z = 1, n_upper = 3, n_lower = 2.*
 
 ```python
 quantum_physics_ai999x.solve('hydrogen_transition', Z=1, n_upper=3, n_lower=2)
@@ -1230,9 +1314,17 @@ $$
 - **Assumes:** n_upper > n_lower >= 1; $M > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The 3 → 2 line of a one-electron atom with Z = 1 (the worked example's transition) against the mass of its nucleus, 61 masses from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-transition-reduced-mass-curve)
+![Vacuum wavelength in nm as n_lower runs from 1 to 2, every other input as you entered it (2 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-transition-reduced-mass-live-1)
 
-*The 3 → 2 line of a one-electron atom with Z = 1 (the worked example's transition) against the mass of its nucleus, 61 masses from 0.1 to 1000 u from the package: the reduced-mass correction lengthens the wavelength for light nuclei. Dots (nuclear masses stated): H (M = 1.00728 u) 656.47 nm; D (M = 2.01355 u) 656.291 nm; T (M = 3.0155 u) 656.232 nm. Marked: the worked example, M = 1.00728 u → 656.47 nm.*
+*Vacuum wavelength in nm as n_lower runs from 1 to 2, every other input as you entered it (2 solutions). Marked: your n_lower = 2 gives λ_nm = 656.3. Shaded by spectral series (Lyman, Balmer, ...): Lyman, Balmer. Your inputs: Z = 1, n_upper = 3, n_lower = 2, M_u = 2.013553.*
+
+![Spectral series (Lyman, Balmer, ](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-transition-reduced-mass-live-2)
+
+*Spectral series (Lyman, Balmer, ...) for 10 6 x 5 combinations of n_lower and Z around your inputs (the other inputs as entered); the ring marks your inputs, which give Balmer. Blank cells admit no answer. Your inputs: Z = 1, n_upper = 3, n_lower = 2, M_u = 2.013553.*
+
+![Vacuum wavelength in nm as Z runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-transition-reduced-mass-live-3)
+
+*Vacuum wavelength in nm as Z runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your Z = 1 gives λ_nm = 656.3. Your inputs: Z = 1, n_upper = 3, n_lower = 2, M_u = 2.013553.*
 
 ```python
 quantum_physics_ai999x.solve('hydrogen_transition_reduced_mass', Z=1, n_upper=3, n_lower=2, M_u=1.00727646688)
@@ -1273,13 +1365,13 @@ $$
 - **Assumes:** $Z  \geq  2$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Moseley's law: the square root of the Kα X-ray frequency against atomic number, for Z = 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/moseley-k-alpha-curve)
+![E (photon energy) against Z (atomic number of the target element) from 2 to 58, each point a solve of the model: the energy grows as (Z - 1)², Moseley's law](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/moseley-k-alpha-curve-2)
 
-*Moseley's law: the square root of the Kα X-ray frequency against atomic number, for Z = 5.0 … 60.0 (each frequency from the package, its square root taken for the plot), a straight line. Marked: the worked example, Z = 29, f = 1.9344e+18 Hz, √f = 1.3908e+09 √Hz.*
+*E (photon energy) against Z (atomic number of the target element) from 2 to 58, each point a solve of the model: the energy grows as (Z - 1)², Moseley's law. Marked: the given Z = 29, E = 8 keV. Your inputs: Z = 29.*
 
-![E_keV (photon energy) against Z (atomic number of the target element) from 1 to 58 on a logarithmic axis](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/moseley-k-alpha-curve-2)
+![Photon energy as Z runs from 9 to 49, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/moseley-k-alpha-live-1)
 
-*E_keV (photon energy) against Z (atomic number of the target element) from 1 to 58 on a logarithmic axis. 27 points computed by quantum-physics-ai999x; marked: the worked example, Z = 29, E_keV = 8.00015 keV.*
+*Photon energy as Z runs from 9 to 49, every other input as you entered it (41 solutions). Marked: your Z = 29 gives E_keV = 8. Your inputs: Z = 29.*
 
 ```python
 quantum_physics_ai999x.solve('moseley_k_alpha', Z=29)
@@ -1322,9 +1414,17 @@ $$
 - **Assumes:** $n  \geq  1$; $0  \leq  l  \leq  n - 1$; infinitely heavy nucleus
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Mean radius ⟨r⟩ of the electron of a one-electron atom with Z = 1 (the worked example's; dots) with its spread Δr (bars), for every state n = 1 … 4 and l = 0 … n − 1, from the package (in a₀): 1s 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-radial-expectations-points)
+![Mean radius ⟨r⟩ of the electron of a one-electron atom with Z = 1 for every state n = 1 to 4 and l = 0 to n - 1 (up to f), each a solve of the model (in units of a0): 1s 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-radial-expectations-points)
 
-*Mean radius ⟨r⟩ of the electron of a one-electron atom with Z = 1 (the worked example's; dots) with its spread Δr (bars), for every state n = 1 … 4 and l = 0 … n − 1, from the package (in a₀): 1s 1.5, 2s 6, 3s 13.5, 4s 24, 2p 5, 3p 12.5, 4p 23, 3d 10.5, 4d 21, 4f 18. ⟨r⟩ grows as n²/Z; at fixed n a larger l sits slightly closer in and is less spread. Marked: the worked example's state, 2p.*
+*Mean radius ⟨r⟩ of the electron of a one-electron atom with Z = 1 for every state n = 1 to 4 and l = 0 to n - 1 (up to f), each a solve of the model (in units of a0): 1s 1.5, 2s 6, 3s 13.5, 4s 24, 2p 5, 3p 12.5, 4p 23, 3d 10.5, 4d 21, 4f 18. ⟨r⟩ grows as n²/Z; at fixed n a larger l sits slightly closer in. Marked: the given state n = 2, l = 1, ⟨r⟩ = 5 a0 with spread 2.236 a0. Your inputs: n = 2, l = 1, Z = 1.*
+
+![<r> in units of a0 as n runs from 2 to 6, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-radial-expectations-live-1)
+
+*<r> in units of a0 as n runs from 2 to 6, every other input as you entered it (5 solutions). Marked: your n = 2 gives r_mean_a0 = 5. Your inputs: n = 2, l = 1, Z = 1.*
+
+![<r> in units of a0 as Z runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-radial-expectations-live-2)
+
+*<r> in units of a0 as Z runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your Z = 1 gives r_mean_a0 = 5. Your inputs: n = 2, l = 1, Z = 1.*
 
 ```python
 quantum_physics_ai999x.solve('hydrogen_radial_expectations', n=1, l=0, Z=1)
@@ -1371,9 +1471,13 @@ $$
 - **Assumes:** $n  \geq  1$; $0  \leq  l  \leq  n - 1$; $R > 0$; infinitely heavy nucleus
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Probability of finding the hydrogen electron within a radius R, for the 1s, 2s, 2p and 3d states, 80 radii each from the package (1s passes 1/2 near 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-radial-probability-curve)
+![Probability within R as n runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-radial-probability-live-1)
 
-*Probability of finding the hydrogen electron within a radius R, for the 1s, 2s, 2p and 3d states, 80 radii each from the package (1s passes 1/2 near 1.5 a₀; 2s passes 1/2 near 6 a₀; 2p passes 1/2 near 4.75 a₀; 3d passes 1/2 near 10.25 a₀); larger n puts the electron farther out. Marked: the worked example, 1s within R = a₀: 0.323324.*
+*Probability within R as n runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your n = 1 gives P_inside = 0.3233. Your inputs: n = 1, l = 0, Z = 1, R = 52.9177210544 pm.*
+
+![Probability within R as Z runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/hydrogen-radial-probability-live-2)
+
+*Probability within R as Z runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your Z = 1 gives P_inside = 0.3233. Your inputs: n = 1, l = 0, Z = 1, R = 52.9177210544 pm.*
 
 ```python
 quantum_physics_ai999x.solve('hydrogen_radial_probability', n=1, l=0, Z=1, R=5.29177210544e-11)
@@ -1417,13 +1521,21 @@ $$
 - **Assumes:** each $j  \geq  0$ and whole or half-whole; |m| <= j with j - m whole
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Clebsch–Gordan coefficients ⟨j₁ m₁; j₂ m₂ | J M⟩ for coupling two spins j₁ = j₂ = 1/2: every value the package returns for the uncoupled states (rows) and the coupled triplet J = 1 and singlet J = 0 (columns); a dot where M ≠ m₁ + m₂ (no coefficient)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/clebsch-gordan-table)
+![Clebsch-Gordan coefficients for coupling j1 = 1/2 with j2 = 1/2: the model's value for each uncoupled state (rows, m1 and m2) and each coupled state (columns, J and M); a dot where M is not m1 + m2](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/clebsch-gordan-table.svg)
 
-*Clebsch–Gordan coefficients ⟨j₁ m₁; j₂ m₂ | J M⟩ for coupling two spins j₁ = j₂ = 1/2: every value the package returns for the uncoupled states (rows) and the coupled triplet J = 1 and singlet J = 0 (columns); a dot where M ≠ m₁ + m₂ (no coefficient). Marked: the worked example ⟨1/2 +1/2; 1/2 −1/2 | 1 0⟩ = 0.707107, squared 1/2.*
+*Clebsch-Gordan coefficients for coupling j1 = 1/2 with j2 = 1/2: the model's value for each uncoupled state (rows, m1 and m2) and each coupled state (columns, J and M); a dot where M is not m1 + m2. The given coefficient: ⟨1/2 +1/2; 1/2 -1/2 | 1 0⟩ = 0.7071 (its row outlined). Your inputs: j1 = 0.5, m1 = 0.5, j2 = 0.5, m2 = -0.5, J = 1, M = 0.*
 
-![Clebsch–Gordan coefficients for coupling j₁ = 1 with j₂ = 1/2: the package's value for each uncoupled state (rows) and each coupled state (columns); a dot where M ≠ m₁ + m₂](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/clebsch-gordan-table-2)
+![Clebsch-Gordan coefficients for coupling j1 = 1 with j2 = 1/2: the model's value for each uncoupled state (rows, m1 and m2) and each coupled state (columns, J and M); a dot where M is not m1 + m2](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/clebsch-gordan-table-2)
 
-*Clebsch–Gordan coefficients for coupling j₁ = 1 with j₂ = 1/2: the package's value for each uncoupled state (rows) and each coupled state (columns); a dot where M ≠ m₁ + m₂. Negative coefficients are shaded in the second colour; each column's squares add up to 1. The worked example's coefficient ⟨1/2 +1/2; 1/2 −1/2 | 1 0⟩ = 0.707107.*
+*Clebsch-Gordan coefficients for coupling j1 = 1 with j2 = 1/2: the model's value for each uncoupled state (rows, m1 and m2) and each coupled state (columns, J and M); a dot where M is not m1 + m2. The given coefficient: ⟨1/2 +1/2; 1/2 -1/2 | 1 0⟩ = 0.7071. Your inputs: j1 = 0.5, m1 = 0.5, j2 = 0.5, m2 = -0.5, J = 1, M = 0.*
+
+![Clebsch-Gordan coefficient as m1 runs from -0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/clebsch-gordan-live-1)
+
+*Clebsch-Gordan coefficient as m1 runs from -0.5 to 0.5, every other input as you entered it (2 solutions). Marked: your m1 = 0.5 gives cg = 0.7071. Your inputs: j1 = 0.5, m1 = 0.5, j2 = 0.5, m2 = -0.5, J = 1, M = 0.*
+
+![Clebsch-Gordan coefficient as m2 runs from -0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/clebsch-gordan-live-2)
+
+*Clebsch-Gordan coefficient as m2 runs from -0.5 to 0.5, every other input as you entered it (2 solutions). Marked: your m2 = -0.5 gives cg = 0.7071. Your inputs: j1 = 0.5, m1 = 0.5, j2 = 0.5, m2 = -0.5, J = 1, M = 0.*
 
 ```python
 quantum_physics_ai999x.solve('clebsch_gordan', j1=0.5, m1=0.5, j2=0.5, m2=-0.5, J=1, M=0)
@@ -1476,9 +1588,17 @@ $$
 - **Assumes:** each $j  \geq  0$ and whole or half-whole; |m| <= j with j - m whole
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Wigner 3j symbols (1 1 J; m₁ m₂ M) with M = −(m₁ + m₂), for J = 0, 1 and 2: rows are m₁, columns m₂, every value from the package; a dot where |M| > J (no symbol)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/wigner-3j-symbol-table)
+![Wigner 3j symbols (1 1 J; m1 m2 M) with M = -(m1 + m2), for every allowed J: rows J and m1, columns m2, every value a solve of the model; a dot where |M| > J](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/wigner-3j-symbol-table)
 
-*Wigner 3j symbols (1 1 J; m₁ m₂ M) with M = −(m₁ + m₂), for J = 0, 1 and 2: rows are m₁, columns m₂, every value from the package; a dot where |M| > J (no symbol). Marked: the worked example (1 1 0; +1 −1 0) = 0.57735, squared 0.333333; the J = 1 table is antisymmetric, J = 0 and 2 symmetric.*
+*Wigner 3j symbols (1 1 J; m1 m2 M) with M = -(m1 + m2), for every allowed J: rows J and m1, columns m2, every value a solve of the model; a dot where |M| > J. The given symbol (m1 = +1, m2 = -1, J = 0) = 0.5774, squared 0.3333. Your inputs: j1 = 1, m1 = 1, j2 = 1, m2 = -1, J = 0, M = 0.*
+
+![The 3j symbol as j1 runs from 1 to 9, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/wigner-3j-symbol-live-1)
+
+*The 3j symbol as j1 runs from 1 to 9, every other input as you entered it (9 solutions). Marked: your j1 = 1 gives w3j = 0.5774. Your inputs: j1 = 1, m1 = 1, j2 = 1, m2 = -1, J = 0, M = 0.*
+
+![The 3j symbol as m1 runs from -1 to 1, every other input as you entered it (3 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/wigner-3j-symbol-live-2)
+
+*The 3j symbol as m1 runs from -1 to 1, every other input as you entered it (3 solutions). Marked: your m1 = 1 gives w3j = 0.5774. Your inputs: j1 = 1, m1 = 1, j2 = 1, m2 = -1, J = 0, M = 0.*
 
 ```python
 quantum_physics_ai999x.solve('wigner_3j_symbol', j1=1, m1=1, j2=1, m2=-1, J=0, M=0)
@@ -1527,13 +1647,21 @@ $$
 - **Assumes:** |L - S| <= $J  \leq  L + S$, $J > 0$; |mJ| <= J; weak field (LS coupling holds)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Zeeman splitting of the ²P₃/₂ and ²P₁/₂ levels (L = 1, S = 1/2) in a field B from 0 to 2 T: the energy shift of every m_J sublevel from the package at 9 fields (J = 3/2: g_J = 4/3; J = 1/2: g_J = 2/3); the shifts grow linearly with B, steeper for the larger g_J](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/lande-g-zeeman-levels)
+![Landé g factors of 9 atomic terms written as 2S+1, L, J, each a solve of the model (exact fractions): 2S1/2 2, 2P1/2 2/3, 2P3/2 4/3, 2D3/2 4/5, 2D5/2 6/5, 1P1 1, 3P1 3/2, 3P2 3/2, 3D3 4/3](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/lande-g-zeeman-bars)
 
-*Zeeman splitting of the ²P₃/₂ and ²P₁/₂ levels (L = 1, S = 1/2) in a field B from 0 to 2 T: the energy shift of every m_J sublevel from the package at 9 fields (J = 3/2: g_J = 4/3; J = 1/2: g_J = 2/3); the shifts grow linearly with B, steeper for the larger g_J. Marked: the worked example J = 3/2, m_J = +1/2 at B = 1 T, ΔE = 3.8589e-05 eV.*
+*Landé g factors of 9 atomic terms written as 2S+1, L, J, each a solve of the model (exact fractions): 2S1/2 2, 2P1/2 2/3, 2P3/2 4/3, 2D3/2 4/5, 2D5/2 6/5, 1P1 1, 3P1 3/2, 3P2 3/2, 3D3 4/3. A pure spin gives 2, a pure orbit 1. Highlighted: the given term when it is one of them (L = 1, S = 1/2, J = 3/2). In SI units: g_J = 1.333. Your inputs: L = 1, S = 0.5, J = 1.5, mJ = 0.5, B = 1 T.*
 
-![Landé g-factors of 9 atomic terms ^{2S+1}L_J, each from the package (exact fractions written on the bars): ²S₁/₂ 2, ²P₁/₂ 2/3, ²P₃/₂ 4/3, ²D₃/₂ 4/5, ²D₅/₂ 6/5, ¹P₁ 1, ³P₁ 3/2, ³P₂ 3/2, ³D₃ 4/3](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/lande-g-zeeman-bars)
+![Zeeman splitting of the level L = 1, S = 1/2, J = 3/2 in a field B from 0 to 2 T: the energy shift of every mJ sublevel, a solve of the model at 9 fields (gJ = 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/lande-g-zeeman-levels)
 
-*Landé g-factors of 9 atomic terms ^{2S+1}L_J, each from the package (exact fractions written on the bars): ²S₁/₂ 2, ²P₁/₂ 2/3, ²P₃/₂ 4/3, ²D₃/₂ 4/5, ²D₅/₂ 6/5, ¹P₁ 1, ³P₁ 3/2, ³P₂ 3/2, ³D₃ 4/3. A pure spin gives 2, a pure orbit 1. Highlighted: the worked example's term, L = 1, S = 1/2, J = 3/2.*
+*Zeeman splitting of the level L = 1, S = 1/2, J = 3/2 in a field B from 0 to 2 T: the energy shift of every mJ sublevel, a solve of the model at 9 fields (gJ = 1.333); the shifts grow linearly with B. Marked: the given mJ = +1/2 at B = 1 T, ΔE = 3.859e-05 eV. Your inputs: L = 1, S = 0.5, J = 1.5, mJ = 0.5, B = 1 T.*
+
+![The shift in eV as mJ runs from -1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/lande-g-zeeman-live-1)
+
+*The shift in eV as mJ runs from -1.5 to 1.5, every other input as you entered it (4 solutions). Marked: your mJ = 0.5 gives dE_eV = 3.859e-05. Your inputs: L = 1, S = 0.5, J = 1.5, mJ = 0.5, B = 1 T.*
+
+![Landé g factor as J runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/lande-g-zeeman-live-2)
+
+*Landé g factor as J runs from 0.5 to 1.5, every other input as you entered it (2 solutions). Marked: your J = 1.5 gives g_J = 1.333. Your inputs: L = 1, S = 0.5, J = 1.5, mJ = 0.5, B = 1 T.*
 
 ```python
 quantum_physics_ai999x.solve('lande_g_zeeman', L=1, S=0.5, J=1.5, mJ=0.5, B=1.0)
@@ -1579,13 +1707,17 @@ $$
 - **Assumes:** |m|, |m'| <= j; $j  \leq  20$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Wigner small-d matrices d^j_{m′m}(β) for a rotation by β = 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-rotation-wigner-d-matrix)
+![Wigner small-d matrices d(β) for a rotation by β = 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-rotation-wigner-d-matrix)
 
-*Wigner small-d matrices d^j_{m′m}(β) for a rotation by β = 1.5708 rad (90°, the worked example's) about the y axis, j = 1/2 and j = 1: rows m′, columns m, every element from the package (negative ones in the second colour). The squares are the probabilities of finding m′ after rotating the state m; each row's squares add up to 1. The worked example's element d^1/2_{+1/2,+1/2} = 0.707107.*
+*Wigner small-d matrices d(β) for a rotation by β = 1.571 rad about the y axis, j = 1/2 (left) and j = 1 (right): rows m', columns m, every element a solve of the model (negative ones in the second colour). The squares are the probabilities of finding m' after rotating the state m. Given element: d = 0.7071. Your inputs: j = 0.5, mp = 0.5, m = 0.5, beta = 1.5707963267948966 rad.*
 
-![d (Wigner small-d matrix element) against beta (rotation angle about the y axis (deg or rad)) from 0 rad to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-rotation-wigner-d-curve)
+![Wigner small-d matrix element as j runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-rotation-wigner-d-live-1)
 
-*d (Wigner small-d matrix element) against beta (rotation angle about the y axis (deg or rad)) from 0 rad to 1.5708 rad. Other inputs as in the worked example: j = 0.5, mp = 0.5, m = 0.5. 41 points computed by quantum-physics-ai999x; marked: the worked example, beta = 1.5708 rad, d = 0.707107.*
+*Wigner small-d matrix element as j runs from 0.5 to 8.5, every other input as you entered it (9 solutions). Marked: your j = 0.5 gives d = 0.7071. Your inputs: j = 0.5, mp = 0.5, m = 0.5, beta = 1.5707963267948966 rad.*
+
+![Wigner small-d matrix element as m runs from -0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-rotation-wigner-d-live-2)
+
+*Wigner small-d matrix element as m runs from -0.5 to 0.5, every other input as you entered it (2 solutions). Marked: your m = 0.5 gives d = 0.7071. Your inputs: j = 0.5, mp = 0.5, m = 0.5, beta = 1.5707963267948966 rad.*
 
 ```python
 quantum_physics_ai999x.solve('spin_rotation_wigner_d', j=0.5, mp=0.5, m=0.5, beta=1.5707963267948966)
@@ -1638,9 +1770,13 @@ $$
 - **Assumes:** $m > 0$; $L > 0$; $n  \geq  1$; infinitely high walls
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![E_eV (the same in eV) against L (width of the box) from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-levels-curve)
+![The same in eV as n runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-levels-live-1)
 
-*E_eV (the same in eV) against L (width of the box) from 5.0000e-10 m to 1.5000e-09 m. One curve for each value of n (quantum number (1, 2, 3, ...)): 1, 2, 3. Other inputs as in the worked example: m = 9.1093837139e-31 kg. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, L = 1.0000e-09 m, E_eV = 0.37603 eV.*
+*The same in eV as n runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your n = 1 gives E_eV = 0.376. Your inputs: m = 9.109e-31 kg, L = 1 nm, n = 1.*
+
+![The same in eV and ground-state energy as L runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-levels-live-2)
+
+*The same in eV and ground-state energy as L runs from 0.6 to 1.4 nm, every other input as you entered it (29 solutions). Marked: your L = 1 nm gives E_eV = 0.376. Your inputs: m = 9.109e-31 kg, L = 1 nm, n = 1.*
 
 ```python
 quantum_physics_ai999x.solve('infinite_well_levels', m=9.1093837139e-31, L=1e-09, n=1)
@@ -1658,7 +1794,7 @@ quantum_physics_ai999x.solve('infinite_well_levels', m=9.1093837139e-31, L=1e-10
 |---|---|---|
 | Particle in a box: m = 9.1093837139e-31 kg, L = 1 nm, n = 1 | SOLVED | E = 6.02467e-20 J, E_eV = 0.37603 eV, E1_eV = 0.37603 eV, p = 3.31304e-25 kg*m/s, wavelength = 2e-09 m |
 | Particle in a box: m = 9.1e-31 kg, L = 1 nm, n = 0 | INVALID_INPUT | n: must be at least 1, got 0. |
-| Particle in a box: m = 9.1e-31 kg, L = 1 nm | NEEDS_INPUT | infinite_well_levels needs n (quantum number (1, 2, 3, ...)). Example: solve('infinite_well_levels', m='9.10938e-31 kg', |
+| Particle in a box: m = 9.1e-31 kg, L = 1 nm | NEEDS_INPUT | infinite_well_levels needs n (quantum number (1, 2, 3, ...)). Example: solve('infinite_well_levels', m='9.1093837139e-31 |
 
 <a id="infinite_well_transition"></a>
 
@@ -1688,13 +1824,17 @@ $$
 - **Assumes:** n_upper > n_lower >= 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A particle of mass m = 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-transition-diagram)
+![A particle of mass 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-transition-diagram)
 
-*A particle of mass m = 9.1094e-31 kg in an infinite square well of width L = 1.0000e-09 m (the worked example): the lowest levels the package gives (E ∝ n²) and the photon wavelength of each downward transition it computes, written beside the arrow in nm: 2→1: 1099.06 nm, 3→1: 412.148 nm, 4→1: 219.813 nm, 3→2: 659.438 nm, 4→2: 274.766 nm, 4→3: 471.027 nm. The worked example's transition, 2→1, is drawn in the first colour.*
+*A particle of mass 9.109e-31 kg in an infinite square well of width 1 nm: the lowest levels the model gives (E grows as n²) and the photon wavelength of each downward transition it computes: 2→1: 1099 nm, 3→1: 412.1 nm, 3→2: 659.4 nm, 4→1: 219.8 nm, 4→2: 274.8 nm, 4→3: 471 nm. Your inputs: m = 9.109e-31 kg, L = 1 nm, n_upper = 2, n_lower = 1.*
 
-![lambda_nm (wavelength in nm) against n_upper (upper level) from 1 to 10](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-transition-curve)
+![Wavelength in nm as L runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-transition-live-1)
 
-*lambda_nm (wavelength in nm) against n_upper (upper level) from 1 to 10. One curve for each value of L (width of the box): 1.0000e-09 m, 5.0000e-10 m, 2.0000e-09 m. Other inputs as in the worked example: m = 9.1093837139e-31 kg, n_lower = 1. 9 points per curve computed by quantum-physics-ai999x; marked: the worked example, n_upper = 2, lambda_nm = 1099.06 nm.*
+*Wavelength in nm as L runs from 0.6 to 1.4 nm, every other input as you entered it (41 solutions). Marked: your L = 1 nm gives λ_nm = 1099. Your inputs: m = 9.109e-31 kg, L = 1 nm, n_upper = 2, n_lower = 1.*
+
+![Wavelength in nm as n_upper runs from 2 to 6, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-transition-live-2)
+
+*Wavelength in nm as n_upper runs from 2 to 6, every other input as you entered it (5 solutions). Marked: your n_upper = 2 gives λ_nm = 1099. Your inputs: m = 9.109e-31 kg, L = 1 nm, n_upper = 2, n_lower = 1.*
 
 ```python
 quantum_physics_ai999x.solve('infinite_well_transition', m=9.1093837139e-31, L=1e-09, n_upper=2, n_lower=1)
@@ -1707,7 +1847,7 @@ quantum_physics_ai999x.solve('infinite_well_transition', m=9.1093837139e-31, L=1
 |---|---|---|
 | Particle in a box transition: m = 9.1093837139e-31 kg, L = 1 nm, n_upper = 2, n_lower = 1 | SOLVED | E_photon_eV = 1.12809 eV, lam = 1.09906e-06 m, lambda_nm = 1099.06 nm, f = 2.72771e+14 Hz |
 | Particle in a box transition: m = 9.1e-31 kg, L = 1 nm, n_upper = 1, n_lower = 2 | INVALID_INPUT | n_upper: must be at least 2, got 1. |
-| Particle in a box transition: m = 9.1e-31 kg, L = 1 nm, n_upper = 2 | NEEDS_INPUT | infinite_well_transition needs n_lower (lower level). Example: solve('infinite_well_transition', m='9.10938e-31 kg', L=' |
+| Particle in a box transition: m = 9.1e-31 kg, L = 1 nm, n_upper = 2 | NEEDS_INPUT | infinite_well_transition needs n_lower (lower level). Example: solve('infinite_well_transition', m='9.1093837139e-31 kg' |
 
 <a id="infinite_well_probability"></a>
 
@@ -1735,9 +1875,17 @@ $$
 - **Assumes:** $0  \leq  x_{1} < x_{2}  \leq  L$; $n  \geq  1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![An electron in a 1 nm infinite square well: the three lowest energy levels the package gives (E1 = 0](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/infinite-well-probability-levels.svg)
+![An electron in an infinite square well 1 nm wide: the lowest energy levels the model gives (E1 = 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-probability-levels)
 
-*An electron in a 1 nm infinite square well: the three lowest energy levels the package gives (E1 = 0.37603 eV, E2 = 1.50412 eV, E3 = 3.38427 eV), each with its probability density drawn on the level (the probability of each of 60 intervals of 0.0166667 nm divided by the interval, 0.4 eV per 1/nm); state n has n humps and n − 1 nodes.*
+*An electron in an infinite square well 1 nm wide: the lowest energy levels the model gives (E1 = 0.376 eV, E2 = 1.504 eV, E3 = 3.384 eV), each with its probability density drawn on the level (the model's probability of each of 60 equal intervals divided by the interval); state n has n humps. Shaded: the given interval, where the probability is 0.8183 for n = 1. Your inputs: n = 1, L = 1 nm, x1 = 0.25 nm, x2 = 0.75 nm.*
+
+![Probability as x2 runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-probability-live-1)
+
+*Probability as x2 runs from 0.45 to 0.99 nm, every other input as you entered it (37 solutions). Marked: your x2 = 0.75 nm gives P = 0.8183. Your inputs: n = 1, L = 1 nm, x1 = 0.25 nm, x2 = 0.75 nm.*
+
+![Probability as n runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-probability-live-2)
+
+*Probability as n runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your n = 1 gives P = 0.8183. Your inputs: n = 1, L = 1 nm, x1 = 0.25 nm, x2 = 0.75 nm.*
 
 ```python
 quantum_physics_ai999x.solve('infinite_well_probability', n=1, L=1e-09, x1=2.5e-10, x2=7.5e-10)
@@ -1784,9 +1932,13 @@ $$
 - **Assumes:** $n  \geq  1$; $L > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![dx_over_L (dx/L) against n (quantum number) from 1 to 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-uncertainty-curve)
+![Dx/L as n runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-uncertainty-live-1)
 
-*dx_over_L (dx/L) against n (quantum number) from 1 to 9. Other inputs as in the worked example: L = 1.0 m. 9 points computed by quantum-physics-ai999x; marked: the worked example, n = 1, dx_over_L = 0.180756.*
+*Dx/L as n runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your n = 1 gives dx_over_L = 0.1808. Your inputs: n = 1, L = 1 nm.*
+
+![Position spread as L runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/infinite-well-uncertainty-live-2)
+
+*Position spread as L runs from 0.6 to 1.4 nm, every other input as you entered it (29 solutions). Marked: your L = 1 nm gives dx = 0.1808 nm. Your inputs: n = 1, L = 1 nm.*
 
 ```python
 quantum_physics_ai999x.solve('infinite_well_uncertainty', n=1, L=1.0)
@@ -1830,13 +1982,17 @@ $$
 - **Assumes:** $m > 0$; $\omega > 0$; $n  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The quantum harmonic oscillator for a proton-mass particle (m = 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/harmonic-oscillator-levels-levels)
+![The quantum harmonic oscillator for a particle of mass 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/harmonic-oscillator-levels-levels)
 
-*The quantum harmonic oscillator for a proton-mass particle (m = 1.6726e-27 kg, ω = 1.0000e+14 rad/s, the worked example): the levels n = 0 … 5 the package returns (0.0329106, 0.0987318, 0.164553, 0.230374, 0.296195, 0.362017 eV, spacing 0.0658212 eV), each drawn between its classical turning points ±amplitude (dots, also returned); the grey parabola is the potential, drawn through the n = 5 turning points.*
+*The quantum harmonic oscillator for a particle of mass 1.67e-27 kg at ω = 5e+14 rad/s: the levels n = 0 to 5 the model returns (spacing 0.3291 eV), each drawn between its classical turning points (dots, also returned), which trace the parabola of the potential. Highlighted: the given n = 0, E = 0.1646 eV. Your inputs: m = 1.67e-27 kg, omega = 5e14 rad/s, n = 0.*
 
-![E_eV (the same in eV) against omega (angular frequency) from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/harmonic-oscillator-levels-curve)
+![The same in eV as n runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/harmonic-oscillator-levels-live-1)
 
-*E_eV (the same in eV) against omega (angular frequency) from 5.0000e+13 rad/s to 1.5000e+14 rad/s. One curve for each value of n (quantum number (0, 1, 2, ...)): 0, 1, 2. Other inputs as in the worked example: m = 1.67262192595e-27 kg. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, omega = 1.0000e+14 rad/s, E_eV = 0.0329106 eV.*
+*The same in eV as n runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your n = 0 gives E_eV = 0.1646. Your inputs: m = 1.67e-27 kg, omega = 5e14 rad/s, n = 0.*
+
+![The same in eV as ω runs from 3e+14 to 7e+14 rad/s, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/harmonic-oscillator-levels-live-2)
+
+*The same in eV as ω runs from 3e+14 to 7e+14 rad/s, every other input as you entered it (29 solutions). Marked: your ω = 5e+14 rad/s gives E_eV = 0.1646. Your inputs: m = 1.67e-27 kg, omega = 5e14 rad/s, n = 0.*
 
 ```python
 quantum_physics_ai999x.solve('harmonic_oscillator_levels', m=1.67262192595e-27, omega=100000000000000.0, n=0)
@@ -1854,7 +2010,7 @@ quantum_physics_ai999x.solve('harmonic_oscillator_levels', m=9.1093837139e-31, o
 |---|---|---|
 | Harmonic oscillator: m = 1.67262192595e-27 kg, omega = 1e14 rad/s, n = 0 | SOLVED | E = 5.27286e-21 J, E_eV = 0.0329106 eV, E0_eV = 0.0329106 eV, spacing_eV = 0.0658212 eV, amplitude = 2.51096e-11 m, dx = 1.77551e-11 m |
 | Harmonic oscillator: m = 1e-27 kg, omega = -1e14 rad/s, n = 0 | INVALID_INPUT | Quantum harmonic oscillator levels: the mass and the angular frequency must be positive. |
-| Harmonic oscillator: m = 1e-27 kg, n = 0 | NEEDS_INPUT | harmonic_oscillator_levels needs omega (angular frequency). Example: solve('harmonic_oscillator_levels', m='1.67262e-27  |
+| Harmonic oscillator: m = 1e-27 kg, n = 0 | NEEDS_INPUT | harmonic_oscillator_levels needs omega (angular frequency). Example: solve('harmonic_oscillator_levels', m='1.6726219259 |
 
 <a id="harmonic_oscillator_forbidden_probability"></a>
 
@@ -1880,9 +2036,13 @@ $$
 - **Assumes:** $0  \leq  n  \leq  60$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Probability of finding a quantum harmonic oscillator outside its classical turning points (in the classically forbidden region) for levels n = 0 … 20, each from the package: 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/harmonic-oscillator-forbidden-probability-stems)
+![Probability of finding a quantum harmonic oscillator outside its classical turning points for levels n = 0 to 20, each a solve of the model: 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/harmonic-oscillator-forbidden-probability-stems)
 
-*Probability of finding a quantum harmonic oscillator outside its classical turning points (in the classically forbidden region) for levels n = 0 … 20, each from the package: 0.157299 in the ground state, falling slowly to 0.0483977 at n = 20 as the quantum oscillator approaches the classical one. Marked: the worked example, n = 0.*
+*Probability of finding a quantum harmonic oscillator outside its classical turning points for levels n = 0 to 20, each a solve of the model: 0.1573 in the ground state, 0.0484 at n = 20, falling slowly as the quantum oscillator approaches the classical one. Highlighted: the given n = 0, P = 0.1573. Your inputs: n = 0.*
+
+![Probability outside the turning points as n runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/harmonic-oscillator-forbidden-probability-live-1)
+
+*Probability outside the turning points as n runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your n = 0 gives P_forbidden = 0.1573. Your inputs: n = 0.*
 
 ```python
 quantum_physics_ai999x.solve('harmonic_oscillator_forbidden_probability', n=0)
@@ -1929,13 +2089,21 @@ $$
 - **Assumes:** V0, a, $m > 0$; at most 127 bound states; no state exactly at the top of the well
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![An electron (m = 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/finite-square-well-levels)
+![A particle of mass 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/finite-square-well-levels)
 
-*An electron (m = 9.1094e-31 kg) in a finite square well of depth V₀ = 10 eV and width a = 0.5 nm (the worked example): the package finds 3 bound states, E1 = 0.961043 eV, E2 = 3.75528 eV, E3 = 7.95049 eV; dashed: the levels of an infinitely deep well of the same width (1.50412, 6.01648 eV, also from the package), always higher.*
+*A particle of mass 9.109e-31 kg in a finite square well of depth V0 = 10 eV and width a = 500 pm: the model finds 3 bound states, E1 = 0.9611 eV, E2 = 3.755 eV, E3 = 7.951 eV; dashed: the levels of an infinitely deep well of the same width below V0 (1.504 eV, 6.017 eV, also from the model), always higher. Your inputs: V0 = 10 eV, a = 0.5 nm, m = 9.109e-31 kg.*
 
-![E1_eV (ground-state energy above the bottom of the well) against a (width of the well) from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/finite-square-well-curve)
+![Ground-state energy above the bottom of the well as a runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/finite-square-well-live-1)
 
-*E1_eV (ground-state energy above the bottom of the well) against a (width of the well) from 5.0000e-11 m to 5.0000e-09 m on a logarithmic axis. One curve for each value of m (particle mass): 9.1094e-31 kg, 4.5547e-31 kg, 1.8219e-30 kg. Other inputs as in the worked example: V0 = 1.602176634e-18 J. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, a = 5.0000e-10 m, E1_eV = 0.961043 eV.*
+*Ground-state energy above the bottom of the well as a runs from 0.3 to 0.7 nm, every other input as you entered it (41 solutions). Marked: your a = 0.5 nm gives E1_eV = 0.9611. Your inputs: V0 = 10 eV, a = 0.5 nm, m = 9.109e-31 kg.*
+
+![Every entry of energies_eV as computed for your inputs (3 entries: 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/finite-square-well-live-2)
+
+*Every entry of energies_eV as computed for your inputs (3 entries: 0.9611, 3.755, 7.951). Your inputs: V0 = 10 eV, a = 0.5 nm, m = 9.109e-31 kg.*
+
+![Ground-state energy above the bottom of the well as V0 runs from 6 to 14 eV, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/finite-square-well-live-3)
+
+*Ground-state energy above the bottom of the well as V0 runs from 6 to 14 eV, every other input as you entered it (29 solutions). Marked: your V0 = 10 eV gives E1_eV = 0.9611. Your inputs: V0 = 10 eV, a = 0.5 nm, m = 9.109e-31 kg.*
 
 ```python
 quantum_physics_ai999x.solve('finite_square_well', V0=1.602176634e-18, a=5e-10, m=9.1093837139e-31)
@@ -1948,7 +2116,7 @@ quantum_physics_ai999x.solve('finite_square_well', V0=1.602176634e-18, a=5e-10, 
 |---|---|---|
 | Finite square well: V0 = 10 eV, a = 0.5 nm, m = 9.1093837139e-31 kg | SOLVED | n_bound = 3, E1_eV = 0.961043 eV, energies_eV = [0.961042905305, 3.75528284707, 7.95049450895], z0 = 4.05022 |
 | Finite square well: V0 = -10 eV, a = 0.5 nm, m = 9.1e-31 kg | INVALID_INPUT | Bound states of a finite square well: the depth, width and mass must be positive. |
-| Finite square well: V0 = 10 eV, a = 0.5 nm | NEEDS_INPUT | finite_square_well needs m (particle mass). Example: solve('finite_square_well', V0='1.60218e-18 J', a='5e-10 m', m='9.1 |
+| Finite square well: V0 = 10 eV, a = 0.5 nm | NEEDS_INPUT | finite_square_well needs m (particle mass). Example: solve('finite_square_well', V0='1.602176634e-18 J', a='5e-10 m', m= |
 
 <a id="barrier_transmission"></a>
 
@@ -1978,17 +2146,21 @@ $$
 - **Assumes:** E, V0, a, $m > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Transmission and reflection of an electron (m = 9](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/barrier-transmission-curve.svg)
+![T (transmission probability) against E (kinetic energy of the incident particle) from 1](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/barrier-transmission-curve-2.svg)
 
-*Transmission and reflection of an electron (m = 9.1094e-31 kg) at a rectangular barrier of height V₀ = 3.2044e-19 J (2 eV) and width a = 0.5 nm, for 60 energies computed by the package; tunnelling below E = V₀, transmission resonances above it; marked: E/V₀ = 0.5, T = 0.0235471.*
+*T (transmission probability) against E (kinetic energy of the incident particle) from 1.602e-20 J to 1.602e-18 J on a logarithmic axis, one curve for each value of V0 (barrier height): 3.204e-19 J, 1.602e-19 J, 6.409e-19 J; 41 points per curve, each a solve of the model. Marked: the given point, E = 1.602e-19 J, T = 0.02355. Your inputs: E = 1 eV, V0 = 2 eV, a = 0.5 nm, m = 9.109e-31 kg.*
 
-![tunnelling (E < V0) or over the barrier (regime) over E (kinetic energy of the incident particle) from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/barrier-transmission-decision)
+![The regime over E (kinetic energy of the incident particle) and V0 (barrier height), each from a tenth to ten times the given value on logarithmic axes: each of the 17 × 13 cells is one solve of the model, coloured by the regime it returns (tunnelling (E < V0): 140 cells, over the barrier (E > V0): 81 cells)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/barrier-transmission-decision)
 
-*tunnelling (E < V0) or over the barrier (regime) over E (kinetic energy of the incident particle) from 1.6022e-20 J to 1.6022e-18 J and V0 (barrier height) from 3.2044e-20 J to 3.2044e-18 J (logarithmic axes): each of the 31 × 21 cells is one run of quantum-physics-ai999x, coloured by the verdict it returned, over the barrier (E > V0): 234 cells, tunnelling (E < V0): 417 cells. Other inputs as in the worked example: a = 5e-10 m, m = 9.1093837139e-31 kg. Marked: the worked example, E = 1.6022e-19 J, V0 = 3.2044e-19 J → tunnelling (E < V0).*
+*The regime over E (kinetic energy of the incident particle) and V0 (barrier height), each from a tenth to ten times the given value on logarithmic axes: each of the 17 × 13 cells is one solve of the model, coloured by the regime it returns (tunnelling (E < V0): 140 cells, over the barrier (E > V0): 81 cells). The boundary is E = V0. Marked: the given point, tunnelling (E < V0). In SI units: T = 0.02355. Your inputs: E = 1 eV, V0 = 2 eV, a = 0.5 nm, m = 9.109e-31 kg.*
 
-![T (transmission probability) against E (kinetic energy of the incident particle) from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/barrier-transmission-curve-2)
+![Transmission probability as V0 runs from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/barrier-transmission-live-1)
 
-*T (transmission probability) against E (kinetic energy of the incident particle) from 1.6022e-20 J to 1.6022e-18 J on a logarithmic axis, logarithmic output axis. One curve for each value of V0 (barrier height): 3.2044e-19 J, 1.6022e-19 J, 6.4087e-19 J. Other inputs as in the worked example: a = 5e-10 m, m = 9.1093837139e-31 kg. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, E = 1.6022e-19 J, T = 0.0235471.*
+*Transmission probability as V0 runs from 1.2 to 2.8 eV, every other input as you entered it (41 solutions). Marked: your V0 = 2 eV gives T = 0.02355. Your inputs: E = 1 eV, V0 = 2 eV, a = 0.5 nm, m = 9.109e-31 kg.*
+
+![Transmission probability as a runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/barrier-transmission-live-2)
+
+*Transmission probability as a runs from 0.3 to 0.7 nm, every other input as you entered it (27 solutions). Marked: your a = 0.5 nm gives T = 0.02355. Your inputs: E = 1 eV, V0 = 2 eV, a = 0.5 nm, m = 9.109e-31 kg.*
 
 ```python
 quantum_physics_ai999x.solve('barrier_transmission', E=1.602176634e-19, V0=3.204353268e-19, a=5e-10, m=9.1093837139e-31)
@@ -2006,7 +2178,7 @@ quantum_physics_ai999x.solve('barrier_transmission', E=3.204353268e-19, V0=3.204
 |---|---|---|
 | Barrier transmission: E = 1 eV, V0 = 2 eV, a = 0.5 nm, m = 9.1093837139e-31 kg | SOLVED | T = 0.0235471, R = 0.976453, kappa_a = 2.56158, regime = tunnelling (E < V0) |
 | Barrier transmission: E = -1 eV, V0 = 2 eV, a = 0.5 nm, m = 9.1e-31 kg | INVALID_INPUT | Transmission through a rectangular barrier: the energy, barrier height, width and mass must be positive. |
-| Barrier transmission: E = 1 eV, V0 = 2 eV, a = 0.5 nm | NEEDS_INPUT | barrier_transmission needs m (particle mass). Example: solve('barrier_transmission', E='1.60218e-19 J', V0='3.20435e-19  |
+| Barrier transmission: E = 1 eV, V0 = 2 eV, a = 0.5 nm | NEEDS_INPUT | barrier_transmission needs m (particle mass). Example: solve('barrier_transmission', E='1.602176634e-19 J', V0='3.204353 |
 
 <a id="wkb_field_emission"></a>
 
@@ -2037,11 +2209,15 @@ $$
 
 ![Field emission through the triangular barrier of a metal with work function W = 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/wkb-field-emission-diagram)
 
-*Field emission through the triangular barrier of a metal with work function W = 4.5 eV (the worked example) at F = 5.0000e+09 V/m and at twice that field: the barrier falls from W at the surface and crosses the Fermi level at the width the package returns (the sloped lines are drawn through those two points); arrows: the tunnelling path. F = 5.0000e+09 V/m: width 0.9 nm, transmission 2.1685e-06 (exponent 13.0415); F = 1.0000e+10 V/m: width 0.45 nm, transmission 0.0014726 (exponent 6.52073).*
+*Field emission through the triangular barrier of a metal with work function W = 4.5 eV at F = 5e+09 V/m and at twice that field: the barrier falls from W at the surface and crosses the Fermi level at the width the model returns (0.9 nm and 0.45 nm; the sloped lines are drawn through those two points); arrows: the tunnelling path. Tunnelling probabilities 2.169e-06 and 0.001473. In SI units: exponent = 13.04. Your inputs: W = 4.5 eV, F = 5e9 V/m.*
 
-![exponent (WKB exponent 2 integral kappa dx) against F (applied electric field (V/m)) from 2](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/wkb-field-emission-curve)
+![WKB exponent 2 integral kappa dx as F runs from 3e+09 to 7e+09 V/m, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/wkb-field-emission-live-1)
 
-*exponent (WKB exponent 2 integral kappa dx) against F (applied electric field (V/m)) from 2.5000e+09 N/C to 7.5000e+09 N/C. One curve for each value of W (barrier height above the electron's energy (work function, eV)): 7.2098e-19 J, 3.6049e-19 J, 1.4420e-18 J. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, F = 5.0000e+09 N/C, exponent = 13.0415.*
+*WKB exponent 2 integral kappa dx as F runs from 3e+09 to 7e+09 V/m, every other input as you entered it (41 solutions). Marked: your F = 5e+09 V/m gives exponent = 13.04. Your inputs: W = 4.5 eV, F = 5e9 V/m.*
+
+![WKB exponent 2 integral kappa dx as W runs from 2](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/wkb-field-emission-live-2)
+
+*WKB exponent 2 integral kappa dx as W runs from 2.7 to 6.3 eV, every other input as you entered it (29 solutions). Marked: your W = 4.5 eV gives exponent = 13.04. Your inputs: W = 4.5 eV, F = 5e9 V/m.*
 
 ```python
 quantum_physics_ai999x.solve('wkb_field_emission', W=7.209794852999999e-19, F=5000000000.0)
@@ -2054,7 +2230,7 @@ quantum_physics_ai999x.solve('wkb_field_emission', W=7.209794852999999e-19, F=50
 |---|---|---|
 | Field emission: W = 4.5 eV, F = 5e9 V/m | SOLVED | exponent = 13.0415, T = 2.16854e-06, log10_T = -5.66383, width = 9e-10 m, width_nm = 0.9 nm |
 | Field emission: W = 4.5 eV, F = -5e9 V/m | INVALID_INPUT | WKB tunnelling through a triangular barrier (field emission): the barrier height (work function) and the field must be p |
-| Field emission: W = 4.5 eV | NEEDS_INPUT | wkb_field_emission needs F (applied electric field (V/m)). Example: solve('wkb_field_emission', W='7.20979e-19 J', F='5e |
+| Field emission: W = 4.5 eV | NEEDS_INPUT | wkb_field_emission needs F (applied electric field (V/m)). Example: solve('wkb_field_emission', W='7.209794852999999e-19 |
 
 <a id="spin_half_measurement"></a>
 
@@ -2083,9 +2259,13 @@ $$
 - **Assumes:** polar angles between 0 and 180 degrees
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![P_up (probability of +hbar/2 along n) against theta_n (polar angle of the measurement axis) from 0 rad to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-half-measurement-curve)
+![Probability of +hbar/2 along n as θ runs from 54 to 126 deg, every other input as you entered it (39 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-half-measurement-live-1)
 
-*P_up (probability of +hbar/2 along n) against theta_n (polar angle of the measurement axis) from 0 rad to 1.5708 rad. One curve for each value of theta (polar angle of the state's Bloch vector): 1.0472 rad, 0.392699 rad, 1.1781 rad. Other inputs as in the worked example: phi = 0.0 rad, phi_n = 0.0 rad. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, theta_n = 0 rad, P_up = 0.75.*
+*Probability of +hbar/2 along n as θ runs from 54 to 126 deg, every other input as you entered it (39 solutions). Marked: your θ = 90 deg gives P_up = 0.5. Your inputs: theta = 90 deg, phi = 0 deg, theta_n = 0 deg, phi_n = 0 deg.*
+
+![Probability of +hbar/2 along n as θ_n runs from 0 to 1 deg, every other input as you entered it (15 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/spin-half-measurement-live-2)
+
+*Probability of +hbar/2 along n as θ_n runs from 0 to 1 deg, every other input as you entered it (15 solutions). Marked: your θ_n = 0 deg gives P_up = 0.5. Your inputs: theta = 90 deg, phi = 0 deg, theta_n = 0 deg, phi_n = 0 deg.*
 
 ```python
 quantum_physics_ai999x.solve('spin_half_measurement', theta=1.5707963267948966, phi=0.0, theta_n=0.0, phi_n=0.0)
@@ -2142,13 +2322,17 @@ $$
 - **Assumes:** not both amplitudes zero
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The qubit state α|0⟩ + β|1⟩ with α = 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-state-bloch-bloch)
+![The qubit state α|0⟩ + β|1⟩ as its Bloch vector (oblique view, x toward the viewer; dashed: its projection on the equator)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-state-bloch-bloch)
 
-*The qubit state α|0⟩ + β|1⟩ with α = 0.6 + 0i, β = 0 + 0.8i (the worked example) as its Bloch vector (oblique view, x toward the viewer; dashed: its projection on the equator). Marked: the package's (x, y, z) = (0, 0.96, -0.28), θ = 1.85459 rad, φ = 1.5708 rad, P(0) = 0.36, P(1) = 0.64.*
+*The qubit state α|0⟩ + β|1⟩ as its Bloch vector (oblique view, x toward the viewer; dashed: its projection on the equator). Marked: the model's (x, y, z) = (0, 0.96, -0.28), θ = 1.855 rad, φ = 1.571 rad, P(0) = 0.36, P(1) = 0.64. Your inputs: a_re = 0.6, a_im = 0, b_re = 0, b_im = 0.8.*
 
-![z (Bloch z = <sigma_z>) against a_im (imaginary part of alpha) from -1 to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-state-bloch-curve)
+![Z as a_re runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-state-bloch-live-1)
 
-*z (Bloch z = <sigma_z>) against a_im (imaginary part of alpha) from -1 to 1. One curve for each value of a_re (real part of alpha): 0.6, 0.3, 1.2. Other inputs as in the worked example: b_re = 0.0, b_im = 0.8. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, a_im = 0, z = -0.28.*
+*Z as a_re runs from 0.15 to 1.05, every other input as you entered it (41 solutions). Marked: your a_re = 0.6 gives z = -0.28. Your inputs: a_re = 0.6, a_im = 0, b_re = 0, b_im = 0.8.*
+
+![Z as a_im runs from -1 to 1, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-state-bloch-live-2)
+
+*Z as a_im runs from -1 to 1, every other input as you entered it (29 solutions). Marked: your a_im = 0 gives z = -0.28. Your inputs: a_re = 0.6, a_im = 0, b_re = 0, b_im = 0.8.*
 
 ```python
 quantum_physics_ai999x.solve('qubit_state_bloch', a_re=0.6, a_im=0.0, b_re=0.0, b_im=0.8)
@@ -2199,9 +2383,13 @@ $$
 - **Assumes:** gates from H, X, Y, Z, S, Sdg, T, Tdg, I, Rx(t), Ry(t), Rz(t), P(t); at most 500 gates
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The worked example's single-qubit circuit started in |0⟩ on the Bloch sphere (oblique view, x toward the viewer): the Bloch vector the package returns after each gate in turn, I: (0, 0, 1); H: (1, 0, 0)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/single-qubit-circuit-bloch)
+![The single-qubit circuit started in |0⟩ on the Bloch sphere (oblique view, x toward the viewer): the Bloch vector the model returns after each gate in turn (the last in the accent colour): start: (0, 0, 1); H: (1, 0, 0)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/single-qubit-circuit-bloch)
 
-*The worked example's single-qubit circuit started in |0⟩ on the Bloch sphere (oblique view, x toward the viewer): the Bloch vector the package returns after each gate in turn, I: (0, 0, 1); H: (1, 0, 0). H takes |0⟩ to the equator; T turns about z by 45°, S by 90°, X, Y and Z by 180°.*
+*The single-qubit circuit started in |0⟩ on the Bloch sphere (oblique view, x toward the viewer): the Bloch vector the model returns after each gate in turn (the last in the accent colour): start: (0, 0, 1); H: (1, 0, 0). In SI units: p0 = 0.5. Your inputs: start = 0, gates = H.*
+
+![Probability of measuring 0 for every choice of start, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/single-qubit-circuit-live-1)
+
+*Probability of measuring 0 for every choice of start, every other input as you entered it (highlighted: your choice). 0: 0.5; 1: 0.5; +: 1; -: 0; +i: 0.5; -i: 0.5. Your inputs: start = 0, gates = H.*
 
 ```python
 quantum_physics_ai999x.solve('single_qubit_circuit', start='0', gates='H')
@@ -2261,13 +2449,13 @@ $$
 - **Assumes:** gates from the documented set; at most 500 gates
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Two-qubit circuits started in |00⟩ (rows, top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0), with the probability of each measurement outcome and the concurrence (1 = maximally entangled) the package computes; H0 CNOT01 makes the Bell state, P(00) = P(11) = 0](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/two-qubit-circuit-heatmap.svg)
+![Two-qubit circuits started in |00⟩, rows top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0, with the probability of each measurement outcome and the concurrence C (1 = maximally entangled), each a solve of the model](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/two-qubit-circuit-heatmap.svg)
 
-*Two-qubit circuits started in |00⟩ (rows, top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0), with the probability of each measurement outcome and the concurrence (1 = maximally entangled) the package computes; H0 CNOT01 makes the Bell state, P(00) = P(11) = 0.5 with concurrence 1.*
+*Two-qubit circuits started in |00⟩, rows top to bottom: X0; H0; H0 H1; H0 CNOT01; X1 H0 CNOT01; H0 CNOT01 H0, with the probability of each measurement outcome and the concurrence C (1 = maximally entangled), each a solve of the model. The given circuit H0 CNOT01: P(00) = 0.5, P(11) = 0.5, concurrence 1. Your inputs: start = 00, gates = H0 CNOT01.*
 
-![p00 (probability of |00>) for each option of start (initial basis state |q0 q1>), one run of quantum-physics-ai999x per option: 00: 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-qubit-circuit-bars)
+![P00 for every choice of start, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-qubit-circuit-live-1)
 
-*p00 (probability of |00>) for each option of start (initial basis state |q0 q1>), one run of quantum-physics-ai999x per option: 00: 0.5, 01: 0, 10: 0.5, 11: 0. The worked example uses 00. Other inputs as in the worked example: gates = H0 CNOT01.*
+*P00 for every choice of start, every other input as you entered it (highlighted: your choice). 00: 0.5; 01: 0; 10: 0.5; 11: 0. Your inputs: start = 00, gates = H0 CNOT01.*
 
 ```python
 quantum_physics_ai999x.solve('two_qubit_circuit', start='00', gates='H0 CNOT01')
@@ -2319,9 +2507,9 @@ $$
 - **Assumes:** gates from H, X, Y, Z, S, Sdg, T, Tdg, I, Rx(t), Ry(t), Rz(t), P(t)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Rotation axes of single-qubit gates on the Bloch sphere (oblique view, x toward the viewer): the unit axis n and rotation angle the package returns for each gate or gate sequence, X about (1, 0, 0) by 180°; Y about (0, 1, 0) by 180°; Z / S / T about (0, 0, 1) by 180°, 90°, 45°; H about (0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/gate-rotation-axis-bloch)
+![Rotation axes of single-qubit gates on the Bloch sphere (oblique view, x toward the viewer): the unit axis and rotation angle the model returns for X, Y, Z, H, S and T (grey) and for the given sequence H (accent): X: (1, 0, 0) by 180°; Y: (0, 1, 0) by 180°; Z: (0, 0, 1) by 180°; H: (0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/gate-rotation-axis-bloch)
 
-*Rotation axes of single-qubit gates on the Bloch sphere (oblique view, x toward the viewer): the unit axis n and rotation angle the package returns for each gate or gate sequence, X about (1, 0, 0) by 180°; Y about (0, 1, 0) by 180°; Z / S / T about (0, 0, 1) by 180°, 90°, 45°; H about (0.7071, 0, 0.7071) by 180°; H T about (-0.6786, -0.2811, -0.6786) by 148.6°. Z, S and T turn about the same axis by different angles. The worked example's sequence, H, is drawn in the first colour.*
+*Rotation axes of single-qubit gates on the Bloch sphere (oblique view, x toward the viewer): the unit axis and rotation angle the model returns for X, Y, Z, H, S and T (grey) and for the given sequence H (accent): X: (1, 0, 0) by 180°; Y: (0, 1, 0) by 180°; Z: (0, 0, 1) by 180°; H: (0.7071, 0, 0.7071) by 180°; S: (0, 0, 1) by 90°; T: (0, 0, 1) by 45°; given: (0.7071, 0, 0.7071) by 180°. In SI units: angle = 3.142 rad. Your inputs: gates = H.*
 
 ```python
 quantum_physics_ai999x.solve('gate_rotation_axis', gates='H')
@@ -2373,9 +2561,13 @@ $$
 - **Assumes:** $Omega > 0$; $t  \geq  0$; rotating-wave approximation, starting in the ground state
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Excited-state probability of a driven two-level system with Rabi frequency Ω = 1e+06 rad/s (the worked example) at three detunings, 141 times from 0 to 14 µs from the package: detuning speeds the oscillation and lowers its height, Δ = 0 Ω: P_max = 1, period 6](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/rabi-oscillation-curve)
+![Excited-state probability as Omega runs from 6e+05 to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/rabi-oscillation-live-1)
 
-*Excited-state probability of a driven two-level system with Rabi frequency Ω = 1e+06 rad/s (the worked example) at three detunings, 141 times from 0 to 14 µs from the package: detuning speeds the oscillation and lowers its height, Δ = 0 Ω: P_max = 1, period 6.28319 µs; Δ = 1 Ω: P_max = 0.5, period 4.44288 µs; Δ = 2 Ω: P_max = 0.2, period 2.80993 µs.*
+*Excited-state probability as Omega runs from 6e+05 to 1.4e+06 rad/s, every other input as you entered it (41 solutions). Marked: your Omega = 1e+06 rad/s gives P_excited = 0.5. Your inputs: Omega = 1e6 rad/s, Delta = 0 rad/s, t = 1.5708 us.*
+
+![Excited-state probability as t runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/rabi-oscillation-live-2)
+
+*Excited-state probability as t runs from 0.9425 to 2.199 us, every other input as you entered it (29 solutions). Marked: your t = 1.571 us gives P_excited = 0.5. Your inputs: Omega = 1e6 rad/s, Delta = 0 rad/s, t = 1.5708 us.*
 
 ```python
 quantum_physics_ai999x.solve('rabi_oscillation', Omega=1000000.0, Delta=0.0, t=3.1415926535897933e-06)
@@ -2422,9 +2614,13 @@ $$
 - **Assumes:** $B > 0$; $t  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Larmor precession of a proton spin in B = 1 T (the worked example), started along +x: the probability of measuring it along +x and the mean ⟨S_x⟩, 121 times over 3 periods from the package](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/larmor-precession-curve)
+![Probability of measuring spin up along +x at](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/larmor-precession-live-1)
 
-*Larmor precession of a proton spin in B = 1 T (the worked example), started along +x: the probability of measuring it along +x and the mean ⟨S_x⟩, 121 times over 3 periods from the package. Marked: the package's Larmor frequency f_L = 4.2577e+07 Hz (ω_L = 2.6752e+08 rad/s), one period 23.4866 ns (1/f_L), and the worked example's moment t = 0 s: P(+x) = 1.*
+*Probability of measuring spin up along +x at... as t runs from 0 to 3.523e-08 s, every other input as you entered it (21 solutions). Marked: your t = 0 s gives P_plus_x = 1. Your inputs: particle = proton, B = 1 T, t = 0 s.*
+
+![Larmor frequency as B runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/larmor-precession-live-2)
+
+*Larmor frequency as B runs from 0.6 to 1.4 T, every other input as you entered it (29 solutions). Marked: your B = 1 T gives f_L = 42.58 MHz. Your inputs: particle = proton, B = 1 T, t = 0 s.*
 
 ```python
 quantum_physics_ai999x.solve('larmor_precession', particle='proton', B=1.0, t=0.0)
@@ -2470,9 +2666,13 @@ $$
 - **Assumes:** |r| <= 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Entropy and purity of a qubit against the length of its Bloch vector r = (|r|, 0, 0), 51 lengths from the package: the centre (|r| = 0) is the maximally mixed state, 1 bit and purity 1/2; the surface (|r| = 1) a pure state](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-entropy-purity-curve)
+![Von Neumann entropy in bits as r[1] runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-entropy-purity-live-1)
 
-*Entropy and purity of a qubit against the length of its Bloch vector r = (|r|, 0, 0), 51 lengths from the package: the centre (|r| = 0) is the maximally mixed state, 1 bit and purity 1/2; the surface (|r| = 1) a pure state. Marked: the worked example r = [0.6, 0.0, 0.0], S = 0.721928 bits, purity 0.68.*
+*Von Neumann entropy in bits as r[1] runs from 0.15 to 0.9825, every other input as you entered it (38 solutions). Marked: your r[1] = 0.6 gives S_bits = 0.7219. Your inputs: r = 0.6, 0, 0.*
+
+![Von Neumann entropy in bits as r[2] runs from -0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-entropy-purity-live-2)
+
+*Von Neumann entropy in bits as r[2] runs from -0.7857 to 0.7857, every other input as you entered it (23 solutions). Marked: your r[2] = 0 gives S_bits = 0.7219. Your inputs: r = 0.6, 0, 0.*
 
 ```python
 quantum_physics_ai999x.solve('qubit_entropy_purity', r=[0.6, 0.0, 0.0])
@@ -2522,13 +2722,17 @@ $$
 - **Assumes:** |r|, |s| <= 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The two qubit states of the worked example as Bloch vectors r = [0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-fidelity-bloch)
+![The two qubit states as Bloch vectors r = (0, 0, 1) and s = (1, 0, 0) (oblique view, x toward the viewer; dashed: the chord between them)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-fidelity-bloch)
 
-*The two qubit states of the worked example as Bloch vectors r = [0.0, 0.0, 1.0] and s = [1.0, 0.0, 0.0] (oblique view, x toward the viewer). Marked: the package's fidelity F = 0.5 (√F = 0.707107) and trace distance 0.707107.*
+*The two qubit states as Bloch vectors r = (0, 0, 1) and s = (1, 0, 0) (oblique view, x toward the viewer; dashed: the chord between them). Marked: the model's fidelity F = 0.5 (square root 0.7071) and trace distance 0.7071. Your inputs: r = 0, 0, 1, s = 1, 0, 0.*
 
-![Fidelity and trace distance between |0⟩ (r = (0, 0, 1)) and a pure state turned by an angle from 0 to 180° in the x–z plane, 61 angles from the package: F = cos²(angle/2) falls from 1 to 0 as the trace distance rises](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-fidelity-curve)
+![Trace distance as r[3] runs from 0 to 1, every other input as you entered it (2 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-fidelity-live-1)
 
-*Fidelity and trace distance between |0⟩ (r = (0, 0, 1)) and a pure state turned by an angle from 0 to 180° in the x–z plane, 61 angles from the package: F = cos²(angle/2) falls from 1 to 0 as the trace distance rises. Marked: the worked example, r = [0.0, 0.0, 1.0] and s = [1.0, 0.0, 0.0], 90° apart: F = 0.5, trace distance 0.707107.*
+*Trace distance as r[3] runs from 0 to 1, every other input as you entered it (2 solutions). Marked: your r[3] = 1 gives trace_distance = 0.7071. Your inputs: r = 0, 0, 1, s = 1, 0, 0.*
+
+![Trace distance as s[1] runs from 0 to 1, every other input as you entered it (2 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/qubit-fidelity-live-2)
+
+*Trace distance as s[1] runs from 0 to 1, every other input as you entered it (2 solutions). Marked: your s[1] = 1 gives trace_distance = 0.7071. Your inputs: r = 0, 0, 1, s = 1, 0, 0.*
 
 ```python
 quantum_physics_ai999x.solve('qubit_fidelity', r=[0.0, 0.0, 1.0], s=[1.0, 0.0, 0.0])
@@ -2579,13 +2783,17 @@ $$
 - **Assumes:** the spin singlet state; measurement directions in one plane
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The CHSH value of a spin singlet for measurement settings a = 0, b = θ, a′ = 2θ, b′ = 3θ, 61 steps θ from 0 to 90° from the package; above the bound |S| = 2 (stated, shaded) no local hidden-variable model can reproduce the correlations](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/chsh-bell-test-curve)
+![CHSH value as b2 runs from 81 to 189 deg, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/chsh-bell-test-live-1)
 
-*The CHSH value of a spin singlet for measurement settings a = 0, b = θ, a′ = 2θ, b′ = 3θ, 61 steps θ from 0 to 90° from the package; above the bound |S| = 2 (stated, shaded) no local hidden-variable model can reproduce the correlations. Marked: the worked example θ = 45°, |S| = 2.82843, violates: yes.*
+*CHSH value as b2 runs from 81 to 189 deg, every other input as you entered it (41 solutions). Marked: your b2 = 135 deg gives S = -2.828. Your inputs: a = 0 deg, a2 = 90 deg, b = 45 deg, b2 = 135 deg.*
 
-![whether |S| exceeds 2 (violates) over a (Alice's first setting (angle in the x-z plane)) from 0 rad to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/chsh-bell-test-decision)
+![Whether |S| exceeds 2 for 25 5 x 5 combinations of b2 and a2 around your inputs (the other inputs as entered); the ring marks your inputs, which give yes](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/chsh-bell-test-live-2)
 
-*whether |S| exceeds 2 (violates) over a (Alice's first setting (angle in the x-z plane)) from 0 rad to 1.5708 rad and a2 (Alice's second setting a') from 0 rad to 1.5708 rad: each of the 31 × 21 cells is one run of quantum-physics-ai999x, coloured by the verdict it returned, no: 391 cells, yes: 260 cells. Other inputs as in the worked example: b = 0.7853981633974483 rad, b2 = 2.356194490192345 rad. Marked: the worked example, a = 0 rad, a2 = 1.5708 rad → yes.*
+*Whether |S| exceeds 2 for 25 5 x 5 combinations of b2 and a2 around your inputs (the other inputs as entered); the ring marks your inputs, which give yes. Blank cells admit no answer. Your inputs: a = 0 deg, a2 = 90 deg, b = 45 deg, b2 = 135 deg.*
+
+![CHSH value as a2 runs from 54 to 126 deg, every other input as you entered it (27 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/chsh-bell-test-live-3)
+
+*CHSH value as a2 runs from 54 to 126 deg, every other input as you entered it (27 solutions). Marked: your a2 = 90 deg gives S = -2.828. Your inputs: a = 0 deg, a2 = 90 deg, b = 45 deg, b2 = 135 deg.*
 
 ```python
 quantum_physics_ai999x.solve('chsh_bell_test', a=0.0, a2=1.5707963267948966, b=0.7853981633974483, b2=2.356194490192345)
@@ -2602,7 +2810,7 @@ quantum_physics_ai999x.solve('chsh_bell_test', a=0.0, a2=0.0, b=0.0, b2=0.0)
 | question | outcome | result |
 |---|---|---|
 | CHSH: a = 0 deg, a2 = 90 deg, b = 45 deg, b2 = 135 deg | SOLVED | S = -2.82843, abs_S = 2.82843, E_ab = -0.707107, E_ab2 = 0.707107, E_a2b = -0.707107, E_a2b2 = -0.707107, violates = yes |
-| CHSH: a = 0 deg, a2 = 90 deg, b = 45 deg | NEEDS_INPUT | chsh_bell_test needs b2 (Bob's second setting b'). Example: solve('chsh_bell_test', a='0 rad', a2='1.5708 rad', b='0.785 |
+| CHSH: a = 0 deg, a2 = 90 deg, b = 45 deg | NEEDS_INPUT | chsh_bell_test needs b2 (Bob's second setting b'). Example: solve('chsh_bell_test', a='0 rad', a2='1.5707963267948966 ra |
 
 <a id="grover_search"></a>
 
@@ -2631,9 +2839,17 @@ $$
 - **Assumes:** $1  \leq  M < N/2$; $0  \leq  k  \leq  10^{7}$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Grover search for 1 marked item among 2ⁿ: the probability of success after k = 0 … 12 iterations for 2, 3, 4 qubits, from the package (stems side by side)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/grover-search-stems)
+![Grover search for 1 marked item(s) among 2ⁿ: the probability of success after k = 0 to 12 iterations for 4, 5, 6 qubits, each a solve of the model (side by side)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/grover-search-stems)
 
-*Grover search for 1 marked item among 2ⁿ: the probability of success after k = 0 … 12 iterations for 2, 3, 4 qubits, from the package (stems side by side). The probability rises to nearly 1 at the best k and then falls again, 2 qubits: best k = 1, P = 1; 3 qubits: best k = 2, P = 0.945312; 4 qubits: best k = 3, P = 0.961319. Marked: the worked example, 2 qubits after k = 1: P = 1.*
+*Grover search for 1 marked item(s) among 2ⁿ: the probability of success after k = 0 to 12 iterations for 4, 5, 6 qubits, each a solve of the model (side by side). The probability rises to nearly 1 at the best k and then falls again: 4 qubits: best k = 3, P = 0.9613; 5 qubits: best k = 4, P = 0.9992; 6 qubits: best k = 6, P = 0.9966. Marked: the given 4 qubits, k = 3, P = 0.9613. Your inputs: n_qubits = 4, M = 1, k = 3.*
+
+![Probability of a marked item after k iterations as n_qubits runs from 2 to 8, every other input as you entered it (7 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/grover-search-live-1)
+
+*Probability of a marked item after k iterations as n_qubits runs from 2 to 8, every other input as you entered it (7 solutions). Marked: your n_qubits = 4 gives P_success = 0.9613. Your inputs: n_qubits = 4, M = 1, k = 3.*
+
+![Probability of a marked item after k iterations as M runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/grover-search-live-2)
+
+*Probability of a marked item after k iterations as M runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your M = 1 gives P_success = 0.9613. Your inputs: n_qubits = 4, M = 1, k = 3.*
 
 ```python
 quantum_physics_ai999x.solve('grover_search', n_qubits=2, M=1, k=1)
@@ -2679,13 +2895,17 @@ $$
 - **Assumes:** |alpha| >= 0; $n  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Photon-number distribution of coherent (laser) light for |α| = 1, 2, 3, P(n) for n = 0 … 15 from the package (stems side by side): Poisson distributions whose variance equals the mean, |α| = 1: mean 1, variance 1; |α| = 2: mean 4, variance 4; |α| = 3: mean 9, variance 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/coherent-state-photon-statistics-stems)
+![Photon-number distribution of coherent (laser) light for |α| = 1, 2 and 3, P(n) for n = 0 to 19, each a solve of the model (side by side): Poisson distributions whose variance equals the mean |α|²](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/coherent-state-photon-statistics-stems)
 
-*Photon-number distribution of coherent (laser) light for |α| = 1, 2, 3, P(n) for n = 0 … 15 from the package (stems side by side): Poisson distributions whose variance equals the mean, |α| = 1: mean 1, variance 1; |α| = 2: mean 4, variance 4; |α| = 3: mean 9, variance 9. Marked: the worked example |α| = 2, P(3) = 0.195367.*
+*Photon-number distribution of coherent (laser) light for |α| = 1, 2 and 3, P(n) for n = 0 to 19, each a solve of the model (side by side): Poisson distributions whose variance equals the mean |α|². Marked: the given |α| = 2, P(3) = 0.1954. Your inputs: alpha = 2, n = 3.*
 
-![P_n (probability of exactly n photons) against alpha (coherent amplitude |alpha|) from 1 to 3](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/coherent-state-photon-statistics-curve)
+![Probability of exactly n photons as α runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/coherent-state-photon-statistics-live-1)
 
-*P_n (probability of exactly n photons) against alpha (coherent amplitude |alpha|) from 1 to 3. One curve for each value of n (photon number): 3, 4, 5. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, alpha = 2, P_n = 0.195367.*
+*Probability of exactly n photons as α runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your α = 2 gives P_n = 0.1954. Your inputs: alpha = 2, n = 3.*
+
+![Probability of exactly n photons as n runs from 0 to 7, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/coherent-state-photon-statistics-live-2)
+
+*Probability of exactly n photons as n runs from 0 to 7, every other input as you entered it (8 solutions). Marked: your n = 3 gives P_n = 0.1954. Your inputs: alpha = 2, n = 3.*
 
 ```python
 quantum_physics_ai999x.solve('coherent_state_photon_statistics', alpha=2.0, n=3)
@@ -2735,9 +2955,13 @@ $$
 - **Assumes:** T_half > 0; $N_{0} > 0$; $t  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![fraction (fraction remaining N/N0) against T_half (half-life) from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-decay-law-curve)
+![Fraction remaining N/N0 as T_half runs from 3438 to 8022 yr, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-decay-law-live-1)
 
-*fraction (fraction remaining N/N0) against T_half (half-life) from 1.8083e+10 s to 1.8083e+12 s on a logarithmic axis. One curve for each value of t (elapsed time): 3.6165e+11 s, 1.8083e+11 s, 7.2330e+11 s. Other inputs as in the worked example: N0 = 1e+20. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, T_half = 1.8083e+11 s, fraction = 0.25.*
+*Fraction remaining N/N0 as T_half runs from 3438 to 8022 yr, every other input as you entered it (41 solutions). Marked: your T_half = 5730 yr gives fraction = 0.25. Your inputs: T_half = 5730 yr, N0 = 1e20, t = 11460 yr.*
+
+![Fraction remaining N/N0 as t runs from 6876 to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-decay-law-live-2)
+
+*Fraction remaining N/N0 as t runs from 6876 to 1.604e+04 yr, every other input as you entered it (29 solutions). Marked: your t = 1.146e+04 yr gives fraction = 0.25. Your inputs: T_half = 5730 yr, N0 = 1e20, t = 11460 yr.*
 
 ```python
 quantum_physics_ai999x.solve('radioactive_decay_law', T_half=10.0, N0=1000.0, t=20.0)
@@ -2782,13 +3006,17 @@ $$
 - **Assumes:** 0 < fraction <= 1; T_half > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![t (elapsed time (age)) against fraction (fraction of the original nuclei (or activity) remaining, 0 < f <= 1 (or a percentage)) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-dating-age-curve)
+![t (elapsed time (age)) over T_half (half-life) from 90](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-dating-age-field)
 
-*t (elapsed time (age)) against fraction (fraction of the original nuclei (or activity) remaining, 0 < f <= 1 (or a percentage)) from 0.02 to 0.98. One curve for each value of T_half (half-life): 1.8083e+11 s, 9.0413e+10 s, 3.6165e+11 s. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, fraction = 0.25, t = 3.6165e+11 s.*
+*t (elapsed time (age)) over T_half (half-life) from 90.41 Gs to 271.2 Gs and fraction (fraction of the original nuclei (or activity) remaining, 0 < f <= 1 (or a percentage)) from 0.125 to 0.375: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 127.9 Gs to dark 813.7 Gs); iso-lines at t = 2e+11, 3e+11, 4e+11, 5e+11, 6e+11, 7e+11, 8e+11. Marked: the given point, T_half = 180.8 Gs, fraction = 0.25, t = 361.7 Gs. In SI units: t = 3.617e+11 s. Your inputs: fraction = 0.25, T_half = 5730 yr.*
 
-![t (elapsed time (age)) over T_half (half-life) from 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-dating-age-field)
+![Elapsed time (age) as T_half runs from 3438 to 8022 yr, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-dating-age-live-1)
 
-*t (elapsed time (age)) over T_half (half-life) from 9.0413e+10 s to 2.7124e+11 s and fraction (fraction of the original nuclei (or activity) remaining, 0 < f <= 1 (or a percentage)) from 0.02 to 0.98: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 2.6352e+09 s to dark 1.5308e+12 s); iso-lines at t = 5.00e11, 1.00e12 s. Marked: the worked example, T_half = 1.8083e+11 s, fraction = 0.25, t = 3.6165e+11 s.*
+*Elapsed time (age) as T_half runs from 3438 to 8022 yr, every other input as you entered it (41 solutions). Marked: your T_half = 5730 yr gives t = 1.146e+04 yr. Your inputs: fraction = 0.25, T_half = 5730 yr.*
+
+![Elapsed time (age) as fraction runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radioactive-dating-age-live-2)
+
+*Elapsed time (age) as fraction runs from 0.0625 to 0.4375, every other input as you entered it (29 solutions). Marked: your fraction = 0.25 gives t = 1.146e+04 yr. Your inputs: fraction = 0.25, T_half = 5730 yr.*
 
 ```python
 quantum_physics_ai999x.solve('radioactive_dating_age', fraction=0.25, T_half=5730.0)
@@ -2837,9 +3065,13 @@ $$
 - **Assumes:** $t  \geq  0$; one of the tabulated nuclides
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![fraction (fraction of the parent nuclide remaining) against t (elapsed time) from 138598 s to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/nuclide-decay-curve)
+![Fraction of the parent nuclide remaining as t runs from 8](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/nuclide-decay-live-1)
 
-*fraction (fraction of the parent nuclide remaining) against t (elapsed time) from 138598 s to 1.3860e+07 s on a logarithmic axis. Other inputs as in the worked example: nuclide = I-131. 41 points computed by quantum-physics-ai999x; marked: the worked example, t = 1.38598e+06 s, fraction = 0.25.*
+*Fraction of the parent nuclide remaining as t runs from 8.316e+05 to 1.94e+06 s, every other input as you entered it (41 solutions). Marked: your t = 1.386e+06 s gives fraction = 0.25. Your inputs: nuclide = I-131, t = 1385976.96 s.*
+
+![Every answer of one unit for your inputs: half_life (half-life (ICRP-107)) = 6](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/nuclide-decay-live-2)
+
+*Every answer of one unit for your inputs: half_life (half-life (ICRP-107)) = 6.93e+05; mean_life (mean life) = 9.998e+05. Your inputs: nuclide = I-131, t = 1385976.96 s.*
 
 ```python
 quantum_physics_ai999x.solve('nuclide_decay', nuclide='I-131', t=1385976.96)
@@ -2857,7 +3089,7 @@ quantum_physics_ai999x.solve('nuclide_decay', nuclide='C-14', t=0.0)
 |---|---|---|
 | Nuclide decay: nuclide = I-131, t = 1385976.96 s | SOLVED | fraction = 0.25, half_life = 692988 s, half_life_years = 0.0219595, decay_constant = 1.00023e-06 1/s, mean_life = 999771 s, specific_activity_per_atom = 2.50057e-07 1/s |
 | Nuclide decay: nuclide = Xx-999, t = 1 s | INVALID_INPUT | nuclide: one of C-14, H-3, Co-60, Cs-137, Sr-90, I-131, Rn-222, Ra-226, U-238, U-235, Pu-239, K-40, Am-241, Tc-99m, F-18 |
-| Nuclide decay: nuclide = C-14 | NEEDS_INPUT | nuclide_decay needs t (elapsed time). Example: solve('nuclide_decay', nuclide='I-131', t='1.38598e+06 s'). |
+| Nuclide decay: nuclide = C-14 | NEEDS_INPUT | nuclide_decay needs t (elapsed time). Example: solve('nuclide_decay', nuclide='I-131', t='1385976.96 s'). |
 
 <a id="decay_chain_parent_daughter"></a>
 
@@ -2888,9 +3120,13 @@ $$
 - **Assumes:** half-lives and N0 positive; $t  \geq  0$; no daughter at $t = 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A parent (half-life 2 s) decaying into a daughter (half-life 1 s), N₀ = 1, the worked example: numbers (top) and activities (bottom, daughter dashed), 97 times from the package](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/decay-chain-parent-daughter-curve)
+![Daughter nuclei as T_half_D runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/decay-chain-parent-daughter-live-1)
 
-*A parent (half-life 2 s) decaying into a daughter (half-life 1 s), N₀ = 1, the worked example: numbers (top) and activities (bottom, daughter dashed), 97 times from the package. The daughter's activity overtakes the parent's and then follows it (transient equilibrium). Marked: t = 2 s, N_daughter = 0.25, activity ratio 1.*
+*Daughter nuclei as T_half_D runs from 0.6 to 1.4 h, every other input as you entered it (41 solutions). Marked: your T_half_D = 1 h gives N_daughter = 7.51e+10. Your inputs: T_half_P = 10 h, T_half_D = 1 h, N0 = 1e12, t = 5 h.*
+
+![Daughter nuclei as N0 runs from 2](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/decay-chain-parent-daughter-live-2)
+
+*Daughter nuclei as N0 runs from 2.5e+11 to 1.75e+12, every other input as you entered it (29 solutions). Marked: your N0 = 1e+12 gives N_daughter = 7.51e+10. Your inputs: T_half_P = 10 h, T_half_D = 1 h, N0 = 1e12, t = 5 h.*
 
 ```python
 quantum_physics_ai999x.solve('decay_chain_parent_daughter', T_half_P=2.0, T_half_D=1.0, N0=1.0, t=2.0)
@@ -2942,11 +3178,15 @@ $$
 
 ![A particle of mass M = 139](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-body-decay-diagram)
 
-*A particle of mass M = 139.57 MeV/c² at rest decaying into m₁ = 105.658 and m₂ = 0 MeV/c² (the worked example): the products fly apart back to back with equal momentum (arrow lengths to scale). Marked: the package's p = 29.7921 MeV/c, energies E₁ = 109.778 and E₂ = 29.7921 MeV, kinetic energies K₁ = 4.11987 and K₂ = 29.7921 MeV, Q = 33.912 MeV.*
+*A particle of mass M = 139.6 at rest decaying into m1 = 105.7 and m2 = 0: the products fly apart back to back with equal momentum. Marked: the model's p = 29.79 MeV/c, energies E1 = 109.8 and E2 = 29.79 MeV, kinetic energies K1 = 4.12 and K2 = 29.79 MeV, Q = 33.91 MeV. Your inputs: M = 139.57039, m1 = 105.6583755, m2 = 0.*
 
-![K1_MeV (kinetic energy of product 1) against m1 (mass of product 1) from 52](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-body-decay-curve)
+![Kinetic energy of product 1 as m1 runs from 26](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-body-decay-live-1)
 
-*K1_MeV (kinetic energy of product 1) against m1 (mass of product 1) from 52.8292 to 158.488. One curve for each value of M (mass of the parent): 139.57, 279.141. Other inputs as in the worked example: m2 = 0.0. 25 points per curve computed by quantum-physics-ai999x; marked: the worked example, m1 = 105.658, K1_MeV = 4.11987 MeV.*
+*Kinetic energy of product 1 as m1 runs from 26.41 to 137.4, every other input as you entered it (29 solutions). Marked: your m1 = 105.7 gives K1_MeV = 4.12. Your inputs: M = 139.57039, m1 = 105.6583755, m2 = 0.*
+
+![Kinetic energy of product 1 as M runs from 109](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-body-decay-live-2)
+
+*Kinetic energy of product 1 as M runs from 109.7 to 244.2, every other input as you entered it (19 solutions). Marked: your M = 139.6 gives K1_MeV = 4.12. Your inputs: M = 139.57039, m1 = 105.6583755, m2 = 0.*
 
 ```python
 quantum_physics_ai999x.solve('two_body_decay', M=10.0, m1=3.0, m2=4.0)
@@ -2993,13 +3233,17 @@ $$
 - **Assumes:** masses >= 0; target at rest
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![whether the reaction needs energy (Q < 0) (endothermic) over m_a (projectile mass (u)) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/nuclear-reaction-threshold-decision)
+![Q value and threshold kinetic energy of the projectile as m_a runs from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/nuclear-reaction-threshold-live-1)
 
-*whether the reaction needs energy (Q < 0) (endothermic) over m_a (projectile mass (u)) from 0.40026 to 40.026 and m_X (target mass (u)) from 1.40031 to 140.031 (logarithmic axes): each of the 31 × 21 cells is one run of quantum-physics-ai999x, coloured by the verdict it returned, no: 405 cells, yes: 246 cells. Other inputs as in the worked example: m_Y = 16.999131757, m_b = 1.00782503207. Marked: the worked example, m_a = 4.0026, m_X = 14.0031 → yes.*
+*Q value and threshold kinetic energy of the projectile as m_a runs from 1.001 to 7.005, every other input as you entered it (41 solutions). Marked: your m_a = 4.003 gives Q_MeV = -1.191. Shaded by whether the reaction needs energy (Q < 0): yes, no. Your inputs: m_a = 4.002603, m_X = 14.003074, m_Y = 16.999131, m_b = 1.007825.*
 
-![Q_MeV (Q value) against m_a (projectile mass (u)) from 2](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/nuclear-reaction-threshold-curve)
+![Whether the reaction needs energy (Q < 0) for 25 5 x 5 combinations of m_a and m_X around your inputs (the other inputs as entered); the ring marks your inputs, which give yes](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/nuclear-reaction-threshold-live-2)
 
-*Q_MeV (Q value) against m_a (projectile mass (u)) from 2.0013 to 6.0039. One curve for each value of m_Y (heavy product mass (u)): 16.9991, 8.49957, 33.9983. Other inputs as in the worked example: m_X = 14.003074004, m_b = 1.00782503207. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, m_a = 4.0026, Q_MeV = -1.19188 MeV.*
+*Whether the reaction needs energy (Q < 0) for 25 5 x 5 combinations of m_a and m_X around your inputs (the other inputs as entered); the ring marks your inputs, which give yes. Blank cells admit no answer. Your inputs: m_a = 4.002603, m_X = 14.003074, m_Y = 16.999131, m_b = 1.007825.*
+
+![Q value and threshold kinetic energy of the projectile as m_X runs from 3](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/nuclear-reaction-threshold-live-3)
+
+*Q value and threshold kinetic energy of the projectile as m_X runs from 3.501 to 24.51, every other input as you entered it (27 solutions). Marked: your m_X = 14 gives Q_MeV = -1.191. Shaded by whether the reaction needs energy (Q < 0): yes, no. Your inputs: m_a = 4.002603, m_X = 14.003074, m_Y = 16.999131, m_b = 1.007825.*
 
 ```python
 quantum_physics_ai999x.solve('nuclear_reaction_threshold', m_a=4.002603254, m_X=14.003074004, m_Y=16.999131757, m_b=1.00782503207)
@@ -3042,9 +3286,13 @@ $$
 - **Assumes:** $1  \leq  Z  \leq  A$; $r_{0} > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![V_MeV (Coulomb barrier height) against r0 (radius parameter (typically 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/coulomb-barrier-curve)
+![Coulomb barrier height as Z1 runs from 1 to 4, every other input as you entered it (4 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/coulomb-barrier-live-1)
 
-*V_MeV (Coulomb barrier height) against r0 (radius parameter (typically 1.2 fm)) from 5.0000e-16 m to 1.5000e-15 m. One curve for each value of A1 (mass number of nucleus 1): 1, 2, 3. Other inputs as in the worked example: Z1 = 1, Z2 = 1, A2 = 1. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, r0 = 1.0000e-15 m, V_MeV = 0.719982 MeV.*
+*Coulomb barrier height as Z1 runs from 1 to 4, every other input as you entered it (4 solutions). Marked: your Z1 = 2 gives V_MeV = 25.6. Your inputs: Z1 = 2, A1 = 4, Z2 = 79, A2 = 197, r0 = 1.2 fm.*
+
+![Coulomb barrier height as r0 runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/coulomb-barrier-live-2)
+
+*Coulomb barrier height as r0 runs from 0.72 to 1.68 fm, every other input as you entered it (29 solutions). Marked: your r0 = 1.2 fm gives V_MeV = 25.6. Your inputs: Z1 = 2, A1 = 4, Z2 = 79, A2 = 197, r0 = 1.2 fm.*
 
 ```python
 quantum_physics_ai999x.solve('coulomb_barrier', Z1=1, A1=1, Z2=1, A2=1, r0=1e-15)
@@ -3088,9 +3336,13 @@ $$
 - **Assumes:** $p  \geq  0$; one of the tabulated particles
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![mean_decay_length (mean decay length beta gamma c tau) against p (momentum in GeV/c) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/particle-decay-length-curve)
+![Mean decay length beta gamma c tau as p runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/particle-decay-length-live-1)
 
-*mean_decay_length (mean decay length beta gamma c tau) against p (momentum in GeV/c) from 0.0528292 to 0.158488. Other inputs as in the worked example: particle = mu-. 31 points computed by quantum-physics-ai999x; marked: the worked example, p = 0.105658, mean_decay_length = 658.638 m.*
+*Mean decay length beta gamma c tau as p runs from 0.02641 to 0.1849, every other input as you entered it (41 solutions). Marked: your p = 0.1057 gives mean_decay_length = 658.6. Your inputs: particle = mu-, p = 0.1056583755.*
+
+![Every answer of one unit for your inputs: lifetime_lab (mean lifetime in the lab) = 3](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/particle-decay-length-live-2)
+
+*Every answer of one unit for your inputs: lifetime_lab (mean lifetime in the lab) = 3.107e-06; proper_lifetime (mean proper lifetime (PDG)) = 2.197e-06. Your inputs: particle = mu-, p = 0.1056583755.*
 
 ```python
 quantum_physics_ai999x.solve('particle_decay_length', particle='mu-', p=0.1056583755)
@@ -3103,7 +3355,7 @@ quantum_physics_ai999x.solve('particle_decay_length', particle='mu-', p=0.105658
 |---|---|---|
 | Decay length: particle = mu-, p = 0.1056583755 | SOLVED | gamma = 1.41421, beta = 0.707107, beta_gamma = 1, lifetime_lab = 3.107e-06 s, mean_decay_length = 658.638 m, proper_lifetime = 2.19698e-06 s, mass_MeV = 105.658 |
 | Decay length: particle = quark, p = 10 | INVALID_INPUT | particle: one of pi+, K+, K_S0, K_L0, mu-, tau-, n, Lambda, Sigma+, Xi-, Omega-, D+, D0, B+, B0; got 'quark'. |
-| Decay length: particle = K_S0 | NEEDS_INPUT | particle_decay_length needs p (momentum in GeV/c). Example: solve('particle_decay_length', particle='mu-', p=0.105658). |
+| Decay length: particle = K_S0 | NEEDS_INPUT | particle_decay_length needs p (momentum in GeV/c). Example: solve('particle_decay_length', particle='mu-', p=0.105658375 |
 
 <a id="wien_peak"></a>
 
@@ -3130,9 +3382,9 @@ $$
 - **Assumes:** $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![lambda_max_nm (peak wavelength in nm) against T (temperature of the blackbody) from 2889 K to 8667 K](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/wien-peak-curve)
+![Peak wavelength in nm as T runs from 3467 to 8089 K, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/wien-peak-live-1)
 
-*lambda_max_nm (peak wavelength in nm) against T (temperature of the blackbody) from 2889 K to 8667 K. 31 points computed by quantum-physics-ai999x; marked: the worked example, T = 5778 K, lambda_max_nm = 501.518 nm.*
+*Peak wavelength in nm as T runs from 3467 to 8089 K, every other input as you entered it (41 solutions). Marked: your T = 5778 K gives λ_max_nm = 501.5. Your inputs: T = 5778 K.*
 
 ```python
 quantum_physics_ai999x.solve('wien_peak', T=5778.0)
@@ -3178,9 +3430,13 @@ $$
 - **Assumes:** $T > 0$; $A > 0$; 0 < emissivity <= 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![P (total radiated power) against T (surface temperature) from 500 K to 1500 K](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/stefan-boltzmann-curve)
+![Total radiated power as T runs from 3467 to 8089 K, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/stefan-boltzmann-live-1)
 
-*P (total radiated power) against T (surface temperature) from 500 K to 1500 K. One curve for each value of A (radiating area): 1 m^2, 0.5 m^2, 2 m^2. Other inputs as in the worked example: emissivity = 1.0. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, T = 1000 K, P = 56703.7 W.*
+*Total radiated power as T runs from 3467 to 8089 K, every other input as you entered it (41 solutions). Marked: your T = 5778 K gives P = 3.849e+26. Your inputs: T = 5778 K, emissivity = 1, A = 6.09e18 m^2.*
+
+![Total radiated power as emissivity runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/stefan-boltzmann-live-2)
+
+*Total radiated power as emissivity runs from 0.25 to 1, every other input as you entered it (29 solutions). Marked: your emissivity = 1 gives P = 3.849e+26. Your inputs: T = 5778 K, emissivity = 1, A = 6.09e18 m^2.*
 
 ```python
 quantum_physics_ai999x.solve('stefan_boltzmann', T=1000.0, emissivity=1.0, A=1.0)
@@ -3226,17 +3482,21 @@ $$
 - **Assumes:** $\lambda > 0$; $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Planck spectral radiance at three temperatures, 117 wavelengths each from the package; the dots are the peaks given by its Wien's-law capability: T = 3000 K: λ_max = 965](https://huggingface.co/AI999X/quantum-physics-ai999x/resolve/main/figures/planck-spectral-radiance-spectrum.svg)
+![Planck spectral radiance at three temperatures, 61 wavelengths each a solve of the model; the dots are the peaks from its Wien's-law capability: T = 3005 K: peak at 964](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/planck-spectral-radiance-spectrum)
 
-*Planck spectral radiance at three temperatures, 117 wavelengths each from the package; the dots are the peaks given by its Wien's-law capability: T = 3000 K: λ_max = 965.924 nm, B_λ = 995.249 W/(m² sr nm); T = 4500 K: λ_max = 643.949 nm, B_λ = 7557.67 W/(m² sr nm); T = 5778 K: λ_max = 501.518 nm, B_λ = 26376.3 W/(m² sr nm).*
+*Planck spectral radiance at three temperatures, 61 wavelengths each a solve of the model; the dots are the peaks from its Wien's-law capability: T = 3005 K: peak at 964.5 nm, 1.003e+12 W/m³; T = 4507 K: peak at 643 nm, 7.615e+12 W/m³; T = 5778 K: peak at 501.5 nm, 2.638e+13 W/m³. Marked: the given λ = 500 nm, T = 5778 K, B = 2.638e+13 W/m³. Your inputs: lam = 5e-07 m, T = 5778 K.*
 
-![B_lambda (spectral radiance (W per m^2 per sr per m of wavelength)) against lam (wavelength) from 2](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/planck-spectral-radiance-curve)
+![B_lambda (spectral radiance (W per m^2 per sr per m of wavelength)) over T (temperature) from 2889 K to 8667 K and lam (wavelength) from 250 nm to 750 nm: each of the 15 × 11 cells is one solve of the model, shaded by its value (light 2](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/planck-spectral-radiance-field)
 
-*B_lambda (spectral radiance (W per m^2 per sr per m of wavelength)) against lam (wavelength) from 2.5000e-07 m to 7.5000e-07 m. One curve for each value of T (temperature): 5778 K, 2889 K, 11556 K. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, lam = 5.0000e-07 m, B_lambda = 2.6376e+13 W/m^3.*
+*B_lambda (spectral radiance (W per m^2 per sr per m of wavelength)) over T (temperature) from 2889 K to 8667 K and lam (wavelength) from 250 nm to 750 nm: each of the 15 × 11 cells is one solve of the model, shaded by its value (light 2.721e+08 W/m³ to dark 1.993e+14 W/m³); iso-lines at B_lambda = 5e+13, 1e+14, 1.5e+14. Marked: the given point, T = 5778 K, lam = 500 nm, B_lambda = 2.638e+13 W/m³. Your inputs: lam = 5e-07 m, T = 5778 K.*
 
-![B_lambda (spectral radiance (W per m^2 per sr per m of wavelength)) over T (temperature) from 577](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/planck-spectral-radiance-field)
+![Spectral radiance (W per m^2 per sr per m of](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/planck-spectral-radiance-live-1)
 
-*B_lambda (spectral radiance (W per m^2 per sr per m of wavelength)) over T (temperature) from 577.8 K to 57780 K and lam (wavelength) from 5.0000e-08 m to 5.0000e-06 m (logarithmic axes): each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 1.9687e-196 W/m^3 to dark 2.6376e+18 W/m^3, logarithmic shading). Marked: the worked example, T = 5778 K, lam = 5.0000e-07 m, B_lambda = 2.6376e+13 W/m^3.*
+*Spectral radiance (W per m^2 per sr per m of... as λ runs from 3e-07 to 7e-07 m, every other input as you entered it (41 solutions). Marked: your λ = 5e-07 m gives B_lambda = 2.638e+13. Your inputs: lam = 5e-07 m, T = 5778 K.*
+
+![Spectral radiance (W per m^2 per sr per m of](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/planck-spectral-radiance-live-2)
+
+*Spectral radiance (W per m^2 per sr per m of... as T runs from 3467 to 8089 K, every other input as you entered it (29 solutions). Marked: your T = 5778 K gives B_lambda = 2.638e+13. Your inputs: lam = 5e-07 m, T = 5778 K.*
 
 ```python
 quantum_physics_ai999x.solve('planck_spectral_radiance', lam=5e-07, T=5778.0)
@@ -3278,13 +3538,17 @@ $$
 - **Assumes:** $0 < lambda1 < lambda2$; $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The band above 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/blackbody-band-fraction-spectrum)
+![The band from 400 nm to 700 nm (highlighted where it falls in the drawn range) of the Planck spectrum of a T = 5778 K blackbody (121 wavelengths from the model's spectral radiance, drawn around the peak at 501](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/blackbody-band-fraction-spectrum)
 
-*The band above 0.001 nm (the whole spectrum) (the worked example's) shaded under the Planck spectrum of a T = 5778 K blackbody (121 wavelengths from the package's spectral radiance, drawn around the peak). Marked: the package's band fraction F = 1 of all radiated power, with 0 below 0.001 nm and 0 above the band (one minus its fraction below the upper edge); band exitance 6.3201e+07 W/m².*
+*The band from 400 nm to 700 nm (highlighted where it falls in the drawn range) of the Planck spectrum of a T = 5778 K blackbody (121 wavelengths from the model's spectral radiance, drawn around the peak at 501.5 nm). Marked: the model's band fraction F = 0.3667 of all radiated power, with 0.1222 below the band and 0.5111 above it. Your inputs: lam1 = 400 nm, lam2 = 700 nm, T = 5778 K.*
 
-![Fraction of a blackbody's power emitted in the band 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/blackbody-band-fraction-curve)
+![Fraction of the total emission between](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/blackbody-band-fraction-live-1)
 
-*Fraction of a blackbody's power emitted in the band 0.001–1.0000e+09 nm (the worked example's) against temperature, 61 temperatures from 1000 to 31623 K from the package. Marked: the largest drawn value 1 at 1000 K, and the worked example's T = 5778 K: 1.*
+*Fraction of the total emission between... as T runs from 3467 to 8089 K, every other input as you entered it (41 solutions). Marked: your T = 5778 K gives F_band = 0.3667. Your inputs: lam1 = 400 nm, lam2 = 700 nm, T = 5778 K.*
+
+![Fraction of the total emission between](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/blackbody-band-fraction-live-2)
+
+*Fraction of the total emission between... as λ1 runs from 240 to 560 nm, every other input as you entered it (29 solutions). Marked: your λ1 = 400 nm gives F_band = 0.3667. Your inputs: lam1 = 400 nm, lam2 = 700 nm, T = 5778 K.*
 
 ```python
 quantum_physics_ai999x.solve('blackbody_band_fraction', lam1=1e-12, lam2=1.0, T=5778.0)
@@ -3324,9 +3588,13 @@ $$
 - **Assumes:** $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![n (photon number density) against T (temperature) from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/photon-gas-curve)
+![Photon number density as T runs from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/photon-gas-live-1)
 
-*n (photon number density) against T (temperature) from 1.3625 K to 4.0875 K. 31 points computed by quantum-physics-ai999x; marked: the worked example, T = 2.725 K, n = 4.1050e+08 1/m^3.*
+*Photon number density as T runs from 1.363 to 4.769 K, every other input as you entered it (41 solutions). Marked: your T = 2.725 K gives n = 4.105e+08. Your inputs: T = 2.725 K.*
+
+![Every answer of one unit for your inputs: u (energy density (J/m^3)) = 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/photon-gas-live-2)
+
+*Every answer of one unit for your inputs: u (energy density (J/m^3)) = 4.172e-14; pressure (radiation pressure u/3) = 1.391e-14. Your inputs: T = 2.725 K.*
 
 ```python
 quantum_physics_ai999x.solve('photon_gas', T=2.725)
@@ -3372,9 +3640,13 @@ $$
 - **Assumes:** $dE > 0$; $T > 0$; g0, $g_{1}  \geq  1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![A two-level system with gap ΔE = 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-level-thermodynamics-curve)
+![Population ratio N1/N0 as dE runs from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-level-thermodynamics-live-1)
 
-*A two-level system with gap ΔE = 4.0054e-21 J (0.025 eV, the worked example) and equal degeneracies, 81 temperatures from 5 to 2000 K from the package: the populations (top) approach 1/2 each, and the heat capacity (bottom) shows the Schottky peak. Marked: the largest drawn C/k = 0.438481 at T = 125.17 K.*
+*Population ratio N1/N0 as dE runs from 0.015 to 0.035 eV, every other input as you entered it (41 solutions). Marked: your dE = 0.025 eV gives ratio = 0.3802. Your inputs: dE = 0.025 eV, T = 300 K, g0 = 1, g1 = 1.*
+
+![Population ratio N1/N0 as g1 runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/two-level-thermodynamics-live-2)
+
+*Population ratio N1/N0 as g1 runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your g1 = 1 gives ratio = 0.3802. Your inputs: dE = 0.025 eV, T = 300 K, g0 = 1, g1 = 1.*
 
 ```python
 quantum_physics_ai999x.solve('two_level_thermodynamics', dE=2.870978885078724e-21, T=300.0, g0=1, g1=1)
@@ -3421,13 +3693,17 @@ $$
 - **Assumes:** $theta_E > 0$; $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![C_molar (molar heat capacity of an Einstein solid 3R C/k) against theta_E (Einstein temperature hbar omega/k) from 30 K to 3000 K on a logarithmic axis](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/einstein-oscillator-curve)
+![C_molar (molar heat capacity of an Einstein solid 3R C/k) over theta_E (Einstein temperature hbar omega/k) from 120 K to 360 K and T (temperature) from 150 K to 450 K: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 15](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/einstein-oscillator-field)
 
-*C_molar (molar heat capacity of an Einstein solid 3R C/k) against theta_E (Einstein temperature hbar omega/k) from 30 K to 3000 K on a logarithmic axis. One curve for each value of T (temperature): 300 K, 150 K, 600 K. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, theta_E = 300 K, C_molar = 22.9647 J/(mol*K).*
+*C_molar (molar heat capacity of an Einstein solid 3R C/k) over theta_E (Einstein temperature hbar omega/k) from 120 K to 360 K and T (temperature) from 150 K to 450 K: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 15.76 J/(mol·K) to dark 24.8 J/(mol·K)); iso-lines at C_molar = 16, 18, 20, 22, 24. Marked: the given point, theta_E = 240 K, T = 300 K, C_molar = 23.65 J/(mol·K). Your inputs: theta_E = 240 K, T = 300 K.*
 
-![C_molar (molar heat capacity of an Einstein solid 3R C/k) over theta_E (Einstein temperature hbar omega/k) from 30 K to 3000 K and T (temperature) from 30 K to 3000 K (logarithmic axes): each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 9](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/einstein-oscillator-field)
+![Molar heat capacity of an Einstein solid 3R C/k as T runs from 260 to 340 K, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/einstein-oscillator-live-1)
 
-*C_molar (molar heat capacity of an Einstein solid 3R C/k) over theta_E (Einstein temperature hbar omega/k) from 30 K to 3000 K and T (temperature) from 30 K to 3000 K (logarithmic axes): each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 9.2791e-39 J/(mol*K) to dark 24.9432 J/(mol*K)); iso-lines at C_molar = 5, 10, 15, 20 J/(mol*K). Marked: the worked example, theta_E = 300 K, T = 300 K, C_molar = 22.9647 J/(mol*K).*
+*Molar heat capacity of an Einstein solid 3R C/k as T runs from 260 to 340 K, every other input as you entered it (41 solutions). Marked: your T = 300 K gives C_molar = 23.65. Your inputs: theta_E = 240 K, T = 300 K.*
+
+![Molar heat capacity of an Einstein solid 3R C/k as θ_E runs from 200 to 280 K, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/einstein-oscillator-live-2)
+
+*Molar heat capacity of an Einstein solid 3R C/k as θ_E runs from 200 to 280 K, every other input as you entered it (29 solutions). Marked: your θ_E = 240 K gives C_molar = 23.65. Your inputs: theta_E = 240 K, T = 300 K.*
 
 ```python
 quantum_physics_ai999x.solve('einstein_oscillator', theta_E=300.0, T=300.0)
@@ -3467,9 +3743,13 @@ $$
 - **Assumes:** $T > 0$; $theta_D > 0$; $theta_D/T  \leq  600$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Molar heat capacity of a solid in the Debye model and in the Einstein model with the same characteristic temperature θ = 500 K (the worked example's), 120 temperatures each from the package: both approach the classical value at high T, but at low T the Debye curve falls as T³ and the Einstein curve much faster](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/debye-heat-capacity-curve)
+![Molar heat capacity C_V as θ_D runs from 303 to 383 K, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/debye-heat-capacity-live-1)
 
-*Molar heat capacity of a solid in the Debye model and in the Einstein model with the same characteristic temperature θ = 500 K (the worked example's), 120 temperatures each from the package: both approach the classical value at high T, but at low T the Debye curve falls as T³ and the Einstein curve much faster. Marked: the worked example's T = 1 K, Debye 1.5550e-05 J/(mol·K), Einstein 4.4428e-211 J/(mol·K).*
+*Molar heat capacity C_V as θ_D runs from 303 to 383 K, every other input as you entered it (41 solutions). Marked: your θ_D = 343 K gives C_molar = 23.39. Your inputs: T = 300 K, theta_D = 343 K.*
+
+![Molar heat capacity C_V as T runs from 260 to 340 K, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/debye-heat-capacity-live-2)
+
+*Molar heat capacity C_V as T runs from 260 to 340 K, every other input as you entered it (29 solutions). Marked: your T = 300 K gives C_molar = 23.39. Your inputs: T = 300 K, theta_D = 343 K.*
 
 ```python
 quantum_physics_ai999x.solve('debye_heat_capacity', T=1.0, theta_D=500.0)
@@ -3510,9 +3790,9 @@ $$
 - **Assumes:** $n > 0$; free electrons with spin $1/2$, $T = 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![E_F_eV (Fermi energy) against n (conduction-electron density (per m^3)) from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fermi-energy-free-electrons-curve)
+![Fermi energy as n runs from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fermi-energy-free-electrons-live-1)
 
-*E_F_eV (Fermi energy) against n (conduction-electron density (per m^3)) from 4.2350e+28 1/m^3 to 1.2705e+29 1/m^3. 31 points computed by quantum-physics-ai999x; marked: the worked example, n = 8.4700e+28 1/m^3, E_F_eV = 7.03276 eV.*
+*Fermi energy as n runs from 5.082e+28 to 1.186e+29 m^-3, every other input as you entered it (41 solutions). Marked: your n = 8.47e+28 m^-3 gives E_F_eV = 7.033. Your inputs: n = 8.47e28 m^-3.*
 
 ```python
 quantum_physics_ai999x.solve('fermi_energy_free_electrons', n=8.47e+28)
@@ -3554,9 +3834,13 @@ $$
 - **Assumes:** rho, $M > 0$; $z  \geq  1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![E_F_eV (Fermi energy) against M (molar mass (g/mol or kg/mol)) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fermi-energy-metal-curve)
+![Fermi energy as z runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fermi-energy-metal-live-1)
 
-*E_F_eV (Fermi energy) against M (molar mass (g/mol or kg/mol)) from 0.031773 kg/mol to 0.095319 kg/mol. One curve for each value of rho (mass density of the metal): 8960 kg/m^3, 4480 kg/m^3, 17920 kg/m^3. Other inputs as in the worked example: z = 1. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, M = 0.063546 kg/mol, E_F_eV = 7.04451 eV.*
+*Fermi energy as z runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your z = 1 gives E_F_eV = 7.045. Your inputs: rho = 8960 kg/m^3, M = 63.546 g/mol, z = 1.*
+
+![Fermi energy as M runs from 38](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fermi-energy-metal-live-2)
+
+*Fermi energy as M runs from 38.13 to 88.96 g/mol, every other input as you entered it (29 solutions). Marked: your M = 63.55 g/mol gives E_F_eV = 7.045. Your inputs: rho = 8960 kg/m^3, M = 63.546 g/mol, z = 1.*
 
 ```python
 quantum_physics_ai999x.solve('fermi_energy_metal', rho=8960.0, M=0.063546, z=1)
@@ -3597,9 +3881,13 @@ $$
 - **Assumes:** $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Fermi–Dirac occupation around the chemical potential μ = 5 eV (the worked example) at three temperatures, 81 energies each from the package: the step softens over a few kT](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fermi-dirac-occupation-curve)
+![F as E runs from 3](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fermi-dirac-occupation-live-1)
 
-*Fermi–Dirac occupation around the chemical potential μ = 5 eV (the worked example) at three temperatures, 81 energies each from the package: the step softens over a few kT. T = 100 K: f(μ + 0.1 eV) = 9.1247e-06; T = 300 K: f(μ + 0.1 eV) = 0.0204688; T = 1000 K: f(μ + 0.1 eV) = 0.238585. Marked: E = μ, where the package gives f = 1/2 at every temperature.*
+*F as E runs from 3.06 to 7.14 eV, every other input as you entered it (41 solutions). Marked: your E = 5.1 eV gives f = 0.02047. Your inputs: E = 5.1 eV, mu = 5.0 eV, T = 300 K.*
+
+![F as μ runs from 3 to 7 eV, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fermi-dirac-occupation-live-2)
+
+*F as μ runs from 3 to 7 eV, every other input as you entered it (29 solutions). Marked: your μ = 5 eV gives f = 0.02047. Your inputs: E = 5.1 eV, mu = 5.0 eV, T = 300 K.*
 
 ```python
 quantum_physics_ai999x.solve('fermi_dirac_occupation', E=8.01088317e-19, mu=8.01088317e-19, T=300.0)
@@ -3617,7 +3905,7 @@ quantum_physics_ai999x.solve('fermi_dirac_occupation', E=8.05638710873212e-19, m
 |---|---|---|
 | Fermi-Dirac occupation: E = 5 eV, mu = 5 eV, T = 300 K | SOLVED | f = 0.5, one_minus_f = 0.5, x = 0 |
 | Fermi-Dirac occupation: E = 5 eV, mu = 5 eV, T = 0 K | INVALID_INPUT | Fermi-Dirac occupation of a state: the temperature must be positive. |
-| Fermi-Dirac occupation: E = 5 eV, mu = 5 eV | NEEDS_INPUT | fermi_dirac_occupation needs T (temperature). Example: solve('fermi_dirac_occupation', E='8.01088e-19 J', mu='8.01088e-1 |
+| Fermi-Dirac occupation: E = 5 eV, mu = 5 eV | NEEDS_INPUT | fermi_dirac_occupation needs T (temperature). Example: solve('fermi_dirac_occupation', E='8.01088317e-19 J', mu='8.01088 |
 
 <a id="bose_einstein_occupation"></a>
 
@@ -3645,13 +3933,17 @@ $$
 - **Assumes:** $T > 0$; $E > mu$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Bose–Einstein mean occupation and its classical limit against x = (E − μ)/kT, μ = 0 and T = 300 K, 61 energies from the package: the two agree for x ≫ 1 and part below x ≈ 1, where bosons crowd into low states](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bose-einstein-occupation-curve)
+![n (mean occupation 1/(e^x - 1)) against E (energy of the state) from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bose-einstein-occupation-curve-2)
 
-*Bose–Einstein mean occupation and its classical limit against x = (E − μ)/kT, μ = 0 and T = 300 K, 61 energies from the package: the two agree for x ≫ 1 and part below x ≈ 1, where bosons crowd into low states. Marked: the worked example, x = 0.693147, n = 1 (classical 0.5).*
+*n (mean occupation 1/(e^x - 1)) against E (energy of the state) from 1.602e-22 J to 1.602e-20 J on a logarithmic axis, one curve for each value of T (temperature): 300 K, 150 K, 600 K; 41 points per curve, each a solve of the model. Marked: the given point, E = 1.602e-21 J, n = 2.117. Your inputs: E = 0.01 eV, mu = 0 eV, T = 300 K.*
 
-![n (mean occupation 1/(e^x - 1)) against E (energy of the state) from 2](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bose-einstein-occupation-curve-2)
+![N as μ runs from -1 to 0 eV, every other input as you entered it (21 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bose-einstein-occupation-live-1)
 
-*n (mean occupation 1/(e^x - 1)) against E (energy of the state) from 2.8710e-22 J to 2.8710e-20 J on a logarithmic axis, logarithmic output axis. One curve for each value of T (temperature): 300 K, 150 K, 600 K. Other inputs as in the worked example: mu = 0.0 J. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, E = 2.8710e-21 J, n = 1.*
+*N as μ runs from -1 to 0 eV, every other input as you entered it (21 solutions). Marked: your μ = 0 eV gives n = 2.117. Your inputs: E = 0.01 eV, mu = 0 eV, T = 300 K.*
+
+![N as T runs from 260 to 340 K, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bose-einstein-occupation-live-2)
+
+*N as T runs from 260 to 340 K, every other input as you entered it (29 solutions). Marked: your T = 300 K gives n = 2.117. Your inputs: E = 0.01 eV, mu = 0 eV, T = 300 K.*
 
 ```python
 quantum_physics_ai999x.solve('bose_einstein_occupation', E=2.870978885078724e-21, mu=0.0, T=300.0)
@@ -3698,9 +3990,13 @@ $$
 - **Assumes:** n, T, $m > 0$; $T  \geq  0.02$ T_F; |mu/kT| <= 60
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![eta (mu/kT) against T (temperature) from 50000 K to 150000 K](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fermi-gas-chemical-potential-curve)
+![Mu/kT as T runs from 3e+04 to 7e+04 K, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fermi-gas-chemical-potential-live-1)
 
-*eta (mu/kT) against T (temperature) from 50000 K to 150000 K. One curve for each value of m (particle mass): 9.1094e-31 kg, 4.5547e-31 kg, 1.8219e-30 kg. Other inputs as in the worked example: n = 1e+28 1/m^3. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, T = 100000 K, eta = -2.70288.*
+*Mu/kT as T runs from 3e+04 to 7e+04 K, every other input as you entered it (41 solutions). Marked: your T = 5e+04 K gives η = -1.621. Your inputs: n = 1e28 m^-3, T = 50000 K, m = 9.109e-31 kg.*
+
+![Mu/kT as m runs from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/fermi-gas-chemical-potential-live-2)
+
+*Mu/kT as m runs from 5.465e-31 to 1.275e-30 kg, every other input as you entered it (29 solutions). Marked: your m = 9.109e-31 kg gives η = -1.621. Your inputs: n = 1e28 m^-3, T = 50000 K, m = 9.109e-31 kg.*
 
 ```python
 quantum_physics_ai999x.solve('fermi_gas_chemical_potential', n=1e+28, T=100000.0, m=9.1093837139e-31)
@@ -3739,13 +4035,17 @@ $$
 - **Assumes:** $n > 0$; $m > 0$; ideal gas, spin 0, uniform box
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![T_c (critical temperature) against m (particle mass) from 7](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bec-critical-temperature-curve)
-
-*T_c (critical temperature) against m (particle mass) from 7.2150e-26 kg to 2.1645e-25 kg. One curve for each value of n (particle density): 1.0000e+20 1/m^3, 5.0000e+19 1/m^3, 2.0000e+20 1/m^3. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, m = 1.4430e-25 kg, T_c = 3.9838e-07 K.*
-
 ![T_c (critical temperature) over m (particle mass) from 7](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bec-critical-temperature-field)
 
-*T_c (critical temperature) over m (particle mass) from 7.2150e-26 kg to 2.1645e-25 kg and n (particle density) from 5.0000e+19 1/m^3 to 1.5000e+20 1/m^3: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 1.6731e-07 K to dark 1.0440e-06 K); iso-lines at T_c = 2.00e-7, 4.00e-7, 6.00e-7, 8.00e-7, 1.00e-6 K. Marked: the worked example, m = 1.4430e-25 kg, n = 1.0000e+20 1/m^3, T_c = 3.9838e-07 K.*
+*T_c (critical temperature) over m (particle mass) from 7.215e-26 kg to 2.164e-25 kg and n (particle density) from 5e+19 1/m³ to 1.5e+20 1/m³: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 1.673e-07 K to dark 1.044e-06 K); iso-lines at T_c = 2e-07, 4e-07, 6e-07, 8e-07, 1e-06. Marked: the given point, m = 1.443e-25 kg, n = 1e+20 1/m³, T_c = 3.984e-07 K. Your inputs: n = 1e20 m^-3, m = 1.443e-25 kg.*
+
+![Critical temperature as m runs from 8](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bec-critical-temperature-live-1)
+
+*Critical temperature as m runs from 8.658e-26 to 2.02e-25 kg, every other input as you entered it (41 solutions). Marked: your m = 1.443e-25 kg gives T_c = 3.984e-07. Your inputs: n = 1e20 m^-3, m = 1.443e-25 kg.*
+
+![Critical temperature as n runs from 6e+19 to 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/bec-critical-temperature-live-2)
+
+*Critical temperature as n runs from 6e+19 to 1.4e+20 m^-3, every other input as you entered it (29 solutions). Marked: your n = 1e+20 m^-3 gives T_c = 3.984e-07. Your inputs: n = 1e20 m^-3, m = 1.443e-25 kg.*
 
 ```python
 quantum_physics_ai999x.solve('bec_critical_temperature', n=1e+20, m=1.443e-25)
@@ -3785,9 +4085,9 @@ $$
 - **Assumes:** $\lambda > 0$; in vacuum
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![E_eV (photon energy in eV) against lam (vacuum wavelength (nm, m ](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/photon-energy-curve)
+![Photon energy in eV as λ runs from 3e-07 to 7e-07 m, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/photon-energy-live-1)
 
-*E_eV (photon energy in eV) against lam (vacuum wavelength (nm, m ...)) from 2.5000e-07 m to 7.5000e-07 m. 31 points computed by quantum-physics-ai999x; marked: the worked example, lam = 5.0000e-07 m, E_eV = 2.47968 eV.*
+*Photon energy in eV as λ runs from 3e-07 to 7e-07 m, every other input as you entered it (41 solutions). Marked: your λ = 5e-07 m gives E_eV = 2.48. Your inputs: lam = 5e-07 m.*
 
 ```python
 quantum_physics_ai999x.solve('photon_energy', lam=5e-07)
@@ -3832,9 +4132,9 @@ $$
 - **Assumes:** $m > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![E_MeV (rest energy in MeV) against m (rest mass (kg, g ](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/rest-energy-curve)
+![Rest energy in MeV as m runs from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/rest-energy-live-1)
 
-*E_MeV (rest energy in MeV) against m (rest mass (kg, g ...)) from 4.5547e-31 kg to 1.3664e-30 kg. 31 points computed by quantum-physics-ai999x; marked: the worked example, m = 9.1094e-31 kg, E_MeV = 0.510999 MeV.*
+*Rest energy in MeV as m runs from 5.466e-31 to 1.275e-30 kg, every other input as you entered it (41 solutions). Marked: your m = 9.109e-31 kg gives E_MeV = 0.511. Your inputs: m = 9.1093837139e-31 kg.*
 
 ```python
 quantum_physics_ai999x.solve('rest_energy', m=9.1093837139e-31)
@@ -3853,7 +4153,7 @@ quantum_physics_ai999x.solve('rest_energy', m=1.0)
 | Rest energy: m = 9.1093837139e-31 kg | SOLVED | E = 8.18711e-14 J, E_MeV = 0.510999 MeV, E_kWh = 2.2742e-20 |
 | Rest energy: m = 1 g | SOLVED | E = 8.98755e+13 J, E_MeV = 5.60959e+26 MeV, E_kWh = 2.49654e+07 |
 | Rest energy: m = 0 kg | INVALID_INPUT | Rest energy (mass-energy equivalence): the mass must be positive. |
-| Rest energy: | NEEDS_INPUT | rest_energy needs m (rest mass (kg, g ...)). Example: solve('rest_energy', m='9.10938e-31 kg'). |
+| Rest energy: | NEEDS_INPUT | rest_energy needs m (rest mass (kg, g ...)). Example: solve('rest_energy', m='9.1093837139e-31 kg'). |
 
 <a id="de_broglie_wavelength_mv"></a>
 
@@ -3883,13 +4183,17 @@ $$
 - **Assumes:** $m > 0$; $0 < v < c$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![lambda_nm (the same in nm) against m (mass of the particle) from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/de-broglie-wavelength-mv-curve)
-
-*lambda_nm (the same in nm) against m (mass of the particle) from 4.5547e-31 kg to 1.3664e-30 kg. One curve for each value of v (speed (may be written as a fraction of c)): 1e+06 m/s, 500000 m/s, 2e+06 m/s. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, m = 9.1094e-31 kg, lambda_nm = 0.72739 nm.*
-
 ![lambda_nm (the same in nm) over m (mass of the particle) from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/de-broglie-wavelength-mv-field)
 
-*lambda_nm (the same in nm) over m (mass of the particle) from 4.5547e-31 kg to 1.3664e-30 kg and v (speed (may be written as a fraction of c)) from 500000 m/s to 1.5e+06 m/s: each of the 21 × 15 cells is one run of quantum-physics-ai999x, shaded by its value (light 0.323284 nm to dark 2.90956 nm); iso-lines at lambda_nm = 0.5, 1, 1.5, 2, 2.5 nm. Marked: the worked example, m = 9.1094e-31 kg, v = 1e+06 m/s, lambda_nm = 0.72739 nm.*
+*lambda_nm (the same in nm) over m (mass of the particle) from 4.554e-31 kg to 1.366e-30 kg and v (speed (may be written as a fraction of c)) from 1e+06 m/s to 3e+06 m/s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0.1616 nm to dark 1.455 nm); iso-lines at lambda_nm = 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4. Marked: the given point, m = 9.109e-31 kg, v = 2e+06 m/s, lambda_nm = 0.3637 nm. Your inputs: m = 9.109e-31 kg, v = 2.0e6 m/s.*
+
+![The same in nm as v runs from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/de-broglie-wavelength-mv-live-1)
+
+*The same in nm as v runs from 1.2e+06 to 2.8e+06 m/s, every other input as you entered it (41 solutions). Marked: your v = 2e+06 m/s gives λ_nm = 0.3637. Your inputs: m = 9.109e-31 kg, v = 2.0e6 m/s.*
+
+![The same in nm as m runs from 5](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/de-broglie-wavelength-mv-live-2)
+
+*The same in nm as m runs from 5.465e-31 to 1.275e-30 kg, every other input as you entered it (29 solutions). Marked: your m = 9.109e-31 kg gives λ_nm = 0.3637. Your inputs: m = 9.109e-31 kg, v = 2.0e6 m/s.*
 
 ```python
 quantum_physics_ai999x.solve('de_broglie_wavelength_mv', m=9.1093837139e-31, v=1000000.0)
@@ -3941,13 +4245,21 @@ $$
 - **Assumes:** $E > 0$; $V_{0} > 0$; the particle comes from $x < 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Reflection and transmission of a particle at a potential step of height V₀ = 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/step-potential-curve)
-
-*Reflection and transmission of a particle at a potential step of height V₀ = 4.8065e-19 J (3 eV) for 80 energies from the package: total reflection below the step, partial reflection above it even though the particle could pass classically. Marked: the worked example E/V₀ = 1.33333, T = 0.888889, R = 0.111111.*
-
 ![T (transmission probability (ratio of probability currents)) against V0 (height of the step) from 4](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/step-potential-curve-2)
 
-*T (transmission probability (ratio of probability currents)) against V0 (height of the step) from 4.8065e-20 J to 4.8065e-18 J on a logarithmic axis. One curve for each value of E (kinetic energy of the incident particle (on the low side)): 6.4087e-19 J, 3.2044e-19 J, 1.2817e-18 J. 41 points per curve computed by quantum-physics-ai999x; marked: the worked example, V0 = 4.8065e-19 J, T = 0.888889.*
+*T (transmission probability (ratio of probability currents)) against V0 (height of the step) from 4.807e-20 J to 4.807e-18 J on a logarithmic axis, one curve for each value of E (kinetic energy of the incident particle (on the low side)): 8.011e-19 J, 4.005e-19 J, 1.602e-18 J; 41 points per curve, each a solve of the model. Marked: the given point, V0 = 4.807e-19 J, T = 0.9493. Your inputs: E = 5 eV, V0 = 3 eV.*
+
+![Transmission probability (ratio of](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/step-potential-live-1)
+
+*Transmission probability (ratio of... as E runs from 3 to 7 eV, every other input as you entered it (41 solutions). Marked: your E = 5 eV gives T = 0.9493. Shaded by partial transmission (E > V0) or total reflection: total reflection (E <= V0), partial transmission (E > V0). Your inputs: E = 5 eV, V0 = 3 eV.*
+
+![Partial transmission (E > V0) or total reflection for 25 5 x 5 combinations of E and V0 around your inputs (the other inputs as entered); the ring marks your inputs, which give partial transmission (E > V0)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/step-potential-live-2)
+
+*Partial transmission (E > V0) or total reflection for 25 5 x 5 combinations of E and V0 around your inputs (the other inputs as entered); the ring marks your inputs, which give partial transmission (E > V0). Blank cells admit no answer. Your inputs: E = 5 eV, V0 = 3 eV.*
+
+![Transmission probability (ratio of](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/step-potential-live-3)
+
+*Transmission probability (ratio of... as V0 runs from 1.8 to 4.2 eV, every other input as you entered it (29 solutions). Marked: your V0 = 3 eV gives T = 0.9493. Your inputs: E = 5 eV, V0 = 3 eV.*
 
 ```python
 quantum_physics_ai999x.solve('step_potential', E=6.408706536e-19, V0=4.806529901999999e-19)
@@ -3966,7 +4278,7 @@ quantum_physics_ai999x.solve('step_potential', E=1.602176634e-19, V0=4.806529901
 | Step potential: E = 4 eV, V0 = 3 eV | SOLVED | R = 0.111111, T = 0.888889, k2_over_k1 = 0.5, regime = partial transmission (E > V0) |
 | Step potential: E = 1 eV, V0 = 3 eV | SOLVED | R = 1, T = 0, k2_over_k1 = 0, regime = total reflection (E <= V0) |
 | Step potential: E = -1 eV, V0 = 3 eV | INVALID_INPUT | Reflection and transmission at a potential step: the energy and the step height must be positive. |
-| Step potential: E = 4 eV | NEEDS_INPUT | step_potential needs V0 (height of the step). Example: solve('step_potential', E='6.40871e-19 J', V0='4.80653e-19 J'). |
+| Step potential: E = 4 eV | NEEDS_INPUT | step_potential needs V0 (height of the step). Example: solve('step_potential', E='6.408706536e-19 J', V0='4.806529901999 |
 
 <a id="semi_empirical_mass_formula"></a>
 
@@ -3999,13 +4311,17 @@ $$
 - **Assumes:** $1  \leq  Z  \leq  A$; $A  \geq  2$; a liquid-drop estimate: poor for light nuclei
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The five terms of the semi-empirical mass formula for Z = 26, A = 56 (iron-56, the worked example), each from the package, stacked as a running total: volume +882, surface −260](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/semi-empirical-mass-formula-bars)
+![The five terms of the semi-empirical mass formula for Z = 26, A = 56, each from the model with the signs the formula combines them with: volume +882, surface -260](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/semi-empirical-mass-formula-bars)
 
-*The five terms of the semi-empirical mass formula for Z = 26, A = 56 (iron-56, the worked example), each from the package, stacked as a running total: volume +882, surface −260.543, Coulomb −120.796, asymmetry −6.77143, pairing +1.49399 MeV (signs as the formula combines them), total binding energy B = 495.384 MeV (8.84614 MeV per nucleon).*
+*The five terms of the semi-empirical mass formula for Z = 26, A = 56, each from the model with the signs the formula combines them with: volume +882, surface -260.5, Coulomb -120.8, asymmetry -6.771, pairing 1.494 MeV (the remainder of the binding energy, derived); total binding energy B = 495.4 MeV. Your inputs: Z = 26, A = 56.*
 
-![Binding energy per nucleon along the valley of stability, A = 8 … 240 in steps of 4: for each A the proton number is the nearest integer to the package's most stable Z, and B/A is the package's value for that nucleus (59 nuclei)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/semi-empirical-mass-formula-curve)
+![Binding energy, volume term a_V A and surface_MeV as A runs from 36 to 76, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/semi-empirical-mass-formula-live-1)
 
-*Binding energy per nucleon along the valley of stability, A = 8 … 240 in steps of 4: for each A the proton number is the nearest integer to the package's most stable Z, and B/A is the package's value for that nucleus (59 nuclei). The curve peaks near iron: fusion releases energy below it, fission above. Marked: the worked example's nucleus, Z = 26, A = 56, B/A = 8.84614 MeV (most stable Z for this A: 25.2797).*
+*Binding energy, volume term a_V A and surface_MeV as A runs from 36 to 76, every other input as you entered it (41 solutions). Marked: your A = 56 gives B_MeV = 495.4. Your inputs: Z = 26, A = 56.*
+
+![Binding energy as Z runs from 6 to 46, every other input as you entered it (21 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/semi-empirical-mass-formula-live-2)
+
+*Binding energy as Z runs from 6 to 46, every other input as you entered it (21 solutions). Marked: your Z = 26 gives B_MeV = 495.4. Your inputs: Z = 26, A = 56.*
 
 ```python
 quantum_physics_ai999x.solve('semi_empirical_mass_formula', Z=26, A=56)
@@ -4053,9 +4369,13 @@ $$
 - **Assumes:** $E  \geq  0$; $m > 0$; $1  \leq  w_R  \leq  20$; the energy is absorbed uniformly in the mass m
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![H (equivalent dose (Sv = J/kg)) against m (mass of the absorbing tissue) from 0](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radiation-dose-curve)
+![Equivalent dose and absorbed dose as m runs from 300 to 700 g, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radiation-dose-live-1)
 
-*H (equivalent dose (Sv = J/kg)) against m (mass of the absorbing tissue) from 0.25 kg to 0.75 kg. One curve for each value of E (radiation energy absorbed by the tissue (J, mJ, MeV ...)): 0.002 J, 0.001 J, 0.004 J. Other inputs as in the worked example: w_R = 20.0. 31 points per curve computed by quantum-physics-ai999x; marked: the worked example, m = 0.5 kg, H = 0.08 J/kg.*
+*Equivalent dose and absorbed dose as m runs from 300 to 700 g, every other input as you entered it (41 solutions). Marked: your m = 500 g gives H = 0.08 Sv. Your inputs: E = 2 mJ, m = 500 g, w_R = 20.*
+
+![Equivalent dose and absorbed dose as E runs from 1](https://www.ai999x.com/?ax_fig=quantum-physics-ai999x/radiation-dose-live-2)
+
+*Equivalent dose and absorbed dose as E runs from 1.2 to 2.8 mJ, every other input as you entered it (29 solutions). Marked: your E = 2 mJ gives H = 0.08 Sv. Your inputs: E = 2 mJ, m = 500 g, w_R = 20.*
 
 ```python
 quantum_physics_ai999x.solve('radiation_dose', E=0.5, m=70.0, w_R=2.0)
